@@ -1,0 +1,23 @@
+{
+  "completions": {
+    "engine": "openai",
+    "model": "gpt-6-luna",
+    "thinking": "low"
+  },
+  "embeddings": {
+    "engine": "openai",
+    "model": "text-embedding-3-small"
+  },
+  "voice": {
+    "engine": "google",
+    "tts_model": "gemini-2.5-pro-tts",
+    "language": "en-US"
+  },
+  "providers": {
+    "google": {
+      "auth_method": "service_account",
+      "project_id": "your-gcp-project",
+      "location": "global"
+    }
+  }
+}

@@ -1,0 +1,8014 @@
+{
+ "slug": "name-a-car-brand",
+ "prompt": "Name a car brand",
+ "noun": "car brand",
+ "domain": "transportation",
+ "built_at": "2026-10-22T22:45:20+00:00",
+ "model": "gpt-6-sol",
+ "answers": [
+  {
+   "id": "ford",
+   "name": "Ford",
+   "aliases": [
+    "Auto Motive Power",
+    "Blue Oval",
+    "Built Ford Tough",
+    "Driving Skills for Life",
+    "Factoría Ford",
+    "FoMoCo",
+    "Ford Advanced Vehicles",
+    "Ford Blue",
+    "Ford Group",
+    "Ford Model E",
+    "Ford Motor",
+    "Ford Motor Co.",
+    "Ford Motor Comp.",
+    "Ford Motor Corporation",
+    "Ford Motor Works",
+    "Ford Motors",
+    "Ford Philanthropy",
+    "Ford Research and Innovation Center",
+    "Ford USA",
+    "Ford bestselling models",
+    "Ford company",
+    "Ford trucks",
+    "Ford.com",
+    "NYSE: F",
+    "The Ford Motor Company",
+    "Www.ford.com"
+   ],
+   "article": "Ford Motor Company",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9767,
+   "signals": {
+    "pageviews": 1005652,
+    "zipf": 4.5,
+    "salience": 5
+   }
+  },
+  {
+   "id": "toyota",
+   "name": "Toyota",
+   "aliases": [
+    "7203",
+    "Controversies surrounding Toyota",
+    "Environmental record of Toyota",
+    "Global.toyota",
+    "Shigeru Hayakawa",
+    "Toyoda Motor",
+    "Toyopet",
+    "Toyota 58-79 timeline",
+    "Toyota Baltic",
+    "Toyota Corporation",
+    "Toyota FTAC",
+    "Toyota Financial Savings Bank",
+    "Toyota Financial Services",
+    "Toyota Jidosha Kabushiki-gaisha",
+    "Toyota Jidousha Kabushiki-gaisha",
+    "Toyota Motor",
+    "Toyota Motor Company",
+    "Toyota Motor Corp.",
+    "Toyota Motor Corporation",
+    "Toyota Motors",
+    "Toyota Motors Manufacturing",
+    "Toyota automobile collectibles",
+    "Toyota cars",
+    "Toyota company",
+    "Toyota sewing machine",
+    "Toyota.com",
+    "Toyotas",
+    "Toyta",
+    "Www.toyota.com",
+    "Zeronise"
+   ],
+   "article": "Toyota",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.957,
+   "signals": {
+    "pageviews": 1042889,
+    "zipf": 3.95,
+    "salience": 5
+   }
+  },
+  {
+   "id": "bmw",
+   "name": "BMW",
+   "aliases": [
+    "BMW AG",
+    "BMW Group",
+    "BMW Korea",
+    "BMW logo",
+    "Bavarian Motor Works",
+    "Bayer Motoren Werke",
+    "Bayerische Motoren Werke",
+    "Bayerische Motoren Werke Ag",
+    "Bayerische Motoren Werke GmbH",
+    "Bayrische Motoren Werke",
+    "Bmw.com",
+    "Bmwgroup.com",
+    "EfficientDynamics",
+    "Environmental record of BMW",
+    "Freude am Fahren",
+    "Motoren Werke AG",
+    "Sheer Driving Pleasure",
+    "The Ultimate Driving Machine"
+   ],
+   "article": "BMW",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9552,
+   "signals": {
+    "pageviews": 1055145,
+    "zipf": 3.92,
+    "salience": 5
+   }
+  },
+  {
+   "id": "mercedes-benz",
+   "name": "Mercedes-Benz",
+   "aliases": [
+    "Environmental impact of Mercedes-Benz",
+    "Environmental record of Mercedes-Benz",
+    "History of Mercedes-Benz",
+    "Mercades Benz",
+    "Mercedes",
+    "Mercedes-Benz AG",
+    "Mercedes-Benz CLT-Class",
+    "Mercedes-Benz Corporation",
+    "Mercedes-benz.com",
+    "Mercedez-Benz"
+   ],
+   "article": "Mercedes-Benz",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.953,
+   "signals": {
+    "pageviews": 814243,
+    "zipf": 3.44,
+    "salience": 5
+   }
+  },
+  {
+   "id": "ferrari",
+   "name": "Ferrari",
+   "aliases": [
+    "Farrari",
+    "Ferari",
+    "Ferarri",
+    "Ferarris",
+    "Ferrari Automobili",
+    "Ferrari India",
+    "Ferrari N.V.",
+    "Ferrari S.p.A.",
+    "Ferrari SpA",
+    "Ferrari Special Projects",
+    "Ferrari.com",
+    "Ferraris",
+    "Identity of Ferrari",
+    "RACE"
+   ],
+   "article": "Ferrari",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9499,
+   "signals": {
+    "pageviews": 826096,
+    "zipf": 3.88,
+    "salience": 5
+   }
+  },
+  {
+   "id": "tesla",
+   "name": "Tesla",
+   "aliases": [
+    "Ian Wright",
+    "Ir.tesla.com",
+    "List of Tesla vehicles",
+    "Phantom braking",
+    "T3SLA",
+    "TSLA",
+    "Telsa Motors",
+    "Tesla 4680",
+    "Tesla Advanced Automation Germany",
+    "Tesla EV",
+    "Tesla Electric Car",
+    "Tesla Inc.",
+    "Tesla India",
+    "Tesla Motors EV",
+    "Tesla Motors car",
+    "Tesla Motors cars",
+    "Tesla Motors electric car",
+    "Tesla Motors electric cars",
+    "Tesla Motors electric vehicle",
+    "Tesla Motors electric vehicles",
+    "Tesla Motors, Inc.",
+    "Tesla Solar",
+    "Tesla Tool and Die",
+    "Tesla automobile",
+    "Tesla automobiles",
+    "Tesla car",
+    "Tesla cars",
+    "Tesla electric cars",
+    "Tesla electric vehicle",
+    "Tesla electric vehicles",
+    "Tesla models",
+    "Tesla motors",
+    "Tesla recalls",
+    "Tesla vehicle",
+    "Tesla vehicles",
+    "Tesla.com"
+   ],
+   "article": "Tesla, Inc.",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9492,
+   "signals": {
+    "pageviews": 1461452,
+    "zipf": 3.77,
+    "salience": 5
+   }
+  },
+  {
+   "id": "honda",
+   "name": "Honda",
+   "aliases": [
+    "Cbr 150",
+    "Global.honda",
+    "Hero honda passion plus",
+    "History of Honda",
+    "Honda 300ex",
+    "Honda CL145",
+    "Honda Clio",
+    "Honda Corporation",
+    "Honda Group",
+    "Honda Marine Group",
+    "Honda Motor",
+    "Honda Motor Co.",
+    "Honda Motor Co., Ltd.",
+    "Honda Motor Company",
+    "Honda Motor Company Inc.",
+    "Honda Motor Company Limited",
+    "Honda Motor Company Ltd.",
+    "Honda Motor Corporation",
+    "Honda Motor Manufacturing",
+    "Honda Outboard",
+    "Honda Primo",
+    "Honda Soltec",
+    "Honda Technologies",
+    "Honda Verno",
+    "Honda Werther",
+    "Honda atv",
+    "Honda motorcycle",
+    "Honda motorcycles",
+    "Honda motors",
+    "Soltec",
+    "The Power of Dreams"
+   ],
+   "article": "Honda",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.946,
+   "signals": {
+    "pageviews": 646958,
+    "zipf": 3.92,
+    "salience": 5
+   }
+  },
+  {
+   "id": "porsche",
+   "name": "Porsche",
+   "aliases": [
+    "Dr. Ing. h. c. F.",
+    "F. Porsche AG",
+    "Porche",
+    "Porsche AG",
+    "Porsche Car Connect",
+    "Porsche Cars",
+    "Porsche GmbH",
+    "Porsche Roxster",
+    "Porsche.de",
+    "Porsches",
+    "Porsh",
+    "Porshe"
+   ],
+   "article": "Porsche",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9349,
+   "signals": {
+    "pageviews": 698361,
+    "zipf": 3.7,
+    "salience": 5
+   }
+  },
+  {
+   "id": "land-rover",
+   "name": "Land Rover",
+   "aliases": [
+    "Ford Land Rover",
+    "Land Rover Bikes",
+    "Land Rover Coffee",
+    "Land Rover Ltd.",
+    "Land Rovers",
+    "Landie"
+   ],
+   "article": "Land Rover",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9326,
+   "signals": {
+    "pageviews": 466217,
+    "zipf": 3.75,
+    "salience": 5
+   }
+  },
+  {
+   "id": "nissan",
+   "name": "Nissan",
+   "aliases": [
+    "7201",
+    "China Nissan",
+    "DAT Automobile Manufacturing Inc.",
+    "History of Nissan",
+    "Kaishinsha Motorcar Works",
+    "Nee-saan",
+    "Nissan 180 Plan",
+    "Nissan Blue Stage",
+    "Nissan Bluebird Store",
+    "Nissan Cherry Store",
+    "Nissan China",
+    "Nissan Commercial Vehicles",
+    "Nissan Company",
+    "Nissan Jidosha KK",
+    "Nissan Motor",
+    "Nissan Motor Co.",
+    "Nissan Motor Co. Ltd.",
+    "Nissan Motor Company, Limited",
+    "Nissan Motor Company, Ltd.",
+    "Nissan Motor Corporation",
+    "Nissan Motor Corporation, U.S.A.",
+    "Nissan Motor Corporation, USA",
+    "Nissan Motor Store",
+    "Nissan Motor Thailand",
+    "Nissan Motors",
+    "Nissan Red Stage",
+    "Nissan Red and Blue Stage",
+    "Nissan Revival Plan",
+    "Nissan Saito Store",
+    "Nissan Satio Store",
+    "Nissan Technical Center",
+    "Nissan Technical Center Europe",
+    "Nissan Technical Centre",
+    "Nissan car",
+    "Nissan cars",
+    "Nissan vehicles",
+    "Nissan-global.com",
+    "Nsany",
+    "The Nissan Motor Company"
+   ],
+   "article": "Nissan",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9289,
+   "signals": {
+    "pageviews": 549583,
+    "zipf": 3.69,
+    "salience": 5
+   }
+  },
+  {
+   "id": "audi",
+   "name": "Audi",
+   "aliases": [
+    "@AudiOfficial",
+    "Audi AG",
+    "Audi Aktien-Gesellschaft",
+    "Audi Automobilwerke GmbH",
+    "Audi in motorsport",
+    "Audi of America",
+    "Audi.com",
+    "Progress through Technology",
+    "Vorsprung durch Technik"
+   ],
+   "article": "Audi",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9283,
+   "signals": {
+    "pageviews": 567265,
+    "zipf": 3.66,
+    "salience": 5
+   }
+  },
+  {
+   "id": "volkswagen",
+   "name": "Volkswagen",
+   "aliases": [
+    "Das Auto",
+    "Environmental record of Volkswagen",
+    "Folksvagon",
+    "Folkswagon",
+    "Gas Auto",
+    "Mission SalzGiga",
+    "The People's Car",
+    "V-Dub",
+    "VW",
+    "VW EV",
+    "VW Motorsport",
+    "VW car",
+    "VW cars",
+    "VW electric car",
+    "VW electric cars",
+    "VW electric vehicle",
+    "VW electric vehicles",
+    "VW vehicle",
+    "VW vehicles",
+    "Volkswagen EV",
+    "Volkswagen France",
+    "Volkswagen Roccan",
+    "Volkswagen car",
+    "Volkswagen cars",
+    "Volkswagen electric car",
+    "Volkswagen electric cars",
+    "Volkswagen electric vehicle",
+    "Volkswagen electric vehicles",
+    "Volkswagen vehicle",
+    "Volkswagen vehicles",
+    "Volkswagens",
+    "Volkswagon",
+    "Voltswagen",
+    "Vw.com",
+    "Wolfsburg Edition"
+   ],
+   "article": "Volkswagen",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.92,
+   "signals": {
+    "pageviews": 754686,
+    "zipf": 3.5,
+    "salience": 5
+   }
+  },
+  {
+   "id": "jaguar",
+   "name": "Jaguar",
+   "aliases": [
+    "Jaguar Cars",
+    "Jaguar Cars Limited",
+    "Jaguar Cars Ltd",
+    "Jaguar automobile",
+    "Jaguar brand",
+    "Jaguar car",
+    "Jaguar marque",
+    "Jaguar motors",
+    "Jaguar.com"
+   ],
+   "article": "Jaguar Cars",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9118,
+   "signals": {
+    "pageviews": 545255,
+    "zipf": 3.51,
+    "salience": 5
+   }
+  },
+  {
+   "id": "hyundai",
+   "name": "Hyundai",
+   "aliases": [
+    "Controversies surrounding Hyundai Motor Company",
+    "Daimler-Hyundai Truck Corporation",
+    "Daimler–Hyundai Truck",
+    "Drive your way",
+    "HYMTF",
+    "HYUD",
+    "Hyundai - Drive your way",
+    "Hyundai Auto Canada Inc.",
+    "Hyundai Motor",
+    "Hyundai Motor Co.",
+    "Hyundai Motor Corporation",
+    "Hyundai Motor Japan",
+    "Hyundai Motors",
+    "Hyundai Translead",
+    "Hyundai.com",
+    "Supernal",
+    "The Hyundai Motor Company"
+   ],
+   "article": "Hyundai Motor Company",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9115,
+   "signals": {
+    "pageviews": 582393,
+    "zipf": 3.44,
+    "salience": 5
+   }
+  },
+  {
+   "id": "jeep",
+   "name": "Jeep",
+   "aliases": [
+    "Jeeep",
+    "Jeep Willys",
+    "Jeep.com",
+    "Jeeps",
+    "Willy's Jeep"
+   ],
+   "article": "Jeep",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9107,
+   "signals": {
+    "pageviews": 436322,
+    "zipf": 3.72,
+    "salience": 5
+   }
+  },
+  {
+   "id": "chevrolet",
+   "name": "Chevrolet",
+   "aliases": [
+    "An American Revolution",
+    "COPO",
+    "Cheverolet",
+    "Chevey",
+    "Chevies",
+    "Chevolet",
+    "Chevrolet Division",
+    "Chevrolet Division of General Motors Company",
+    "Chevrolet Motor",
+    "Chevrolet Motor Company",
+    "Chevrolet Motors Division",
+    "Chevrolet Parts",
+    "Chevrolet auto parts",
+    "Chevrolet buses",
+    "Chevrolet.com",
+    "Chevrolets",
+    "Chevy",
+    "Chevy Parts",
+    "Chevy auto parts",
+    "Find New Roads",
+    "Kroymans",
+    "Kroymans Corporation",
+    "Team Chevy"
+   ],
+   "article": "Chevrolet",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9106,
+   "signals": {
+    "pageviews": 484780,
+    "zipf": 3.62,
+    "salience": 5
+   }
+  },
+  {
+   "id": "aston-martin",
+   "name": "Aston Martin",
+   "aliases": [
+    "ASTON MATRIN",
+    "Adrian Hallmark",
+    "Aston Martin Lagonda Limited",
+    "Aston Martin Lagonda Ltd",
+    "Aston Martin in motorsport",
+    "Aston Martins",
+    "Astongate",
+    "Bamford and Martin"
+   ],
+   "article": "Aston Martin",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9102,
+   "signals": {
+    "pageviews": 529752,
+    "zipf": 3.63,
+    "salience": 4
+   }
+  },
+  {
+   "id": "dodge",
+   "name": "Dodge",
+   "aliases": [
+    "Dadge",
+    "Dodge Brothers",
+    "Dodge Brothers Company",
+    "Dodge Brothers Motor Car Company",
+    "Dodge Brothers Motor Company",
+    "Dodge Brothers Motor Vehicle Company",
+    "Dodge Brothers, Inc",
+    "Dodge Cars",
+    "Dodge Luxury Liner Special",
+    "Dodge Motor Company",
+    "Dodge Motors",
+    "Dodge V8",
+    "Dodge automobiles",
+    "Dodge bros.",
+    "Dodge division",
+    "Fratzog",
+    "Grab life by the horns"
+   ],
+   "article": "Dodge",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9095,
+   "signals": {
+    "pageviews": 363691,
+    "zipf": 3.93,
+    "salience": 5
+   }
+  },
+  {
+   "id": "volvo",
+   "name": "Volvo",
+   "aliases": [
+    "Volvo Car Corporation",
+    "Volvo Concept Car",
+    "Volvo Personvagnar",
+    "Volvo Personvagnar AB",
+    "Volvo Personvogne Danmark A/S",
+    "Volvo VCC",
+    "Volvo Versatility Concept Car",
+    "Volvo car",
+    "Volvo cars"
+   ],
+   "article": "Volvo Cars",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9076,
+   "signals": {
+    "pageviews": 529839,
+    "zipf": 3.48,
+    "salience": 5
+   }
+  },
+  {
+   "id": "kia",
+   "name": "Kia",
+   "aliases": [
+    "KN Car",
+    "Kia America",
+    "Kia Corporation",
+    "Kia Group",
+    "Kia Motor Corporation",
+    "Kia Motors",
+    "Kia Motors America",
+    "Kia Motors Company",
+    "Kia Motors Corp.",
+    "Kia Motors Corporation",
+    "Kia Motors Europe",
+    "Kia Motors Inc.",
+    "Kia Motors Mexico",
+    "Kia Motors Turkey",
+    "Kia Motors, Incorporated",
+    "Kia Philippines",
+    "Kia cars",
+    "Kia.com",
+    "Kookhyun Shim",
+    "Kyungsung Precision Industry",
+    "Movement that inspires"
+   ],
+   "article": "Kia",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9033,
+   "signals": {
+    "pageviews": 521750,
+    "zipf": 3.44,
+    "salience": 5
+   }
+  },
+  {
+   "id": "lamborghini",
+   "name": "Lamborghini",
+   "aliases": [
+    "Automobili Ferruccio Lamborghini",
+    "Automobili Ferruccio Lamborghini S.p.A.",
+    "Automobili Lamborghini",
+    "Automobili Lamborghini S.p.A.",
+    "Automobili Lamborghini SpA",
+    "Automóviles Lamborghini Latinoamérica",
+    "Iulian Bumbu",
+    "Lamberghini",
+    "Lambergini",
+    "Lamboghini",
+    "Lambogini",
+    "Lamborghini Ankonian",
+    "Lamborghini Deimos",
+    "Lamborghini Insecta",
+    "Lamborghini LatinoAmerica",
+    "Lamborghini Madura",
+    "Lamborghini Pregunta",
+    "Lamborghini S.p.A.",
+    "Lamborghini.com",
+    "Lamborghinis",
+    "Lamborginhi",
+    "Lamborgini",
+    "Lambourghini",
+    "Lambourgini",
+    "Lambroghini",
+    "Lamburgini",
+    "Lumborgini"
+   ],
+   "article": "Lamborghini",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9019,
+   "signals": {
+    "pageviews": 779318,
+    "zipf": 3.23,
+    "salience": 5
+   }
+  },
+  {
+   "id": "cadillac",
+   "name": "Cadillac",
+   "aliases": [
+    "Cadallac",
+    "Cadilac",
+    "Cadillac Automobile Company",
+    "Cadillac Motor Car",
+    "Cadillac Motor Car Division",
+    "Cadillac Motor Company",
+    "Cadillac Racing",
+    "Cadillac automobile",
+    "Cadillac in motorsport",
+    "Cadillacs",
+    "Cadillick"
+   ],
+   "article": "Cadillac",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8943,
+   "signals": {
+    "pageviews": 458692,
+    "zipf": 3.48,
+    "salience": 5
+   }
+  },
+  {
+   "id": "renault",
+   "name": "Renault",
+   "aliases": [
+    "Groupe Renault",
+    "Renault Group",
+    "Renault Maxthon",
+    "Renault Motors",
+    "Renault S.A.",
+    "Renault SA",
+    "Renault W'air",
+    "Régie Nationale des Usines Renault",
+    "Serge Yoccoz"
+   ],
+   "article": "Renault",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8932,
+   "signals": {
+    "pageviews": 506503,
+    "zipf": 3.35,
+    "salience": 5
+   }
+  },
+  {
+   "id": "mg",
+   "name": "MG",
+   "aliases": [
+    "MG Icon",
+    "MG Motor",
+    "MG Motor UK",
+    "MG Motor UK Limited",
+    "MG Motor UK Ltd",
+    "Mg motors",
+    "Morris Garages",
+    "NAC MG"
+   ],
+   "article": "MG Motor",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8918,
+   "signals": {
+    "pageviews": 362254,
+    "zipf": 4.12,
+    "salience": 4
+   }
+  },
+  {
+   "id": "mazda",
+   "name": "Mazda",
+   "aliases": [
+    "Anfini",
+    "Enfini",
+    "Masda",
+    "Matsuda Kabushiki-gaisha",
+    "Mazda Canada",
+    "Mazda Canada Inc.",
+    "Mazda Group",
+    "Mazda Motor",
+    "Mazda Motor Company",
+    "Mazda Motor Corp.",
+    "Mazda Motor Corporation",
+    "Mazda Philippines",
+    "Mazda RX",
+    "Mazda logo",
+    "Mazda.com",
+    "Miazder",
+    "Toyo Industries",
+    "Toyo Kogyo",
+    "Toyo-Koygo"
+   ],
+   "article": "Mazda",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8913,
+   "signals": {
+    "pageviews": 503692,
+    "zipf": 3.34,
+    "salience": 5
+   }
+  },
+  {
+   "id": "lexus",
+   "name": "Lexus",
+   "aliases": [
+    "History of Lexus",
+    "L Studio",
+    "L-finesse",
+    "Lexus 2010",
+    "Lexus India",
+    "Lexus International",
+    "Lexus Personalized Settings",
+    "Lstudio.com",
+    "Toyota Lexus"
+   ],
+   "article": "Lexus",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8827,
+   "signals": {
+    "pageviews": 476612,
+    "zipf": 3.27,
+    "salience": 5
+   }
+  },
+  {
+   "id": "subaru",
+   "name": "Subaru",
+   "aliases": [
+    "Saburu",
+    "Subaru Canada",
+    "Subaru Group",
+    "Subie",
+    "Suburu",
+    "Suby"
+   ],
+   "article": "Subaru",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8821,
+   "signals": {
+    "pageviews": 481620,
+    "zipf": 3.26,
+    "salience": 5
+   }
+  },
+  {
+   "id": "fiat",
+   "name": "Fiat",
+   "aliases": [
+    "Fabbrica Italiana Automobili Torino",
+    "Fiat Automobiles S.p.A.",
+    "Fiat Automóveis",
+    "Fiat Marylebone",
+    "Fiat automobiles",
+    "Fiat.com",
+    "Fix it again Tony",
+    "Micro-Vett SPA"
+   ],
+   "article": "Fiat",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8812,
+   "signals": {
+    "pageviews": 317002,
+    "zipf": 3.63,
+    "salience": 5
+   }
+  },
+  {
+   "id": "mini",
+   "name": "Mini",
+   "aliases": [
+    "BMW MINI",
+    "Mini BMW",
+    "Mini Pacesetter",
+    "Mini marque",
+    "New MINI"
+   ],
+   "article": "Mini (marque)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8802,
+   "signals": {
+    "pageviews": 238760,
+    "zipf": 4.44,
+    "salience": 4
+   }
+  },
+  {
+   "id": "rolls-royce",
+   "name": "Rolls-Royce",
+   "aliases": [
+    "Rolls-Royce Motor Cars",
+    "Rolls-Royce Motor Cars Limited",
+    "Rolls-Royce SUV"
+   ],
+   "article": "Rolls-Royce Motor Cars",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8785,
+   "signals": {
+    "pageviews": 376097,
+    "zipf": 3.49,
+    "salience": 4
+   }
+  },
+  {
+   "id": "seat",
+   "name": "SEAT",
+   "aliases": [
+    "Auto Emoción",
+    "S.E.A.T.",
+    "SEAT Aran",
+    "SEAT, S.A.",
+    "Seat cars"
+   ],
+   "article": "SEAT",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8781,
+   "signals": {
+    "pageviews": 222361,
+    "zipf": 4.82,
+    "salience": 4
+   }
+  },
+  {
+   "id": "genesis",
+   "name": "Genesis",
+   "aliases": [
+    "Genesis GT70",
+    "Genesis GT80",
+    "Genesis GT90",
+    "Genesis Motor",
+    "Genesis Motor, LLC",
+    "Genesis Motors",
+    "Genesis Vision G",
+    "Genesis cars",
+    "Genesis.com"
+   ],
+   "article": "Genesis Motor",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8779,
+   "signals": {
+    "pageviews": 365645,
+    "zipf": 3.85,
+    "salience": 4
+   }
+  },
+  {
+   "id": "lincoln",
+   "name": "Lincoln",
+   "aliases": [
+    "Continental",
+    "Ford lincoln",
+    "Lincoln Motor Co.",
+    "Lincoln automobile",
+    "Lincoln car",
+    "Lincoln cars",
+    "Lincoln-Mercury Division",
+    "The Lincoln Motor Company"
+   ],
+   "article": "Lincoln Motor Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8753,
+   "signals": {
+    "pageviews": 235896,
+    "zipf": 4.31,
+    "salience": 4
+   }
+  },
+  {
+   "id": "peugeot",
+   "name": "Peugeot",
+   "aliases": [
+    "Automobiles Peugeot",
+    "Pegueot",
+    "Peueot",
+    "Peugeot 1001",
+    "Peugeot 1008",
+    "Peugeot 101",
+    "Peugeot 1810",
+    "Peugeot Corporation",
+    "Peugeot PROLOGUE HYmotion4",
+    "Peugeot UK",
+    "Peugeot car club",
+    "Peugeot.com",
+    "Peugot",
+    "Puegeot",
+    "Pugeot",
+    "Puh-jo",
+    "Roland Peugeot"
+   ],
+   "article": "Peugeot",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8705,
+   "signals": {
+    "pageviews": 431222,
+    "zipf": 3.13,
+    "salience": 5
+   }
+  },
+  {
+   "id": "ram",
+   "name": "RAM",
+   "aliases": [
+    "Ram Trucks"
+   ],
+   "article": "Ram Trucks",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8685,
+   "signals": {
+    "pageviews": 231044,
+    "zipf": 4.19,
+    "salience": 4
+   }
+  },
+  {
+   "id": "mclaren",
+   "name": "McLaren",
+   "aliases": [
+    "McLaren Automobile",
+    "McLaren Automotive",
+    "McLaren Automotive Limited",
+    "McLaren Cars",
+    "McLaren Special Operations"
+   ],
+   "article": "McLaren Automotive",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8592,
+   "signals": {
+    "pageviews": 383531,
+    "zipf": 3.49,
+    "salience": 4
+   }
+  },
+  {
+   "id": "mitsubishi",
+   "name": "Mitsubishi",
+   "aliases": [
+    "Mitsubishi Jidōsha Kōgyō Kabushiki Kaisha",
+    "Mitsubishi Motor",
+    "Mitsubishi Motor Company",
+    "Mitsubishi Motor Corporation",
+    "Mitsubishi Motors",
+    "Mitsubishi Motors Corporation",
+    "Mitsubishi cars"
+   ],
+   "article": "Mitsubishi Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8566,
+   "signals": {
+    "pageviews": 303779,
+    "zipf": 3.34,
+    "salience": 5
+   }
+  },
+  {
+   "id": "alfa-romeo",
+   "name": "Alfa Romeo",
+   "aliases": [
+    "Alfa Romeo 85AF",
+    "Alfa Romeo 900AF",
+    "Alfa Romeo 911AF",
+    "Alfa Romeo Automobiles",
+    "Alfa Romeo Automobiles S.p.A.",
+    "Alfa Romeo Castello",
+    "Alfa Romeo Mille Aerfer",
+    "Alfa Romeo Millle AF",
+    "Alfa Romeo Models",
+    "Alfa Romeo Post War",
+    "Alfa Romeo Spa",
+    "Alfa Romeo V8",
+    "Alfa Romeos",
+    "Alfa romeo history",
+    "Alfaromeo.com",
+    "Alpha-Romeo",
+    "Anonima Lombarda Fabbrica Automobili",
+    "List of Alfa Romeo vehicles"
+   ],
+   "article": "Alfa Romeo",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8554,
+   "signals": {
+    "pageviews": 359030,
+    "zipf": 2.98,
+    "salience": 4
+   }
+  },
+  {
+   "id": "bentley",
+   "name": "Bentley",
+   "aliases": [
+    "Bentley Cars",
+    "Bentley Motors",
+    "Bentley Motors Limited",
+    "Bentley Motors Ltd",
+    "Bentley car",
+    "Bentleymotors.com",
+    "List of Bentley automobiles",
+    "List of Bentley cars",
+    "List of Bentley models",
+    "List of Bentley vehicles"
+   ],
+   "article": "Bentley",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8553,
+   "signals": {
+    "pageviews": 341587,
+    "zipf": 3.59,
+    "salience": 4
+   }
+  },
+  {
+   "id": "suzuki",
+   "name": "Suzuki",
+   "aliases": [
+    "Formula Suzuki",
+    "Globalsuzuki.com",
+    "Suzki",
+    "Suzuki Eiger 400",
+    "Suzuki Motor",
+    "Suzuki Motor Corp.",
+    "Suzuki Motor Corporation",
+    "Suzuki Motors",
+    "Suzuki RC100",
+    "Suzuki X-HEAD",
+    "Suzuki cars",
+    "Suzuki.com",
+    "Szki",
+    "Szuki"
+   ],
+   "article": "Suzuki",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8503,
+   "signals": {
+    "pageviews": 369127,
+    "zipf": 3.43,
+    "salience": 4
+   }
+  },
+  {
+   "id": "smart",
+   "name": "Smart",
+   "aliases": [
+    "Daimler Smart",
+    "DaimlerChrysler smart",
+    "Eco-speedster",
+    "Eco-sprinter",
+    "MCC smart",
+    "Micro Compact Car GmbH",
+    "Smart Automobile",
+    "Smart Automobile Co., Ltd.",
+    "Smart Car",
+    "Smart Cars",
+    "Smart GmbH",
+    "Smart.com",
+    "Swatch Mercedes ART",
+    "Swatchmobile"
+   ],
+   "article": "Smart (marque)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8494,
+   "signals": {
+    "pageviews": 224871,
+    "zipf": 4.83,
+    "salience": 3
+   }
+  },
+  {
+   "id": "lotus",
+   "name": "Lotus",
+   "aliases": [
+    "All lotus ever made",
+    "Eco Elise",
+    "Group Lotus",
+    "Light is right",
+    "Limo-Green",
+    "Lotus 103",
+    "Lotus 105",
+    "Lotus 106",
+    "Lotus 118",
+    "Lotus 40",
+    "Lotus 53",
+    "Lotus 57",
+    "Lotus 58",
+    "Lotus 61",
+    "Lotus 67",
+    "Lotus 68",
+    "Lotus 70B",
+    "Lotus 71",
+    "Lotus 73",
+    "Lotus 90",
+    "Lotus Cars",
+    "Lotus Cars Limited",
+    "Lotus Components",
+    "Lotus Eco Elise",
+    "Lotus Engineering",
+    "Lotus M250",
+    "Lotus Motorsport",
+    "Lotus Performance",
+    "Lotus Sport",
+    "Lotus automobile",
+    "Versatile Vehicle Architecture"
+   ],
+   "article": "Lotus Cars",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8397,
+   "signals": {
+    "pageviews": 383904,
+    "zipf": 3.62,
+    "salience": 3
+   }
+  },
+  {
+   "id": "saab",
+   "name": "Saab",
+   "aliases": [
+    "Saab Automobile",
+    "Saab Automobile AB",
+    "Saab Automotive",
+    "Saab Cars",
+    "Saab V4",
+    "Saab auto"
+   ],
+   "article": "Saab Automobile",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8364,
+   "signals": {
+    "pageviews": 396356,
+    "zipf": 3.09,
+    "salience": 4
+   }
+  },
+  {
+   "id": "tata",
+   "name": "Tata",
+   "aliases": [
+    "Miljø Grenland",
+    "Miljøbil Grenland AS",
+    "TATA Engineering and Locomotive Company",
+    "Tata Engine and Locomotive",
+    "Tata Intra",
+    "Tata LPTA 5252",
+    "Tata Motors",
+    "Tata Motors Limited",
+    "Tata Motors Ltd",
+    "Tata Motors Subsidiaries",
+    "Tata Pr1ma",
+    "Tata Truck",
+    "Tata motor"
+   ],
+   "article": "Tata Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8273,
+   "signals": {
+    "pageviews": 467129,
+    "zipf": 3.33,
+    "salience": 3
+   }
+  },
+  {
+   "id": "byd",
+   "name": "BYD",
+   "aliases": [
+    "BIVT",
+    "BYD Auto",
+    "BYD Auto Co., Ltd.",
+    "BYD Automobile",
+    "BYD Automobile Co Ltd",
+    "BYD Automobile Company",
+    "BYD Dual Mode",
+    "BYD God's Eye",
+    "BYD J6",
+    "BYD PHEV",
+    "BYD TianShen",
+    "BYD Toyota EV Technology",
+    "BYD car",
+    "BYD e-Platform",
+    "BYD motor",
+    "DiLink",
+    "DiPilot",
+    "E-Platform 2.0",
+    "GAC BYD",
+    "Songsan Dolphin"
+   ],
+   "article": "BYD Auto",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8247,
+   "signals": {
+    "pageviews": 1100806,
+    "zipf": 2.2,
+    "salience": 4
+   }
+  },
+  {
+   "id": "buick",
+   "name": "Buick",
+   "aliases": [
+    "Buick Auto-Vim and Power Company",
+    "Buick Engine",
+    "Buick Motor Company",
+    "Buick Motor Division",
+    "Buick Motor Division of General Motors",
+    "Buicks",
+    "Four-holer",
+    "Ventiport"
+   ],
+   "article": "Buick",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8234,
+   "signals": {
+    "pageviews": 317646,
+    "zipf": 3.17,
+    "salience": 4
+   }
+  },
+  {
+   "id": "lucid",
+   "name": "Lucid",
+   "aliases": [
+    "Atieva",
+    "Lucid AMP-1",
+    "Lucid Cosmos",
+    "Lucid Earth",
+    "Lucid Group",
+    "Lucid Motors",
+    "Lucid Project Gravity"
+   ],
+   "article": "Lucid Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.821,
+   "signals": {
+    "pageviews": 451298,
+    "zipf": 3.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "holden",
+   "name": "Holden",
+   "aliases": [
+    "Aussie 4 speed",
+    "GM Holden Ltd",
+    "GM-Holden",
+    "GMH manual",
+    "General Motors Holden",
+    "General Motors–Holden's",
+    "General Motors–Holden's Ltd",
+    "Holden & Frost Ltd",
+    "Holden Australia",
+    "Holden Engine Company",
+    "Holden Limited",
+    "Holden Ltd",
+    "Holden Motor Company",
+    "Holden Motors",
+    "Holden TriMatic",
+    "Holden cars",
+    "Holden manual transmission",
+    "Holden's Engine Company",
+    "Holden's Motor Body Builders Ltd",
+    "Holden's Motor Company",
+    "J.A. Holden & Co",
+    "Trimatic",
+    "Trimatic transmission"
+   ],
+   "article": "Holden",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8175,
+   "signals": {
+    "pageviews": 259275,
+    "zipf": 3.63,
+    "salience": 3
+   }
+  },
+  {
+   "id": "opel",
+   "name": "Opel",
+   "aliases": [
+    "Adam Opel AG",
+    "Adam Opel GmbH",
+    "Adam Opel KG",
+    "Adam Opel works",
+    "Discover Opel",
+    "Fresh thinking - better cars",
+    "Opel 1204 SL",
+    "Opel AG",
+    "Opel Automobile",
+    "Opel Automobile GmbH",
+    "Opel Cars",
+    "Opel Group",
+    "Opel OSV",
+    "Opel Powertrain",
+    "Opel Special Vehicles",
+    "Opel.com",
+    "Opel/Vauxhall",
+    "Safetec",
+    "The Future Is Everyone's",
+    "Wir leben Autos"
+   ],
+   "article": "Opel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8166,
+   "signals": {
+    "pageviews": 370376,
+    "zipf": 2.78,
+    "salience": 4
+   }
+  },
+  {
+   "id": "maserati",
+   "name": "Maserati",
+   "aliases": [
+    "Masarati",
+    "Maserati 4C",
+    "Maserati S.p.A.",
+    "Maserati.com"
+   ],
+   "article": "Maserati",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8157,
+   "signals": {
+    "pageviews": 331944,
+    "zipf": 2.98,
+    "salience": 4
+   }
+  },
+  {
+   "id": "pontiac",
+   "name": "Pontiac",
+   "aliases": [
+    "Pontiac Motor Company",
+    "Pontiac automobile",
+    "Pontiac car",
+    "The Courier"
+   ],
+   "article": "Pontiac (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8154,
+   "signals": {
+    "pageviews": 284267,
+    "zipf": 3.12,
+    "salience": 4
+   }
+  },
+  {
+   "id": "vauxhall",
+   "name": "Vauxhall",
+   "aliases": [
+    "Alex Wilson and Company",
+    "General Motors UK",
+    "General Motors UK Limited",
+    "Opel UK",
+    "Vauxhall Iron Works",
+    "Vauxhall Motors Limited",
+    "Vauxhall automobile",
+    "Vauxhall cars",
+    "Vauxhall motor cars",
+    "Vauxhall motors",
+    "Voxol motors"
+   ],
+   "article": "Vauxhall Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8127,
+   "signals": {
+    "pageviews": 296887,
+    "zipf": 3.07,
+    "salience": 4
+   }
+  },
+  {
+   "id": "saturn",
+   "name": "Saturn",
+   "aliases": [
+    "Saturn Cars",
+    "Saturn Corporation",
+    "Saturn Green Line",
+    "Saturn LLC",
+    "Saturn Red Line",
+    "Saturn automobile",
+    "Saturn brand",
+    "Saturn car",
+    "Saturn compact car",
+    "Saturn concept cars",
+    "Saturn coupe",
+    "Saturn crossover",
+    "Saturn sedan",
+    "Saturn suv",
+    "Saturn wagon"
+   ],
+   "article": "Saturn Corporation",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8103,
+   "signals": {
+    "pageviews": 184068,
+    "zipf": 3.54,
+    "salience": 4
+   }
+  },
+  {
+   "id": "great-wall",
+   "name": "Great Wall",
+   "aliases": [
+    "Changzheng Automobile",
+    "Cháng Chéng Qì Chē",
+    "GWM",
+    "Great Wall Auto",
+    "Great Wall Commercial Vehicles",
+    "Great Wall Motor",
+    "Great Wall Motor Co Ltd",
+    "Great Wall Motor Company",
+    "Great Wall Motor Company Limited",
+    "Great Wall Motors",
+    "Souo"
+   ],
+   "article": "Great Wall Motor",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8093,
+   "signals": {
+    "pageviews": 199636,
+    "zipf": 4.98,
+    "salience": 3
+   }
+  },
+  {
+   "id": "chrysler",
+   "name": "Chrysler",
+   "aliases": [
+    "Chrysler brand"
+   ],
+   "article": "Chrysler (brand)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8075,
+   "signals": {
+    "pageviews": 119362,
+    "zipf": 3.55,
+    "salience": 5
+   }
+  },
+  {
+   "id": "mercury",
+   "name": "Mercury",
+   "aliases": [
+    "Ford Mercury",
+    "Lincoln–Mercury",
+    "Mercury 114",
+    "Mercury Division",
+    "Mercury V8",
+    "Mercury Vehicles",
+    "Mercury automobile",
+    "Mercury-Edsel-Lincoln"
+   ],
+   "article": "Mercury (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8062,
+   "signals": {
+    "pageviews": 158929,
+    "zipf": 4.02,
+    "salience": 3
+   }
+  },
+  {
+   "id": "maruti-suzuki",
+   "name": "Maruti Suzuki",
+   "aliases": [
+    "Maruti",
+    "Maruti Exports",
+    "Maruti Motors",
+    "Maruti Suzuki India",
+    "Maruti Suzuki India Limited",
+    "Maruti Suzuki India Ltd.",
+    "Maruti Suzuki True Value",
+    "Maruti True Value",
+    "Maruti Udyog",
+    "Maruti Udyog Limited",
+    "Maruti Udyog Ltd.",
+    "Maruti automobile",
+    "NEXA",
+    "Suzuki India",
+    "Suzuki Motor India",
+    "TimeLine of Maruti Udyog Ltd",
+    "Timeline of Maruti Suzuki"
+   ],
+   "article": "Maruti Suzuki",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8001,
+   "signals": {
+    "pageviews": 322359,
+    "zipf": 2.42,
+    "salience": 3
+   }
+  },
+  {
+   "id": "polestar",
+   "name": "Polestar",
+   "aliases": [
+    "Polestar AB",
+    "Volvo Polestar"
+   ],
+   "article": "Polestar",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7973,
+   "signals": {
+    "pageviews": 546066,
+    "zipf": 2.0,
+    "salience": 4
+   }
+  },
+  {
+   "id": "gmc",
+   "name": "GMC",
+   "aliases": [
+    "GMC Buses",
+    "GMC CAR",
+    "GMC Cars",
+    "GMC Division of General Motors LLC",
+    "GMC Medium Duty Trucks",
+    "GMC S-Series",
+    "GMC Truck",
+    "GMC Truck & Coach Division",
+    "GMC Trucks",
+    "GMC cars & trucks",
+    "General Motors Truck",
+    "General Motors Truck Company",
+    "Grabowski Motor Company",
+    "Grabowski Motors Corporation",
+    "Grabowsky Motor Company",
+    "Max Grabowski",
+    "Morris Grabowski"
+   ],
+   "article": "GMC (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7957,
+   "signals": {
+    "pageviews": 228471,
+    "zipf": 3.06,
+    "salience": 4
+   }
+  },
+  {
+   "id": "bugatti",
+   "name": "Bugatti",
+   "aliases": [
+    "Bugatti Automobiles",
+    "Bugatti Automobiles S.A.S.",
+    "Bugatti Automobiles SAS",
+    "Bugatti Bordeaux",
+    "Bugatti.com"
+   ],
+   "article": "Bugatti Automobiles",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.794,
+   "signals": {
+    "pageviews": 251837,
+    "zipf": 2.81,
+    "salience": 4
+   }
+  },
+  {
+   "id": "morgan",
+   "name": "Morgan",
+   "aliases": [
+    "Morgan Aero",
+    "Morgan Motor Company",
+    "Morgan Super Sports",
+    "Morgan ThreeWheeler",
+    "Morgan cars"
+   ],
+   "article": "Morgan Motor Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.792,
+   "signals": {
+    "pageviews": 112423,
+    "zipf": 4.42,
+    "salience": 3
+   }
+  },
+  {
+   "id": "acura",
+   "name": "Acura",
+   "aliases": [
+    "Accura",
+    "History of Acura",
+    "Honda Acura"
+   ],
+   "article": "Acura",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.792,
+   "signals": {
+    "pageviews": 242329,
+    "zipf": 2.81,
+    "salience": 4
+   }
+  },
+  {
+   "id": "amc",
+   "name": "AMC",
+   "aliases": [
+    "AMC cars",
+    "American Motor Company",
+    "American Motor Corporation",
+    "American Motors",
+    "American Motors Company",
+    "American Motors Corporation"
+   ],
+   "article": "American Motors Corporation",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7893,
+   "signals": {
+    "pageviews": 241111,
+    "zipf": 3.38,
+    "salience": 3
+   }
+  },
+  {
+   "id": "plymouth",
+   "name": "Plymouth",
+   "aliases": [
+    "1937 Plymouth",
+    "1940 Plymouth",
+    "Chrysler-Plymouth",
+    "Plymouth Motors",
+    "Plymouth Speedster",
+    "Plymouth Tornado",
+    "Plymouth XX 500",
+    "Plymouth automobile",
+    "Plymouth car",
+    "Plymouth cars"
+   ],
+   "article": "Plymouth (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7846,
+   "signals": {
+    "pageviews": 160189,
+    "zipf": 3.69,
+    "salience": 3
+   }
+  },
+  {
+   "id": "ds",
+   "name": "DS",
+   "aliases": [
+    "DS Automobiles",
+    "DS Automotive",
+    "DS Performance",
+    "DS car marque",
+    "E-Tense",
+    "List of DS Automobiles vehicles"
+   ],
+   "article": "DS Automobiles",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7835,
+   "signals": {
+    "pageviews": 154871,
+    "zipf": 3.76,
+    "salience": 3
+   }
+  },
+  {
+   "id": "maybach",
+   "name": "Maybach",
+   "aliases": [
+    "Karl Maybach",
+    "Luftfahrzeug-Motorenbau",
+    "Luftfahrzeug-Motorenbau GmbH",
+    "Maybach-Manufaktur",
+    "Maybach-Motorenbau",
+    "Maybach-Motorenbau GmbH",
+    "Maybach.com",
+    "Maybachs",
+    "Mayback",
+    "Maybock",
+    "Mercedes-Maybach"
+   ],
+   "article": "Maybach",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7804,
+   "signals": {
+    "pageviews": 487735,
+    "zipf": 2.42,
+    "salience": 3
+   }
+  },
+  {
+   "id": "isuzu",
+   "name": "Isuzu",
+   "aliases": [
+    "History of Isuzu",
+    "Isuzu BA",
+    "Isuzu BC",
+    "Isuzu BD",
+    "Isuzu BF",
+    "Isuzu Jidōsha Kabushiki-gaisha",
+    "Isuzu Motors",
+    "Isuzu Motors Ltd.",
+    "Izuzu",
+    "Mimamori-kun",
+    "Sumida M-type"
+   ],
+   "article": "Isuzu",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7788,
+   "signals": {
+    "pageviews": 253481,
+    "zipf": 2.54,
+    "salience": 4
+   }
+  },
+  {
+   "id": "infiniti",
+   "name": "Infiniti",
+   "aliases": [
+    "History of Infiniti",
+    "Nissan Infiniti"
+   ],
+   "article": "Infiniti",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7776,
+   "signals": {
+    "pageviews": 218675,
+    "zipf": 2.76,
+    "salience": 4
+   }
+  },
+  {
+   "id": "citroen",
+   "name": "Citroën",
+   "aliases": [
+    "Automobiles Citroën",
+    "Citreon",
+    "Citroeen",
+    "Citroen DS Inside",
+    "Citroen.com",
+    "Citroën D5",
+    "Citroën DS High Rider",
+    "Citroën DS2",
+    "Citroën Re-Volt",
+    "Citroën Révolte",
+    "Citroën-Marchetti",
+    "Inspired by You",
+    "Moduboard"
+   ],
+   "article": "Citroën",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7774,
+   "signals": {
+    "pageviews": 330170,
+    "zipf": 2.33,
+    "salience": 4
+   }
+  },
+  {
+   "id": "mahindra",
+   "name": "Mahindra",
+   "aliases": [
+    "K C Mahindra",
+    "List of Mahindra & Mahindra facilities",
+    "Mahindra & Mahindra",
+    "Mahindra & Mahindra facilities",
+    "Mahindra Automative and Farm Equipment Sectors",
+    "Mahindra Automotive",
+    "Mahindra Automotive and Farm Equipment Sectors",
+    "Mahindra and Mahindra Limited",
+    "Mahindra motors"
+   ],
+   "article": "Mahindra & Mahindra",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7772,
+   "signals": {
+    "pageviews": 367329,
+    "zipf": 2.66,
+    "salience": 3
+   }
+  },
+  {
+   "id": "skoda",
+   "name": "Škoda",
+   "aliases": [
+    "AZNP",
+    "Simply Clever",
+    "Skoda Auto",
+    "Skoda Vision X",
+    "Skoda cars",
+    "Vision X",
+    "Škoda 422",
+    "Škoda Octavia WRC E2",
+    "Škoda Octavia WRC Evo2",
+    "Škoda Octavia WRC Evo3",
+    "Škoda Smoov'",
+    "Škoda Snowman",
+    "Škoda Vision RS"
+   ],
+   "article": "Škoda Auto",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7756,
+   "signals": {
+    "pageviews": 518504,
+    "zipf": 1.75,
+    "salience": 4
+   }
+  },
+  {
+   "id": "oldsmobile",
+   "name": "Oldsmobile",
+   "aliases": [
+    "Not your father's Oldsmobile",
+    "Olds Motor Vehicle Company",
+    "Olds Motor Works",
+    "Oldsmobile Division of General Motors",
+    "Oldsmobiles"
+   ],
+   "article": "Oldsmobile",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7739,
+   "signals": {
+    "pageviews": 242446,
+    "zipf": 2.51,
+    "salience": 4
+   }
+  },
+  {
+   "id": "hummer",
+   "name": "Hummer",
+   "aliases": [
+    "AM General Hummer",
+    "Hummers"
+   ],
+   "article": "Hummer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7696,
+   "signals": {
+    "pageviews": 196242,
+    "zipf": 2.78,
+    "salience": 4
+   }
+  },
+  {
+   "id": "chery",
+   "name": "Chery",
+   "aliases": [
+    "Cherry QQ3",
+    "Chery & Wanda Bus",
+    "Chery Automobil",
+    "Chery Automobile",
+    "Chery Automobile Co Ltd",
+    "Chery Automobile Co.",
+    "Chery Automobile Company",
+    "Chery B12",
+    "Chery B22",
+    "Chery F11",
+    "Chery Holding",
+    "Chery P12",
+    "Chery S11",
+    "Chery T15",
+    "Cheryinternational.com",
+    "Chirey",
+    "List of Chery models",
+    "Qirui QQ"
+   ],
+   "article": "Chery",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7646,
+   "signals": {
+    "pageviews": 515300,
+    "zipf": 2.07,
+    "salience": 3
+   }
+  },
+  {
+   "id": "proton",
+   "name": "Proton",
+   "aliases": [
+    "EuropeStar",
+    "PONSB",
+    "PROTON Holdings",
+    "Perusahaan Otomobil Nasional Sdn Bhd",
+    "Proton Company",
+    "Proton Group",
+    "Proton Holdings Berhad",
+    "Proton Holdings Bhd",
+    "Proton car",
+    "Proton cars"
+   ],
+   "article": "Proton Holdings",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7598,
+   "signals": {
+    "pageviews": 157204,
+    "zipf": 3.42,
+    "salience": 3
+   }
+  },
+  {
+   "id": "rivian",
+   "name": "Rivian",
+   "aliases": [
+    "Avera Motors",
+    "Rivian Automotive",
+    "Rivian SUV"
+   ],
+   "article": "Rivian",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7504,
+   "signals": {
+    "pageviews": 546644,
+    "zipf": 1.07,
+    "salience": 4
+   }
+  },
+  {
+   "id": "rover",
+   "name": "Rover",
+   "aliases": [],
+   "article": "Rover (marque)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7458,
+   "signals": {
+    "pageviews": 89450,
+    "zipf": 3.76,
+    "salience": 3
+   }
+  },
+  {
+   "id": "dacia",
+   "name": "Dacia",
+   "aliases": [
+    "Dacian Kingdom",
+    "Dacian State",
+    "Dacorum",
+    "Dakia",
+    "Gothia",
+    "Iron Age Romania",
+    "Iron Age in Romania",
+    "Kingdom of Dacia"
+   ],
+   "article": "Dacia",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7415,
+   "signals": {
+    "pageviews": 195596,
+    "zipf": 2.36,
+    "salience": 4
+   }
+  },
+  {
+   "id": "koenigsegg",
+   "name": "Koenigsegg",
+   "aliases": [
+    "Koeniggsegg",
+    "Koenigseg",
+    "Koenigsegg Automotive",
+    "Koenigsegg Automotive AB",
+    "Koeninsegg",
+    "Kooennoennioeggoennnisssoeuggooueeng"
+   ],
+   "article": "Koenigsegg",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7395,
+   "signals": {
+    "pageviews": 366408,
+    "zipf": 2.06,
+    "salience": 3
+   }
+  },
+  {
+   "id": "lada",
+   "name": "Lada",
+   "aliases": [
+    "Lada 21011",
+    "Lada.ru"
+   ],
+   "article": "Lada",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7357,
+   "signals": {
+    "pageviews": 252646,
+    "zipf": 2.36,
+    "salience": 3
+   }
+  },
+  {
+   "id": "scion",
+   "name": "Scion",
+   "aliases": [
+    "Pure price",
+    "Toyota Scion"
+   ],
+   "article": "Scion (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7311,
+   "signals": {
+    "pageviews": 151096,
+    "zipf": 3.03,
+    "salience": 3
+   }
+  },
+  {
+   "id": "alpine",
+   "name": "Alpine",
+   "aliases": [
+    "Alpine Automobiles",
+    "Alpine Cars",
+    "Alpine Renault",
+    "Automobiles Alpine",
+    "Renault Alpine",
+    "Société Automobiles Alpine",
+    "Société des Automobiles Alpine"
+   ],
+   "article": "Automobiles Alpine",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7288,
+   "signals": {
+    "pageviews": 178687,
+    "zipf": 3.62,
+    "salience": 2
+   }
+  },
+  {
+   "id": "imperial",
+   "name": "Imperial",
+   "aliases": [
+    "1966 Chrysler Imperial",
+    "Chrysler Imperial FS",
+    "Chrysler Imperial Frank Sinatra Edition",
+    "Chrysler Imperial LeBaron",
+    "Frank Sinatra Edition",
+    "Frank Sinatra Signature Edition",
+    "Imperial Crown",
+    "Imperial Crown Convertible",
+    "Imperial Custom",
+    "Imperial LeBaron",
+    "Imperial Southampton",
+    "Imperial automobile"
+   ],
+   "article": "Imperial (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7203,
+   "signals": {
+    "pageviews": 94425,
+    "zipf": 4.21,
+    "salience": 2
+   }
+  },
+  {
+   "id": "pagani",
+   "name": "Pagani",
+   "aliases": [
+    "Pagani Automobili",
+    "Pagani Automobili S.p.A.",
+    "Pagani ait Automobili S.p.A.",
+    "Pagani.com",
+    "Pagini cars"
+   ],
+   "article": "Pagani Automobili",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7173,
+   "signals": {
+    "pageviews": 235663,
+    "zipf": 2.16,
+    "salience": 3
+   }
+  },
+  {
+   "id": "hudson",
+   "name": "Hudson",
+   "aliases": [
+    "Hudson 6",
+    "Hudson Automobiles",
+    "Hudson Eight",
+    "Hudson Motor Car",
+    "Hudson Motor Car Co.",
+    "Hudson Motor Company",
+    "Hudson Motors",
+    "Hudson cars",
+    "Step-Down Hudson",
+    "The Hudson Motor Car Company"
+   ],
+   "article": "Hudson Motor Car Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.717,
+   "signals": {
+    "pageviews": 99886,
+    "zipf": 4.03,
+    "salience": 2
+   }
+  },
+  {
+   "id": "studebaker",
+   "name": "Studebaker",
+   "aliases": [
+    "Studebaker Brothers Manufacturing Company",
+    "Studebaker Corporation",
+    "Studebaker Motor Company",
+    "Studebaker Pacific Corporation",
+    "Studebaker cars"
+   ],
+   "article": "Studebaker",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7156,
+   "signals": {
+    "pageviews": 191871,
+    "zipf": 2.45,
+    "salience": 3
+   }
+  },
+  {
+   "id": "datsun",
+   "name": "Datsun",
+   "aliases": [
+    "Datso",
+    "Datson",
+    "Nissan Datsun"
+   ],
+   "article": "Datsun",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7155,
+   "signals": {
+    "pageviews": 198109,
+    "zipf": 2.38,
+    "salience": 3
+   }
+  },
+  {
+   "id": "austin",
+   "name": "Austin",
+   "aliases": [
+    "Austin Arrow",
+    "Austin Automobile",
+    "Austin FG",
+    "Austin Motor",
+    "Austin Motors",
+    "The Austin Company",
+    "The Austin Motor Company",
+    "The Austin Motor Company Limited"
+   ],
+   "article": "Austin Motor Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7142,
+   "signals": {
+    "pageviews": 84843,
+    "zipf": 4.36,
+    "salience": 2
+   }
+  },
+  {
+   "id": "lancia",
+   "name": "Lancia",
+   "aliases": [
+    "Lancia Automobiles",
+    "Lancia Automobiles S.p.A.",
+    "Lancia Esadelta"
+   ],
+   "article": "Lancia",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7108,
+   "signals": {
+    "pageviews": 213617,
+    "zipf": 2.18,
+    "salience": 3
+   }
+  },
+  {
+   "id": "delorean",
+   "name": "DeLorean",
+   "aliases": [
+    "De Lorean factory",
+    "Delorean motor company"
+   ],
+   "article": "DeLorean Motor Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7038,
+   "signals": {
+    "pageviews": 136671,
+    "zipf": 2.64,
+    "salience": 3
+   }
+  },
+  {
+   "id": "ktm",
+   "name": "KTM",
+   "aliases": [
+    "Ernst Kronreif",
+    "Hans Trunkenpolz",
+    "KTM Sportmotorcycle AG",
+    "KTM X-Bow",
+    "Kraftfahrzeug Trunkenpolz Mattighofen",
+    "Kraftfahrzeuge Trunkenpolz Mattighofen",
+    "Kronreif & Trunkenpolz Mattighofen",
+    "Ktm rc 125",
+    "Pierer Industrie AG"
+   ],
+   "article": "KTM",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7021,
+   "signals": {
+    "pageviews": 261952,
+    "zipf": 2.64,
+    "salience": 2
+   }
+  },
+  {
+   "id": "cupra",
+   "name": "Cupra",
+   "aliases": [
+    "SEAT Cupra"
+   ],
+   "article": "Cupra (marque)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.702,
+   "signals": {
+    "pageviews": 328515,
+    "zipf": 1.55,
+    "salience": 3
+   }
+  },
+  {
+   "id": "fisker",
+   "name": "Fisker",
+   "aliases": [
+    "Fisker Inc",
+    "Fisker eMotion"
+   ],
+   "article": "Fisker Inc.",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6969,
+   "signals": {
+    "pageviews": 176591,
+    "zipf": 2.17,
+    "salience": 3
+   }
+  },
+  {
+   "id": "triumph",
+   "name": "Triumph",
+   "aliases": [
+    "Triumph Motor Company",
+    "Triumph Vehicles Limited",
+    "Triumph automobiles"
+   ],
+   "article": "Triumph Motor Company",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6966,
+   "signals": {
+    "pageviews": 82059,
+    "zipf": 3.96,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ac",
+   "name": "AC",
+   "aliases": [
+    "AC Cars",
+    "AC Cars Ltd",
+    "Auto Carriers Ltd."
+   ],
+   "article": "AC Cars",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6936,
+   "signals": {
+    "pageviews": 69256,
+    "zipf": 4.25,
+    "salience": 2
+   }
+  },
+  {
+   "id": "morris",
+   "name": "Morris",
+   "aliases": [
+    "Morris Motor",
+    "Morris Motors",
+    "Morris Motors Limited",
+    "The Morris Motor Company"
+   ],
+   "article": "Morris Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6916,
+   "signals": {
+    "pageviews": 70148,
+    "zipf": 4.15,
+    "salience": 2
+   }
+  },
+  {
+   "id": "packard",
+   "name": "Packard",
+   "aliases": [
+    "List of Packard vehicles",
+    "Ohio Automobile Company",
+    "Packard & Weiss",
+    "Packard Electric Company",
+    "Packard Motor Car",
+    "Packard Motor Car Co.",
+    "Packard Motor Car Company",
+    "Packard Motor Company",
+    "Packard cars",
+    "Packard motors"
+   ],
+   "article": "Packard",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6913,
+   "signals": {
+    "pageviews": 152789,
+    "zipf": 3.28,
+    "salience": 2
+   }
+  },
+  {
+   "id": "cd",
+   "name": "CD",
+   "aliases": [
+    "CD disc",
+    "CD recording",
+    "CD-Panhard",
+    "CD-quality",
+    "CDs",
+    "Compact Disc",
+    "Compact Laser Disc",
+    "Compact Laser Disk",
+    "Compact audio disc",
+    "Compact discs",
+    "Compact disk",
+    "Compact disks",
+    "DTS Audio CD",
+    "DTS-CD",
+    "Digital record",
+    "MIDI disc",
+    "Music compact disc",
+    "SHM-CD",
+    "Un CD"
+   ],
+   "article": "Compact disc",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6892,
+   "signals": {
+    "pageviews": 376022,
+    "zipf": 4.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "daihatsu",
+   "name": "Daihatsu",
+   "aliases": [
+    "Daihatsu Motor",
+    "Daihatsu Motor Co",
+    "Daihatsu Motor Co., Ltd.",
+    "Daihatsu Motor Company",
+    "Daihatsu Motor Company, Limited",
+    "Daihatsu Motor Corporation",
+    "Hatsudoki Seizo",
+    "Kakukaku Shikajika"
+   ],
+   "article": "Daihatsu",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.685,
+   "signals": {
+    "pageviews": 176014,
+    "zipf": 1.99,
+    "salience": 3
+   }
+  },
+  {
+   "id": "karma",
+   "name": "Karma",
+   "aliases": [
+    "Karma Automotive"
+   ],
+   "article": "Karma Automotive",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6814,
+   "signals": {
+    "pageviews": 73034,
+    "zipf": 3.88,
+    "salience": 2
+   }
+  },
+  {
+   "id": "nio",
+   "name": "Nio",
+   "aliases": [
+    "Blue sky coming",
+    "Kris Tomasson",
+    "Lihong Qin",
+    "NIO EV",
+    "NIO Life",
+    "NIO cars",
+    "NIO electric vehicle",
+    "NextEV",
+    "Nio Battery Station",
+    "Nio Battery Swap station",
+    "Nio Battery Swapping station",
+    "Nio EF9",
+    "Nio ES3",
+    "Nio Inc.",
+    "Nio Nomi",
+    "Nio Nomi AI",
+    "Nio Phone",
+    "Nio Pilot",
+    "Nio Power",
+    "Nio Power Battery Station",
+    "Nio Power Battery Swap station",
+    "Nio Power Battery Swapping station",
+    "Nio Power battery swap",
+    "Nio Power battery swapping",
+    "Nio Power swap",
+    "Nio Power swapping",
+    "Nio Service",
+    "Nio battery swap",
+    "Nio battery swapping",
+    "Nio car",
+    "Nio electric car",
+    "Nio electric cars",
+    "Nio electric vehicles",
+    "Nomi AI",
+    "Shenji NX3091",
+    "Shenji NX9031"
+   ],
+   "article": "Nio Inc.",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.678,
+   "signals": {
+    "pageviews": 105907,
+    "zipf": 2.47,
+    "salience": 3
+   }
+  },
+  {
+   "id": "auto-union",
+   "name": "Auto Union",
+   "aliases": [
+    "Auto Union AG",
+    "Auto Union GmbH"
+   ],
+   "article": "Auto Union",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6777,
+   "signals": {
+    "pageviews": 95436,
+    "zipf": 4.38,
+    "salience": 2
+   }
+  },
+  {
+   "id": "daewoo",
+   "name": "Daewoo",
+   "aliases": [
+    "Daewoo Motor",
+    "Daewoo Motors",
+    "GM DAEWOO",
+    "GM Daewoo Motors"
+   ],
+   "article": "Daewoo Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6744,
+   "signals": {
+    "pageviews": 121933,
+    "zipf": 2.31,
+    "salience": 3
+   }
+  },
+  {
+   "id": "tucker",
+   "name": "Tucker",
+   "aliases": [
+    "Preston Tucker",
+    "Tucker Car Corporation",
+    "Tucker Carioca",
+    "Tucker Corporation",
+    "Tucker car company"
+   ],
+   "article": "Preston Tucker",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6735,
+   "signals": {
+    "pageviews": 71944,
+    "zipf": 3.79,
+    "salience": 2
+   }
+  },
+  {
+   "id": "eagle",
+   "name": "Eagle",
+   "aliases": [
+    "Eagle Automotive",
+    "Eagle Optima",
+    "Eagle automobile",
+    "Eagle automobiles"
+   ],
+   "article": "Eagle (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6726,
+   "signals": {
+    "pageviews": 56674,
+    "zipf": 4.13,
+    "salience": 2
+   }
+  },
+  {
+   "id": "vinfast",
+   "name": "VinFast",
+   "aliases": [
+    "VinFast Auto Ltd.",
+    "VinFast Klara"
+   ],
+   "article": "VinFast",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6696,
+   "signals": {
+    "pageviews": 415032,
+    "zipf": 0.0,
+    "salience": 3
+   }
+  },
+  {
+   "id": "bajaj",
+   "name": "Bajaj",
+   "aliases": [
+    "Bajaj Auto",
+    "Bajaj Auto Ltd.",
+    "Bajaj Automobiles",
+    "Bajaj Kristal",
+    "Bajaj scooter"
+   ],
+   "article": "Bajaj Auto",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6694,
+   "signals": {
+    "pageviews": 202419,
+    "zipf": 2.5,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ssangyong",
+   "name": "SsangYong",
+   "aliases": [
+    "Dong A Motors",
+    "Dong-A-Motor",
+    "KG Mobility",
+    "SsangYong Motor Corporation",
+    "SsangYong Motors",
+    "Ssangyong Motor",
+    "Ssangyong Motor Company",
+    "Ssanyong"
+   ],
+   "article": "KG Mobility",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6598,
+   "signals": {
+    "pageviews": 143175,
+    "zipf": 1.81,
+    "salience": 3
+   }
+  },
+  {
+   "id": "nash",
+   "name": "Nash",
+   "aliases": [
+    "Airflyte",
+    "Nash Motor Company",
+    "Nash Motors",
+    "Nash cars"
+   ],
+   "article": "Nash Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6594,
+   "signals": {
+    "pageviews": 61533,
+    "zipf": 3.84,
+    "salience": 2
+   }
+  },
+  {
+   "id": "geely",
+   "name": "Geely",
+   "aliases": [
+    "Geely Auto",
+    "Geely Automobile",
+    "Geely Automobile Holdings",
+    "Geely Automobile Holdings Limited"
+   ],
+   "article": "Geely Auto",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6592,
+   "signals": {
+    "pageviews": 128645,
+    "zipf": 1.97,
+    "salience": 3
+   }
+  },
+  {
+   "id": "lynk-and-co",
+   "name": "Lynk & Co",
+   "aliases": [
+    "Lynk & Co Automotive Technology"
+   ],
+   "article": "Lynk & Co",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.659,
+   "signals": {
+    "pageviews": 175622,
+    "zipf": 1.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "alpina",
+   "name": "Alpina",
+   "aliases": [
+    "Alpina Burkard Bovensiepen",
+    "BMW Alpina"
+   ],
+   "article": "Alpina",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6539,
+   "signals": {
+    "pageviews": 203451,
+    "zipf": 2.19,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ares",
+   "name": "Ares",
+   "aliases": [
+    "Ares Design",
+    "Greek god of war"
+   ],
+   "article": "Ares",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6466,
+   "signals": {
+    "pageviews": 667557,
+    "zipf": 3.09,
+    "salience": 1
+   }
+  },
+  {
+   "id": "edsel",
+   "name": "Edsel",
+   "aliases": [
+    "Edsel is a no-go",
+    "Ford Edsel"
+   ],
+   "article": "Edsel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6432,
+   "signals": {
+    "pageviews": 175674,
+    "zipf": 2.24,
+    "salience": 2
+   }
+  },
+  {
+   "id": "hindustan",
+   "name": "Hindustan",
+   "aliases": [
+    "Hindustan 10",
+    "Hindustan Landmaster",
+    "Hindustan Motors",
+    "Hindustan Motors Limited"
+   ],
+   "article": "Hindustan Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6371,
+   "signals": {
+    "pageviews": 89502,
+    "zipf": 2.95,
+    "salience": 2
+   }
+  },
+  {
+   "id": "geo",
+   "name": "Geo",
+   "aliases": [
+    "Chevrolet Geo"
+   ],
+   "article": "Geo (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6347,
+   "signals": {
+    "pageviews": 55153,
+    "zipf": 3.61,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dongfeng",
+   "name": "Dongfeng",
+   "aliases": [
+    "CHTC",
+    "Chufeng",
+    "Dong Feng Motor Philippines",
+    "DongFeng Bus",
+    "Dongfeng Motor",
+    "Dongfeng Motor Corporation",
+    "Dongfeng Motor Corporation Ltd.",
+    "Dongfeng Motors",
+    "Dongfeng eπ",
+    "Dōngfēng Qichē Gōngsī",
+    "EGT New Energy Automotive",
+    "Second Automobile Works",
+    "Skio"
+   ],
+   "article": "Dongfeng Motor Corporation",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6335,
+   "signals": {
+    "pageviews": 156711,
+    "zipf": 2.19,
+    "salience": 2
+   }
+  },
+  {
+   "id": "li-auto",
+   "name": "Li Auto",
+   "aliases": [
+    "Leading ideal",
+    "List of Li Auto vehicles"
+   ],
+   "article": "Li Auto",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6295,
+   "signals": {
+    "pageviews": 63718,
+    "zipf": 4.05,
+    "salience": 2
+   }
+  },
+  {
+   "id": "jac",
+   "name": "JAC",
+   "aliases": [
+    "Anhui Jianghuai",
+    "Anhui Jianghuai Automobile",
+    "Anhui Jianghuai Automobile Co Ltd",
+    "JAC Group",
+    "JAC J3 EV",
+    "JAC J3 iev",
+    "JAC Motors",
+    "JAC Refine",
+    "JAC Yiwei",
+    "JAC iEV",
+    "Jianghuai Automobile"
+   ],
+   "article": "JAC Group",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6283,
+   "signals": {
+    "pageviews": 90209,
+    "zipf": 2.73,
+    "salience": 2
+   }
+  },
+  {
+   "id": "changan",
+   "name": "Changan",
+   "aliases": [
+    "Chana Auto",
+    "Chang'an Auto",
+    "Chang'an Automobile Co Ltd",
+    "Chang'an Automobile Group",
+    "Chang'an Automobile Group Co., Ltd.",
+    "Changan Automobile",
+    "Changan Automobile Company",
+    "Changan Automobile Company Limited",
+    "Changan Motors",
+    "Changan Qiyuan E07",
+    "China Changan Automobile",
+    "China Changan Automobile Group",
+    "Chongqing Changan Automobile",
+    "Chongqing Changan Automobile CO Limited",
+    "Chongqing Changan Automobile Company Limited",
+    "Chongqing Changon Automobile Company Limited",
+    "Kaicene"
+   ],
+   "article": "Changan Automobile",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6277,
+   "signals": {
+    "pageviews": 221250,
+    "zipf": 1.68,
+    "salience": 2
+   }
+  },
+  {
+   "id": "de-tomaso",
+   "name": "De Tomaso",
+   "aliases": [
+    "De T",
+    "De Tomaso 801",
+    "De Tomaso Automobili",
+    "De Tomaso Automobili S.p.A.",
+    "De Tomaso Automobili SpA",
+    "De Tomaso F1",
+    "De Tomaso Modena",
+    "De Tomaso Modena S.p.A.",
+    "De Tomaso Modena SpA"
+   ],
+   "article": "De Tomaso",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.627,
+   "signals": {
+    "pageviews": 104806,
+    "zipf": 1.82,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ineos",
+   "name": "Ineos",
+   "aliases": [
+    "Ineos Automotive"
+   ],
+   "article": "Ineos Automotive",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6238,
+   "signals": {
+    "pageviews": 146112,
+    "zipf": 2.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "gaz",
+   "name": "GAZ",
+   "aliases": [
+    "\"GAZ Group",
+    "Avtostroi",
+    "Azgaz.ru",
+    "Gorkovsky Avtomobilny Zavod",
+    "Gorky Automobile Plant",
+    "OAO GAZ"
+   ],
+   "article": "GAZ",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.623,
+   "signals": {
+    "pageviews": 80938,
+    "zipf": 2.92,
+    "salience": 2
+   }
+  },
+  {
+   "id": "firefly",
+   "name": "Firefly",
+   "aliases": [
+    "Fireflies",
+    "Firefly flashing",
+    "Lampyrid",
+    "Lampyridae",
+    "Light bug",
+    "Lightning beetle",
+    "Lucciola",
+    "Luciernagas",
+    "Nio Firefly",
+    "Peenie wallie"
+   ],
+   "article": "Firefly",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6229,
+   "signals": {
+    "pageviews": 397556,
+    "zipf": 3.13,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hawk",
+   "name": "Hawk",
+   "aliases": [
+    "Hawk Cars",
+    "Hawks"
+   ],
+   "article": "Hawk",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6199,
+   "signals": {
+    "pageviews": 203299,
+    "zipf": 3.81,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kaiser",
+   "name": "Kaiser",
+   "aliases": [
+    "Kaiser Deluxe",
+    "Kaiser Motors"
+   ],
+   "article": "Kaiser Motors",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.619,
+   "signals": {
+    "pageviews": 50156,
+    "zipf": 3.54,
+    "salience": 2
+   }
+  },
+  {
+   "id": "mopar",
+   "name": "Mopar",
+   "aliases": [
+    "AutoPar",
+    "Chryco",
+    "Mopar Performance"
+   ],
+   "article": "Mopar",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6184,
+   "signals": {
+    "pageviews": 117109,
+    "zipf": 2.34,
+    "salience": 2
+   }
+  },
+  {
+   "id": "desoto",
+   "name": "DeSoto",
+   "aliases": [
+    "DeSoto DeSoto",
+    "DeSoto Division",
+    "DeSoto cars"
+   ],
+   "article": "DeSoto (automobile)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6175,
+   "signals": {
+    "pageviews": 87985,
+    "zipf": 2.6,
+    "salience": 2
+   }
+  },
+  {
+   "id": "messerschmitt",
+   "name": "Messerschmitt",
+   "aliases": [
+    "BF-19 Messerschmitt",
+    "Bayerische Flugzeug-Werke",
+    "Messerschmitt AG",
+    "Messerschmitt Aktiengesellschaft",
+    "Messerschmitt company"
+   ],
+   "article": "Messerschmitt",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6172,
+   "signals": {
+    "pageviews": 137840,
+    "zipf": 2.09,
+    "salience": 2
+   }
+  },
+  {
+   "id": "perodua",
+   "name": "Perodua",
+   "aliases": [
+    "The Perodua Logo"
+   ],
+   "article": "Perodua",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6166,
+   "signals": {
+    "pageviews": 102733,
+    "zipf": 1.42,
+    "salience": 3
+   }
+  },
+  {
+   "id": "xpeng",
+   "name": "Xpeng",
+   "aliases": [
+    "Guangzhou Xiaopeng Motors",
+    "Guangzhou Xiaopeng Motors Technology",
+    "XMotors",
+    "XMotors.ai",
+    "XPEV",
+    "XPeng Inc.",
+    "XPeng Turing",
+    "XPeng Voyager X2",
+    "Xiaopeng Automobiles",
+    "Xiaopeng Motors",
+    "Xiaopeng.com",
+    "Xpeng Motors"
+   ],
+   "article": "XPeng",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6166,
+   "signals": {
+    "pageviews": 197001,
+    "zipf": 0.0,
+    "salience": 3
+   }
+  },
+  {
+   "id": "trabant",
+   "name": "Trabant",
+   "aliases": [
+    "Traban",
+    "Trabant Kübelwagen",
+    "Trabant Sputnik",
+    "Trabbi",
+    "Trabi",
+    "Trebant"
+   ],
+   "article": "Trabant",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6159,
+   "signals": {
+    "pageviews": 174832,
+    "zipf": 1.79,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tvr",
+   "name": "TVR",
+   "aliases": [
+    "Grantura Engineering",
+    "Grantura Plastics",
+    "Layton Sports Cars",
+    "TVR Engineering",
+    "TVR T440R",
+    "Trevcar Motors"
+   ],
+   "article": "TVR",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6157,
+   "signals": {
+    "pageviews": 151742,
+    "zipf": 1.97,
+    "salience": 2
+   }
+  },
+  {
+   "id": "abarth",
+   "name": "Abarth",
+   "aliases": [
+    "Abarth & C.",
+    "Abarth & C. S.p.A.",
+    "Abarth & Co. SpA",
+    "Abarth 1300 OT",
+    "Abarth Simca GT",
+    "Arbath",
+    "Fiat 750 Abarth",
+    "Fiat Abarth",
+    "Fiat Abarth 750",
+    "Squadra Abarth"
+   ],
+   "article": "Abarth",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6151,
+   "signals": {
+    "pageviews": 132201,
+    "zipf": 2.1,
+    "salience": 2
+   }
+  },
+  {
+   "id": "talbot",
+   "name": "Talbot",
+   "aliases": [
+    "Talb",
+    "Talbot Car Company"
+   ],
+   "article": "Talbot",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6122,
+   "signals": {
+    "pageviews": 51134,
+    "zipf": 3.42,
+    "salience": 2
+   }
+  },
+  {
+   "id": "austin-healey",
+   "name": "Austin-Healey",
+   "aliases": [
+    "Austin-Healy",
+    "List of Austin-Healey models"
+   ],
+   "article": "Austin-Healey",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6037,
+   "signals": {
+    "pageviews": 66132,
+    "zipf": 2.89,
+    "salience": 2
+   }
+  },
+  {
+   "id": "willys",
+   "name": "Willys",
+   "aliases": [
+    "Bacha Khan University shooting",
+    "Bacha Khan University terrorist attack",
+    "Overland Whippet",
+    "Whippet",
+    "Willys 6-70",
+    "Willys Motor Company",
+    "Willys-Overland",
+    "Willys-Overland Motor Company",
+    "Willys-Overland Motors",
+    "Willys-Overland Motors, Inc.",
+    "Willys–Overland Company"
+   ],
+   "article": "Willys",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6034,
+   "signals": {
+    "pageviews": 97033,
+    "zipf": 2.24,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tatra",
+   "name": "Tatra",
+   "aliases": [
+    "American Truck Company",
+    "American Truck Corporation",
+    "Tatra 400",
+    "Tatra T 805",
+    "Tatra automobile",
+    "Tatra cars",
+    "Tatra trucks",
+    "Tatra, a. s."
+   ],
+   "article": "Tatra (company)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6026,
+   "signals": {
+    "pageviews": 129232,
+    "zipf": 1.93,
+    "salience": 2
+   }
+  },
+  {
+   "id": "rimac",
+   "name": "Rimac",
+   "aliases": [
+    "Rimac Auto",
+    "Rimac Automobile",
+    "Rimac Automobiles",
+    "Rimac Automobili",
+    "Rimac Automobilli"
+   ],
+   "article": "Rimac Automobili",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6017,
+   "signals": {
+    "pageviews": 158747,
+    "zipf": 1.62,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tank",
+   "name": "Tank",
+   "aliases": [
+    "GWM Tank",
+    "Great Wall Tank",
+    "Tank (marque)",
+    "Tank 600",
+    "Tank 800"
+   ],
+   "article": "Tank (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6013,
+   "signals": {
+    "pageviews": 27073,
+    "zipf": 4.57,
+    "salience": 2
+   }
+  },
+  {
+   "id": "haval",
+   "name": "Haval",
+   "aliases": [],
+   "article": "Haval (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5978,
+   "signals": {
+    "pageviews": 92615,
+    "zipf": 1.12,
+    "salience": 3
+   }
+  },
+  {
+   "id": "brabus",
+   "name": "Brabus",
+   "aliases": [
+    "BRABUS CV8",
+    "Brabus 800 iBusiness",
+    "Brabus GmbH",
+    "Constantin Buschmann",
+    "Mercedes Brabus"
+   ],
+   "article": "Brabus",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5905,
+   "signals": {
+    "pageviews": 143032,
+    "zipf": 1.62,
+    "salience": 2
+   }
+  },
+  {
+   "id": "holden-special-vehicles",
+   "name": "Holden Special Vehicles",
+   "aliases": [
+    "Chevrolet Special Vehicles",
+    "HD Holden Special",
+    "HSV",
+    "HSV Manta",
+    "HSV SV88",
+    "HSV SV91",
+    "HSV VT",
+    "HSV VZ",
+    "HSV XU6",
+    "SV88"
+   ],
+   "article": "Holden Special Vehicles",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5904,
+   "signals": {
+    "pageviews": 50920,
+    "zipf": 3.58,
+    "salience": 2
+   }
+  },
+  {
+   "id": "duesenberg",
+   "name": "Duesenberg",
+   "aliases": [
+    "Deusenberg",
+    "Duesenberg Automobile & Motors Company, Inc.",
+    "Duesenberg Motor Company",
+    "Duesenburg",
+    "Duesy",
+    "Dusenberg",
+    "Dusenburg"
+   ],
+   "article": "Duesenberg",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5897,
+   "signals": {
+    "pageviews": 127845,
+    "zipf": 1.76,
+    "salience": 2
+   }
+  },
+  {
+   "id": "zeekr",
+   "name": "Zeekr",
+   "aliases": [
+    "Jikrypton",
+    "ZEEKR Intelligent Technology Holding Limited",
+    "Zeekr Group",
+    "Zeekr Technology",
+    "Zeekr Technology Group"
+   ],
+   "article": "Zeekr",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5893,
+   "signals": {
+    "pageviews": 293503,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dr",
+   "name": "DR",
+   "aliases": [
+    "DR Automobiles",
+    "DR Motor",
+    "DR Motor Company",
+    "EVO",
+    "ICH-X",
+    "ICKX",
+    "Sportequipe"
+   ],
+   "article": "DR Automobiles",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5838,
+   "signals": {
+    "pageviews": 78318,
+    "zipf": 5.24,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ruf",
+   "name": "Ruf",
+   "aliases": [
+    "Alois Ruf",
+    "RUF Automobile",
+    "Ruf 3400K",
+    "Ruf Automobile GmbH"
+   ],
+   "article": "Ruf Automobile",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.582,
+   "signals": {
+    "pageviews": 68989,
+    "zipf": 2.44,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dallara",
+   "name": "Dallara",
+   "aliases": [
+    "Dallara Automobili"
+   ],
+   "article": "Dallara",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5786,
+   "signals": {
+    "pageviews": 102427,
+    "zipf": 1.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "pilgrim",
+   "name": "Pilgrim",
+   "aliases": [
+    "Islamic pilgrimage",
+    "Muslim pilgrimage",
+    "Pilgramage",
+    "Pilgramages",
+    "Pilgrim Cars",
+    "Pilgrimage",
+    "Pilgrimage in Islam",
+    "Pilgrimages",
+    "Pilgrims",
+    "Piligrim centre",
+    "Religious pilgrimage"
+   ],
+   "article": "Pilgrimage",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5615,
+   "signals": {
+    "pageviews": 146434,
+    "zipf": 3.38,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lagonda",
+   "name": "Lagonda",
+   "aliases": [],
+   "article": "Lagonda",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5591,
+   "signals": {
+    "pageviews": 87686,
+    "zipf": 1.64,
+    "salience": 2
+   }
+  },
+  {
+   "id": "saleen",
+   "name": "Saleen",
+   "aliases": [
+    "Saleen Automotive, Inc.",
+    "Saleen Autosport",
+    "Saleen Special Vehicles",
+    "Saleen, Incorporated"
+   ],
+   "article": "Saleen",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5576,
+   "signals": {
+    "pageviews": 72247,
+    "zipf": 1.84,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bristol",
+   "name": "Bristol",
+   "aliases": [
+    "Bristol Cars",
+    "Bristol Cars Limited"
+   ],
+   "article": "Bristol Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5573,
+   "signals": {
+    "pageviews": 70618,
+    "zipf": 4.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "steyr",
+   "name": "Steyr",
+   "aliases": [
+    "Josef und Franz Werndl and Company",
+    "Steyr-Daimler-Puch",
+    "Steyr-Daimler-Puch A.G.",
+    "Steyr-Daimler-Puch AG",
+    "Steyr-Daimler-Puch Fahrzeugtechnik AG",
+    "Steyr-Puch",
+    "Steyr-Werke AG"
+   ],
+   "article": "Steyr-Daimler-Puch",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5555,
+   "signals": {
+    "pageviews": 65755,
+    "zipf": 2.03,
+    "salience": 2
+   }
+  },
+  {
+   "id": "rambler",
+   "name": "Rambler",
+   "aliases": [
+    "AMC Rambler",
+    "American Rambler"
+   ],
+   "article": "Rambler (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5552,
+   "signals": {
+    "pageviews": 48489,
+    "zipf": 2.63,
+    "salience": 2
+   }
+  },
+  {
+   "id": "caterham",
+   "name": "Caterham",
+   "aliases": [
+    "Caterham Cars",
+    "Caterham Cars Ltd",
+    "Caterham Motorsport",
+    "Caterhams",
+    "Seven Cars Limited"
+   ],
+   "article": "Caterham Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5552,
+   "signals": {
+    "pageviews": 51430,
+    "zipf": 2.41,
+    "salience": 2
+   }
+  },
+  {
+   "id": "simca",
+   "name": "Simca",
+   "aliases": [
+    "Simca Fulgur"
+   ],
+   "article": "Simca",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5547,
+   "signals": {
+    "pageviews": 69659,
+    "zipf": 1.91,
+    "salience": 2
+   }
+  },
+  {
+   "id": "faraday-future",
+   "name": "Faraday Future",
+   "aliases": [
+    "FF 91",
+    "FFZERO1",
+    "Faraday FF 91",
+    "Faraday Future FF Zero 1",
+    "Faraday Future Inc.",
+    "Ff.com"
+   ],
+   "article": "Faraday Future",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5496,
+   "signals": {
+    "pageviews": 42738,
+    "zipf": 2.97,
+    "salience": 2
+   }
+  },
+  {
+   "id": "matra",
+   "name": "Matra",
+   "aliases": [
+    "Matra Defense",
+    "Matra-Cosworth",
+    "Matra-Simca",
+    "Matra-Simca MS670B/C",
+    "Matra-Sports"
+   ],
+   "article": "Matra",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.548,
+   "signals": {
+    "pageviews": 69683,
+    "zipf": 1.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "hongqi",
+   "name": "Hongqi",
+   "aliases": [
+    "FAW Hongqi",
+    "Red Flag"
+   ],
+   "article": "Hongqi (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5477,
+   "signals": {
+    "pageviews": 110102,
+    "zipf": 1.04,
+    "salience": 2
+   }
+  },
+  {
+   "id": "noble",
+   "name": "Noble",
+   "aliases": [
+    "Lee noble",
+    "Noble Automotive",
+    "Noble Automotive Ltd",
+    "Noble Cars",
+    "Noble Motorsport Ltd.",
+    "Noble Racing"
+   ],
+   "article": "Noble Automotive",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5476,
+   "signals": {
+    "pageviews": 58619,
+    "zipf": 4.24,
+    "salience": 1
+   }
+  },
+  {
+   "id": "apollo",
+   "name": "Apollo",
+   "aliases": [
+    "Apollo Automobil",
+    "Gumpert Sportwagenmanufaktur"
+   ],
+   "article": "Apollo Automobil",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.544,
+   "signals": {
+    "pageviews": 71994,
+    "zipf": 3.82,
+    "salience": 1
+   }
+  },
+  {
+   "id": "warwick",
+   "name": "Warwick",
+   "aliases": [
+    "Chase Meadow",
+    "Warwick Cars",
+    "Warwick Gates",
+    "Warwick, England",
+    "Warwick, UK",
+    "Warwick, United Kingdom",
+    "Warwick, Warwickshire",
+    "Wawrick",
+    "Wæringwic"
+   ],
+   "article": "Warwick",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5356,
+   "signals": {
+    "pageviews": 86724,
+    "zipf": 3.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jensen",
+   "name": "Jensen",
+   "aliases": [
+    "JNSN",
+    "Jen-Tug",
+    "Jensen Motors",
+    "Jensen car"
+   ],
+   "article": "Jensen Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5354,
+   "signals": {
+    "pageviews": 81924,
+    "zipf": 3.55,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bertone",
+   "name": "Bertone",
+   "aliases": [
+    "Bertone Design",
+    "Carrozzeria Bertone",
+    "Gruppo Bertone"
+   ],
+   "article": "Gruppo Bertone",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5353,
+   "signals": {
+    "pageviews": 55208,
+    "zipf": 1.91,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ariel",
+   "name": "Ariel",
+   "aliases": [
+    "Ariel Ltd.",
+    "Ariel Motor Company",
+    "Ariel Nomad",
+    "Solocrest",
+    "Solocrest Ltd"
+   ],
+   "article": "Ariel Motor Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5323,
+   "signals": {
+    "pageviews": 20528,
+    "zipf": 3.54,
+    "salience": 2
+   }
+  },
+  {
+   "id": "daimler",
+   "name": "Daimler",
+   "aliases": [
+    "Daimler Company",
+    "Daimler Motor Syndicate",
+    "The Daimler Company Limited",
+    "The Daimler Motor Company",
+    "The Daimler Motor Company Limited"
+   ],
+   "article": "Daimler Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5323,
+   "signals": {
+    "pageviews": 141942,
+    "zipf": 2.93,
+    "salience": 1
+   }
+  },
+  {
+   "id": "foton",
+   "name": "Foton",
+   "aliases": [
+    "Beijing Foton",
+    "Beiqi Foton",
+    "Beiqi Foton Motor",
+    "Beiqi Futian",
+    "Chonji",
+    "Foton Mobility",
+    "Foton Motor",
+    "Foton Xiangling Q",
+    "Foton Xiangling V5",
+    "Samhung Joint Venture Company"
+   ],
+   "article": "Foton Motor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5317,
+   "signals": {
+    "pageviews": 63140,
+    "zipf": 1.69,
+    "salience": 2
+   }
+  },
+  {
+   "id": "spyker",
+   "name": "Spyker",
+   "aliases": [
+    "Saab Spyker Automobile",
+    "Saab Spyker Automobiles",
+    "Saab Spyker Cars",
+    "Saab spyker",
+    "Spyker Cars",
+    "Spyker Cars N.V.",
+    "Spyker N.V.",
+    "Spyker P2P B.V.",
+    "Spyker Phoenix B.V.",
+    "Spyker saab",
+    "Swedish Automobile",
+    "Swedish Automobile N.V."
+   ],
+   "article": "Spyker Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5293,
+   "signals": {
+    "pageviews": 64257,
+    "zipf": 1.61,
+    "salience": 2
+   }
+  },
+  {
+   "id": "panhard",
+   "name": "Panhard",
+   "aliases": [
+    "Panhard General Defense",
+    "Panhard and Auverland",
+    "Panhard et Levassor",
+    "Panhard-Levassor"
+   ],
+   "article": "Panhard",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5216,
+   "signals": {
+    "pageviews": 55293,
+    "zipf": 1.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "force-motors",
+   "name": "Force Motors",
+   "aliases": [
+    "Bajaj Tempo",
+    "Bajaj Tempo Motors",
+    "Force",
+    "Force Motors Ltd",
+    "Force One"
+   ],
+   "article": "Force Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5215,
+   "signals": {
+    "pageviews": 107330,
+    "zipf": 4.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "im-motors",
+   "name": "IM Motors",
+   "aliases": [
+    "Zhiji Auto",
+    "Zhiji Motor",
+    "Zhiji Motors"
+   ],
+   "article": "IM Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.519,
+   "signals": {
+    "pageviews": 51159,
+    "zipf": 3.94,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brilliance",
+   "name": "Brilliance",
+   "aliases": [
+    "Brilliance Auto",
+    "Brilliance Auto Group",
+    "Brilliance Automotive",
+    "Brilliance China",
+    "Brilliance China Auto",
+    "Brilliance China Automotive",
+    "Brilliance China Automotive Holdings",
+    "Brilliance China Automotive Holdings Limited",
+    "Brilliance China Automotive Holdings, Ltd.",
+    "Brilliance Shineray",
+    "Granse",
+    "Huachen",
+    "Huachen Automotive Group",
+    "Huáchén Zhōngguó Qìchē Kònggǔ Yǒuxiàngōngsī"
+   ],
+   "article": "Brilliance Auto Group",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5181,
+   "signals": {
+    "pageviews": 20250,
+    "zipf": 3.39,
+    "salience": 2
+   }
+  },
+  {
+   "id": "daf",
+   "name": "Daf",
+   "aliases": [
+    "Dafli",
+    "Daiareh",
+    "Daiereh",
+    "Daireh",
+    "Dajre",
+    "Dap",
+    "Dap drum",
+    "Dap drums",
+    "Dayareh",
+    "Dayereh",
+    "Dayra",
+    "Doira",
+    "Doyra",
+    "Ghaval",
+    "Riq",
+    "Riqq",
+    "Riqs"
+   ],
+   "article": "Daf",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5151,
+   "signals": {
+    "pageviews": 32372,
+    "zipf": 2.46,
+    "salience": 2
+   }
+  },
+  {
+   "id": "deepal",
+   "name": "Deepal",
+   "aliases": [
+    "Deepal Automobile Technology",
+    "Shenlan"
+   ],
+   "article": "Deepal",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5087,
+   "signals": {
+    "pageviews": 90806,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dkw",
+   "name": "DKW",
+   "aliases": [
+    "Dampf-Kraft-Wagen"
+   ],
+   "article": "DKW",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5077,
+   "signals": {
+    "pageviews": 55700,
+    "zipf": 1.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "faw",
+   "name": "FAW",
+   "aliases": [
+    "China FAW Corporation",
+    "China FAW Group",
+    "China FAW Group Corp.",
+    "China FAW Group Corp., Ltd.",
+    "China FAW Group Corporation",
+    "China FAW Group Corporation Limited",
+    "FAW Automotive",
+    "FAW Corp",
+    "FAW Corporation",
+    "FAW Group",
+    "FAW Group Corp",
+    "FAW Group Corporation",
+    "Faw F1",
+    "First Auto Works",
+    "First Automobile Works",
+    "First Automotive Group Corporation",
+    "First Automotive Works",
+    "First Automotive Works Group",
+    "Junpai",
+    "SFTM Changchun Fengyue Co. Ltd."
+   ],
+   "article": "FAW Group",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4967,
+   "signals": {
+    "pageviews": 136329,
+    "zipf": 2.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "standard",
+   "name": "Standard",
+   "aliases": [
+    "Flying Standard",
+    "Standard Motor Co",
+    "Standard Motor Company",
+    "Standard Motors",
+    "Standard Triumph",
+    "Standard Wheel Company"
+   ],
+   "article": "Standard Motor Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4923,
+   "signals": {
+    "pageviews": 30459,
+    "zipf": 5.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "vector",
+   "name": "Vector",
+   "aliases": [
+    "American Aeromotive",
+    "Avtech Motors",
+    "Vector Aeromotive",
+    "Vector Aeromotive Corporation",
+    "Vector Motors",
+    "Vector Motors Corporation",
+    "Vector SRV8",
+    "Vector Supercars",
+    "Vehicle Design Force"
+   ],
+   "article": "Vector Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4892,
+   "signals": {
+    "pageviews": 36540,
+    "zipf": 3.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "zastava",
+   "name": "Zastava",
+   "aliases": [
+    "Yugo",
+    "Zastava Auto",
+    "Zastava Automobiles",
+    "Zastava Automobili",
+    "Zastava vehicles"
+   ],
+   "article": "Zastava Automobiles",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4878,
+   "signals": {
+    "pageviews": 49004,
+    "zipf": 1.39,
+    "salience": 2
+   }
+  },
+  {
+   "id": "wuling",
+   "name": "Wuling",
+   "aliases": [
+    "Liuzhou Wuling Motors",
+    "Wuling Automobile",
+    "Wuling Motors"
+   ],
+   "article": "Wuling Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4869,
+   "signals": {
+    "pageviews": 49990,
+    "zipf": 1.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "premier",
+   "name": "Premier",
+   "aliases": [
+    "Premier Automobiles",
+    "Premier Ltd.",
+    "Premier Sigma",
+    "The Premier Automobiles Limited"
+   ],
+   "article": "Premier Automobiles Limited",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4858,
+   "signals": {
+    "pageviews": 29947,
+    "zipf": 4.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jaecoo",
+   "name": "Jaecoo",
+   "aliases": [
+    "Jaecooglobal.com",
+    "Jeland"
+   ],
+   "article": "Jaecoo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4848,
+   "signals": {
+    "pageviews": 450991,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "reo",
+   "name": "REO",
+   "aliases": [
+    "Reo Motor Car",
+    "Reo Motor Car Company",
+    "Reo Motor Company"
+   ],
+   "article": "REO Motor Car Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4829,
+   "signals": {
+    "pageviews": 81070,
+    "zipf": 2.69,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hino",
+   "name": "Hino",
+   "aliases": [
+    "Gasuden",
+    "Hino Jidōsha",
+    "Hino Motors",
+    "Hino Motors Limited",
+    "Hino Motors, Ltd.",
+    "Hino Trucks",
+    "Tokio Gasu Denki",
+    "Tokio Gasu Denky",
+    "Tokyo Gasu Denki",
+    "Tokyo Gasu Denky",
+    "Toyota Hino"
+   ],
+   "article": "Hino Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4815,
+   "signals": {
+    "pageviews": 118856,
+    "zipf": 2.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cord",
+   "name": "Cord",
+   "aliases": [
+    "Cord Automobile",
+    "Cord L-29"
+   ],
+   "article": "Cord (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4793,
+   "signals": {
+    "pageviews": 33323,
+    "zipf": 3.98,
+    "salience": 1
+   }
+  },
+  {
+   "id": "singer",
+   "name": "Singer",
+   "aliases": [
+    "Singer Cars",
+    "Singer Cycle Company",
+    "Singer Motors",
+    "Singer tricar"
+   ],
+   "article": "Singer Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.474,
+   "signals": {
+    "pageviews": 27659,
+    "zipf": 4.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hispano-suiza",
+   "name": "Hispano-Suiza",
+   "aliases": [
+    "Hispano-Suiza Alphonso",
+    "Hispano-Suiza Automobile Company",
+    "Hispano-Suiza H8a",
+    "Hispano-Suiza Model 1",
+    "Hispano-Suiza V10 Supercharged",
+    "Spanish-Swiss"
+   ],
+   "article": "Hispano-Suiza",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4671,
+   "signals": {
+    "pageviews": 112448,
+    "zipf": 1.53,
+    "salience": 1
+   }
+  },
+  {
+   "id": "prince",
+   "name": "Prince",
+   "aliases": [
+    "Fuji Precision Industries",
+    "Fuji Precision Technology",
+    "Nissan Tama",
+    "Prince Motor",
+    "Prince Motor Company",
+    "Prince Motors",
+    "Tama Electric Car Company"
+   ],
+   "article": "Prince Motor Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4633,
+   "signals": {
+    "pageviews": 24774,
+    "zipf": 4.72,
+    "salience": 1
+   }
+  },
+  {
+   "id": "wey",
+   "name": "Wey",
+   "aliases": [],
+   "article": "Wey (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4628,
+   "signals": {
+    "pageviews": 19935,
+    "zipf": 2.45,
+    "salience": 2
+   }
+  },
+  {
+   "id": "moskvitch",
+   "name": "Moskvitch",
+   "aliases": [
+    "Moskvich",
+    "Moskwitch",
+    "Mosquitch",
+    "OAO Moskvitch"
+   ],
+   "article": "Moskvitch",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4618,
+   "signals": {
+    "pageviews": 54019,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bitter",
+   "name": "Bitter",
+   "aliases": [
+    "Bitter Automotive",
+    "Bitter CD",
+    "Bitter Cars",
+    "Bitter SC",
+    "Erich Bitter Automobil GmbH"
+   ],
+   "article": "Bitter Automotive",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4616,
+   "signals": {
+    "pageviews": 27189,
+    "zipf": 4.21,
+    "salience": 1
+   }
+  },
+  {
+   "id": "radical",
+   "name": "Radical",
+   "aliases": [
+    "Radical 1100 Clubsport",
+    "Radical Cup North America",
+    "Radical Motorsport",
+    "Radical SR1",
+    "Radical SR10",
+    "Radical Sportscars"
+   ],
+   "article": "Radical Sportscars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4597,
+   "signals": {
+    "pageviews": 25581,
+    "zipf": 4.33,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lasalle",
+   "name": "LaSalle",
+   "aliases": [],
+   "article": "LaSalle (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4574,
+   "signals": {
+    "pageviews": 52958,
+    "zipf": 2.94,
+    "salience": 1
+   }
+  },
+  {
+   "id": "seres",
+   "name": "Seres",
+   "aliases": [
+    "Seres Automobile",
+    "Seres Group",
+    "Sokon"
+   ],
+   "article": "Seres Group",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4561,
+   "signals": {
+    "pageviews": 28553,
+    "zipf": 1.73,
+    "salience": 2
+   }
+  },
+  {
+   "id": "reliant",
+   "name": "Reliant",
+   "aliases": [
+    "Reliant Kitten Register",
+    "Reliant Motor Company",
+    "Reliant Motors"
+   ],
+   "article": "Reliant Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4546,
+   "signals": {
+    "pageviews": 41473,
+    "zipf": 3.41,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rimac-nevera",
+   "name": "Rimac Nevera",
+   "aliases": [
+    "Rimac C Two",
+    "Rimac Concept 2",
+    "Rimac Concept Two"
+   ],
+   "article": "Rimac Nevera",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4542,
+   "signals": {
+    "pageviews": 125396,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hennessey",
+   "name": "Hennessey",
+   "aliases": [
+    "Hennessey Motorsports",
+    "Hennessey Performance",
+    "Hennessey Performance Engineering",
+    "Hennessey Special Vehicles"
+   ],
+   "article": "Hennessey Performance Engineering",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4541,
+   "signals": {
+    "pageviews": 57543,
+    "zipf": 2.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "leapmotor",
+   "name": "Leapmotor",
+   "aliases": [
+    "List of Leapmotor vehicles"
+   ],
+   "article": "Leapmotor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4531,
+   "signals": {
+    "pageviews": 253860,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "avatr",
+   "name": "Avatr",
+   "aliases": [
+    "Avatr Technology"
+   ],
+   "article": "Avatr Technology",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4526,
+   "signals": {
+    "pageviews": 50339,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "aion",
+   "name": "Aion",
+   "aliases": [
+    "GAC Aion",
+    "GAC New Energy"
+   ],
+   "article": "GAC Aion",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4521,
+   "signals": {
+    "pageviews": 87599,
+    "zipf": 2.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "denza",
+   "name": "Denza",
+   "aliases": [
+    "Tengshi"
+   ],
+   "article": "Denza",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4515,
+   "signals": {
+    "pageviews": 156417,
+    "zipf": 1.27,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mg-rover",
+   "name": "MG Rover",
+   "aliases": [
+    "MG Rover Group Limited",
+    "MG Rover Group Ltd",
+    "MG Rover report",
+    "The MG Rover Group"
+   ],
+   "article": "MG Rover Group",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4513,
+   "signals": {
+    "pageviews": 59731,
+    "zipf": 3.6,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gac",
+   "name": "GAC",
+   "aliases": [
+    "GAC Motor"
+   ],
+   "article": "GAC Motor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4508,
+   "signals": {
+    "pageviews": 17435,
+    "zipf": 2.46,
+    "salience": 2
+   }
+  },
+  {
+   "id": "exeed",
+   "name": "Exeed",
+   "aliases": [
+    "Exlantix"
+   ],
+   "article": "Exeed",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4485,
+   "signals": {
+    "pageviews": 49832,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "pininfarina",
+   "name": "Pininfarina",
+   "aliases": [
+    "Automobili Pininfarina",
+    "Automobili Pininfarina GmbH"
+   ],
+   "article": "Automobili Pininfarina",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4455,
+   "signals": {
+    "pageviews": 26517,
+    "zipf": 1.79,
+    "salience": 2
+   }
+  },
+  {
+   "id": "lifan",
+   "name": "Lifan",
+   "aliases": [
+    "Chongqing Lifan Motor",
+    "LIFAN Group",
+    "Lifan Industry Company",
+    "Lifan Motors"
+   ],
+   "article": "Lifan Group",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4411,
+   "signals": {
+    "pageviews": 27949,
+    "zipf": 1.55,
+    "salience": 2
+   }
+  },
+  {
+   "id": "omoda",
+   "name": "Omoda",
+   "aliases": [
+    "Ecoda"
+   ],
+   "article": "Omoda",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4409,
+   "signals": {
+    "pageviews": 226605,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "magna-steyr",
+   "name": "Magna Steyr",
+   "aliases": [
+    "Magna Steyr MILA",
+    "Magna Steyr MILA Alpin"
+   ],
+   "article": "Magna Steyr",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4408,
+   "signals": {
+    "pageviews": 77954,
+    "zipf": 2.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gordon-murray-automotive",
+   "name": "Gordon Murray Automotive",
+   "aliases": [
+    "GMA"
+   ],
+   "article": "Gordon Murray Automotive",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4405,
+   "signals": {
+    "pageviews": 52565,
+    "zipf": 3.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "voyah",
+   "name": "Voyah",
+   "aliases": [],
+   "article": "Voyah",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4404,
+   "signals": {
+    "pageviews": 47999,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "riley",
+   "name": "Riley",
+   "aliases": [
+    "Riley Motor",
+    "Riley Motors Limited"
+   ],
+   "article": "Riley Motor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4383,
+   "signals": {
+    "pageviews": 25469,
+    "zipf": 3.9,
+    "salience": 1
+   }
+  },
+  {
+   "id": "togg",
+   "name": "Togg",
+   "aliases": [],
+   "article": "Togg",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4373,
+   "signals": {
+    "pageviews": 44482,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "italdesign",
+   "name": "Italdesign",
+   "aliases": [
+    "Fabrizio Giugiaro",
+    "Italdesign Automobili Speciali",
+    "Italdesign Giugiaro",
+    "Italdesign-Giugiaro S.p.A."
+   ],
+   "article": "Italdesign Giugiaro",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4363,
+   "signals": {
+    "pageviews": 43370,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "jetour",
+   "name": "Jetour",
+   "aliases": [],
+   "article": "Jetour",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4348,
+   "signals": {
+    "pageviews": 213087,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "marcos",
+   "name": "Marcos",
+   "aliases": [
+    "Marcos Engineering",
+    "Marcos cars"
+   ],
+   "article": "Marcos Engineering",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4335,
+   "signals": {
+    "pageviews": 30783,
+    "zipf": 3.47,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ora",
+   "name": "Ora",
+   "aliases": [
+    "GWM ORA",
+    "Great Wall Ora",
+    "Ora Cat"
+   ],
+   "article": "Ora (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4328,
+   "signals": {
+    "pageviews": 37021,
+    "zipf": 3.12,
+    "salience": 1
+   }
+  },
+  {
+   "id": "borgward",
+   "name": "Borgward",
+   "aliases": [],
+   "article": "Borgward",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4281,
+   "signals": {
+    "pageviews": 38466,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "canoo",
+   "name": "Canoo",
+   "aliases": [
+    "Canoo Inc.",
+    "Evelozcity",
+    "Hennessy Capital Acquisition",
+    "List of Canoo vehicles"
+   ],
+   "article": "Canoo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4189,
+   "signals": {
+    "pageviews": 36444,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bestune",
+   "name": "Bestune",
+   "aliases": [
+    "Besturn",
+    "FAW Benteng",
+    "FAW Besturn",
+    "Hongqi Benteng",
+    "Hongqi Besturn"
+   ],
+   "article": "Bestune",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4179,
+   "signals": {
+    "pageviews": 35488,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "sunbeam",
+   "name": "Sunbeam",
+   "aliases": [
+    "Sunbeam 20.9",
+    "Sunbeam Car Company",
+    "Sunbeam F4",
+    "Sunbeam MF2B",
+    "Sunbeam MS2",
+    "Sunbeam Motor Car Company",
+    "Sunbeam Sirdar",
+    "Sunbeam Tonneau",
+    "Sunbeam-Coatalen aero-engines"
+   ],
+   "article": "Sunbeam Motor Car Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4168,
+   "signals": {
+    "pageviews": 42762,
+    "zipf": 2.65,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rodin",
+   "name": "Rodin",
+   "aliases": [
+    "Rodin Cars",
+    "Rodin Motorsport"
+   ],
+   "article": "Rodin Motorsport",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4158,
+   "signals": {
+    "pageviews": 41539,
+    "zipf": 2.66,
+    "salience": 1
+   }
+  },
+  {
+   "id": "iso",
+   "name": "Iso",
+   "aliases": [
+    "Iso Automobile",
+    "Iso Automoveicoli S.p.A.",
+    "Iso Autoveicoli S.p.A.",
+    "Iso Rivolta"
+   ],
+   "article": "Iso (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4128,
+   "signals": {
+    "pageviews": 19113,
+    "zipf": 3.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "franklin",
+   "name": "Franklin",
+   "aliases": [
+    "Franklin Automobile Company",
+    "Franklin automobile",
+    "Franklin automobiles"
+   ],
+   "article": "Franklin (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4096,
+   "signals": {
+    "pageviews": 14714,
+    "zipf": 4.21,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hillman",
+   "name": "Hillman",
+   "aliases": [
+    "Hillman Motor Car Company"
+   ],
+   "article": "Hillman",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4072,
+   "signals": {
+    "pageviews": 34358,
+    "zipf": 2.76,
+    "salience": 1
+   }
+  },
+  {
+   "id": "maxus",
+   "name": "Maxus",
+   "aliases": [
+    "Maxus e Deliver 3",
+    "SAIC Maxus"
+   ],
+   "article": "Maxus",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4071,
+   "signals": {
+    "pageviews": 81545,
+    "zipf": 1.33,
+    "salience": 1
+   }
+  },
+  {
+   "id": "nsu",
+   "name": "NSU",
+   "aliases": [
+    "NSU AG",
+    "NSU Motorenwerke",
+    "NSU Motorenwerke AG",
+    "NSU Sportmax",
+    "NSU-Pipe 34 PS"
+   ],
+   "article": "NSU Motorenwerke",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4071,
+   "signals": {
+    "pageviews": 49202,
+    "zipf": 2.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kandi",
+   "name": "Kandi",
+   "aliases": [
+    "Kandi EV",
+    "Kandi EV CarShare",
+    "Kandi Technologies"
+   ],
+   "article": "Kandi Technologies",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4056,
+   "signals": {
+    "pageviews": 6643,
+    "zipf": 2.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "pierce-arrow",
+   "name": "Pierce-Arrow",
+   "aliases": [
+    "Pierce-Arrow Motor Car Company",
+    "Pierce-Arrow Motor Company"
+   ],
+   "article": "Pierce-Arrow Motor Car Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3987,
+   "signals": {
+    "pageviews": 36887,
+    "zipf": 3.72,
+    "salience": 1
+   }
+  },
+  {
+   "id": "humber",
+   "name": "Humber",
+   "aliases": [
+    "Humber Car Company",
+    "Humber Limited",
+    "Humberette"
+   ],
+   "article": "Humber Limited",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3962,
+   "signals": {
+    "pageviews": 30654,
+    "zipf": 2.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ssc",
+   "name": "SSC",
+   "aliases": [
+    "Jerod Shelby",
+    "SSC North America",
+    "Shelby Super Cars"
+   ],
+   "article": "SSC North America",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3945,
+   "signals": {
+    "pageviews": 28042,
+    "zipf": 3.02,
+    "salience": 1
+   }
+  },
+  {
+   "id": "nashorn",
+   "name": "Nashorn",
+   "aliases": [
+    "Hornisse"
+   ],
+   "article": "Nashorn",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3915,
+   "signals": {
+    "pageviews": 81165,
+    "zipf": 1.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "w-motors",
+   "name": "W Motors",
+   "aliases": [],
+   "article": "W Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.39,
+   "signals": {
+    "pageviews": 32045,
+    "zipf": 4.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "puch",
+   "name": "Puch",
+   "aliases": [
+    "Einser-Werk",
+    "First Styrian Bicycle Factory AG",
+    "Johann Puch & Comp.",
+    "Kromag"
+   ],
+   "article": "Puch",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3886,
+   "signals": {
+    "pageviews": 50075,
+    "zipf": 1.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "berkeley",
+   "name": "Berkeley",
+   "aliases": [
+    "Berkeley Cars",
+    "Berkeley SE492",
+    "Berkeley T60"
+   ],
+   "article": "Berkeley Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3885,
+   "signals": {
+    "pageviews": 13378,
+    "zipf": 3.93,
+    "salience": 1
+   }
+  },
+  {
+   "id": "alvis",
+   "name": "Alvis",
+   "aliases": [
+    "Alvis Car and Engineering Company",
+    "Alvis Car and Engineering Company Ltd",
+    "Alvis automobile",
+    "Alvis cars"
+   ],
+   "article": "Alvis Car and Engineering Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3876,
+   "signals": {
+    "pageviews": 42975,
+    "zipf": 2.11,
+    "salience": 1
+   }
+  },
+  {
+   "id": "autobianchi",
+   "name": "Autobianchi",
+   "aliases": [
+    "Autobianci"
+   ],
+   "article": "Autobianchi",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3863,
+   "signals": {
+    "pageviews": 27482,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "wolseley",
+   "name": "Wolseley",
+   "aliases": [
+    "The Wolseley Tool and Motor Car Company",
+    "Wolseley Motor Company",
+    "Wolseley Motors",
+    "Wolseley cars",
+    "Wolseley-Siddeley",
+    "Wolsit"
+   ],
+   "article": "Wolseley Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3854,
+   "signals": {
+    "pageviews": 37268,
+    "zipf": 2.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "luxgen",
+   "name": "Luxgen",
+   "aliases": [
+    "Luxgen MBU",
+    "Luxgen S3 EV+"
+   ],
+   "article": "Luxgen",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3853,
+   "signals": {
+    "pageviews": 27244,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "aiways",
+   "name": "Aiways",
+   "aliases": [],
+   "article": "Aiways",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3841,
+   "signals": {
+    "pageviews": 18909,
+    "zipf": 1.06,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bac",
+   "name": "BAC",
+   "aliases": [
+    "BAC Mono",
+    "Briggs Automotive Company"
+   ],
+   "article": "Briggs Automotive Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3819,
+   "signals": {
+    "pageviews": 24328,
+    "zipf": 3.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "wartburg",
+   "name": "Wartburg",
+   "aliases": [],
+   "article": "Wartburg (marque)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3792,
+   "signals": {
+    "pageviews": 45078,
+    "zipf": 1.96,
+    "salience": 1
+   }
+  },
+  {
+   "id": "radar",
+   "name": "Radar",
+   "aliases": [
+    "Geely Radar",
+    "Radar Auto",
+    "Ridarra",
+    "Riddara"
+   ],
+   "article": "Geely Radar",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3777,
+   "signals": {
+    "pageviews": 8851,
+    "zipf": 4.2,
+    "salience": 1
+   }
+  },
+  {
+   "id": "backdraft",
+   "name": "Backdraft",
+   "aliases": [
+    "Backdraft Racing",
+    "Backdrafting",
+    "Backdraught",
+    "Smoke explosion"
+   ],
+   "article": "Backdraft",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3777,
+   "signals": {
+    "pageviews": 49196,
+    "zipf": 1.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "heinkel",
+   "name": "Heinkel",
+   "aliases": [
+    "Heinkel Flugzeugwerke",
+    "Heinkels"
+   ],
+   "article": "Heinkel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3769,
+   "signals": {
+    "pageviews": 49784,
+    "zipf": 1.76,
+    "salience": 1
+   }
+  },
+  {
+   "id": "haima",
+   "name": "Haima",
+   "aliases": [
+    "Haima Automobile"
+   ],
+   "article": "Haima Automobile",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3756,
+   "signals": {
+    "pageviews": 15933,
+    "zipf": 1.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "panther",
+   "name": "Panther",
+   "aliases": [
+    "Panther Westwinds",
+    "Panther Westwinds Company"
+   ],
+   "article": "Panther Westwinds",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3719,
+   "signals": {
+    "pageviews": 14107,
+    "zipf": 3.65,
+    "salience": 1
+   }
+  },
+  {
+   "id": "uaz",
+   "name": "UAZ",
+   "aliases": [
+    "Ulyanovsk Automobile Plant"
+   ],
+   "article": "UAZ",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3693,
+   "signals": {
+    "pageviews": 52146,
+    "zipf": 1.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jinbei",
+   "name": "Jinbei",
+   "aliases": [
+    "Hippari",
+    "Jinbei Motors"
+   ],
+   "article": "Jinbei",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3689,
+   "signals": {
+    "pageviews": 48668,
+    "zipf": 1.69,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ginetta",
+   "name": "Ginetta",
+   "aliases": [
+    "Ginetta Akula",
+    "Ginetta Cars",
+    "Ginetta G12",
+    "Ginetta G2",
+    "Ginetta G20",
+    "Ginetta G50 HC"
+   ],
+   "article": "Ginetta Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3688,
+   "signals": {
+    "pageviews": 46302,
+    "zipf": 1.76,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rezvani",
+   "name": "Rezvani",
+   "aliases": [
+    "RAD",
+    "Rezvani Automotive Designs",
+    "Rezvani Hercules",
+    "Rezvani Motors"
+   ],
+   "article": "Rezvani Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.364,
+   "signals": {
+    "pageviews": 53002,
+    "zipf": 1.21,
+    "salience": 1
+   }
+  },
+  {
+   "id": "auburn",
+   "name": "Auburn",
+   "aliases": [
+    "American Central Manufacturing",
+    "Auburn automobile",
+    "The Auburn Automobile Company"
+   ],
+   "article": "Auburn Automobile Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3631,
+   "signals": {
+    "pageviews": 10962,
+    "zipf": 3.72,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lanchester",
+   "name": "Lanchester",
+   "aliases": [
+    "Lanchester Motor Company",
+    "The Lanchester Motor Company Limited"
+   ],
+   "article": "Lanchester Motor Company",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3615,
+   "signals": {
+    "pageviews": 32174,
+    "zipf": 2.09,
+    "salience": 1
+   }
+  },
+  {
+   "id": "yangwang",
+   "name": "Yangwang",
+   "aliases": [
+    "Yangwang Auto"
+   ],
+   "article": "Yangwang",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3613,
+   "signals": {
+    "pageviews": 79540,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "geometry",
+   "name": "Geometry",
+   "aliases": [
+    "Geely Geometry",
+    "Geome"
+   ],
+   "article": "Geely Geometry",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3594,
+   "signals": {
+    "pageviews": 8243,
+    "zipf": 3.88,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lloyd",
+   "name": "Lloyd",
+   "aliases": [
+    "Hansa-Lloyd Werke AG",
+    "Lloyd Motoren Werke",
+    "Lloyd Motoren Werke GmbH",
+    "Lloyd-Hartnett",
+    "Norddeutsche Automobil und Motoren GmbH",
+    "North German Automobile and Engine"
+   ],
+   "article": "Lloyd (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3593,
+   "signals": {
+    "pageviews": 6704,
+    "zipf": 4.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cmc",
+   "name": "CMC",
+   "aliases": [
+    "CMC Motor",
+    "China Motor Corporation"
+   ],
+   "article": "China Motor Corporation",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3589,
+   "signals": {
+    "pageviews": 18241,
+    "zipf": 3.09,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jetta",
+   "name": "Jetta",
+   "aliases": [
+    "Jetta (car brand)"
+   ],
+   "article": "Jetta (car brand)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3582,
+   "signals": {
+    "pageviews": 23412,
+    "zipf": 2.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "zotye",
+   "name": "Zotye",
+   "aliases": [
+    "Domy",
+    "New Power",
+    "Zhong Tai",
+    "Zotye 5008 EV",
+    "Zotye Auto",
+    "Zotye International",
+    "Zotye Zhidou E20"
+   ],
+   "article": "Zotye Auto",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3567,
+   "signals": {
+    "pageviews": 19009,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "horch",
+   "name": "Horch",
+   "aliases": [
+    "Horch Pullmann"
+   ],
+   "article": "Horch",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3548,
+   "signals": {
+    "pageviews": 49665,
+    "zipf": 1.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "monica",
+   "name": "Monica",
+   "aliases": [
+    "Monica 560",
+    "Monica Motors"
+   ],
+   "article": "Monica (automobile)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3502,
+   "signals": {
+    "pageviews": 5663,
+    "zipf": 3.96,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bond",
+   "name": "Bond",
+   "aliases": [
+    "Bond Cars",
+    "Bond Cars Ltd.",
+    "Bond Motor Company",
+    "Bond mini",
+    "Sharps Commercials",
+    "Sharps Commercials Ltd"
+   ],
+   "article": "Bond Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3494,
+   "signals": {
+    "pageviews": 3020,
+    "zipf": 4.59,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mitsuoka",
+   "name": "Mitsuoka",
+   "aliases": [
+    "Mitsuoka Motors",
+    "Mitsuoka Ryugi"
+   ],
+   "article": "Mitsuoka",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.348,
+   "signals": {
+    "pageviews": 68253,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "aurus",
+   "name": "Aurus",
+   "aliases": [
+    "Aurus Motors",
+    "Kortezh"
+   ],
+   "article": "Aurus Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.347,
+   "signals": {
+    "pageviews": 66333,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "imperia",
+   "name": "Imperia",
+   "aliases": [
+    "Imperia Automobiles",
+    "Imperia, Italy",
+    "Port Maurice",
+    "Porto Maurizio"
+   ],
+   "article": "Imperia",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3466,
+   "signals": {
+    "pageviews": 34253,
+    "zipf": 1.77,
+    "salience": 1
+   }
+  },
+  {
+   "id": "yulon",
+   "name": "Yulon",
+   "aliases": [
+    "Yueloong",
+    "Yulon GM",
+    "Yulon Motor",
+    "Yulon Motors",
+    "Yulon Nissan"
+   ],
+   "article": "Yulon",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3465,
+   "signals": {
+    "pageviews": 17231,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "turner",
+   "name": "Turner",
+   "aliases": [
+    "Turner Sports Cars"
+   ],
+   "article": "Turner Sports Cars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3451,
+   "signals": {
+    "pageviews": 4463,
+    "zipf": 4.19,
+    "salience": 1
+   }
+  },
+  {
+   "id": "clan",
+   "name": "Clan",
+   "aliases": [
+    "Clan Crusader",
+    "Clan Motor Company",
+    "Clan cars"
+   ],
+   "article": "Clan Crusader",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.344,
+   "signals": {
+    "pageviews": 5019,
+    "zipf": 3.97,
+    "salience": 1
+   }
+  },
+  {
+   "id": "local-motors",
+   "name": "Local Motors",
+   "aliases": [],
+   "article": "Local Motors",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3437,
+   "signals": {
+    "pageviews": 23302,
+    "zipf": 4.01,
+    "salience": 1
+   }
+  },
+  {
+   "id": "delahaye",
+   "name": "Delahaye",
+   "aliases": [],
+   "article": "Delahaye",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3434,
+   "signals": {
+    "pageviews": 37920,
+    "zipf": 1.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "westfield",
+   "name": "Westfield",
+   "aliases": [
+    "Westfield Cars",
+    "Westfield Sportscars",
+    "Westfield Sportscars Ltd",
+    "Westfield XTR"
+   ],
+   "article": "Westfield Sportscars",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3425,
+   "signals": {
+    "pageviews": 14415,
+    "zipf": 3.19,
+    "salience": 1
+   }
+  },
+  {
+   "id": "talbot-lago",
+   "name": "Talbot-Lago",
+   "aliases": [
+    "Lago-Talbot",
+    "Talbot Lago T26 GS"
+   ],
+   "article": "Talbot-Lago",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3422,
+   "signals": {
+    "pageviews": 28053,
+    "zipf": 2.88,
+    "salience": 1
+   }
+  },
+  {
+   "id": "amphicar",
+   "name": "Amphicar",
+   "aliases": [
+    "Amphacar",
+    "Amphibicar",
+    "Amphicar 770",
+    "Amphicar Model 770",
+    "Aquacar",
+    "Hydrocar"
+   ],
+   "article": "Amphicar",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3419,
+   "signals": {
+    "pageviews": 63377,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "maple",
+   "name": "Maple",
+   "aliases": [
+    "Maple Automobile",
+    "Shanghai Maple",
+    "Shanghai Maple Automobile"
+   ],
+   "article": "Shanghai Maple",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3418,
+   "signals": {
+    "pageviews": 5573,
+    "zipf": 3.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "adler",
+   "name": "Adler",
+   "aliases": [
+    "Adlerwerke",
+    "Adlerwerke vorm. Heinrich Kleyer"
+   ],
+   "article": "Adler (cars and motorcycle)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3412,
+   "signals": {
+    "pageviews": 11598,
+    "zipf": 3.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "facel-vega",
+   "name": "Facel Vega",
+   "aliases": [
+    "Facel",
+    "Facel S.A.",
+    "Facel SA",
+    "Facel-Métallon",
+    "Facellia"
+   ],
+   "article": "Facel Vega",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.34,
+   "signals": {
+    "pageviews": 36534,
+    "zipf": 1.21,
+    "salience": 1
+   }
+  },
+  {
+   "id": "roewe",
+   "name": "Roewe",
+   "aliases": [
+    "Rong Wei",
+    "SAIC Roewe"
+   ],
+   "article": "Roewe",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3399,
+   "signals": {
+    "pageviews": 61563,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "aptera",
+   "name": "Aptera",
+   "aliases": [
+    "Aaptera USA",
+    "Aptera 0",
+    "Aptera 1",
+    "Aptera 2",
+    "Aptera 2 Series",
+    "Aptera 2 Series/Infobox",
+    "Aptera 2e",
+    "Aptera 2e/Infobox",
+    "Aptera 2h",
+    "Aptera Mk-0",
+    "Aptera Mk-1",
+    "Aptera Motors",
+    "Aptera Typ-1",
+    "Aptera Typ-1/Infobox",
+    "Aptera USA",
+    "Aptera hybrid car",
+    "Typ-1",
+    "Zaptera",
+    "Zaptera USA"
+   ],
+   "article": "Aptera Motors",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3394,
+   "signals": {
+    "pageviews": 42823,
+    "zipf": 1.22,
+    "salience": 1
+   }
+  },
+  {
+   "id": "allard",
+   "name": "Allard",
+   "aliases": [
+    "Allard K2",
+    "Allard L",
+    "Allard Motor Company",
+    "Cad-Allard"
+   ],
+   "article": "Allard Motor Company",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3351,
+   "signals": {
+    "pageviews": 19743,
+    "zipf": 2.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "venturi",
+   "name": "Venturi",
+   "aliases": [
+    "Automobiles Venturi",
+    "Venturi Automobile",
+    "Venturi Automobiles",
+    "Venturi.fr"
+   ],
+   "article": "Venturi (company)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.334,
+   "signals": {
+    "pageviews": 19069,
+    "zipf": 2.54,
+    "salience": 1
+   }
+  },
+  {
+   "id": "commer",
+   "name": "Commer",
+   "aliases": [
+    "Commer Cob",
+    "Commer Commando",
+    "Commer Express Delivery Van",
+    "Commer Imp Van",
+    "Commer Light Pick-up",
+    "Commer Superpoise",
+    "Commer Walk-Thru"
+   ],
+   "article": "Commer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3334,
+   "signals": {
+    "pageviews": 31837,
+    "zipf": 1.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bollinger",
+   "name": "Bollinger",
+   "aliases": [
+    "Bollinger Deliver-E",
+    "Bollinger Motors"
+   ],
+   "article": "Bollinger Motors",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3318,
+   "signals": {
+    "pageviews": 16817,
+    "zipf": 2.73,
+    "salience": 1
+   }
+  },
+  {
+   "id": "fpv",
+   "name": "FPV",
+   "aliases": [
+    "FPV FG",
+    "Ford Performance Vehicles"
+   ],
+   "article": "Ford Performance Vehicles",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3304,
+   "signals": {
+    "pageviews": 20161,
+    "zipf": 2.44,
+    "salience": 1
+   }
+  },
+  {
+   "id": "falcon",
+   "name": "Falcon",
+   "aliases": [
+    "Falcon Motorsports"
+   ],
+   "article": "Falcon Motorsports",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3297,
+   "signals": {
+    "pageviews": 5090,
+    "zipf": 3.74,
+    "salience": 1
+   }
+  },
+  {
+   "id": "venucia",
+   "name": "Venucia",
+   "aliases": [
+    "Dongfeng Venucia",
+    "Dongfeng Venucia Motor Company"
+   ],
+   "article": "Venucia",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3291,
+   "signals": {
+    "pageviews": 14315,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "minerva",
+   "name": "Minerva",
+   "aliases": [
+    "Minerva Motor Works",
+    "Minerva Motors",
+    "Minerva automobile",
+    "Minerva cars"
+   ],
+   "article": "Minerva (automobile)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.329,
+   "signals": {
+    "pageviews": 14240,
+    "zipf": 2.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "carver",
+   "name": "Carver",
+   "aliases": [
+    "Carver Europe",
+    "Carver one",
+    "Vandenbrink Carver",
+    "VentureOne"
+   ],
+   "article": "Carver (automotive company)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3281,
+   "signals": {
+    "pageviews": 10280,
+    "zipf": 3.33,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hulme",
+   "name": "Hulme",
+   "aliases": [
+    "Cornbrook",
+    "Hulme Supercars",
+    "Hulme, Manchester"
+   ],
+   "article": "Hulme",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3277,
+   "signals": {
+    "pageviews": 17921,
+    "zipf": 2.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "delage",
+   "name": "Delage",
+   "aliases": [],
+   "article": "Delage",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3231,
+   "signals": {
+    "pageviews": 30532,
+    "zipf": 1.58,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mvs",
+   "name": "MVS",
+   "aliases": [
+    "Fujitsu MSP",
+    "Hitachi VOS3",
+    "MSP",
+    "MVS Operating System",
+    "MVS Venturi",
+    "MVS/370",
+    "MVS/ESA",
+    "MVS/SP",
+    "MVS/XA",
+    "Multiple Virtual Storage",
+    "OS/MVS",
+    "OS/VS2"
+   ],
+   "article": "MVS",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3217,
+   "signals": {
+    "pageviews": 16854,
+    "zipf": 2.55,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ligier",
+   "name": "Ligier",
+   "aliases": [],
+   "article": "Ligier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3204,
+   "signals": {
+    "pageviews": 30861,
+    "zipf": 1.46,
+    "salience": 1
+   }
+  },
+  {
+   "id": "wanderer",
+   "name": "Wanderer",
+   "aliases": [
+    "Wanderer Werke"
+   ],
+   "article": "Wanderer (company)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3204,
+   "signals": {
+    "pageviews": 11493,
+    "zipf": 3.01,
+    "salience": 1
+   }
+  },
+  {
+   "id": "armstrong-siddeley",
+   "name": "Armstrong Siddeley",
+   "aliases": [
+    "Armstrong Siddeley Motors Limited",
+    "Armtrong-Siddeley",
+    "Siddeley Autocar",
+    "Siddeley Autocar Company"
+   ],
+   "article": "Armstrong Siddeley",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3177,
+   "signals": {
+    "pageviews": 28031,
+    "zipf": 1.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "qoros",
+   "name": "Qoros",
+   "aliases": [
+    "Qoros Auto"
+   ],
+   "article": "Qoros",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3169,
+   "signals": {
+    "pageviews": 11277,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "hupmobile",
+   "name": "Hupmobile",
+   "aliases": [
+    "Hupp Motor Car Company",
+    "Hupp Motor Company",
+    "Hupp Motor Works",
+    "Hupp Motors",
+    "Huppmobile"
+   ],
+   "article": "Hupmobile",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3154,
+   "signals": {
+    "pageviews": 31712,
+    "zipf": 1.3,
+    "salience": 1
+   }
+  },
+  {
+   "id": "innocenti",
+   "name": "Innocenti",
+   "aliases": [
+    "Leyland Innocenti",
+    "Nuova Innocenti"
+   ],
+   "article": "Innocenti",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.313,
+   "signals": {
+    "pageviews": 28273,
+    "zipf": 1.55,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ultima",
+   "name": "Ultima",
+   "aliases": [
+    "Richard Marlow",
+    "Ultima Sports",
+    "Ultima Sports Ltd"
+   ],
+   "article": "Ultima Sports Ltd",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3103,
+   "signals": {
+    "pageviews": 11792,
+    "zipf": 2.75,
+    "salience": 1
+   }
+  },
+  {
+   "id": "timor",
+   "name": "Timor",
+   "aliases": [
+    "Timor Car",
+    "Timor Putra Nasional"
+   ],
+   "article": "Timor Putra Nasional",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3096,
+   "signals": {
+    "pageviews": 7403,
+    "zipf": 3.27,
+    "salience": 1
+   }
+  },
+  {
+   "id": "baic",
+   "name": "BAIC",
+   "aliases": [
+    "BAIC Motor",
+    "BAIC Motor Company Limited",
+    "BAIC Motor Corp., Ltd.",
+    "BAIC Motor Corporation Limited",
+    "Beijing",
+    "Beijing Motor"
+   ],
+   "article": "BAIC Motor",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3092,
+   "signals": {
+    "pageviews": 27665,
+    "zipf": 1.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "marmon",
+   "name": "Marmon",
+   "aliases": [
+    "Marmon Auto",
+    "Marmon Automoblie",
+    "Marmon Motor Car Company",
+    "Marmon Wasp"
+   ],
+   "article": "Marmon Motor Car Company",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3091,
+   "signals": {
+    "pageviews": 23882,
+    "zipf": 1.84,
+    "salience": 1
+   }
+  },
+  {
+   "id": "frazer-nash",
+   "name": "Frazer Nash",
+   "aliases": [
+    "Fraser Nash"
+   ],
+   "article": "Frazer Nash",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3087,
+   "signals": {
+    "pageviews": 20776,
+    "zipf": 2.85,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trident",
+   "name": "Trident",
+   "aliases": [
+    "Trident Cars",
+    "Trident Clipper"
+   ],
+   "article": "Trident Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3076,
+   "signals": {
+    "pageviews": 7128,
+    "zipf": 3.27,
+    "salience": 1
+   }
+  },
+  {
+   "id": "equus",
+   "name": "Equus",
+   "aliases": [
+    "Equus Automotive",
+    "Equus Bass 770"
+   ],
+   "article": "Equus Bass 770",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.303,
+   "signals": {
+    "pageviews": 16050,
+    "zipf": 2.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "fn",
+   "name": "FN",
+   "aliases": [
+    "Fabrique Nationale"
+   ],
+   "article": "FN (automobile)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3009,
+   "signals": {
+    "pageviews": 4987,
+    "zipf": 3.4,
+    "salience": 1
+   }
+  },
+  {
+   "id": "stutz",
+   "name": "Stutz",
+   "aliases": [
+    "Ideal Motor Car Company",
+    "Stutz Motor Car Company",
+    "Stutz Motor Car of America",
+    "The Stutz Motor Company"
+   ],
+   "article": "Stutz Motor Car Company",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2983,
+   "signals": {
+    "pageviews": 18337,
+    "zipf": 2.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "luxeed",
+   "name": "Luxeed",
+   "aliases": [],
+   "article": "Luxeed",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.297,
+   "signals": {
+    "pageviews": 38489,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "aixam",
+   "name": "Aixam",
+   "aliases": [
+    "Aixam Mega e-City",
+    "Aixam-Mega",
+    "Mega",
+    "Mega Electric",
+    "NICE Car Company",
+    "NICE Mega City"
+   ],
+   "article": "Aixam",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2939,
+   "signals": {
+    "pageviews": 37615,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brabham",
+   "name": "Brabham",
+   "aliases": [
+    "Brabham Automotive"
+   ],
+   "article": "Brabham Automotive",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.293,
+   "signals": {
+    "pageviews": 11173,
+    "zipf": 2.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mosler",
+   "name": "Mosler",
+   "aliases": [
+    "Consulier",
+    "Consulier Industries",
+    "Mosler Automotive"
+   ],
+   "article": "Mosler Automotive",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2913,
+   "signals": {
+    "pageviews": 22618,
+    "zipf": 1.64,
+    "salience": 1
+   }
+  },
+  {
+   "id": "austro-daimler",
+   "name": "Austro-Daimler",
+   "aliases": [],
+   "article": "Austro-Daimler",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2893,
+   "signals": {
+    "pageviews": 18889,
+    "zipf": 2.58,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hanomag",
+   "name": "Hanomag",
+   "aliases": [
+    "Hannoversche Maschinenbau",
+    "Hannoversche Maschinenbau AG"
+   ],
+   "article": "Hanomag",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2878,
+   "signals": {
+    "pageviews": 36448,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "invicta",
+   "name": "Invicta",
+   "aliases": [
+    "Invicta Cars",
+    "Invicta S1"
+   ],
+   "article": "Invicta (car)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2851,
+   "signals": {
+    "pageviews": 10423,
+    "zipf": 2.51,
+    "salience": 1
+   }
+  },
+  {
+   "id": "panoz",
+   "name": "Panoz",
+   "aliases": [
+    "Panoz Auto Development",
+    "Panoz Auto Development Company",
+    "Panoz Motor Company",
+    "Panoz Motor Sports Group",
+    "Panoz Motorsports",
+    "Panoz Racing",
+    "Panoz, LLC"
+   ],
+   "article": "Panoz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2844,
+   "signals": {
+    "pageviews": 26738,
+    "zipf": 1.21,
+    "salience": 1
+   }
+  },
+  {
+   "id": "soueast",
+   "name": "Soueast",
+   "aliases": [
+    "Dongnan",
+    "Soueast Motors",
+    "Soueast-motor.com",
+    "South East",
+    "South East Motor Co Ltd",
+    "South East Motor Corporation",
+    "Southeast Motor",
+    "Southeast Motors"
+   ],
+   "article": "Soueast",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2827,
+   "signals": {
+    "pageviews": 34125,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "zundapp",
+   "name": "Zündapp",
+   "aliases": [
+    "Zuendapp"
+   ],
+   "article": "Zündapp",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2817,
+   "signals": {
+    "pageviews": 33839,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "dax",
+   "name": "Dax",
+   "aliases": [
+    "Dax Cars"
+   ],
+   "article": "Dax Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2797,
+   "signals": {
+    "pageviews": 4910,
+    "zipf": 3.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gillet",
+   "name": "Gillet",
+   "aliases": [
+    "Gillet Automobiles",
+    "Gillet Vertigo",
+    "Gillet Vertigo Streiff"
+   ],
+   "article": "Gillet",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2774,
+   "signals": {
+    "pageviews": 15954,
+    "zipf": 1.85,
+    "salience": 1
+   }
+  },
+  {
+   "id": "goggomobil",
+   "name": "Goggomobil",
+   "aliases": [
+    "Glas",
+    "Goggomobile"
+   ],
+   "article": "Goggomobil",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2746,
+   "signals": {
+    "pageviews": 31611,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "factory-five",
+   "name": "Factory Five",
+   "aliases": [
+    "Factory Five Racing",
+    "Factory Five Racing GTM",
+    "Factory Five Racing, Inc."
+   ],
+   "article": "Factory Five Racing",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2735,
+   "signals": {
+    "pageviews": 9707,
+    "zipf": 4.5,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cg",
+   "name": "CG",
+   "aliases": [
+    "Chappe et Gessalin"
+   ],
+   "article": "Chappe et Gessalin",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2731,
+   "signals": {
+    "pageviews": 1767,
+    "zipf": 3.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "joss",
+   "name": "Joss",
+   "aliases": [
+    "Joss Developments",
+    "Joss JP1",
+    "Joss Supercar"
+   ],
+   "article": "Joss JP1",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2721,
+   "signals": {
+    "pageviews": 3167,
+    "zipf": 3.09,
+    "salience": 1
+   }
+  },
+  {
+   "id": "birkin",
+   "name": "Birkin",
+   "aliases": [
+    "Birkin Cars",
+    "Birkin S3"
+   ],
+   "article": "Birkin Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2721,
+   "signals": {
+    "pageviews": 7125,
+    "zipf": 2.6,
+    "salience": 1
+   }
+  },
+  {
+   "id": "elfin",
+   "name": "Elfin",
+   "aliases": [
+    "Ansett Team Elfin",
+    "Elfin 300",
+    "Elfin 300C",
+    "Elfin 350",
+    "Elfin 360",
+    "Elfin 400",
+    "Elfin 400B",
+    "Elfin 620",
+    "Elfin 620B",
+    "Elfin 620FF",
+    "Elfin 630",
+    "Elfin 700",
+    "Elfin 792",
+    "Elfin 852",
+    "Elfin Aero",
+    "Elfin Cars",
+    "Elfin Catalina",
+    "Elfin FJ",
+    "Elfin Formula Junior",
+    "Elfin GE Two-25",
+    "Elfin GE225",
+    "Elfin Junior",
+    "Elfin ME5",
+    "Elfin MR6",
+    "Elfin MR8",
+    "Elfin MR8-C",
+    "Elfin MR9",
+    "Elfin MS7",
+    "Elfin Sport cars",
+    "Elfin Sports Cars",
+    "Elfin Streamliner",
+    "Elfin T5 Clubman",
+    "Elfin car"
+   ],
+   "article": "Elfin Sports Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2712,
+   "signals": {
+    "pageviews": 10647,
+    "zipf": 2.26,
+    "salience": 1
+   }
+  },
+  {
+   "id": "baojun",
+   "name": "Baojun",
+   "aliases": [
+    "Autobaojun"
+   ],
+   "article": "Baojun",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2684,
+   "signals": {
+    "pageviews": 30350,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "zenvo",
+   "name": "Zenvo",
+   "aliases": [
+    "Zenvo Automotive"
+   ],
+   "article": "Zenvo Automotive",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2664,
+   "signals": {
+    "pageviews": 29751,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "wiesmann",
+   "name": "Wiesmann",
+   "aliases": [
+    "Wiesmann GT",
+    "Wiesmann GT MF 4",
+    "Wiesmann GT MF5",
+    "Wiesmann GmbH",
+    "Wiesmann MF 3",
+    "Wiesmann MF 30",
+    "Wiesmann mf4"
+   ],
+   "article": "Wiesmann GmbH",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2663,
+   "signals": {
+    "pageviews": 21434,
+    "zipf": 1.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "maextro",
+   "name": "Maextro",
+   "aliases": [
+    "Zunjie"
+   ],
+   "article": "Maextro",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2654,
+   "signals": {
+    "pageviews": 29659,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "arcfox",
+   "name": "Arcfox",
+   "aliases": [
+    "ArcFox ECF",
+    "Polar Fox"
+   ],
+   "article": "Arcfox",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2633,
+   "signals": {
+    "pageviews": 28499,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jowett",
+   "name": "Jowett",
+   "aliases": [
+    "Benjamin and William Jowett",
+    "Jowett Cars"
+   ],
+   "article": "Jowett Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2623,
+   "signals": {
+    "pageviews": 10746,
+    "zipf": 2.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "autozam",
+   "name": "Autozam",
+   "aliases": [],
+   "article": "Autozam",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2552,
+   "signals": {
+    "pageviews": 27644,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "touring-superleggera",
+   "name": "Touring Superleggera",
+   "aliases": [
+    "Carrozzeria Touring",
+    "Carrozzeria Touring Superleggera",
+    "Touring of Milan"
+   ],
+   "article": "Carrozzeria Touring Superleggera",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2537,
+   "signals": {
+    "pageviews": 17209,
+    "zipf": 1.47,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bizzarrini",
+   "name": "Bizzarrini",
+   "aliases": [
+    "Scuderia Bizzarrini"
+   ],
+   "article": "Bizzarrini",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2511,
+   "signals": {
+    "pageviews": 27166,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gordon-keeble",
+   "name": "Gordon-Keeble",
+   "aliases": [],
+   "article": "Gordon-Keeble",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2508,
+   "signals": {
+    "pageviews": 14912,
+    "zipf": 2.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "leeco",
+   "name": "Leeco",
+   "aliases": [
+    "Continual Digital Lossless Audio",
+    "Le Vision Entertainment",
+    "LeMall",
+    "LeMobile",
+    "LeSEE"
+   ],
+   "article": "LeEco",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2508,
+   "signals": {
+    "pageviews": 15897,
+    "zipf": 1.44,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pegaso",
+   "name": "Pegaso",
+   "aliases": [],
+   "article": "Pegaso",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2494,
+   "signals": {
+    "pageviews": 17991,
+    "zipf": 1.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lea-francis",
+   "name": "Lea-Francis",
+   "aliases": [
+    "Lea Francis Cars",
+    "Lea-Francis Hyper"
+   ],
+   "article": "Lea-Francis",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2486,
+   "signals": {
+    "pageviews": 9176,
+    "zipf": 3.51,
+    "salience": 1
+   }
+  },
+  {
+   "id": "donkervoort",
+   "name": "Donkervoort",
+   "aliases": [
+    "Donkervoort S7",
+    "Donkevoort"
+   ],
+   "article": "Donkervoort",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.245,
+   "signals": {
+    "pageviews": 25236,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bufori",
+   "name": "Bufori",
+   "aliases": [
+    "Bufori Geneva",
+    "Bufori La Joya",
+    "Bufori Motor Car Company"
+   ],
+   "article": "Bufori",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2439,
+   "signals": {
+    "pageviews": 25126,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "thai-rung",
+   "name": "Thai Rung",
+   "aliases": [
+    "Thai Rung Transformer",
+    "Thai Rung Union Car"
+   ],
+   "article": "Thai Rung Union Car",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2438,
+   "signals": {
+    "pageviews": 9636,
+    "zipf": 3.16,
+    "salience": 1
+   }
+  },
+  {
+   "id": "graf-and-stift",
+   "name": "Gräf & Stift",
+   "aliases": [
+    "Graef & Stift",
+    "ÖAF-Gräf & Stift AG"
+   ],
+   "article": "Gräf & Stift",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2415,
+   "signals": {
+    "pageviews": 17968,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trion",
+   "name": "Trion",
+   "aliases": [
+    "Trion Supercars"
+   ],
+   "article": "Trion Supercars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2407,
+   "signals": {
+    "pageviews": 8146,
+    "zipf": 1.97,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rossion",
+   "name": "Rossion",
+   "aliases": [
+    "1g Racing",
+    "Rossion Automotive",
+    "Rossion Q1"
+   ],
+   "article": "Rossion Q1",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2378,
+   "signals": {
+    "pageviews": 23014,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "livan",
+   "name": "Liván",
+   "aliases": [
+    "Aletra",
+    "Livan Auto",
+    "Livan Automative",
+    "Livan Automotive",
+    "Shanghai Maple Guorun Automobile"
+   ],
+   "article": "Livan Automotive",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2368,
+   "signals": {
+    "pageviews": 22697,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "onvo",
+   "name": "Onvo",
+   "aliases": [],
+   "article": "Onvo",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2317,
+   "signals": {
+    "pageviews": 20460,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trev",
+   "name": "Trev",
+   "aliases": [],
+   "article": "Trev",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2244,
+   "signals": {
+    "pageviews": 1078,
+    "zipf": 2.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bolwell",
+   "name": "Bolwell",
+   "aliases": [
+    "Bolwell Ikara",
+    "Bolwell Mark 7",
+    "Bolwell Mk VII",
+    "Bolwell Mk. 7"
+   ],
+   "article": "Bolwell",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2239,
+   "signals": {
+    "pageviews": 13091,
+    "zipf": 1.09,
+    "salience": 1
+   }
+  },
+  {
+   "id": "microcar",
+   "name": "Microcar",
+   "aliases": [
+    "Microcar (brand)",
+    "Microcar Virgo"
+   ],
+   "article": "Microcar (brand)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2193,
+   "signals": {
+    "pageviews": 11295,
+    "zipf": 1.17,
+    "salience": 1
+   }
+  },
+  {
+   "id": "saker",
+   "name": "Saker",
+   "aliases": [
+    "Saker Cars"
+   ],
+   "article": "Saker Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2182,
+   "signals": {
+    "pageviews": 4544,
+    "zipf": 2.04,
+    "salience": 1
+   }
+  },
+  {
+   "id": "isdera",
+   "name": "Isdera",
+   "aliases": [
+    "Isdera AG",
+    "Isdera GmbH"
+   ],
+   "article": "Isdera",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2164,
+   "signals": {
+    "pageviews": 17862,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hiphi",
+   "name": "HiPhi",
+   "aliases": [
+    "Human Horizons"
+   ],
+   "article": "HiPhi",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2103,
+   "signals": {
+    "pageviews": 16127,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "stelato",
+   "name": "Stelato",
+   "aliases": [
+    "Xiangjie"
+   ],
+   "article": "Stelato",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2072,
+   "signals": {
+    "pageviews": 15952,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sono-motors",
+   "name": "Sono Motors",
+   "aliases": [
+    "Sono"
+   ],
+   "article": "Sono Motors",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2072,
+   "signals": {
+    "pageviews": 6049,
+    "zipf": 2.59,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trumpchi",
+   "name": "Trumpchi",
+   "aliases": [
+    "GAC Chuanqi",
+    "GAC MOTOR",
+    "GAC Trumpchi"
+   ],
+   "article": "GAC Trumpchi",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2041,
+   "signals": {
+    "pageviews": 15865,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lotec",
+   "name": "Lotec",
+   "aliases": [
+    "Lotec Mercedes-Benz C-1000"
+   ],
+   "article": "Lotec",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2031,
+   "signals": {
+    "pageviews": 15496,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cisitalia",
+   "name": "Cisitalia",
+   "aliases": [
+    "Cisitalia 202",
+    "Cisitalia 202 MM",
+    "Cisitalia 202 SMM",
+    "Cisitalia D46"
+   ],
+   "article": "Cisitalia",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2021,
+   "signals": {
+    "pageviews": 15432,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gardner-douglas",
+   "name": "Gardner Douglas",
+   "aliases": [],
+   "article": "Gardner Douglas",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1997,
+   "signals": {
+    "pageviews": 2760,
+    "zipf": 3.63,
+    "salience": 1
+   }
+  },
+  {
+   "id": "landwind",
+   "name": "Landwind",
+   "aliases": [],
+   "article": "Landwind",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.199,
+   "signals": {
+    "pageviews": 14640,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mazzanti",
+   "name": "Mazzanti",
+   "aliases": [
+    "Mazzanti Automobile",
+    "Mazzanti Automobiles",
+    "Mazzanti Automobili"
+   ],
+   "article": "Mazzanti Automobili",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1985,
+   "signals": {
+    "pageviews": 7776,
+    "zipf": 1.2,
+    "salience": 1
+   }
+  },
+  {
+   "id": "artega",
+   "name": "Artega",
+   "aliases": [
+    "Artega Automobil GmbH & Co. KG",
+    "Artega Automobile",
+    "Artega Cars",
+    "Artega GmbH",
+    "Artega Motors"
+   ],
+   "article": "Artega Automobile",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1919,
+   "signals": {
+    "pageviews": 13032,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gilbern",
+   "name": "Gilbern",
+   "aliases": [
+    "Gilbern GT",
+    "Gilbern Invader"
+   ],
+   "article": "Gilbern",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1909,
+   "signals": {
+    "pageviews": 12972,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hyptec",
+   "name": "Hyptec",
+   "aliases": [],
+   "article": "Hyptec",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1899,
+   "signals": {
+    "pageviews": 12504,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bisu",
+   "name": "Bisu",
+   "aliases": [
+    "BAIC Ruixiang",
+    "Bisu Auto",
+    "Huansu",
+    "Xianfeng Motorcycle",
+    "Xianfengmotor",
+    "Yinxiang Group",
+    "Yinxiang Motorcycle"
+   ],
+   "article": "Yinxiang Group",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1849,
+   "signals": {
+    "pageviews": 4745,
+    "zipf": 1.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "weltmeister",
+   "name": "Weltmeister",
+   "aliases": [
+    "WM Motor",
+    "WM Motors"
+   ],
+   "article": "Weltmeister (marque)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1837,
+   "signals": {
+    "pageviews": 11259,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "apal",
+   "name": "Apal",
+   "aliases": [],
+   "article": "Apal",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.18,
+   "signals": {
+    "pageviews": 5340,
+    "zipf": 1.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "inokom",
+   "name": "Inokom",
+   "aliases": [],
+   "article": "Inokom",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1766,
+   "signals": {
+    "pageviews": 9884,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lifan-solano",
+   "name": "Lifan Solano",
+   "aliases": [
+    "ChangJiang 360e",
+    "Lifan 620",
+    "Lifan 630",
+    "Lifan 650"
+   ],
+   "article": "Lifan 620",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1766,
+   "signals": {
+    "pageviews": 5258,
+    "zipf": 1.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "yema",
+   "name": "Yema",
+   "aliases": [
+    "Yema Auto"
+   ],
+   "article": "Yema Auto",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1754,
+   "signals": {
+    "pageviews": 4027,
+    "zipf": 1.24,
+    "salience": 1
+   }
+  },
+  {
+   "id": "esemka",
+   "name": "Esemka",
+   "aliases": [],
+   "article": "Esemka",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1735,
+   "signals": {
+    "pageviews": 9366,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "melkus",
+   "name": "Melkus",
+   "aliases": [],
+   "article": "Melkus",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1725,
+   "signals": {
+    "pageviews": 9296,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "superformance",
+   "name": "Superformance",
+   "aliases": [
+    "Superformance S1 Roadster"
+   ],
+   "article": "Superformance",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1705,
+   "signals": {
+    "pageviews": 9078,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "vencer",
+   "name": "Vencer",
+   "aliases": [],
+   "article": "Vencer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1686,
+   "signals": {
+    "pageviews": 3952,
+    "zipf": 1.16,
+    "salience": 1
+   }
+  },
+  {
+   "id": "9ff",
+   "name": "9ff",
+   "aliases": [],
+   "article": "9ff",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1674,
+   "signals": {
+    "pageviews": 8223,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "streetscooter",
+   "name": "Streetscooter",
+   "aliases": [
+    "StreetScooter GmbH",
+    "StreetScooter Work L",
+    "Work",
+    "Work L"
+   ],
+   "article": "StreetScooter",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1654,
+   "signals": {
+    "pageviews": 7856,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hommel",
+   "name": "Hommel",
+   "aliases": [
+    "Automobiles Hommel"
+   ],
+   "article": "Hommel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1647,
+   "signals": {
+    "pageviews": 534,
+    "zipf": 1.45,
+    "salience": 1
+   }
+  },
+  {
+   "id": "tushek",
+   "name": "Tushek",
+   "aliases": [
+    "Tushek & Spigel Supercars"
+   ],
+   "article": "Tushek",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1633,
+   "signals": {
+    "pageviews": 7436,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "casalini",
+   "name": "Casalini",
+   "aliases": [],
+   "article": "Casalini",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1613,
+   "signals": {
+    "pageviews": 7387,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "yudo",
+   "name": "Yudo",
+   "aliases": [
+    "Yudo Auto"
+   ],
+   "article": "Yudo Auto",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1582,
+   "signals": {
+    "pageviews": 6872,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chatenet",
+   "name": "Chatenet",
+   "aliases": [
+    "Automobiles Chatenet"
+   ],
+   "article": "Automobiles Chatenet",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1572,
+   "signals": {
+    "pageviews": 6849,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "e-go",
+   "name": "e.GO",
+   "aliases": [
+    "Next.e.GO Mobile SE",
+    "e.GO Mobile"
+   ],
+   "article": "E.GO Mobile",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1511,
+   "signals": {
+    "pageviews": 5445,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jidu",
+   "name": "Jidu",
+   "aliases": [
+    "Jidu Auto"
+   ],
+   "article": "Jidu Auto",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.148,
+   "signals": {
+    "pageviews": 5159,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "vinaxuki",
+   "name": "Vinaxuki",
+   "aliases": [],
+   "article": "Vinaxuki",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1439,
+   "signals": {
+    "pageviews": 4929,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ciimo",
+   "name": "Ciimo",
+   "aliases": [],
+   "article": "Ciimo",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1409,
+   "signals": {
+    "pageviews": 4616,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "everus",
+   "name": "Everus",
+   "aliases": [
+    "Linian"
+   ],
+   "article": "Everus",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1399,
+   "signals": {
+    "pageviews": 4604,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "dorcen",
+   "name": "Dorcen",
+   "aliases": [
+    "Docan",
+    "Dorcen Auto",
+    "Dorcen Motor"
+   ],
+   "article": "Dorcen",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1348,
+   "signals": {
+    "pageviews": 3815,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "zhidou",
+   "name": "Zhidou",
+   "aliases": [
+    "Zhidou Electric Vehicle"
+   ],
+   "article": "Zhidou",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1327,
+   "signals": {
+    "pageviews": 3153,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ronart",
+   "name": "Ronart",
+   "aliases": [
+    "Ronart Cars"
+   ],
+   "article": "Ronart Cars",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1317,
+   "signals": {
+    "pageviews": 3068,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brennabor",
+   "name": "Brennabor",
+   "aliases": [],
+   "article": "Brennabor",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1307,
+   "signals": {
+    "pageviews": 3058,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "levdeo",
+   "name": "Levdeo",
+   "aliases": [
+    "LeEco Levdeo",
+    "Letin",
+    "Levdeo D30",
+    "Levdeo D50",
+    "Levdeo D60",
+    "Levdeo D70",
+    "Levdeo E60",
+    "Levdeo G10",
+    "Levdeo S50",
+    "Levdeo V60",
+    "Levdeo i3",
+    "Levdeo i5"
+   ],
+   "article": "Levdeo",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1286,
+   "signals": {
+    "pageviews": 3004,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hanteng",
+   "name": "Hanteng",
+   "aliases": [
+    "Han Teng Automobile",
+    "Hanteng Autos"
+   ],
+   "article": "Hanteng Autos",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1266,
+   "signals": {
+    "pageviews": 2688,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "singulato",
+   "name": "Singulato",
+   "aliases": [
+    "Zhiche",
+    "Zhiche Youxing Technology Co., Ltd."
+   ],
+   "article": "Singulato",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1256,
+   "signals": {
+    "pageviews": 2296,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kleinschnittger",
+   "name": "Kleinschnittger",
+   "aliases": [],
+   "article": "Kleinschnittger",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1246,
+   "signals": {
+    "pageviews": 2203,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "loremo",
+   "name": "Loremo",
+   "aliases": [
+    "Loremo AG",
+    "Loremo LS"
+   ],
+   "article": "Loremo",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1225,
+   "signals": {
+    "pageviews": 1415,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hanlong",
+   "name": "Hanlong",
+   "aliases": [
+    "Hanlong Auto",
+    "Huatong",
+    "Hunkt",
+    "Hunkt Canticie",
+    "Hunkt Kuangshi"
+   ],
+   "article": "Hunkt",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1215,
+   "signals": {
+    "pageviews": 1259,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bellier",
+   "name": "Bellier",
+   "aliases": [
+    "Antoine Bellier",
+    "Bellier Automobiles"
+   ],
+   "article": "Antoine Bellier",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1205,
+   "signals": {
+    "pageviews": 1158,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  }
+ ],
+ "unverified": [
+  "Aito",
+  "Barkas",
+  "Baur",
+  "Borgward China",
+  "Borgward Hansa",
+  "Byton",
+  "Crosley",
+  "DB",
+  "EVO",
+  "Enovate",
+  "Eunos",
+  "GWM",
+  "Gumpert",
+  "Jiyue",
+  "Ligier JS",
+  "Marcadier",
+  "Nagant",
+  "Naza",
+  "Neta",
+  "OMODA & JAECOO",
+  "PGO",
+  "Peerless",
+  "Secma",
+  "Skywell",
+  "Suzuki Maruti",
+  "Tobe",
+  "YES!",
+  "Zhonghua"
+ ]
+}

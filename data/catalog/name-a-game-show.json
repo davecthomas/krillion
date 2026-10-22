@@ -1,0 +1,5840 @@
+{
+ "slug": "name-a-game-show",
+ "prompt": "Name a game show",
+ "noun": "game show",
+ "domain": "television",
+ "built_at": "2026-10-22T22:48:12+00:00",
+ "model": "gpt-6-sol",
+ "answers": [
+  {
+   "id": "the-price-is-right",
+   "name": "The Price Is Right",
+   "aliases": [
+    "1 Wrong Price",
+    "Big Wheel",
+    "Cash en Carlo",
+    "Come on down",
+    "Contestants' Row",
+    "Der Preis ist heiss",
+    "Der Preis ist heiß",
+    "El Precio Justo",
+    "O Preço Certo",
+    "One Bid",
+    "One Wrong Price",
+    "Showcase showdown",
+    "Stan Blits",
+    "TPIRUS",
+    "TPiR",
+    "The Nighttime Price Is Right",
+    "The Price Is Right $1000000 Spectacular",
+    "The Price Is Right 2010",
+    "The Price Is Right Million Dollar Spectacular",
+    "The Price Is Right Million Dollar Spectaculars",
+    "The Price Is Right Philippine TV Series",
+    "The Price Is Right Showcases",
+    "The Price Is Right at Night",
+    "The Price is Right Around the World",
+    "The Prize Is Right",
+    "The Showcase"
+   ],
+   "article": "The Price Is Right",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9604,
+   "signals": {
+    "pageviews": 391233,
+    "zipf": 5.15,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-voice",
+   "name": "The Voice",
+   "aliases": [
+    "Alexis Marceaux",
+    "Brandon Mahone",
+    "Charlie Rey",
+    "Devon Barley",
+    "Inventing Shadows",
+    "Jamie Lono",
+    "Kelsey Rey",
+    "Laura Vivas",
+    "Patrick Thomas",
+    "Sylvia Yacoub",
+    "The Voice US",
+    "The Voice USA",
+    "The Voice of America",
+    "The Voice: I Want You"
+   ],
+   "article": "The Voice (American TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9292,
+   "signals": {
+    "pageviews": 703972,
+    "zipf": 5.07,
+    "salience": 4
+   }
+  },
+  {
+   "id": "wheel-of-fortune",
+   "name": "Wheel of Fortune",
+   "aliases": [
+    "Big Wheels",
+    "Celebrity Wheel of Fortune",
+    "I'd like to buy a vowel",
+    "Pat and Vanna",
+    "Prize puzzle",
+    "RSTLNE",
+    "RSTNLE",
+    "Shopper's Bazaar",
+    "Wheel of Fortune Daily",
+    "Wheel of Fortune Live!",
+    "Wheel of Fortune's daytime version"
+   ],
+   "article": "Wheel of Fortune (American game show)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9245,
+   "signals": {
+    "pageviews": 427054,
+    "zipf": 4.09,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-floor",
+   "name": "The Floor",
+   "aliases": [
+    "The Floor season 1",
+    "The Floor season 2",
+    "The Floor season 3",
+    "The Floor season 4",
+    "The Floor season 5",
+    "The Floor season 6",
+    "The Floor season 7"
+   ],
+   "article": "The Floor (American game show)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9125,
+   "signals": {
+    "pageviews": 443721,
+    "zipf": 4.94,
+    "salience": 4
+   }
+  },
+  {
+   "id": "dancing-with-the-stars",
+   "name": "Dancing with the Stars",
+   "aliases": [
+    "Charlotte Jorgensen",
+    "Charlotte Jørgensen",
+    "DWS",
+    "Dancing with the Holidays",
+    "Dancing with the Stars: Juniors .",
+    "Dancing with the stars US",
+    "Dwts",
+    "Dwts us",
+    "Hayley Erbert",
+    "US dancing with the stars"
+   ],
+   "article": "Dancing with the Stars (American TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.912,
+   "signals": {
+    "pageviews": 2037763,
+    "zipf": 4.34,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-amazing-race",
+   "name": "The Amazing Race",
+   "aliases": [],
+   "article": "The Amazing Race (American TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9109,
+   "signals": {
+    "pageviews": 406035,
+    "zipf": 4.79,
+    "salience": 4
+   }
+  },
+  {
+   "id": "family-feud",
+   "name": "Family Feud",
+   "aliases": [
+    "Family Feud Challenge",
+    "Family Feud broadcast history",
+    "Family Feud rules and production",
+    "Family fued",
+    "Hippups",
+    "Pizza Hut Family Feud",
+    "Rubin Ervin",
+    "Survey says",
+    "The New Family Feud"
+   ],
+   "article": "Family Feud",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9059,
+   "signals": {
+    "pageviews": 438204,
+    "zipf": 3.62,
+    "salience": 5
+   }
+  },
+  {
+   "id": "lets-make-a-deal",
+   "name": "Let's Make a Deal",
+   "aliases": [
+    "LMAD",
+    "Let's Make a Bargain",
+    "List of Let's Make a Deal games",
+    "The All-New Let's Make a Deal",
+    "ZONK!"
+   ],
+   "article": "Let's Make a Deal",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9057,
+   "signals": {
+    "pageviews": 149841,
+    "zipf": 4.9,
+    "salience": 5
+   }
+  },
+  {
+   "id": "press-your-luck",
+   "name": "Press Your Luck",
+   "aliases": [
+    "Big Bucks",
+    "No whammies",
+    "Press my luck",
+    "Whammy",
+    "Who Would Ever Hurt A Whammy"
+   ],
+   "article": "Press Your Luck",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9003,
+   "signals": {
+    "pageviews": 151449,
+    "zipf": 4.71,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-great-british-bake-off",
+   "name": "The Great British Bake Off",
+   "aliases": [
+    "Bake Off",
+    "Baking Show",
+    "British bake off",
+    "GBBO",
+    "Great Comic Relief Bake Off",
+    "TGBBO",
+    "The Great British Baking Show",
+    "The Great Christmas Bake Off",
+    "The Great Sport Relief Bake Off"
+   ],
+   "article": "The Great British Bake Off",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8964,
+   "signals": {
+    "pageviews": 1126666,
+    "zipf": 3.88,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-wall",
+   "name": "The Wall",
+   "aliases": [],
+   "article": "The Wall (American game show)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8938,
+   "signals": {
+    "pageviews": 211514,
+    "zipf": 5.04,
+    "salience": 4
+   }
+  },
+  {
+   "id": "american-idol",
+   "name": "American Idol",
+   "aliases": [
+    "Amercian Idol",
+    "America idol",
+    "American Idle",
+    "American Idol 23",
+    "American Idol finale",
+    "American Idol rules",
+    "American Idol series",
+    "American Idole",
+    "American idol tour",
+    "Idolonfox",
+    "List of American Idol judges",
+    "USA Idol"
+   ],
+   "article": "American Idol",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8927,
+   "signals": {
+    "pageviews": 733727,
+    "zipf": 3.93,
+    "salience": 4
+   }
+  },
+  {
+   "id": "americas-got-talent",
+   "name": "America's Got Talent",
+   "aliases": [
+    "AGT",
+    "America's God Talent",
+    "America's Got Talent AGT",
+    "America's Got Talent Holiday Spectacular",
+    "American Got Talent"
+   ],
+   "article": "America's Got Talent",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8917,
+   "signals": {
+    "pageviews": 545251,
+    "zipf": 4.05,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-x-factor",
+   "name": "The X Factor",
+   "aliases": [
+    "British X Factor",
+    "TXFUK",
+    "The Brittish X Factor",
+    "The X Factor Live Tour",
+    "The X Factor categories",
+    "The X Factor format",
+    "The X Factor – The Greatest Hits",
+    "The X Factor: All Stars",
+    "The Xtra Factor",
+    "The Xtra Factor: 24/7",
+    "X Factor Live Tour 2010",
+    "X factor uk"
+   ],
+   "article": "The X Factor (British TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8911,
+   "signals": {
+    "pageviews": 312834,
+    "zipf": 4.56,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-chase",
+   "name": "The Chase",
+   "aliases": [
+    "Beat the Champions",
+    "Celebrity Chase",
+    "Challenge the Culture Masters",
+    "HaMirdaf",
+    "Jahti",
+    "Na Lovu",
+    "Pogoniya",
+    "Potjera",
+    "Takip",
+    "The Chase Celebrity Special",
+    "The Chase Extra",
+    "The Chase: Ultimate Edition",
+    "The Chasers Road Trip",
+    "The Family Chase"
+   ],
+   "article": "The Chase (British game show)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8821,
+   "signals": {
+    "pageviews": 310233,
+    "zipf": 4.44,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-masked-singer",
+   "name": "The Masked Singer",
+   "aliases": [
+    "The Masked Singer US",
+    "The Masked Singer USA",
+    "The Masked Singer season 15",
+    "The Masked Singer: After the Mask"
+   ],
+   "article": "The Masked Singer (American TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8791,
+   "signals": {
+    "pageviews": 781103,
+    "zipf": 3.6,
+    "salience": 4
+   }
+  },
+  {
+   "id": "top-chef",
+   "name": "Top Chef",
+   "aliases": [
+    "Jen Carroll",
+    "Jennifer Carroll"
+   ],
+   "article": "Top Chef",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8768,
+   "signals": {
+    "pageviews": 342509,
+    "zipf": 4.21,
+    "salience": 4
+   }
+  },
+  {
+   "id": "match-game",
+   "name": "Match Game",
+   "aliases": [
+    "Kata Kata Kosong",
+    "Match Game '74",
+    "Match Game '75",
+    "Match Game '76",
+    "Match Game '77",
+    "Match Game '78",
+    "Match Game '79",
+    "Match Game 70s",
+    "Match Game 73",
+    "Match Game 90/91",
+    "Match Game 98",
+    "Match Game PM",
+    "School Riot"
+   ],
+   "article": "Match Game",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.876,
+   "signals": {
+    "pageviews": 168916,
+    "zipf": 5.03,
+    "salience": 4
+   }
+  },
+  {
+   "id": "project-runway",
+   "name": "Project Runway",
+   "aliases": [
+    "Ject runway",
+    "Project Runway: All Star Challenge",
+    "Project runway winners"
+   ],
+   "article": "Project Runway",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8743,
+   "signals": {
+    "pageviews": 384858,
+    "zipf": 3.9,
+    "salience": 4
+   }
+  },
+  {
+   "id": "hells-kitchen",
+   "name": "Hell's Kitchen",
+   "aliases": [
+    "Hell's Kitchen season 26",
+    "Hells Kitchen USA",
+    "Hells kitchen us",
+    "Ramsay's Hell's Kitchen"
+   ],
+   "article": "Hell's Kitchen (American TV series)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8677,
+   "signals": {
+    "pageviews": 798062,
+    "zipf": 3.05,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-dating-game",
+   "name": "The Dating Game",
+   "aliases": [
+    "The Celebrity Dating Game",
+    "The New Dating Game"
+   ],
+   "article": "The Dating Game",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8668,
+   "signals": {
+    "pageviews": 112746,
+    "zipf": 4.66,
+    "salience": 5
+   }
+  },
+  {
+   "id": "who-wants-to-be-a-millionaire",
+   "name": "Who Wants to Be a Millionaire?",
+   "aliases": [
+    "50 por 15",
+    "Ask One of the Audience",
+    "Ask Three of the Audience",
+    "Ask Two Experts",
+    "Ask the Audience",
+    "Ask the Expert",
+    "Ask the Host",
+    "Fastest Finger First",
+    "Fifty Fifty",
+    "Final answer",
+    "Is that you final answer?",
+    "Is that your final answer",
+    "Jump the Question",
+    "Kim besyuz bin ister?",
+    "Kim besyuz milyar ister?",
+    "Kim bir milyon ister?",
+    "LONVIWWTBAM?",
+    "Milioneri",
+    "Millionaire",
+    "Phone-a-Friend",
+    "Quiere ser millonario 50x15",
+    "Suok Ghwari Chi Shi Millonar?",
+    "Super Milyarder 3 Milyar",
+    "Switch the Question",
+    "Two Wise Men",
+    "Vem vill bli miljonar?",
+    "Vil du bli millionaer?",
+    "Vil du bli millionær?",
+    "Viltu vinna milljón?",
+    "Vrei sa fii milionar?",
+    "Vrei să fii miliardar?",
+    "WWTBAM",
+    "Wer wird Millionar?",
+    "Who Wants to Be a Millionnaire?",
+    "Who Wants to be a Millionare"
+   ],
+   "article": "Who Wants to Be a Millionaire?",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8654,
+   "signals": {
+    "pageviews": 153211,
+    "zipf": 3.72,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-1-club",
+   "name": "The 1% Club",
+   "aliases": [
+    "The 1 Percent Club",
+    "The One Percent Club"
+   ],
+   "article": "The 1% Club",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8627,
+   "signals": {
+    "pageviews": 133165,
+    "zipf": 5.13,
+    "salience": 4
+   }
+  },
+  {
+   "id": "running-man",
+   "name": "Running Man",
+   "aliases": [
+    "List of Running Man cast members",
+    "List of Running Man episodes",
+    "List of Running Man missions",
+    "Lists of Running Man missions",
+    "Outrun by Running Man"
+   ],
+   "article": "Running Man (TV program)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8613,
+   "signals": {
+    "pageviews": 497095,
+    "zipf": 5.13,
+    "salience": 3
+   }
+  },
+  {
+   "id": "whats-my-line",
+   "name": "What's My Line?",
+   "aliases": [
+    "Is it bigger than a breadbox?",
+    "Mystery Guest",
+    "What Is My Line?"
+   ],
+   "article": "What's My Line?",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8594,
+   "signals": {
+    "pageviews": 133416,
+    "zipf": 5.01,
+    "salience": 4
+   }
+  },
+  {
+   "id": "rupauls-drag-race",
+   "name": "RuPaul's Drag Race",
+   "aliases": [
+    "Drag Race",
+    "Drag Race Australia",
+    "Drag Race Sweden",
+    "Drag Race Sweden season 1",
+    "Drag Race season 17",
+    "Joe Colegrove",
+    "Production of RuPaul's Drag Race",
+    "RPDR",
+    "RuPaul's Drace Race",
+    "RuPaul's Drag Race Holland",
+    "RuPaul's Drag Race Superstar",
+    "RuPaul's Drag Race season 20",
+    "RuPaul's Drag Race: The Mobile Game"
+   ],
+   "article": "RuPaul's Drag Race",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.857,
+   "signals": {
+    "pageviews": 758786,
+    "zipf": 2.41,
+    "salience": 4
+   }
+  },
+  {
+   "id": "hollywood-squares",
+   "name": "Hollywood Squares",
+   "aliases": [
+    "1965 Hollywood Squares CBS pilot",
+    "Celebrity Squares",
+    "H2: Hollywood Squares",
+    "Halloween Squares",
+    "Hollywood Scares",
+    "Nashville Squares",
+    "The New Hollywood Squares"
+   ],
+   "article": "Hollywood Squares",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8555,
+   "signals": {
+    "pageviews": 146160,
+    "zipf": 3.66,
+    "salience": 5
+   }
+  },
+  {
+   "id": "deal-or-no-deal",
+   "name": "Deal or No Deal",
+   "aliases": [
+    "Allá Tú",
+    "DOND",
+    "Deal or No Deal Indonesia",
+    "Deala No Deala",
+    "Lebet el Hayat",
+    "The Deal",
+    "Trato Hecho",
+    "Za Dīru"
+   ],
+   "article": "Deal or No Deal",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.853,
+   "signals": {
+    "pageviews": 77944,
+    "zipf": 4.99,
+    "salience": 5
+   }
+  },
+  {
+   "id": "squid-game-the-challenge",
+   "name": "Squid Game: The Challenge",
+   "aliases": [],
+   "article": "Squid Game: The Challenge",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8441,
+   "signals": {
+    "pageviews": 334581,
+    "zipf": 3.42,
+    "salience": 4
+   }
+  },
+  {
+   "id": "university-challenge",
+   "name": "University Challenge",
+   "aliases": [
+    "Elementary Challenge",
+    "UC India",
+    "Uni challenge",
+    "University Challenge: The Professionals"
+   ],
+   "article": "University Challenge",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8404,
+   "signals": {
+    "pageviews": 125267,
+    "zipf": 4.76,
+    "salience": 4
+   }
+  },
+  {
+   "id": "would-i-lie-to-you",
+   "name": "Would I Lie to You?",
+   "aliases": [
+    "WILTY"
+   ],
+   "article": "Would I Lie to You?",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8389,
+   "signals": {
+    "pageviews": 344562,
+    "zipf": 4.82,
+    "salience": 3
+   }
+  },
+  {
+   "id": "have-i-got-news-for-you",
+   "name": "Have I Got News for You",
+   "aliases": [
+    "HIGABMNFY",
+    "HIGNFY",
+    "HIGONFY",
+    "Iraqistan",
+    "The Rt. Hon. Tub of Lard MP"
+   ],
+   "article": "Have I Got News for You",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8377,
+   "signals": {
+    "pageviews": 261495,
+    "zipf": 5.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "american-ninja-warrior",
+   "name": "American Ninja Warrior",
+   "aliases": [
+    "American Ninja Warrior season 17",
+    "American Ninja Warrior season 18",
+    "American Ninja Warrior: Challenge",
+    "Celebrity American Ninja Warrior",
+    "Celebrity Ninja Warrior",
+    "Drew Drechsel"
+   ],
+   "article": "American Ninja Warrior",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8331,
+   "signals": {
+    "pageviews": 177486,
+    "zipf": 3.68,
+    "salience": 4
+   }
+  },
+  {
+   "id": "to-tell-the-truth",
+   "name": "To Tell the Truth",
+   "aliases": [
+    "TTTT",
+    "Will the real... please stand up?"
+   ],
+   "article": "To Tell the Truth",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8218,
+   "signals": {
+    "pageviews": 98024,
+    "zipf": 4.92,
+    "salience": 4
+   }
+  },
+  {
+   "id": "physical-100",
+   "name": "Physical: 100",
+   "aliases": [
+    "Fitness: 100",
+    "Physical: 100 Season 2 – Underground",
+    "Physique: 100"
+   ],
+   "article": "Physical: 100",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8146,
+   "signals": {
+    "pageviews": 549256,
+    "zipf": 3.71,
+    "salience": 3
+   }
+  },
+  {
+   "id": "so-you-think-you-can-dance",
+   "name": "So You Think You Can Dance",
+   "aliases": [
+    "American dance idol"
+   ],
+   "article": "So You Think You Can Dance (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8094,
+   "signals": {
+    "pageviews": 169733,
+    "zipf": 4.87,
+    "salience": 3
+   }
+  },
+  {
+   "id": "jeopardy",
+   "name": "Jeopardy!",
+   "aliases": [
+    "A Time for Tony",
+    "Cheryl Farrell",
+    "Clue Crew",
+    "Double Jeopardy!",
+    "Final Jeopardy!",
+    "Hacker jeopardy",
+    "Harry Eisenberg",
+    "J-archive",
+    "Jeapordy",
+    "Jeopardi",
+    "Jeopardy Music",
+    "Jeopardy in popular culture",
+    "Jeopardy theme",
+    "Jeopardy theme song",
+    "Jeopardy! Clue Crew",
+    "Jeopardy! in culture",
+    "Jeopardy! set evolution",
+    "Jeopardy! theme music",
+    "Jeopardy! theme songs",
+    "Jepardy",
+    "Jepordy",
+    "Jimmy McGuire",
+    "Jon Cannon",
+    "Kelly Miyahara",
+    "Lock-out device",
+    "Michelle Loud",
+    "Sarah Whitcomb",
+    "Sarah Whitcomb Foss",
+    "Single Jeopardy!",
+    "Sofia Lidskog",
+    "Steve Dorfman",
+    "Trebek show",
+    "What's the Question?"
+   ],
+   "article": "Jeopardy!",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8009,
+   "signals": {
+    "pageviews": 542510,
+    "zipf": 3.52,
+    "salience": 5
+   }
+  },
+  {
+   "id": "8-out-of-10-cats",
+   "name": "8 Out of 10 Cats",
+   "aliases": [
+    "8 Out of Ten Cats",
+    "8/10 cats",
+    "8OO10C",
+    "Eight out of Ten Cats"
+   ],
+   "article": "8 Out of 10 Cats",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8007,
+   "signals": {
+    "pageviews": 220276,
+    "zipf": 4.36,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-weakest-link",
+   "name": "The Weakest Link",
+   "aliases": [
+    "International versions of The Weakest Link",
+    "Le Maillon Faible"
+   ],
+   "article": "Weakest Link",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7989,
+   "signals": {
+    "pageviews": 78194,
+    "zipf": 3.57,
+    "salience": 5
+   }
+  },
+  {
+   "id": "legends-of-the-hidden-temple",
+   "name": "Legends of the Hidden Temple",
+   "aliases": [
+    "Blue Barracudas",
+    "Cave of Sighs",
+    "Jester's Court",
+    "King's Storeroom",
+    "Kirk Fogg",
+    "Kurt Fogg",
+    "Legend of the Hidden Temple",
+    "Legends of the Hidden Temple season 1",
+    "Legends of the Hidden Temple season 2",
+    "Legends of the Hidden Temple season 3",
+    "Lightning Ball Room",
+    "LotHT",
+    "Medusa's Lair",
+    "Olmec",
+    "Olmec's Temple",
+    "Pendant of Life",
+    "Pendants of Life",
+    "Pharaoh's Secret Passage",
+    "Purple Parrots",
+    "Quicksand Bog",
+    "Red Jaguars",
+    "Room of the Golden Idols",
+    "Room of the Three Gargoyles",
+    "Shrine of the Silver Monkey",
+    "Steps of Knowledge",
+    "Temple Guard",
+    "Temple Guards",
+    "The Pit of Despair",
+    "The Temple Games",
+    "Tomb of the Headless Kings"
+   ],
+   "article": "Legends of the Hidden Temple",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.798,
+   "signals": {
+    "pageviews": 113586,
+    "zipf": 3.82,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-crystal-maze",
+   "name": "The Crystal Maze",
+   "aliases": [],
+   "article": "The Crystal Maze",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7966,
+   "signals": {
+    "pageviews": 127434,
+    "zipf": 3.58,
+    "salience": 4
+   }
+  },
+  {
+   "id": "american-gladiators",
+   "name": "American Gladiators",
+   "aliases": [
+    "Debbie Clark",
+    "Galen Tomlinson",
+    "Storm",
+    "Wesley Berry"
+   ],
+   "article": "American Gladiators (1989 TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7926,
+   "signals": {
+    "pageviews": 134993,
+    "zipf": 3.02,
+    "salience": 4
+   }
+  },
+  {
+   "id": "name-that-tune",
+   "name": "Name That Tune",
+   "aliases": [
+    "Celebrity Name That Tune",
+    "Name That Video",
+    "Ugadai Melodiu",
+    "Ugadai Melodiyu"
+   ],
+   "article": "Name That Tune",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7922,
+   "signals": {
+    "pageviews": 93523,
+    "zipf": 4.25,
+    "salience": 4
+   }
+  },
+  {
+   "id": "8-out-of-10-cats-does-countdown",
+   "name": "8 Out of 10 Cats Does Countdown",
+   "aliases": [
+    "8/10 Cats Does Countdown",
+    "8OO10CDC",
+    "Cats Does Countdown",
+    "Catsdown"
+   ],
+   "article": "8 Out of 10 Cats Does Countdown",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7906,
+   "signals": {
+    "pageviews": 349049,
+    "zipf": 3.6,
+    "salience": 3
+   }
+  },
+  {
+   "id": "double-dare",
+   "name": "Double Dare",
+   "aliases": [
+    "Celebrity Double Dare",
+    "Doc Holliday",
+    "Double Dare 2000",
+    "Family Double Dare",
+    "Fox Family Double Dare",
+    "Fox's Family Double Dare",
+    "Harvey",
+    "John Harvey",
+    "Super Sloppy",
+    "Super Sloppy Double Dare",
+    "Super Special Double Dare"
+   ],
+   "article": "Double Dare (franchise)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7817,
+   "signals": {
+    "pageviews": 77857,
+    "zipf": 4.23,
+    "salience": 4
+   }
+  },
+  {
+   "id": "iron-chef",
+   "name": "Iron Chef",
+   "aliases": [
+    "Allez cuisine!",
+    "Chairman Kaga",
+    "Iron Chef USA",
+    "Iron chef japanese",
+    "Kitchen Stadium",
+    "Ryoori no Tetsujin",
+    "Ryori no tetsujin",
+    "USA"
+   ],
+   "article": "Iron Chef",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7808,
+   "signals": {
+    "pageviews": 176751,
+    "zipf": 4.11,
+    "salience": 3
+   }
+  },
+  {
+   "id": "pointless",
+   "name": "Pointless",
+   "aliases": [
+    "Pointless Celebrities"
+   ],
+   "article": "Pointless",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7787,
+   "signals": {
+    "pageviews": 176991,
+    "zipf": 3.88,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-gong-show",
+   "name": "The Gong Show",
+   "aliases": [
+    "Extreme Gong",
+    "The Popsicle Twins",
+    "Tommy Maitland"
+   ],
+   "article": "The Gong Show",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7754,
+   "signals": {
+    "pageviews": 112594,
+    "zipf": 3.45,
+    "salience": 4
+   }
+  },
+  {
+   "id": "is-it-cake",
+   "name": "Is It Cake?",
+   "aliases": [
+    "Is It Cak3?",
+    "Is It Cake, Too?",
+    "Is It Cake? Halloween",
+    "Is It Cake? Holiday"
+   ],
+   "article": "Is It Cake?",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7734,
+   "signals": {
+    "pageviews": 143067,
+    "zipf": 4.53,
+    "salience": 3
+   }
+  },
+  {
+   "id": "supermarket-sweep",
+   "name": "Supermarket Sweep",
+   "aliases": [],
+   "article": "Supermarket Sweep",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7724,
+   "signals": {
+    "pageviews": 105270,
+    "zipf": 3.56,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-traitors",
+   "name": "The Traitors",
+   "aliases": [
+    "Cut the Head off the Snake",
+    "Do You Know the Enemy?",
+    "Leap of Faith",
+    "Let the Cards Fall As They Will",
+    "Planning a Coup",
+    "Show Me Your Faces",
+    "The Black Banquet",
+    "The Death Conga",
+    "The Traitors US",
+    "Think Outside the Box"
+   ],
+   "article": "The Traitors (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7721,
+   "signals": {
+    "pageviews": 2221947,
+    "zipf": 3.44,
+    "salience": 4
+   }
+  },
+  {
+   "id": "figure-it-out",
+   "name": "Figure It Out",
+   "aliases": [
+    "Brad Barat",
+    "Figure It Out: Family Style",
+    "Figure It Out: Wild Style",
+    "Magda Liolis",
+    "Robert Phasta"
+   ],
+   "article": "Figure It Out",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.771,
+   "signals": {
+    "pageviews": 50500,
+    "zipf": 5.05,
+    "salience": 4
+   }
+  },
+  {
+   "id": "countdown",
+   "name": "Countdown",
+   "aliases": [
+    "Calendar Countdown",
+    "Celebrity Countdown",
+    "Countdown UK",
+    "Crucial conundrum",
+    "Dictionary Corner",
+    "TNETENNBA",
+    "Teatime teaser"
+   ],
+   "article": "Countdown (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7708,
+   "signals": {
+    "pageviews": 278308,
+    "zipf": 3.68,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-big-fat-quiz-of-the-year",
+   "name": "The Big Fat Quiz of the Year",
+   "aliases": [
+    "Bad Dong",
+    "Bfqoty",
+    "Big Fat Quiz",
+    "Big quiz of the year",
+    "The Big Fat Anniversary Quiz",
+    "The Big Fat Quiz of Everything"
+   ],
+   "article": "The Big Fat Quiz of the Year",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7665,
+   "signals": {
+    "pageviews": 169151,
+    "zipf": 3.77,
+    "salience": 3
+   }
+  },
+  {
+   "id": "only-connect",
+   "name": "Only Connect",
+   "aliases": [
+    "Here's the first"
+   ],
+   "article": "Only Connect",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.766,
+   "signals": {
+    "pageviews": 129383,
+    "zipf": 4.37,
+    "salience": 3
+   }
+  },
+  {
+   "id": "cash-cab",
+   "name": "Cash Cab",
+   "aliases": [
+    "Cash Cab USA",
+    "Cash Cab: After Dark",
+    "Cash Cab: Chicago",
+    "Cash Cab: Las Vegas"
+   ],
+   "article": "Cash Cab (American game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.759,
+   "signals": {
+    "pageviews": 67234,
+    "zipf": 3.91,
+    "salience": 4
+   }
+  },
+  {
+   "id": "forged-in-fire",
+   "name": "Forged in Fire",
+   "aliases": [
+    "J. Neilson"
+   ],
+   "article": "Forged in Fire",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7574,
+   "signals": {
+    "pageviews": 151931,
+    "zipf": 3.71,
+    "salience": 3
+   }
+  },
+  {
+   "id": "deal-or-no-deal-island",
+   "name": "Deal or No Deal Island",
+   "aliases": [
+    "Alyssa Klinzing",
+    "Amy McCoy",
+    "Aron Barbell",
+    "Brantzen Wong",
+    "CK Kim",
+    "Courtney Kim",
+    "Dickson Wong",
+    "Jamil Sipes",
+    "Kim Mattina",
+    "La Shell Wooten",
+    "Luke Olejniczak",
+    "Maria-Grace Cook",
+    "Miranda Harrison",
+    "Nick Grasso",
+    "Rock Carlson",
+    "Seychelle Cordero",
+    "Stephanie Mitchell",
+    "Storm Wilson",
+    "Sydnee Peck"
+   ],
+   "article": "Deal or No Deal Island",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7555,
+   "signals": {
+    "pageviews": 105800,
+    "zipf": 4.7,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-circle",
+   "name": "The Circle",
+   "aliases": [
+    "The Circle US"
+   ],
+   "article": "The Circle (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7499,
+   "signals": {
+    "pageviews": 106122,
+    "zipf": 4.55,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-100-000-pyramid",
+   "name": "The $100,000 Pyramid",
+   "aliases": [
+    "$1,000,000 Pyramid",
+    "$50,000 Pyramid",
+    "100000 dollar pyramid",
+    "Donnymid",
+    "Junior Partner Pyramid",
+    "Pyramid",
+    "Pyramid broadcast history",
+    "The $10,000 Pyramid",
+    "The $100k pyramid",
+    "The $20,000 Pyramid",
+    "The $25,000 Pyramid",
+    "The 10,000 Dollar Pyramid",
+    "The New $25,000 Pyramid",
+    "The Pyramid"
+   ],
+   "article": "Pyramid (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7484,
+   "signals": {
+    "pageviews": 63199,
+    "zipf": 0.0,
+    "salience": 5
+   }
+  },
+  {
+   "id": "the-newlywed-game",
+   "name": "The Newlywed Game",
+   "aliases": [
+    "The Celebrity Newlywed Game",
+    "The New Newlywed Game"
+   ],
+   "article": "The Newlywed Game",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7461,
+   "signals": {
+    "pageviews": 57717,
+    "zipf": 2.57,
+    "salience": 5
+   }
+  },
+  {
+   "id": "lip-sync-battle",
+   "name": "Lip Sync Battle",
+   "aliases": [
+    "Lip Sync Battle Africa",
+    "Lip Synch Battle"
+   ],
+   "article": "Lip Sync Battle",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7446,
+   "signals": {
+    "pageviews": 137415,
+    "zipf": 3.65,
+    "salience": 3
+   }
+  },
+  {
+   "id": "beat-bobby-flay",
+   "name": "Beat Bobby Flay",
+   "aliases": [],
+   "article": "Beat Bobby Flay",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7445,
+   "signals": {
+    "pageviews": 191209,
+    "zipf": 2.48,
+    "salience": 3
+   }
+  },
+  {
+   "id": "masterchef",
+   "name": "MasterChef",
+   "aliases": [
+    "MasterChef America",
+    "MasterChef United States",
+    "MasterChef season 17",
+    "Masterchef us"
+   ],
+   "article": "MasterChef (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7401,
+   "signals": {
+    "pageviews": 505938,
+    "zipf": 3.01,
+    "salience": 4
+   }
+  },
+  {
+   "id": "password",
+   "name": "Password",
+   "aliases": [
+    "Password All-Stars"
+   ],
+   "article": "Password (American game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7398,
+   "signals": {
+    "pageviews": 79557,
+    "zipf": 4.06,
+    "salience": 4
+   }
+  },
+  {
+   "id": "never-mind-the-buzzcocks",
+   "name": "Never Mind the Buzzcocks",
+   "aliases": [
+    "Biggie to Smalls",
+    "Diva or Beaver?",
+    "Do You Know Who I Am?",
+    "Dress You Up",
+    "Ed Seymour",
+    "I Fought the Law",
+    "Inspector Rock",
+    "Mama Said \"Knock You Out\"",
+    "Next Lines",
+    "Sorry No Refunds",
+    "What Have We Pixellated?",
+    "What a Load of Buzzcocks"
+   ],
+   "article": "Never Mind the Buzzcocks",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7396,
+   "signals": {
+    "pageviews": 179659,
+    "zipf": 2.13,
+    "salience": 3
+   }
+  },
+  {
+   "id": "takeshis-castle",
+   "name": "Takeshi's Castle",
+   "aliases": [
+    "Fu'un! takeshi castle",
+    "Fūun! Takeshi Jō",
+    "Humor Amarillo",
+    "Kenny Blankenship",
+    "Keshi Heads",
+    "Mai dire Banzai",
+    "Romesh and Tom Take Takeshi’s Castle",
+    "Takashi's Castle",
+    "Tikeshi's castle",
+    "Vic Ramono"
+   ],
+   "article": "Takeshi's Castle",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7391,
+   "signals": {
+    "pageviews": 201892,
+    "zipf": 1.55,
+    "salience": 3
+   }
+  },
+  {
+   "id": "taskmaster",
+   "name": "Taskmaster",
+   "aliases": [
+    "Het grootste licht",
+    "HomeTasking",
+    "Junior Taskmaster",
+    "Taskmaster SuperMax+",
+    "Taskmaster episodes",
+    "Taskmasterclass"
+   ],
+   "article": "Taskmaster (TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7355,
+   "signals": {
+    "pageviews": 2303433,
+    "zipf": 2.37,
+    "salience": 4
+   }
+  },
+  {
+   "id": "america-says",
+   "name": "America Says",
+   "aliases": [],
+   "article": "America Says",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.733,
+   "signals": {
+    "pageviews": 35432,
+    "zipf": 5.03,
+    "salience": 4
+   }
+  },
+  {
+   "id": "chopped",
+   "name": "Chopped",
+   "aliases": [
+    "Chopped All-Stars",
+    "Chopped Sweets",
+    "Chopped TV",
+    "Chopped TV series",
+    "Chopped: Holiday"
+   ],
+   "article": "Chopped (TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7306,
+   "signals": {
+    "pageviews": 109256,
+    "zipf": 3.78,
+    "salience": 4
+   }
+  },
+  {
+   "id": "qi",
+   "name": "QI",
+   "aliases": [
+    "Cultural impact of QI",
+    "QI DVD",
+    "QI News",
+    "QI XL",
+    "Quite Interesting",
+    "Quite Interresting",
+    "The QI Test"
+   ],
+   "article": "QI",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7297,
+   "signals": {
+    "pageviews": 279519,
+    "zipf": 3.29,
+    "salience": 4
+   }
+  },
+  {
+   "id": "tournament-of-champions",
+   "name": "Tournament of Champions",
+   "aliases": [],
+   "article": "Tournament of Champions (TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7273,
+   "signals": {
+    "pageviews": 352734,
+    "zipf": 4.23,
+    "salience": 2
+   }
+  },
+  {
+   "id": "card-sharks",
+   "name": "Card Sharks",
+   "aliases": [
+    "Donna Fulks",
+    "Money Cards"
+   ],
+   "article": "Card Sharks",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7197,
+   "signals": {
+    "pageviews": 45884,
+    "zipf": 3.93,
+    "salience": 4
+   }
+  },
+  {
+   "id": "lego-masters",
+   "name": "Lego Masters",
+   "aliases": [
+    "Lego Masters season 6",
+    "Lego masters usa"
+   ],
+   "article": "Lego Masters (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7139,
+   "signals": {
+    "pageviews": 100618,
+    "zipf": 3.72,
+    "salience": 3
+   }
+  },
+  {
+   "id": "you-bet-your-life",
+   "name": "You Bet Your Life",
+   "aliases": [
+    "The Best of Groucho",
+    "The Groucho Show"
+   ],
+   "article": "You Bet Your Life",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7125,
+   "signals": {
+    "pageviews": 59732,
+    "zipf": 4.75,
+    "salience": 3
+   }
+  },
+  {
+   "id": "where-in-the-world-is-carmen-sandiego",
+   "name": "Where in the World Is Carmen Sandiego?",
+   "aliases": [
+    "Auld Lang Gone",
+    "The Chief"
+   ],
+   "article": "Where in the World Is Carmen Sandiego? (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7105,
+   "signals": {
+    "pageviews": 128244,
+    "zipf": 2.18,
+    "salience": 3
+   }
+  },
+  {
+   "id": "minute-to-win-it",
+   "name": "Minute to Win It",
+   "aliases": [
+    "Candy elevator",
+    "Don't blow the joker",
+    "Face the cookie",
+    "Supercoin",
+    "You've got a minute to win it!"
+   ],
+   "article": "Minute to Win It",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7079,
+   "signals": {
+    "pageviews": 29503,
+    "zipf": 4.83,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-great-british-menu",
+   "name": "The Great British Menu",
+   "aliases": [
+    "Great Brittish Menu",
+    "List of Great British Menu episodes"
+   ],
+   "article": "Great British Menu",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7076,
+   "signals": {
+    "pageviews": 226837,
+    "zipf": 4.2,
+    "salience": 2
+   }
+  },
+  {
+   "id": "beat-shazam",
+   "name": "Beat Shazam",
+   "aliases": [],
+   "article": "Beat Shazam",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7031,
+   "signals": {
+    "pageviews": 52689,
+    "zipf": 2.94,
+    "salience": 4
+   }
+  },
+  {
+   "id": "chain-reaction",
+   "name": "Chain Reaction",
+   "aliases": [
+    "Dylan Lane"
+   ],
+   "article": "Chain Reaction (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6998,
+   "signals": {
+    "pageviews": 32602,
+    "zipf": 4.39,
+    "salience": 4
+   }
+  },
+  {
+   "id": "25-words-or-less",
+   "name": "25 Words or Less",
+   "aliases": [],
+   "article": "25 Words or Less",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6974,
+   "signals": {
+    "pageviews": 27106,
+    "zipf": 4.76,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-great-pottery-throw-down",
+   "name": "The Great Pottery Throw Down",
+   "aliases": [
+    "Pottery Throw Down",
+    "The Great British Pottery Throw Down"
+   ],
+   "article": "The Great Pottery Throw Down",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6967,
+   "signals": {
+    "pageviews": 286846,
+    "zipf": 3.66,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-generation-game",
+   "name": "The Generation Game",
+   "aliases": [
+    "Did they do well?"
+   ],
+   "article": "The Generation Game",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6939,
+   "signals": {
+    "pageviews": 50040,
+    "zipf": 4.77,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-wheel",
+   "name": "The Wheel",
+   "aliases": [
+    "Michael McIntyre’s The Wheel"
+   ],
+   "article": "The Wheel (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6925,
+   "signals": {
+    "pageviews": 51666,
+    "zipf": 4.5,
+    "salience": 3
+   }
+  },
+  {
+   "id": "truth-or-consequences",
+   "name": "Truth or Consequences",
+   "aliases": [],
+   "article": "Truth or Consequences",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6859,
+   "signals": {
+    "pageviews": 53203,
+    "zipf": 4.37,
+    "salience": 3
+   }
+  },
+  {
+   "id": "tipping-point",
+   "name": "Tipping Point",
+   "aliases": [
+    "Tip It",
+    "Tipping Point: Lucky Stars"
+   ],
+   "article": "Tipping Point (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6853,
+   "signals": {
+    "pageviews": 76418,
+    "zipf": 3.56,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-traitors-australia",
+   "name": "The Traitors Australia",
+   "aliases": [
+    "Camille Chicheportiche",
+    "The Traitor"
+   ],
+   "article": "The Traitors (Australian TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6815,
+   "signals": {
+    "pageviews": 265638,
+    "zipf": 3.43,
+    "salience": 2
+   }
+  },
+  {
+   "id": "celebrity-family-feud",
+   "name": "Celebrity Family Feud",
+   "aliases": [
+    "Celebrity feud",
+    "Family feud celebrity"
+   ],
+   "article": "Celebrity Family Feud",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6814,
+   "signals": {
+    "pageviews": 75365,
+    "zipf": 3.53,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-great-british-sewing-bee",
+   "name": "The Great British Sewing Bee",
+   "aliases": [
+    "Sewing Bee"
+   ],
+   "article": "The Great British Sewing Bee",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6798,
+   "signals": {
+    "pageviews": 226178,
+    "zipf": 3.53,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-devils-plan",
+   "name": "The Devil's Plan",
+   "aliases": [
+    "The Devil's Plan: Death Room"
+   ],
+   "article": "The Devil's Plan",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6783,
+   "signals": {
+    "pageviews": 207757,
+    "zipf": 3.59,
+    "salience": 2
+   }
+  },
+  {
+   "id": "fort-boyard",
+   "name": "Fort Boyard",
+   "aliases": [
+    "Fångarna på fortet"
+   ],
+   "article": "Fort Boyard (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6757,
+   "signals": {
+    "pageviews": 98245,
+    "zipf": 1.13,
+    "salience": 3
+   }
+  },
+  {
+   "id": "celebrity-jeopardy",
+   "name": "Celebrity Jeopardy!",
+   "aliases": [
+    "Celebrity Jeapordy",
+    "Celebrity Jeopardy! Tournament",
+    "Triple Jeopardy!"
+   ],
+   "article": "Celebrity Jeopardy!",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6754,
+   "signals": {
+    "pageviews": 72935,
+    "zipf": 3.45,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-amazing-race-canada",
+   "name": "The Amazing Race Canada",
+   "aliases": [
+    "TARC 1"
+   ],
+   "article": "The Amazing Race Canada",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6728,
+   "signals": {
+    "pageviews": 114865,
+    "zipf": 4.57,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-great-american-baking-show",
+   "name": "The Great American Baking Show",
+   "aliases": [
+    "The Great American Holiday Baking Show",
+    "The Great Holiday Baking Show"
+   ],
+   "article": "The Great American Baking Show",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6711,
+   "signals": {
+    "pageviews": 145485,
+    "zipf": 3.9,
+    "salience": 2
+   }
+  },
+  {
+   "id": "guts",
+   "name": "Guts",
+   "aliases": [
+    "Aggro Crag",
+    "Agro crag",
+    "Global Guts",
+    "List of Global GUTS episodes",
+    "Nickelodeon Guts"
+   ],
+   "article": "Nickelodeon Guts",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6694,
+   "signals": {
+    "pageviews": 48388,
+    "zipf": 3.77,
+    "salience": 4
+   }
+  },
+  {
+   "id": "the-mole",
+   "name": "The Mole",
+   "aliases": [
+    "Celebrity Mole"
+   ],
+   "article": "The Mole (American TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6674,
+   "signals": {
+    "pageviews": 121442,
+    "zipf": 3.67,
+    "salience": 3
+   }
+  },
+  {
+   "id": "worst-cooks-in-america",
+   "name": "Worst Cooks in America",
+   "aliases": [
+    "Carrie Lee Riggins",
+    "Erika Coleman",
+    "Rachel Coleman",
+    "Worst Cooks",
+    "Worst Cooks Of America"
+   ],
+   "article": "Worst Cooks in America",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6655,
+   "signals": {
+    "pageviews": 155795,
+    "zipf": 3.62,
+    "salience": 2
+   }
+  },
+  {
+   "id": "robot-wars",
+   "name": "Robot Wars",
+   "aliases": [
+    "Bigger Brother",
+    "Cassius Chrome",
+    "Cassius Robot Series",
+    "Dead Metal",
+    "Diotoir",
+    "Firestorm",
+    "Firestorm Robot Series",
+    "House Robots of Robot Wars",
+    "House robot",
+    "House robots",
+    "List of Robot Wars episodes",
+    "List of significant Robot Wars contestants",
+    "Matilda",
+    "Mr. Psycho",
+    "Pussycat",
+    "Refbot",
+    "Robot Wars Episodes",
+    "Robot Wars Extreme",
+    "Robot Wars Featherweight",
+    "Robot Wars Seeding",
+    "Robot Wars UK Series 1",
+    "Robot Wars grand finalists",
+    "Robot wars house robots",
+    "Sergeant Bash",
+    "Sgt. Bash",
+    "Sir Killalot",
+    "Slicer",
+    "The Fourth Wars"
+   ],
+   "article": "Robot Wars (TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6608,
+   "signals": {
+    "pageviews": 127018,
+    "zipf": 4.08,
+    "salience": 2
+   }
+  },
+  {
+   "id": "blankety-blank",
+   "name": "Blankety Blank",
+   "aliases": [
+    "Lily Savage's Blankety Blank"
+   ],
+   "article": "Blankety Blank",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6598,
+   "signals": {
+    "pageviews": 76280,
+    "zipf": 1.76,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-64-000-question",
+   "name": "The $64,000 Question",
+   "aliases": [
+    "64,000 Dollar Question",
+    "Coles £3000 Question",
+    "The $64,000 Challenge"
+   ],
+   "article": "The $64,000 Question",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6583,
+   "signals": {
+    "pageviews": 40099,
+    "zipf": 0.0,
+    "salience": 4
+   }
+  },
+  {
+   "id": "im-sorry-i-havent-a-clue",
+   "name": "I'm Sorry I Haven't a Clue",
+   "aliases": [
+    "Cheddar Gorge",
+    "Gnat's crotchet",
+    "ISIHAC",
+    "Just a Minim",
+    "Mrs. Trellis",
+    "Mrs. Trellis of North Wales",
+    "One Song to the Tune of Another",
+    "Sound Charades",
+    "The antidote to panel games"
+   ],
+   "article": "I'm Sorry I Haven't a Clue",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6541,
+   "signals": {
+    "pageviews": 115126,
+    "zipf": 4.09,
+    "salience": 2
+   }
+  },
+  {
+   "id": "mastermind",
+   "name": "Mastermind",
+   "aliases": [
+    "Approaching Menace",
+    "Bbc mastermind",
+    "David verghese",
+    "Impending Menace",
+    "International Mastermind",
+    "Junior Mastermind",
+    "Mastermind International",
+    "Mastermind TV Series",
+    "Sport Mastermind"
+   ],
+   "article": "Mastermind (British game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6534,
+   "signals": {
+    "pageviews": 75145,
+    "zipf": 3.36,
+    "salience": 4
+   }
+  },
+  {
+   "id": "making-it",
+   "name": "Making It",
+   "aliases": [
+    "The Handmade Project"
+   ],
+   "article": "Making It (TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6533,
+   "signals": {
+    "pageviews": 35327,
+    "zipf": 5.52,
+    "salience": 2
+   }
+  },
+  {
+   "id": "are-you-smarter-than-a-5th-grader",
+   "name": "Are You Smarter than a 5th Grader?",
+   "aliases": [
+    "Are You Smarter Than a Fifth Grader?"
+   ],
+   "article": "Are You Smarter than a 5th Grader?",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6526,
+   "signals": {
+    "pageviews": 21586,
+    "zipf": 3.16,
+    "salience": 5
+   }
+  },
+  {
+   "id": "love-connection",
+   "name": "Love Connection",
+   "aliases": [],
+   "article": "Love Connection",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6461,
+   "signals": {
+    "pageviews": 31871,
+    "zipf": 4.72,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-great-food-truck-race",
+   "name": "The Great Food Truck Race",
+   "aliases": [
+    "Mystikka Masala"
+   ],
+   "article": "The Great Food Truck Race",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6429,
+   "signals": {
+    "pageviews": 87764,
+    "zipf": 4.44,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-floor-is-lava",
+   "name": "The Floor Is Lava",
+   "aliases": [
+    "Hot lava",
+    "Hot lava monster",
+    "The floor is made of lava"
+   ],
+   "article": "The floor is lava",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6407,
+   "signals": {
+    "pageviews": 23710,
+    "zipf": 3.7,
+    "salience": 4
+   }
+  },
+  {
+   "id": "family-fortunes",
+   "name": "Family Fortunes",
+   "aliases": [
+    "All Star Family Fortune",
+    "All Star Family Fortunes"
+   ],
+   "article": "Family Fortunes",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.64,
+   "signals": {
+    "pageviews": 46579,
+    "zipf": 3.62,
+    "salience": 3
+   }
+  },
+  {
+   "id": "concentration",
+   "name": "Concentration",
+   "aliases": [
+    "Classic Concentration"
+   ],
+   "article": "Concentration (game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6356,
+   "signals": {
+    "pageviews": 38837,
+    "zipf": 4.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-amazing-race-australia",
+   "name": "The Amazing Race Australia",
+   "aliases": [
+    "TARAus"
+   ],
+   "article": "The Amazing Race Australia",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6288,
+   "signals": {
+    "pageviews": 66355,
+    "zipf": 4.6,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-cube",
+   "name": "The Cube",
+   "aliases": [
+    "The Million Pound Cube"
+   ],
+   "article": "The Cube (British game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6274,
+   "signals": {
+    "pageviews": 50418,
+    "zipf": 3.82,
+    "salience": 3
+   }
+  },
+  {
+   "id": "nailed-it",
+   "name": "Nailed It!",
+   "aliases": [
+    "Nailed It! Holiday"
+   ],
+   "article": "Nailed It!",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6268,
+   "signals": {
+    "pageviews": 53714,
+    "zipf": 3.77,
+    "salience": 3
+   }
+  },
+  {
+   "id": "guys-grocery-games",
+   "name": "Guy's Grocery Games",
+   "aliases": [
+    "Flavortown Market",
+    "Triple G"
+   ],
+   "article": "Guy's Grocery Games",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6264,
+   "signals": {
+    "pageviews": 40258,
+    "zipf": 3.63,
+    "salience": 3
+   }
+  },
+  {
+   "id": "junior-bake-off",
+   "name": "Junior Bake Off",
+   "aliases": [],
+   "article": "Junior Bake Off",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6242,
+   "signals": {
+    "pageviews": 89483,
+    "zipf": 3.81,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-celebrity-apprentice",
+   "name": "The Celebrity Apprentice",
+   "aliases": [
+    "Celeb apprentice"
+   ],
+   "article": "The Celebrity Apprentice",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6188,
+   "signals": {
+    "pageviews": 101177,
+    "zipf": 3.6,
+    "salience": 2
+   }
+  },
+  {
+   "id": "sale-of-the-century",
+   "name": "Sale of the Century",
+   "aliases": [
+    "$ale of the Century"
+   ],
+   "article": "Sale of the Century",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6182,
+   "signals": {
+    "pageviews": 24122,
+    "zipf": 4.7,
+    "salience": 3
+   }
+  },
+  {
+   "id": "bullseye",
+   "name": "Bullseye",
+   "aliases": [
+    "Bendy Bully",
+    "Bronze Bully",
+    "Bronze Bully Trophy",
+    "Chris Johns"
+   ],
+   "article": "Bullseye (British game show)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6158,
+   "signals": {
+    "pageviews": 127107,
+    "zipf": 2.8,
+    "salience": 3
+   }
+  },
+  {
+   "id": "win-ben-steins-money",
+   "name": "Win Ben Stein's Money",
+   "aliases": [],
+   "article": "Win Ben Stein's Money",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6139,
+   "signals": {
+    "pageviews": 44501,
+    "zipf": 2.41,
+    "salience": 3
+   }
+  },
+  {
+   "id": "gladiators",
+   "name": "Gladiators",
+   "aliases": [
+    "Bernadette Hunt",
+    "Lize van der Walt",
+    "Warren Furman",
+    "Wembley live shows",
+    "Wembley live shows 1995",
+    "Wembly live shows 1993",
+    "Wembly live shows 1995"
+   ],
+   "article": "Gladiators (1992 British TV series)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6135,
+   "signals": {
+    "pageviews": 112579,
+    "zipf": 3.02,
+    "salience": 3
+   }
+  },
+  {
+   "id": "dont-forget-the-lyrics",
+   "name": "Don't Forget the Lyrics!",
+   "aliases": [],
+   "article": "Don't Forget the Lyrics! (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6088,
+   "signals": {
+    "pageviews": 26889,
+    "zipf": 4.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-next-food-network-star",
+   "name": "The Next Food Network Star",
+   "aliases": [
+    "Food Network Star",
+    "NFNS",
+    "Party Line with Dan & Steve",
+    "Party Line with the Hearty Boys",
+    "TNFNS"
+   ],
+   "article": "Food Network Star",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6065,
+   "signals": {
+    "pageviews": 52052,
+    "zipf": 4.66,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ive-got-a-secret",
+   "name": "I've Got a Secret",
+   "aliases": [
+    "I Have Got a Secret",
+    "I Have a Secret",
+    "Telecast Enterprises"
+   ],
+   "article": "I've Got a Secret",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6042,
+   "signals": {
+    "pageviews": 48502,
+    "zipf": 4.82,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-moment-of-truth",
+   "name": "The Moment of Truth",
+   "aliases": [
+    "Lauren Cleri",
+    "List of The Moment of Truth episodes"
+   ],
+   "article": "The Moment of Truth (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.602,
+   "signals": {
+    "pageviews": 48313,
+    "zipf": 4.83,
+    "salience": 2
+   }
+  },
+  {
+   "id": "impossible",
+   "name": "Impossible",
+   "aliases": [
+    "!mpossible"
+   ],
+   "article": "Impossible (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6019,
+   "signals": {
+    "pageviews": 31117,
+    "zipf": 4.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "face-off",
+   "name": "Face Off",
+   "aliases": [],
+   "article": "Face Off (American TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.601,
+   "signals": {
+    "pageviews": 40888,
+    "zipf": 5.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tic-tac-dough",
+   "name": "Tic-Tac-Dough",
+   "aliases": [
+    "Criss Cross Quiz",
+    "Tak-Tik-BOOM",
+    "Thom McKee"
+   ],
+   "article": "Tic-Tac-Dough",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5984,
+   "signals": {
+    "pageviews": 36361,
+    "zipf": 2.89,
+    "salience": 3
+   }
+  },
+  {
+   "id": "lingo",
+   "name": "Lingo",
+   "aliases": [],
+   "article": "Lingo (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5977,
+   "signals": {
+    "pageviews": 41876,
+    "zipf": 3.01,
+    "salience": 4
+   }
+  },
+  {
+   "id": "making-the-cut",
+   "name": "Making the Cut",
+   "aliases": [],
+   "article": "Making the Cut (2020 TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5967,
+   "signals": {
+    "pageviews": 40993,
+    "zipf": 5.06,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-quiz-with-balls",
+   "name": "The Quiz with Balls",
+   "aliases": [],
+   "article": "The Quiz with Balls",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.592,
+   "signals": {
+    "pageviews": 63145,
+    "zipf": 3.74,
+    "salience": 2
+   }
+  },
+  {
+   "id": "hole-in-the-wall",
+   "name": "Hole in the Wall",
+   "aliases": [],
+   "article": "Hole in the Wall (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5911,
+   "signals": {
+    "pageviews": 19813,
+    "zipf": 4.51,
+    "salience": 3
+   }
+  },
+  {
+   "id": "battlebots",
+   "name": "BattleBots",
+   "aliases": [
+    "Backlash",
+    "BattleBots, Inc.",
+    "BattleBots: Champions",
+    "Battlebot",
+    "Bite Force",
+    "Diesector",
+    "Nightmare",
+    "OverKill",
+    "Robot Rumble"
+   ],
+   "article": "BattleBots",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5892,
+   "signals": {
+    "pageviews": 124879,
+    "zipf": 1.75,
+    "salience": 3
+   }
+  },
+  {
+   "id": "cutthroat-kitchen",
+   "name": "Cutthroat Kitchen",
+   "aliases": [
+    "Camp Cutthroat"
+   ],
+   "article": "Cutthroat Kitchen",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5889,
+   "signals": {
+    "pageviews": 34772,
+    "zipf": 2.83,
+    "salience": 3
+   }
+  },
+  {
+   "id": "win-lose-or-draw",
+   "name": "Win, Lose or Draw",
+   "aliases": [
+    "Teen Win, Lose or Draw"
+   ],
+   "article": "Win, Lose or Draw",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5873,
+   "signals": {
+    "pageviews": 17132,
+    "zipf": 4.55,
+    "salience": 3
+   }
+  },
+  {
+   "id": "just-a-minute",
+   "name": "Just a Minute",
+   "aliases": [
+    "One Minute Please"
+   ],
+   "article": "Just a Minute",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5864,
+   "signals": {
+    "pageviews": 39307,
+    "zipf": 4.96,
+    "salience": 2
+   }
+  },
+  {
+   "id": "mxc",
+   "name": "MXC",
+   "aliases": [
+    "Most Extreme Competition",
+    "Most Extreme Elimination",
+    "Most Extreme Elimination Challenge",
+    "Vic Romano"
+   ],
+   "article": "Most Extreme Elimination Challenge",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5858,
+   "signals": {
+    "pageviews": 124165,
+    "zipf": 1.4,
+    "salience": 3
+   }
+  },
+  {
+   "id": "sasuke",
+   "name": "Sasuke",
+   "aliases": [
+    "Japanese Ninja Warrior",
+    "Ninja Warrior"
+   ],
+   "article": "Sasuke (TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.584,
+   "signals": {
+    "pageviews": 76609,
+    "zipf": 2.88,
+    "salience": 3
+   }
+  },
+  {
+   "id": "catchphrase",
+   "name": "Catchphrase",
+   "aliases": [
+    "Celebrity Catchphrase",
+    "Clutchphrase",
+    "Cosmic blowout",
+    "Ready Money Round"
+   ],
+   "article": "Catchphrase (British game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5743,
+   "signals": {
+    "pageviews": 63401,
+    "zipf": 2.94,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-genius",
+   "name": "The Genius",
+   "aliases": [
+    "The Genius Game"
+   ],
+   "article": "The Genius (TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5734,
+   "signals": {
+    "pageviews": 40372,
+    "zipf": 4.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "1-vs-100",
+   "name": "1 vs. 100",
+   "aliases": [
+    "Jason Luna",
+    "Last Man Standing",
+    "One Versus One Hundred"
+   ],
+   "article": "1 vs. 100 (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5693,
+   "signals": {
+    "pageviews": 23146,
+    "zipf": 3.7,
+    "salience": 3
+   }
+  },
+  {
+   "id": "jokers-wild",
+   "name": "Joker's Wild",
+   "aliases": [
+    "Joker! Joker!! Joker!!!",
+    "List of Joker's Wild Categories",
+    "Snoop Dogg Presents The Joker's Wild",
+    "Unlikely Pairs"
+   ],
+   "article": "The Joker's Wild",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5692,
+   "signals": {
+    "pageviews": 28890,
+    "zipf": 2.6,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-million-pound-drop",
+   "name": "The Million Pound Drop",
+   "aliases": [
+    "TMPDL",
+    "The 100k drop",
+    "The Million Pound Drop Live",
+    "£1,000,000 Drop",
+    "£100,000 Drop"
+   ],
+   "article": "The Million Pound Drop",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5676,
+   "signals": {
+    "pageviews": 16547,
+    "zipf": 4.2,
+    "salience": 3
+   }
+  },
+  {
+   "id": "scrabble",
+   "name": "Scrabble",
+   "aliases": [],
+   "article": "Scrabble (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5671,
+   "signals": {
+    "pageviews": 53751,
+    "zipf": 3.04,
+    "salience": 3
+   }
+  },
+  {
+   "id": "fetch-with-ruff-ruffman",
+   "name": "Fetch! with Ruff Ruffman",
+   "aliases": [
+    "Blossom",
+    "Blossom von Yum Yum",
+    "FETCH!",
+    "FWRR",
+    "Isaac bean",
+    "List of Fetch! with Ruff Ruffman characters",
+    "Ruff Ruffman",
+    "Rufflica"
+   ],
+   "article": "Fetch! with Ruff Ruffman",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5607,
+   "signals": {
+    "pageviews": 69393,
+    "zipf": 1.02,
+    "salience": 2
+   }
+  },
+  {
+   "id": "who-wants-to-be-a-millionaire-hot-seat",
+   "name": "Who Wants to Be a Millionaire: Hot Seat",
+   "aliases": [
+    "Millionaire Hot Seat"
+   ],
+   "article": "Millionaire Hot Seat",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5603,
+   "signals": {
+    "pageviews": 49222,
+    "zipf": 3.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "remote-control",
+   "name": "Remote Control",
+   "aliases": [
+    "MTV's Remote Control",
+    "Remote control game show"
+   ],
+   "article": "Remote Control (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5584,
+   "signals": {
+    "pageviews": 38225,
+    "zipf": 4.37,
+    "salience": 2
+   }
+  },
+  {
+   "id": "twenty-one",
+   "name": "Twenty One",
+   "aliases": [
+    "21",
+    "Vivian Nearing",
+    "Vivienne Nearing",
+    "Vivienne Wax"
+   ],
+   "article": "Twenty-One (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5584,
+   "signals": {
+    "pageviews": 34330,
+    "zipf": 4.64,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-trust-a-game-of-greed",
+   "name": "The Trust: A Game of Greed",
+   "aliases": [
+    "The Trust"
+   ],
+   "article": "The Trust: A Game of Greed",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5541,
+   "signals": {
+    "pageviews": 45412,
+    "zipf": 3.71,
+    "salience": 2
+   }
+  },
+  {
+   "id": "junkyard-wars",
+   "name": "Junkyard Wars",
+   "aliases": [
+    "Junkheap wars",
+    "Junkyard Mega-Wars",
+    "List of Scrapheap Challenge episodes",
+    "Scrapheap",
+    "Scrapheap Challenge",
+    "Scrapheap Mega Challenge",
+    "Scrapheap challange",
+    "Scrappy Races",
+    "Scrappy Races Rally"
+   ],
+   "article": "Scrapheap Challenge",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5541,
+   "signals": {
+    "pageviews": 57849,
+    "zipf": 2.74,
+    "salience": 2
+   }
+  },
+  {
+   "id": "golden-balls",
+   "name": "Golden Balls",
+   "aliases": [
+    "Split or Steal"
+   ],
+   "article": "Golden Balls",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5507,
+   "signals": {
+    "pageviews": 35698,
+    "zipf": 4.29,
+    "salience": 2
+   }
+  },
+  {
+   "id": "fun-house",
+   "name": "Fun House",
+   "aliases": [
+    "Pat Sharp's Fun House"
+   ],
+   "article": "Fun House (British game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5488,
+   "signals": {
+    "pageviews": 25924,
+    "zipf": 5.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-sing-off",
+   "name": "The Sing-Off",
+   "aliases": [
+    "Solo",
+    "The Sing-Off season 5"
+   ],
+   "article": "The Sing-Off",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5484,
+   "signals": {
+    "pageviews": 31864,
+    "zipf": 4.52,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-fun-factory",
+   "name": "The Fun Factory",
+   "aliases": [
+    "Bobby Van",
+    "Robert Jack Stein"
+   ],
+   "article": "Bobby Van",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5479,
+   "signals": {
+    "pageviews": 132940,
+    "zipf": 4.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pictionary",
+   "name": "Pictionary",
+   "aliases": [],
+   "article": "Pictionary",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.543,
+   "signals": {
+    "pageviews": 58976,
+    "zipf": 2.01,
+    "salience": 3
+   }
+  },
+  {
+   "id": "queen-for-a-day",
+   "name": "Queen for a Day",
+   "aliases": [],
+   "article": "Queen for a Day",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5427,
+   "signals": {
+    "pageviews": 26235,
+    "zipf": 4.82,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-traitors-canada",
+   "name": "The Traitors Canada",
+   "aliases": [],
+   "article": "The Traitors Canada",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5423,
+   "signals": {
+    "pageviews": 253226,
+    "zipf": 3.43,
+    "salience": 1
+   }
+  },
+  {
+   "id": "eggheads",
+   "name": "Eggheads",
+   "aliases": [
+    "Celebrity Eggheads",
+    "David Rainford",
+    "He is Heavy, He's my Father",
+    "Lisa Thiel",
+    "Revenge of the Egghead"
+   ],
+   "article": "Eggheads (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5364,
+   "signals": {
+    "pageviews": 55654,
+    "zipf": 1.95,
+    "salience": 3
+   }
+  },
+  {
+   "id": "the-hit-list",
+   "name": "The Hit List",
+   "aliases": [
+    "Playlisters"
+   ],
+   "article": "The Hit List (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5364,
+   "signals": {
+    "pageviews": 23856,
+    "zipf": 5.02,
+    "salience": 2
+   }
+  },
+  {
+   "id": "catch-21",
+   "name": "Catch 21",
+   "aliases": [
+    "The New Catch 21"
+   ],
+   "article": "Catch 21",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.535,
+   "signals": {
+    "pageviews": 26122,
+    "zipf": 4.66,
+    "salience": 2
+   }
+  },
+  {
+   "id": "wild-and-crazy-kids",
+   "name": "Wild & Crazy Kids",
+   "aliases": [],
+   "article": "Wild & Crazy Kids",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.529,
+   "signals": {
+    "pageviews": 26026,
+    "zipf": 4.53,
+    "salience": 2
+   }
+  },
+  {
+   "id": "password-plus",
+   "name": "Password Plus",
+   "aliases": [
+    "Password Plus/Super Password",
+    "Super Password"
+   ],
+   "article": "Password Plus and Super Password",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5167,
+   "signals": {
+    "pageviews": 27968,
+    "zipf": 4.01,
+    "salience": 2
+   }
+  },
+  {
+   "id": "fifteen-to-one",
+   "name": "Fifteen to One",
+   "aliases": [
+    "15 to 1",
+    "Bill McKaig",
+    "Jeden Z Dziesięciu"
+   ],
+   "article": "Fifteen to One",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5078,
+   "signals": {
+    "pageviews": 24338,
+    "zipf": 4.14,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-american-bible-challenge",
+   "name": "The American Bible Challenge",
+   "aliases": [],
+   "article": "The American Bible Challenge",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5072,
+   "signals": {
+    "pageviews": 23576,
+    "zipf": 4.34,
+    "salience": 2
+   }
+  },
+  {
+   "id": "play-your-cards-right",
+   "name": "Play Your Cards Right",
+   "aliases": [
+    "PYCR"
+   ],
+   "article": "Play Your Cards Right",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5069,
+   "signals": {
+    "pageviews": 18905,
+    "zipf": 4.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-big-d",
+   "name": "The Big D",
+   "aliases": [
+    "List of programs broadcast by USA",
+    "List of programs broadcast by USA Network",
+    "Real Country",
+    "Strip Poker",
+    "World's Nastiest Neighbors"
+   ],
+   "article": "List of programs broadcast by USA Network",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5063,
+   "signals": {
+    "pageviews": 62528,
+    "zipf": 5.25,
+    "salience": 1
+   }
+  },
+  {
+   "id": "blockbusters",
+   "name": "Blockbusters",
+   "aliases": [],
+   "article": "Blockbusters (British game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5039,
+   "signals": {
+    "pageviews": 31121,
+    "zipf": 2.76,
+    "salience": 3
+   }
+  },
+  {
+   "id": "beat-the-clock",
+   "name": "Beat the Clock",
+   "aliases": [
+    "Clock"
+   ],
+   "article": "Beat the Clock",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5035,
+   "signals": {
+    "pageviews": 23306,
+    "zipf": 4.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "trivial-pursuit",
+   "name": "Trivial Pursuit",
+   "aliases": [],
+   "article": "Trivial Pursuit (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5025,
+   "signals": {
+    "pageviews": 31040,
+    "zipf": 3.53,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-krypton-factor",
+   "name": "The Krypton Factor",
+   "aliases": [],
+   "article": "The Krypton Factor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5004,
+   "signals": {
+    "pageviews": 35003,
+    "zipf": 2.76,
+    "salience": 2
+   }
+  },
+  {
+   "id": "split-second",
+   "name": "Split Second",
+   "aliases": [],
+   "article": "Split Second (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4991,
+   "signals": {
+    "pageviews": 16627,
+    "zipf": 4.61,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-masked-dancer",
+   "name": "The Masked Dancer",
+   "aliases": [],
+   "article": "The Masked Dancer (American TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4991,
+   "signals": {
+    "pageviews": 30997,
+    "zipf": 3.49,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-great-canadian-baking-show",
+   "name": "The Great Canadian Baking Show",
+   "aliases": [],
+   "article": "The Great Canadian Baking Show",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4875,
+   "signals": {
+    "pageviews": 88342,
+    "zipf": 3.84,
+    "salience": 1
+   }
+  },
+  {
+   "id": "nick-arcade",
+   "name": "Nick Arcade",
+   "aliases": [
+    "Nickelodeon Arcade",
+    "Scorchia"
+   ],
+   "article": "Nick Arcade",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4773,
+   "signals": {
+    "pageviews": 22759,
+    "zipf": 3.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "identity",
+   "name": "Identity",
+   "aliases": [],
+   "article": "Identity (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.475,
+   "signals": {
+    "pageviews": 5870,
+    "zipf": 4.65,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bake-off-the-professionals",
+   "name": "Bake Off: The Professionals",
+   "aliases": [],
+   "article": "Bake Off: The Professionals",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4742,
+   "signals": {
+    "pageviews": 77495,
+    "zipf": 3.74,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brain-of-britain",
+   "name": "Brain of Britain",
+   "aliases": [
+    "Brain of Brains",
+    "What Do You Know?"
+   ],
+   "article": "Brain of Britain",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4722,
+   "signals": {
+    "pageviews": 12257,
+    "zipf": 4.51,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-titan-games",
+   "name": "The Titan Games",
+   "aliases": [],
+   "article": "The Titan Games",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4712,
+   "signals": {
+    "pageviews": 19826,
+    "zipf": 3.68,
+    "salience": 2
+   }
+  },
+  {
+   "id": "shop-til-you-drop",
+   "name": "Shop 'til You Drop",
+   "aliases": [
+    "Pat Finn",
+    "Shop Till You Drop",
+    "The New Shop 'til you Drop"
+   ],
+   "article": "Shop 'til You Drop",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4708,
+   "signals": {
+    "pageviews": 16154,
+    "zipf": 3.93,
+    "salience": 2
+   }
+  },
+  {
+   "id": "landscape-artist-of-the-year",
+   "name": "Landscape Artist of the Year",
+   "aliases": [
+    "Artist of the Year",
+    "Portrait Artist of the Year"
+   ],
+   "article": "Artist of the Year",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4675,
+   "signals": {
+    "pageviews": 62421,
+    "zipf": 4.22,
+    "salience": 1
+   }
+  },
+  {
+   "id": "celebrity-mastermind",
+   "name": "Celebrity Mastermind",
+   "aliases": [
+    "Celebrity Mastermind - Champion"
+   ],
+   "article": "Celebrity Mastermind",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4669,
+   "signals": {
+    "pageviews": 23564,
+    "zipf": 3.31,
+    "salience": 2
+   }
+  },
+  {
+   "id": "celebrity-name-game",
+   "name": "Celebrity Name Game",
+   "aliases": [
+    "Celebrity Name Game Challenge"
+   ],
+   "article": "Celebrity Name Game",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4665,
+   "signals": {
+    "pageviews": 13081,
+    "zipf": 4.26,
+    "salience": 2
+   }
+  },
+  {
+   "id": "where-in-time-is-carmen-sandiego",
+   "name": "Where in Time Is Carmen Sandiego?",
+   "aliases": [],
+   "article": "Where in Time Is Carmen Sandiego? (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.46,
+   "signals": {
+    "pageviews": 24121,
+    "zipf": 2.18,
+    "salience": 2
+   }
+  },
+  {
+   "id": "debt",
+   "name": "Debt",
+   "aliases": [],
+   "article": "Debt (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4565,
+   "signals": {
+    "pageviews": 4458,
+    "zipf": 4.69,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tenable",
+   "name": "Tenable",
+   "aliases": [
+    "Tenable All Stars"
+   ],
+   "article": "Tenable",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4524,
+   "signals": {
+    "pageviews": 42639,
+    "zipf": 2.4,
+    "salience": 2
+   }
+  },
+  {
+   "id": "baggage",
+   "name": "Baggage",
+   "aliases": [
+    "Baggage: On the Road"
+   ],
+   "article": "Baggage (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4524,
+   "signals": {
+    "pageviews": 14845,
+    "zipf": 3.74,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-great-australian-bake-off",
+   "name": "The Great Australian Bake Off",
+   "aliases": [],
+   "article": "The Great Australian Bake Off",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4521,
+   "signals": {
+    "pageviews": 58392,
+    "zipf": 3.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "in-it-to-win-it",
+   "name": "In It to Win It",
+   "aliases": [
+    "In It to Win It 2012",
+    "The National Lottery: In It to Win It"
+   ],
+   "article": "The National Lottery: In It to Win It",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4483,
+   "signals": {
+    "pageviews": 6787,
+    "zipf": 5.36,
+    "salience": 2
+   }
+  },
+  {
+   "id": "power-of-10",
+   "name": "Power of 10",
+   "aliases": [
+    "Power of Ten",
+    "Strzal w 10",
+    "Strzal w dziesiatke",
+    "Strzał w 10",
+    "Strzał w dziesiątkę"
+   ],
+   "article": "Power of 10 (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4466,
+   "signals": {
+    "pageviews": 7009,
+    "zipf": 5.1,
+    "salience": 2
+   }
+  },
+  {
+   "id": "common-knowledge",
+   "name": "Common Knowledge",
+   "aliases": [],
+   "article": "Common Knowledge (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4442,
+   "signals": {
+    "pageviews": 7518,
+    "zipf": 4.76,
+    "salience": 2
+   }
+  },
+  {
+   "id": "people-puzzler",
+   "name": "People Puzzler",
+   "aliases": [],
+   "article": "People Puzzler",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4377,
+   "signals": {
+    "pageviews": 17506,
+    "zipf": 2.2,
+    "salience": 2
+   }
+  },
+  {
+   "id": "knightmare",
+   "name": "Knightmare",
+   "aliases": [
+    "Kinghtmare",
+    "Knightmare Castle",
+    "Knightmare Life Force",
+    "Knightmare VR",
+    "Treguard",
+    "Treguard of Dunshelm",
+    "Wall monster"
+   ],
+   "article": "Knightmare (TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4375,
+   "signals": {
+    "pageviews": 41288,
+    "zipf": 1.83,
+    "salience": 2
+   }
+  },
+  {
+   "id": "greed",
+   "name": "Greed",
+   "aliases": [
+    "Greed: The Series",
+    "Super Greed"
+   ],
+   "article": "Greed (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4363,
+   "signals": {
+    "pageviews": 12207,
+    "zipf": 3.73,
+    "salience": 2
+   }
+  },
+  {
+   "id": "national-lampoons-funny-money",
+   "name": "National Lampoon's Funny Money",
+   "aliases": [
+    "100 Winners",
+    "Caroline & Friends",
+    "Fake-a-Date",
+    "Funny Money",
+    "GSN Video Games",
+    "List of programs broadcast by GSN",
+    "List of programs broadcast by Game Show Network",
+    "Mall Masters",
+    "One Hundred Winners",
+    "Prime Games",
+    "Starface",
+    "That's the Question",
+    "Trivia Track"
+   ],
+   "article": "List of programs broadcast by Game Show Network",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4305,
+   "signals": {
+    "pageviews": 72283,
+    "zipf": 2.01,
+    "salience": 1
+   }
+  },
+  {
+   "id": "russian-roulette",
+   "name": "Russian Roulette",
+   "aliases": [
+    "Russkaya Ruletka"
+   ],
+   "article": "Russian Roulette (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4284,
+   "signals": {
+    "pageviews": 12477,
+    "zipf": 3.38,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-finish-line",
+   "name": "The Finish Line",
+   "aliases": [],
+   "article": "The Finish Line (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4272,
+   "signals": {
+    "pageviews": 34122,
+    "zipf": 4.81,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-singing-bee",
+   "name": "The Singing Bee",
+   "aliases": [],
+   "article": "The Singing Bee (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.425,
+   "signals": {
+    "pageviews": 8317,
+    "zipf": 3.97,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tattletales",
+   "name": "Tattletales",
+   "aliases": [],
+   "article": "Tattletales",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4225,
+   "signals": {
+    "pageviews": 39151,
+    "zipf": 1.17,
+    "salience": 2
+   }
+  },
+  {
+   "id": "show-me-the-money",
+   "name": "Show Me the Money",
+   "aliases": [],
+   "article": "Show Me the Money (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4177,
+   "signals": {
+    "pageviews": 4768,
+    "zipf": 5.32,
+    "salience": 2
+   }
+  },
+  {
+   "id": "now-you-see-it",
+   "name": "Now You See It",
+   "aliases": [],
+   "article": "Now You See It (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.416,
+   "signals": {
+    "pageviews": 4709,
+    "zipf": 5.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "high-rollers",
+   "name": "High Rollers",
+   "aliases": [],
+   "article": "High Rollers",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4126,
+   "signals": {
+    "pageviews": 10653,
+    "zipf": 3.31,
+    "salience": 2
+   }
+  },
+  {
+   "id": "finders-keepers",
+   "name": "Finders Keepers",
+   "aliases": [
+    "Finders Keepers - Room List",
+    "Joe Conklin",
+    "Larry Toffler"
+   ],
+   "article": "Finders Keepers (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4123,
+   "signals": {
+    "pageviews": 11758,
+    "zipf": 2.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "million-dollar-password",
+   "name": "Million Dollar Password",
+   "aliases": [
+    "$1,000,000 Password",
+    "Millionaire Password",
+    "Millon Dollar Password"
+   ],
+   "article": "Million Dollar Password",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4107,
+   "signals": {
+    "pageviews": 7265,
+    "zipf": 3.93,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-edge",
+   "name": "The Edge",
+   "aliases": [],
+   "article": "The Edge (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4044,
+   "signals": {
+    "pageviews": 8787,
+    "zipf": 4.74,
+    "salience": 1
+   }
+  },
+  {
+   "id": "snake-in-the-grass",
+   "name": "Snake in the Grass",
+   "aliases": [],
+   "article": "Snake in the Grass (TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4042,
+   "signals": {
+    "pageviews": 35343,
+    "zipf": 4.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "divided",
+   "name": "Divided",
+   "aliases": [],
+   "article": "Divided (British game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3998,
+   "signals": {
+    "pageviews": 2631,
+    "zipf": 4.47,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-million-second-quiz",
+   "name": "The Million Second Quiz",
+   "aliases": [
+    "Andrew Kravis",
+    "Andy Kravis"
+   ],
+   "article": "The Million Second Quiz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.399,
+   "signals": {
+    "pageviews": 6915,
+    "zipf": 3.8,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-5th-wheel",
+   "name": "The 5th Wheel",
+   "aliases": [
+    "The Fifth Wheel"
+   ],
+   "article": "The 5th Wheel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.398,
+   "signals": {
+    "pageviews": 6112,
+    "zipf": 4.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-infinite-monkey-cage",
+   "name": "The Infinite Monkey Cage",
+   "aliases": [
+    "Monkey Cage",
+    "TIMC",
+    "Uncaged Monkeys"
+   ],
+   "article": "The Infinite Monkey Cage",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3943,
+   "signals": {
+    "pageviews": 38670,
+    "zipf": 3.64,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rising-star",
+   "name": "Rising Star",
+   "aliases": [
+    "Macy Kate"
+   ],
+   "article": "Rising Star (American TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3941,
+   "signals": {
+    "pageviews": 5013,
+    "zipf": 4.44,
+    "salience": 2
+   }
+  },
+  {
+   "id": "three-on-a-match",
+   "name": "Three on a Match",
+   "aliases": [],
+   "article": "Three on a Match",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3906,
+   "signals": {
+    "pageviews": 22397,
+    "zipf": 5.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "get-your-own-back",
+   "name": "Get Your Own Back",
+   "aliases": [
+    "GYOB",
+    "Lisa Brockwell"
+   ],
+   "article": "Get Your Own Back",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3888,
+   "signals": {
+    "pageviews": 17905,
+    "zipf": 5.45,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-chair",
+   "name": "The Chair",
+   "aliases": [],
+   "article": "The Chair (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3884,
+   "signals": {
+    "pageviews": 7629,
+    "zipf": 4.69,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jungle-run",
+   "name": "Jungle Run",
+   "aliases": [],
+   "article": "Jungle Run",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3866,
+   "signals": {
+    "pageviews": 29172,
+    "zipf": 4.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "raven",
+   "name": "Raven",
+   "aliases": [
+    "Blasted Mountain",
+    "List of Raven Series",
+    "Raven: Series 1-3",
+    "Raven: Series 4-6",
+    "Raven: Spin offs",
+    "The Raven CBBC"
+   ],
+   "article": "Raven (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3858,
+   "signals": {
+    "pageviews": 28016,
+    "zipf": 3.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-adventure-game",
+   "name": "The Adventure Game",
+   "aliases": [
+    "Gronda Gronda"
+   ],
+   "article": "The Adventure Game",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.385,
+   "signals": {
+    "pageviews": 25676,
+    "zipf": 4.44,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-hustler",
+   "name": "The Hustler",
+   "aliases": [],
+   "article": "The Hustler (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3703,
+   "signals": {
+    "pageviews": 10771,
+    "zipf": 2.98,
+    "salience": 2
+   }
+  },
+  {
+   "id": "video-power",
+   "name": "Video Power",
+   "aliases": [
+    "Johnny Arcade"
+   ],
+   "article": "Video Power",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.37,
+   "signals": {
+    "pageviews": 14312,
+    "zipf": 5.17,
+    "salience": 1
+   }
+  },
+  {
+   "id": "boom",
+   "name": "Boom!",
+   "aliases": [],
+   "article": "Boom! (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3657,
+   "signals": {
+    "pageviews": 2077,
+    "zipf": 4.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "boggle",
+   "name": "Boggle",
+   "aliases": [
+    "Alan Turoff",
+    "Allan Turoff",
+    "Boggle Bowl",
+    "Boggle Master"
+   ],
+   "article": "Boggle",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3655,
+   "signals": {
+    "pageviews": 60894,
+    "zipf": 2.27,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-money-game",
+   "name": "The Money Game",
+   "aliases": [
+    "The Money Game: LSU"
+   ],
+   "article": "The Money Game: LSU",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3651,
+   "signals": {
+    "pageviews": 12609,
+    "zipf": 5.37,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brainsurge",
+   "name": "BrainSurge",
+   "aliases": [
+    "Family BrainSurge"
+   ],
+   "article": "BrainSurge",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3651,
+   "signals": {
+    "pageviews": 21556,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "500-questions",
+   "name": "500 Questions",
+   "aliases": [],
+   "article": "500 Questions",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3619,
+   "signals": {
+    "pageviews": 5976,
+    "zipf": 3.15,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-chamber",
+   "name": "The Chamber",
+   "aliases": [],
+   "article": "The Chamber (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3614,
+   "signals": {
+    "pageviews": 7163,
+    "zipf": 4.47,
+    "salience": 1
+   }
+  },
+  {
+   "id": "friend-or-foe",
+   "name": "Friend or Foe?",
+   "aliases": [],
+   "article": "Friend or Foe? (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3611,
+   "signals": {
+    "pageviews": 5358,
+    "zipf": 3.5,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dog-eat-dog",
+   "name": "Dog Eat Dog",
+   "aliases": [],
+   "article": "Dog Eat Dog (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3574,
+   "signals": {
+    "pageviews": 15159,
+    "zipf": 4.63,
+    "salience": 1
+   }
+  },
+  {
+   "id": "body-language",
+   "name": "Body Language",
+   "aliases": [],
+   "article": "Body Language (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3564,
+   "signals": {
+    "pageviews": 12719,
+    "zipf": 4.92,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-button",
+   "name": "The Button",
+   "aliases": [],
+   "article": "The Button (TV series)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3535,
+   "signals": {
+    "pageviews": 5508,
+    "zipf": 4.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "duel",
+   "name": "Duel",
+   "aliases": [
+    "$1,000,000 duel",
+    "Ashlee Register",
+    "Le Quatrième Duel",
+    "Million dollar duel"
+   ],
+   "article": "Duel (American game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3518,
+   "signals": {
+    "pageviews": 4618,
+    "zipf": 3.65,
+    "salience": 2
+   }
+  },
+  {
+   "id": "street-smarts",
+   "name": "Street Smarts",
+   "aliases": [],
+   "article": "Street Smarts",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3473,
+   "signals": {
+    "pageviews": 5118,
+    "zipf": 2.95,
+    "salience": 2
+   }
+  },
+  {
+   "id": "get-the-picture",
+   "name": "Get the Picture",
+   "aliases": [],
+   "article": "Get the Picture (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3459,
+   "signals": {
+    "pageviews": 10676,
+    "zipf": 5.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-now-show",
+   "name": "The Now Show",
+   "aliases": [
+    "Now Shiw"
+   ],
+   "article": "The Now Show",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3451,
+   "signals": {
+    "pageviews": 9300,
+    "zipf": 5.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-news-quiz",
+   "name": "The News Quiz",
+   "aliases": [],
+   "article": "The News Quiz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3434,
+   "signals": {
+    "pageviews": 20438,
+    "zipf": 3.81,
+    "salience": 1
+   }
+  },
+  {
+   "id": "50-50",
+   "name": "50/50",
+   "aliases": [],
+   "article": "50/50 (British game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3398,
+   "signals": {
+    "pageviews": 13739,
+    "zipf": 4.43,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-tournament",
+   "name": "The Tournament",
+   "aliases": [],
+   "article": "The Tournament (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3309,
+   "signals": {
+    "pageviews": 4312,
+    "zipf": 4.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-link",
+   "name": "The Link",
+   "aliases": [],
+   "article": "The Link (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3298,
+   "signals": {
+    "pageviews": 2458,
+    "zipf": 4.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-misery-index",
+   "name": "The Misery Index",
+   "aliases": [],
+   "article": "The Misery Index (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.321,
+   "signals": {
+    "pageviews": 2707,
+    "zipf": 3.81,
+    "salience": 2
+   }
+  },
+  {
+   "id": "who-do-you-trust",
+   "name": "Who Do You Trust?",
+   "aliases": [
+    "Do You Trust Your Wife?"
+   ],
+   "article": "Who Do You Trust?",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3166,
+   "signals": {
+    "pageviews": 7267,
+    "zipf": 5.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-code",
+   "name": "The Code",
+   "aliases": [],
+   "article": "The Code (game show)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3126,
+   "signals": {
+    "pageviews": 1517,
+    "zipf": 5.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-great-egg-race",
+   "name": "The Great Egg Race",
+   "aliases": [
+    "The Great Egg Race Rides Again"
+   ],
+   "article": "The Great Egg Race",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3088,
+   "signals": {
+    "pageviews": 9217,
+    "zipf": 4.35,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-museum-of-curiosity",
+   "name": "The Museum of Curiosity",
+   "aliases": [
+    "The Professor of Curiosities",
+    "The Professor of Curiosity"
+   ],
+   "article": "The Museum of Curiosity",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3059,
+   "signals": {
+    "pageviews": 11142,
+    "zipf": 3.9,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-banker",
+   "name": "The Banker",
+   "aliases": [
+    "Central Bank Governor of the Year",
+    "Thebanker.com"
+   ],
+   "article": "The Banker",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.304,
+   "signals": {
+    "pageviews": 7728,
+    "zipf": 3.78,
+    "salience": 1
+   }
+  },
+  {
+   "id": "best-of-friends",
+   "name": "Best of Friends",
+   "aliases": [
+    "List of Best of Friends episodes"
+   ],
+   "article": "Best of Friends",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3039,
+   "signals": {
+    "pageviews": 6278,
+    "zipf": 5.28,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-world-series-of-pop-culture",
+   "name": "The World Series of Pop Culture",
+   "aliases": [
+    "Twisted Misters",
+    "World series of popular culture"
+   ],
+   "article": "The World Series of Pop Culture",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3036,
+   "signals": {
+    "pageviews": 1416,
+    "zipf": 4.54,
+    "salience": 2
+   }
+  },
+  {
+   "id": "the-wheel-of-fortune-2000",
+   "name": "The Wheel of Fortune 2000",
+   "aliases": [
+    "Wheel 2000"
+   ],
+   "article": "Wheel 2000",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3023,
+   "signals": {
+    "pageviews": 10513,
+    "zipf": 3.96,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bridge-of-lies",
+   "name": "Bridge of Lies",
+   "aliases": [
+    "Liars Bridge"
+   ],
+   "article": "Bridge of Lies",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3013,
+   "signals": {
+    "pageviews": 8008,
+    "zipf": 4.45,
+    "salience": 1
+   }
+  },
+  {
+   "id": "exit",
+   "name": "Exit",
+   "aliases": [],
+   "article": "Exit (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3008,
+   "signals": {
+    "pageviews": 4228,
+    "zipf": 4.35,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-flower-fight",
+   "name": "The Big Flower Fight",
+   "aliases": [
+    "Kristen Griffith-Vanderyacht"
+   ],
+   "article": "The Big Flower Fight",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3008,
+   "signals": {
+    "pageviews": 8375,
+    "zipf": 4.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "childs-play",
+   "name": "Child's Play",
+   "aliases": [],
+   "article": "Child's Play (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.3005,
+   "signals": {
+    "pageviews": 9932,
+    "zipf": 3.98,
+    "salience": 1
+   }
+  },
+  {
+   "id": "million-dollar-money-drop",
+   "name": "Million Dollar Money Drop",
+   "aliases": [
+    "$1,000,000 drop",
+    "$1,000,000 money drop",
+    "Money drop"
+   ],
+   "article": "Million Dollar Money Drop",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.299,
+   "signals": {
+    "pageviews": 8067,
+    "zipf": 4.37,
+    "salience": 1
+   }
+  },
+  {
+   "id": "whammy-the-all-new-press-your-luck",
+   "name": "Whammy! The All-New Press Your Luck",
+   "aliases": [
+    "Whammy!",
+    "Whammy! The New Press Your Luck"
+   ],
+   "article": "Whammy! The All-New Press Your Luck",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2939,
+   "signals": {
+    "pageviews": 14718,
+    "zipf": 2.76,
+    "salience": 1
+   }
+  },
+  {
+   "id": "make-the-grade",
+   "name": "Make the Grade",
+   "aliases": [],
+   "article": "Make the Grade",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2919,
+   "signals": {
+    "pageviews": 6442,
+    "zipf": 4.78,
+    "salience": 1
+   }
+  },
+  {
+   "id": "slime-time-live",
+   "name": "Slime Time Live",
+   "aliases": [
+    "Nick Slime Time Live",
+    "Nickelodeon's Slime Time Live"
+   ],
+   "article": "Slime Time Live",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2906,
+   "signals": {
+    "pageviews": 12455,
+    "zipf": 3.38,
+    "salience": 1
+   }
+  },
+  {
+   "id": "treasure-hunt",
+   "name": "Treasure Hunt",
+   "aliases": [
+    "The New Treasure Hunt"
+   ],
+   "article": "Treasure Hunt (American game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2883,
+   "signals": {
+    "pageviews": 8245,
+    "zipf": 4.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-million-dollar-drop",
+   "name": "The Million Dollar Drop",
+   "aliases": [
+    "The $1,000,000 drop"
+   ],
+   "article": "The Million Dollar Drop",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2879,
+   "signals": {
+    "pageviews": 1005,
+    "zipf": 4.39,
+    "salience": 2
+   }
+  },
+  {
+   "id": "rock-and-roll-jeopardy",
+   "name": "Rock & Roll Jeopardy!",
+   "aliases": [],
+   "article": "Rock & Roll Jeopardy!",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2865,
+   "signals": {
+    "pageviews": 11513,
+    "zipf": 3.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-help",
+   "name": "The Big Help",
+   "aliases": [
+    "The Big Green Help"
+   ],
+   "article": "The Big Help",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2812,
+   "signals": {
+    "pageviews": 4743,
+    "zipf": 5.4,
+    "salience": 1
+   }
+  },
+  {
+   "id": "dream-house",
+   "name": "Dream House",
+   "aliases": [],
+   "article": "Dream House (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2759,
+   "signals": {
+    "pageviews": 5095,
+    "zipf": 4.85,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-great-interior-design-challenge",
+   "name": "The Great Interior Design Challenge",
+   "aliases": [],
+   "article": "The Great Interior Design Challenge",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.275,
+   "signals": {
+    "pageviews": 6629,
+    "zipf": 4.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-better-sex",
+   "name": "The Better Sex",
+   "aliases": [],
+   "article": "The Better Sex",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.275,
+   "signals": {
+    "pageviews": 4742,
+    "zipf": 5.11,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sports-jeopardy",
+   "name": "Sports Jeopardy!",
+   "aliases": [],
+   "article": "Sports Jeopardy!",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2733,
+   "signals": {
+    "pageviews": 9118,
+    "zipf": 3.5,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jumble",
+   "name": "Jumble",
+   "aliases": [
+    "Jumble algorithm",
+    "Texttwist",
+    "Textwist",
+    "Word Jumble"
+   ],
+   "article": "Jumble",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2729,
+   "signals": {
+    "pageviews": 15249,
+    "zipf": 2.81,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-great-kiwi-bake-off",
+   "name": "The Great Kiwi Bake Off",
+   "aliases": [],
+   "article": "The Great Kiwi Bake Off",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2719,
+   "signals": {
+    "pageviews": 10452,
+    "zipf": 3.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-brunch",
+   "name": "The Big Brunch",
+   "aliases": [],
+   "article": "The Big Brunch",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.269,
+   "signals": {
+    "pageviews": 8721,
+    "zipf": 3.46,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-mole-australia",
+   "name": "The Mole Australia",
+   "aliases": [],
+   "article": "The Mole (Australian TV series)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2663,
+   "signals": {
+    "pageviews": 7637,
+    "zipf": 3.65,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-spin",
+   "name": "The Big Spin",
+   "aliases": [
+    "Big Spin 2000"
+   ],
+   "article": "The Big Spin",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2609,
+   "signals": {
+    "pageviews": 5465,
+    "zipf": 4.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-slammer",
+   "name": "The Slammer",
+   "aliases": [
+    "The Slammer Returns"
+   ],
+   "article": "The Slammer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.257,
+   "signals": {
+    "pageviews": 14325,
+    "zipf": 2.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-quiz-kids",
+   "name": "The Quiz Kids",
+   "aliases": [
+    "Quiz Kid"
+   ],
+   "article": "Quiz Kids",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2569,
+   "signals": {
+    "pageviews": 6555,
+    "zipf": 3.8,
+    "salience": 1
+   }
+  },
+  {
+   "id": "prank-patrol",
+   "name": "Prank Patrol",
+   "aliases": [
+    "List of Prank Patrol episodes"
+   ],
+   "article": "Prank Patrol (British TV series)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2549,
+   "signals": {
+    "pageviews": 7207,
+    "zipf": 3.57,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-circle-france",
+   "name": "The Circle France",
+   "aliases": [],
+   "article": "The Circle (French TV series)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2536,
+   "signals": {
+    "pageviews": 4842,
+    "zipf": 4.4,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-bank-job",
+   "name": "The Bank Job",
+   "aliases": [],
+   "article": "The Bank Job (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2464,
+   "signals": {
+    "pageviews": 3636,
+    "zipf": 5.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "round-britain-quiz",
+   "name": "Round Britain Quiz",
+   "aliases": [],
+   "article": "Round Britain Quiz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2433,
+   "signals": {
+    "pageviews": 5517,
+    "zipf": 3.75,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bumper-stumpers",
+   "name": "Bumper Stumpers",
+   "aliases": [],
+   "article": "Bumper Stumpers",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.243,
+   "signals": {
+    "pageviews": 8650,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-master-game",
+   "name": "The Master Game",
+   "aliases": [
+    "BBC Master Game"
+   ],
+   "article": "The Master Game",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2418,
+   "signals": {
+    "pageviews": 3625,
+    "zipf": 4.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-almost-impossible-game-show",
+   "name": "The Almost Impossible Game Show",
+   "aliases": [],
+   "article": "The Almost Impossible Gameshow",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2397,
+   "signals": {
+    "pageviews": 3812,
+    "zipf": 4.61,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-circle-brazil",
+   "name": "The Circle Brazil",
+   "aliases": [
+    "O Círculo",
+    "The Circle Brasil"
+   ],
+   "article": "The Circle (Brazilian TV series)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2386,
+   "signals": {
+    "pageviews": 4630,
+    "zipf": 4.26,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jep",
+   "name": "Jep!",
+   "aliases": [],
+   "article": "Jep!",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2384,
+   "signals": {
+    "pageviews": 11622,
+    "zipf": 2.14,
+    "salience": 1
+   }
+  },
+  {
+   "id": "starcade",
+   "name": "Starcade",
+   "aliases": [],
+   "article": "Starcade",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.238,
+   "signals": {
+    "pageviews": 14157,
+    "zipf": 1.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "it-takes-two",
+   "name": "It Takes Two",
+   "aliases": [],
+   "article": "It Takes Two (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2367,
+   "signals": {
+    "pageviews": 3077,
+    "zipf": 5.12,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-great-american-dream-machine",
+   "name": "The Great American Dream Machine",
+   "aliases": [],
+   "article": "The Great American Dream Machine",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2353,
+   "signals": {
+    "pageviews": 3790,
+    "zipf": 4.53,
+    "salience": 1
+   }
+  },
+  {
+   "id": "perfection",
+   "name": "Perfection",
+   "aliases": [],
+   "article": "Perfection (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2335,
+   "signals": {
+    "pageviews": 2299,
+    "zipf": 3.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "get-a-clue",
+   "name": "Get a Clue",
+   "aliases": [],
+   "article": "Get a Clue (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2318,
+   "signals": {
+    "pageviews": 4525,
+    "zipf": 4.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hot-potato",
+   "name": "Hot Potato",
+   "aliases": [
+    "Celebrity Hot Potato"
+   ],
+   "article": "Hot Potato (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.231,
+   "signals": {
+    "pageviews": 4580,
+    "zipf": 4.07,
+    "salience": 1
+   }
+  },
+  {
+   "id": "whew",
+   "name": "Whew!",
+   "aliases": [
+    "Celebrity Whew!",
+    "Gauntlet of Villains"
+   ],
+   "article": "Whew!",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2303,
+   "signals": {
+    "pageviews": 6571,
+    "zipf": 3.24,
+    "salience": 1
+   }
+  },
+  {
+   "id": "temptation",
+   "name": "Temptation",
+   "aliases": [
+    "Temptation: The New Sale of the Century"
+   ],
+   "article": "Temptation (2007 American game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.229,
+   "signals": {
+    "pageviews": 3459,
+    "zipf": 3.72,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-colour-of-money",
+   "name": "The Colour of Money",
+   "aliases": [],
+   "article": "The Colour of Money (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2247,
+   "signals": {
+    "pageviews": 3583,
+    "zipf": 4.46,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-lyrics-board",
+   "name": "The Lyrics Board",
+   "aliases": [
+    "Kevin Hough"
+   ],
+   "article": "The Lyrics Board",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2217,
+   "signals": {
+    "pageviews": 3736,
+    "zipf": 4.3,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-rich-list",
+   "name": "The Rich List",
+   "aliases": [
+    "The Money List"
+   ],
+   "article": "The Rich List (American game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2205,
+   "signals": {
+    "pageviews": 2763,
+    "zipf": 4.76,
+    "salience": 1
+   }
+  },
+  {
+   "id": "blackout",
+   "name": "Blackout",
+   "aliases": [],
+   "article": "Blackout (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2194,
+   "signals": {
+    "pageviews": 4011,
+    "zipf": 3.58,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hider-in-the-house",
+   "name": "Hider in the House",
+   "aliases": [],
+   "article": "Hider in the House",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2167,
+   "signals": {
+    "pageviews": 6266,
+    "zipf": 2.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-moment",
+   "name": "The Big Moment",
+   "aliases": [],
+   "article": "The Big Moment",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2115,
+   "signals": {
+    "pageviews": 2223,
+    "zipf": 5.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-painting-challenge",
+   "name": "The Big Painting Challenge",
+   "aliases": [
+    "Celebrity Painting Challenge"
+   ],
+   "article": "The Big Painting Challenge",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2072,
+   "signals": {
+    "pageviews": 2887,
+    "zipf": 4.39,
+    "salience": 1
+   }
+  },
+  {
+   "id": "winning-combination",
+   "name": "Winning Combination",
+   "aliases": [],
+   "article": "Winning Combination",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2061,
+   "signals": {
+    "pageviews": 2689,
+    "zipf": 4.46,
+    "salience": 1
+   }
+  },
+  {
+   "id": "1000-heartbeats",
+   "name": "1000 Heartbeats",
+   "aliases": [],
+   "article": "1000 Heartbeats",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2027,
+   "signals": {
+    "pageviews": 5181,
+    "zipf": 2.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "set-for-life",
+   "name": "Set for Life",
+   "aliases": [
+    "Set for the Rest of Your Life"
+   ],
+   "article": "Set for Life",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2025,
+   "signals": {
+    "pageviews": 1660,
+    "zipf": 5.4,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rebound",
+   "name": "Rebound",
+   "aliases": [],
+   "article": "Rebound (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1969,
+   "signals": {
+    "pageviews": 3317,
+    "zipf": 3.53,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-write-stuff",
+   "name": "The Write Stuff",
+   "aliases": [],
+   "article": "The Write Stuff",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1961,
+   "signals": {
+    "pageviews": 1983,
+    "zipf": 4.78,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-video-game",
+   "name": "The Video Game",
+   "aliases": [],
+   "article": "The Video Game",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1945,
+   "signals": {
+    "pageviews": 1536,
+    "zipf": 5.25,
+    "salience": 1
+   }
+  },
+  {
+   "id": "take-it-all",
+   "name": "Take It All",
+   "aliases": [
+    "Howie Mandel's White Elephant"
+   ],
+   "article": "Take It All (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1941,
+   "signals": {
+    "pageviews": 1443,
+    "zipf": 5.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-new-battlestars",
+   "name": "The New Battlestars",
+   "aliases": [
+    "Battlestars"
+   ],
+   "article": "Battlestars (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1939,
+   "signals": {
+    "pageviews": 4918,
+    "zipf": 1.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bible-bowl",
+   "name": "Bible Bowl",
+   "aliases": [
+    "Bible Quiz",
+    "Bible quizzing",
+    "Free Methodist Bible Quiz",
+    "Junior Bible Quizzing",
+    "MACSA Bible Quizzing"
+   ],
+   "article": "Bible quiz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1924,
+   "signals": {
+    "pageviews": 2666,
+    "zipf": 4.28,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-magnificent-marble-machine",
+   "name": "The Magnificent Marble Machine",
+   "aliases": [],
+   "article": "The Magnificent Marble Machine",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1922,
+   "signals": {
+    "pageviews": 3567,
+    "zipf": 3.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-names-the-same",
+   "name": "The Name's the Same",
+   "aliases": [],
+   "article": "The Name's the Same",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1915,
+   "signals": {
+    "pageviews": 4448,
+    "zipf": 2.98,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trivia-trap",
+   "name": "Trivia Trap",
+   "aliases": [],
+   "article": "Trivia Trap",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1909,
+   "signals": {
+    "pageviews": 3941,
+    "zipf": 3.41,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hellevator",
+   "name": "Hellevator",
+   "aliases": [
+    "Hellavator",
+    "List of Hellevator episodes"
+   ],
+   "article": "Hellevator",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1907,
+   "signals": {
+    "pageviews": 7100,
+    "zipf": 1.13,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-diamond-head-game",
+   "name": "The Diamond Head Game",
+   "aliases": [],
+   "article": "The Diamond Head Game",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1904,
+   "signals": {
+    "pageviews": 2321,
+    "zipf": 4.37,
+    "salience": 1
+   }
+  },
+  {
+   "id": "double-talk",
+   "name": "Double Talk",
+   "aliases": [],
+   "article": "Double Talk",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1895,
+   "signals": {
+    "pageviews": 1582,
+    "zipf": 4.87,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-fuse",
+   "name": "The Fuse",
+   "aliases": [],
+   "article": "The Fuse (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.189,
+   "signals": {
+    "pageviews": 2308,
+    "zipf": 3.62,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-last-word",
+   "name": "The Last Word",
+   "aliases": [],
+   "article": "The Last Word (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1865,
+   "signals": {
+    "pageviews": 1350,
+    "zipf": 5.16,
+    "salience": 1
+   }
+  },
+  {
+   "id": "break-the-bank",
+   "name": "Break the Bank",
+   "aliases": [],
+   "article": "Break the Bank (1945 game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1838,
+   "signals": {
+    "pageviews": 1526,
+    "zipf": 4.87,
+    "salience": 1
+   }
+  },
+  {
+   "id": "counterpoint",
+   "name": "Counterpoint",
+   "aliases": [],
+   "article": "Counterpoint (radio programme)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1835,
+   "signals": {
+    "pageviews": 3669,
+    "zipf": 3.11,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-slam",
+   "name": "Grand Slam",
+   "aliases": [],
+   "article": "Grand Slam (American game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1813,
+   "signals": {
+    "pageviews": 2542,
+    "zipf": 3.97,
+    "salience": 1
+   }
+  },
+  {
+   "id": "strike-it-rich",
+   "name": "Strike It Rich",
+   "aliases": [],
+   "article": "Strike It Rich (1947 game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1798,
+   "signals": {
+    "pageviews": 1740,
+    "zipf": 4.47,
+    "salience": 1
+   }
+  },
+  {
+   "id": "talkabout",
+   "name": "Talkabout",
+   "aliases": [
+    "Talk About"
+   ],
+   "article": "Talk About (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1797,
+   "signals": {
+    "pageviews": 5916,
+    "zipf": 1.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "merv-griffins-crosswords",
+   "name": "Merv Griffin's Crosswords",
+   "aliases": [
+    "Crosswords",
+    "Let's Do Crosswords",
+    "Let's Play Crosswords"
+   ],
+   "article": "Merv Griffin's Crosswords",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1778,
+   "signals": {
+    "pageviews": 4074,
+    "zipf": 2.07,
+    "salience": 1
+   }
+  },
+  {
+   "id": "trivial-pursuit-america-plays",
+   "name": "Trivial Pursuit: America Plays",
+   "aliases": [],
+   "article": "Trivial Pursuit: America Plays",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1775,
+   "signals": {
+    "pageviews": 3322,
+    "zipf": 3.5,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-cross-wits",
+   "name": "The Cross-Wits",
+   "aliases": [
+    "The All-New Crosswits"
+   ],
+   "article": "The Cross-Wits",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1732,
+   "signals": {
+    "pageviews": 3422,
+    "zipf": 3.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-money-maze",
+   "name": "The Money Maze",
+   "aliases": [],
+   "article": "The Money Maze",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1719,
+   "signals": {
+    "pageviews": 2678,
+    "zipf": 3.65,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-showdown",
+   "name": "The Big Showdown",
+   "aliases": [],
+   "article": "The Big Showdown",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1711,
+   "signals": {
+    "pageviews": 3000,
+    "zipf": 3.49,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-spelling-bee",
+   "name": "The Spelling Bee",
+   "aliases": [
+    "N’Adom Darko-Asare",
+    "The Spelling Bee Ghana"
+   ],
+   "article": "The Spelling Bee",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1696,
+   "signals": {
+    "pageviews": 2359,
+    "zipf": 3.74,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-exit-list",
+   "name": "The Exit List",
+   "aliases": [],
+   "article": "The Exit List",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1688,
+   "signals": {
+    "pageviews": 1694,
+    "zipf": 4.3,
+    "salience": 1
+   }
+  },
+  {
+   "id": "caesars-challenge",
+   "name": "Caesars Challenge",
+   "aliases": [],
+   "article": "Caesars Challenge",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1643,
+   "signals": {
+    "pageviews": 3221,
+    "zipf": 2.98,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-hollywood-game",
+   "name": "The Hollywood Game",
+   "aliases": [],
+   "article": "The Hollywood Game",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.162,
+   "signals": {
+    "pageviews": 1275,
+    "zipf": 4.49,
+    "salience": 1
+   }
+  },
+  {
+   "id": "separation-anxiety",
+   "name": "Separation Anxiety",
+   "aliases": [],
+   "article": "Separation Anxiety (TV series)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1579,
+   "signals": {
+    "pageviews": 1683,
+    "zipf": 3.96,
+    "salience": 1
+   }
+  },
+  {
+   "id": "all-star-blitz",
+   "name": "All-Star Blitz",
+   "aliases": [],
+   "article": "All-Star Blitz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1497,
+   "signals": {
+    "pageviews": 2125,
+    "zipf": 3.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-question-jury",
+   "name": "The Question Jury",
+   "aliases": [],
+   "article": "The Question Jury",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1496,
+   "signals": {
+    "pageviews": 640,
+    "zipf": 4.43,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-personality-test",
+   "name": "The Personality Test",
+   "aliases": [],
+   "article": "The Personality Test",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1489,
+   "signals": {
+    "pageviews": 478,
+    "zipf": 4.46,
+    "salience": 1
+   }
+  },
+  {
+   "id": "quote-unquote",
+   "name": "Quote... Unquote",
+   "aliases": [],
+   "article": "Quote... Unquote",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1449,
+   "signals": {
+    "pageviews": 2677,
+    "zipf": 2.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-spell",
+   "name": "The Big Spell",
+   "aliases": [
+    "Darkworld Detective",
+    "Murder on the Galactic Express",
+    "The Maltese Vulcan",
+    "The Man with the Golden Raygun"
+   ],
+   "article": "Darkworld Detective",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1443,
+   "signals": {
+    "pageviews": 618,
+    "zipf": 4.35,
+    "salience": 1
+   }
+  },
+  {
+   "id": "amnesia",
+   "name": "Amnesia",
+   "aliases": [
+    "Amensia",
+    "Amne$ia"
+   ],
+   "article": "Amnesia (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1441,
+   "signals": {
+    "pageviews": 1554,
+    "zipf": 3.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "balderdash",
+   "name": "Balderdash",
+   "aliases": [],
+   "article": "Balderdash (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1434,
+   "signals": {
+    "pageviews": 3524,
+    "zipf": 1.94,
+    "salience": 1
+   }
+  },
+  {
+   "id": "camouflage",
+   "name": "Camouflage",
+   "aliases": [
+    "Double Camouflage"
+   ],
+   "article": "Camouflage (2007 game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1352,
+   "signals": {
+    "pageviews": 1134,
+    "zipf": 3.42,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-big-payoff",
+   "name": "The Big Payoff",
+   "aliases": [],
+   "article": "The Big Payoff",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1337,
+   "signals": {
+    "pageviews": 1852,
+    "zipf": 3.25,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ruckus",
+   "name": "Ruckus",
+   "aliases": [],
+   "article": "Ruckus (game show)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.124,
+   "signals": {
+    "pageviews": 1548,
+    "zipf": 2.88,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-99p-challenge",
+   "name": "The 99p Challenge",
+   "aliases": [
+    "King Stupid"
+   ],
+   "article": "The 99p Challenge",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1194,
+   "signals": {
+    "pageviews": 1922,
+    "zipf": 1.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-128-000-question",
+   "name": "The $128,000 Question",
+   "aliases": [],
+   "article": "The $128,000 Question",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1186,
+   "signals": {
+    "pageviews": 1992,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "the-pop-n-rocker-game",
+   "name": "The Pop 'N Rocker Game",
+   "aliases": [],
+   "article": "The Pop 'N Rocker Game",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1123,
+   "signals": {
+    "pageviews": 1235,
+    "zipf": 3.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "spellbound",
+   "name": "Spellbound",
+   "aliases": [],
+   "article": "Spellbound (game show)",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1075,
+   "signals": {
+    "pageviews": 1258,
+    "zipf": 2.66,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mindreaders",
+   "name": "Mindreaders",
+   "aliases": [],
+   "article": "Mindreaders",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1047,
+   "signals": {
+    "pageviews": 2298,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "my-gamesfever",
+   "name": "My GamesFever",
+   "aliases": [
+    "My Game Fever"
+   ],
+   "article": "My GamesFever",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.0738,
+   "signals": {
+    "pageviews": 938,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  }
+ ],
+ "unverified": [
+  "Celebrity Game Face",
+  "On the Cover",
+  "Password at Night",
+  "Spelling Star",
+  "The 1% Club Australia",
+  "The 3rd Degree",
+  "The All-New Dating Game",
+  "The All-New Treasure Hunt",
+  "The Answer Trap",
+  "The Beast",
+  "The Big Bake",
+  "The Boss",
+  "The Bridge",
+  "The Final Straw",
+  "The Ghost Train",
+  "The Great American Quiz Show",
+  "The Great Big Tiny Design Challenge",
+  "The Great Escape",
+  "The Great House Giveaway",
+  "The Great Model Railway Challenge",
+  "The Interrogation Game",
+  "The Jump",
+  "The Kids Are Alright",
+  "The Money Drop",
+  "The Music Match Game",
+  "The New Chain Reaction",
+  "The New High Rollers",
+  "The New Tic-Tac-Dough",
+  "The Runner",
+  "The Switch",
+  "The Time It Takes",
+  "The Unbelievable Truth",
+  "Think Fast!",
+  "Wipeout"
+ ]
+}

@@ -1,0 +1,26 @@
+# Secrets and local model config (copy the .example files)
+.env
+.env.*
+!.env.example
+*-key.json
+service-account*.json
+models.json
+!models.example.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Pipeline caches and build output
+pipeline/.cache/
+data/build/
+
+# Node / Vercel
+node_modules/
+.vercel/
+
+# OS
+.DS_Store
