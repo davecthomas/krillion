@@ -108,7 +108,8 @@ _OTHER_MEANING = re.compile(
     r"island|river|neighbo(u)?rhood|suburb|borough|parish|department|prefecture|territory|kingdom|empire|"
     r"politician|actor|actress|singer|rapper|footballer|player|businessman|businesswoman|writer|author|"
     r"poet|painter|musician|band|album|song|film|television series|tv series|novel|book|magazine|"
-    r"newspaper|website|political party|organization|organisation|surname|given name|disambiguation)\b",
+    r"newspaper|website|political party|organization|organisation|surname|given name|disambiguation|"
+    r"general|statesman|dictator|military leader)\b",
     re.IGNORECASE)
 
 
@@ -155,7 +156,13 @@ def _tries(name: str, noun: str) -> list[str]:
     return list(dict.fromkeys(tries))
 
 
-def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str) -> str | None:
+# An animal or plant: never a Batman villain ("Great White Shark", "Firefly")
+_SPECIES = re.compile(r"\b(species|genus|family of|order of|subfamily|tribe of|breed of)\b", re.IGNORECASE)
+LIVING_DOMAINS = {"animals", "plants", "nature", "food and drink"}
+
+
+def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str,
+                  living: bool = True) -> str | None:
     """First candidate whose description names the noun; failing that, the
     first that is not clearly something else (a place, person or work).
     Broad categories need the fallback: Wikipedia calls most vegetables
@@ -173,8 +180,10 @@ def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, st
         if _plausible(art, desc.get(art, ""), noun):
             return art
     for art in found:
-        if not _OTHER_MEANING.search(desc.get(art, "")):
-            return art
+        d = desc.get(art, "")
+        if _OTHER_MEANING.search(d) or (not living and _SPECIES.search(d)):
+            continue
+        return art
     return None
 
 
@@ -228,7 +237,7 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     # candidate whose short description is about the noun.
     desc = wiki.descriptions(sorted(set(resolved.values())))
     for a in answers:
-        a["article"] = _pick_article(a.pop("_try"), resolved, desc, noun)
+        a["article"] = _pick_article(a.pop("_try"), resolved, desc, noun, raw["domain"] in LIVING_DOMAINS)
 
     known_articles = {a["article"] for a in answers if a["article"]}
     known_names = {a["name"] for a in answers}

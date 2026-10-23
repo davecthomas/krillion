@@ -65,6 +65,15 @@ def test_writer_answers_land_on_the_right_article():
     assert pick(["Carrot"], resolved, desc, "vegetable") == "Carrot"
 
 
+def test_fallbacks_reject_generals_and_species_where_they_dont_belong():
+    pick = catalog._pick_article
+    assert pick(["Caesar"], {"Caesar": "Julius Caesar"}, {"Julius Caesar": "Roman general and statesman"},
+                "Canadian cuisine") is None
+    shark = ({"Great White Shark": "Great white shark"}, {"Great white shark": "Species of large mackerel shark"})
+    assert pick(["Great White Shark"], *shark, "Batman villain", living=False) is None
+    assert pick(["Great White Shark"], *shark, "fish") == "Great white shark"
+
+
 def test_towns_must_be_in_the_place_asked_about():
     resolved = {"Paris, Kentucky": "Paris, Kentucky", "Paris": "Paris", "Peru, Indiana": "Peru, Indiana",
                 "Peru": "Peru", "Lexington": "Lexington, Kentucky"}
