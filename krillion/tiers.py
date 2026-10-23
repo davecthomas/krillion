@@ -29,6 +29,11 @@ WEIGHTS = {
 # wordfreq scores a phrase from its separate words, so "wife carrying" looks
 # common. Trust it far less for multi-word names.
 ZIPF_WEIGHT_MULTIWORD = 0.05
+# The build asks Ngram and Trends about the best-known answers only, so a
+# value there is a rank among the top few. It is placed in the top band of
+# the whole list; otherwise Los Angeles, mid-pack among big cities on
+# Ngram, sinks below Sacramento, which was never asked.
+TOP_ONLY = ("ngram", "trends")
 
 PLANKTON_SHARE, PLANKTON_MIN = 0.06, 3
 SCHOOLER_UNTIL = 0.35
@@ -74,6 +79,11 @@ def commonness(signals: list[Signals]) -> list[float]:
                            for s in signals])
         for name in WEIGHTS
     }
+    n = len(signals)
+    for name in TOP_ONLY:
+        col = cols[name]
+        share = sum(v is not None for v in col) / n if n else 1.0
+        cols[name] = [None if v is None else 1 - share + share * v for v in col]
     out = []
     for i, s in enumerate(signals):
         parts = []

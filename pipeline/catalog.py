@@ -29,6 +29,7 @@ import datetime as dt
 import hashlib
 import json
 import logging
+import os
 import re
 import sys
 from pathlib import Path
@@ -162,7 +163,11 @@ def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, st
     found = [resolved[t] for t in tries if t in resolved]
     place = _place(noun)
     if place:
-        # "Paris" alone is Paris, France: a town counts only if it is in the place
+        # "Toronto, Ontario" resolving at all (a title or a redirect) puts it in
+        # the place. "Paris" alone is Paris, France: a bare name counts only if
+        # its article says it is in the place.
+        if tries and tries[0] in resolved and tries[0].endswith(f", {place}"):
+            return resolved[tries[0]]
         return next((art for art in found if _in_place(art, desc.get(art, ""), place)), None)
     for art in found:
         if _plausible(art, desc.get(art, ""), noun):
@@ -277,7 +282,15 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     # else, and its frequency in text, books and searches belongs to that
     # meaning. Those three signals are left out for it. A title in other
     # words ("Quercus macrocarpa" for bur oak) says nothing about the name.
+    place = _place(noun)
+
     def ambiguous(a: dict) -> bool:
+        # In a city question the bare name is ambiguous only when it leads to
+        # a different article: "London" is London, England, not London,
+        # Ontario. "Austin" (a disambiguation page) means the city.
+        if place:
+            bare = resolved.get(_title_case(a["name"]))
+            return bare is not None and bare != a["article"]
         name, art = set(words(a["name"])), set(words(a["article"]))
         return name != art and name < art
 
@@ -348,6 +361,23 @@ def _in_shard(slug: str, shard: tuple[int, int] | None) -> bool:
     return int(hashlib.sha1(slug.encode()).hexdigest(), 16) % n == i
 
 
+def retier(doc: dict) -> dict:
+    """Re-score and re-tier a built question from its saved signals, after a
+    change to the blend, with no network calls."""
+    answers = doc["answers"]
+    sig = [Signals(pageviews=a["signals"]["pageviews"], zipf=a["signals"]["zipf"],
+                   salience=a["signals"]["salience"], multiword=len(words(a["name"])) > 1, verified=True,
+                   sitelinks=a["signals"].get("sitelinks"), ngram=a["signals"].get("ngram"),
+                   trends=a["signals"].get("trends"))
+           for a in answers]
+    scores = commonness(sig)
+    tiers = assign_tiers(scores, [True] * len(sig))
+    out = []
+    for a, c, t in sorted(zip(answers, scores, tiers), key=lambda x: -x[1]):
+        out.append({**a, "tier": t, "tier_name": TIER_NAMES[t], "commonness": round(c, 4)})
+    return {**doc, "answers": out}
+
+
 def build(slugs: list[str] | None = None, *, rebuild: bool = False, use_trends: bool = True,
           shard: tuple[int, int] | None = None, extras: bool = False) -> list[str]:
     QUESTIONS.mkdir(parents=True, exist_ok=True)
@@ -378,9 +408,24 @@ def main() -> None:
     ap.add_argument("--shard", help="i/n: build only this process's share, for parallel builds (make JOBS=n)")
     ap.add_argument("--extras", action="store_true",
                     help="also add members from the Wikipedia category and Wikidata class (noisy)")
+    ap.add_argument("--retier", action="store_true",
+                    help="re-score built questions from their saved signals (no network)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING, stream=sys.stderr)
+    if args.retier:
+        for path in sorted(QUESTIONS.glob("*.json")):
+            if args.slugs and path.stem not in args.slugs:
+                continue
+            doc = retier(json.loads(path.read_text()))
+            tmp = path.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=0))
+            # Keep the build time, so a retier never marks a stale build fresh
+            st = path.stat()
+            tmp.replace(path)
+            os.utime(path, (st.st_atime, st.st_mtime))
+        print("re-tiered")
+        return
     shard = tuple(int(x) for x in args.shard.split("/")) if args.shard else None
     built = build(args.slugs or None, rebuild=args.all, use_trends=not args.no_trends, shard=shard, extras=args.extras)
     print(f"{len(built)} question(s) built")

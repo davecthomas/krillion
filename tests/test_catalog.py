@@ -78,6 +78,10 @@ def test_towns_must_be_in_the_place_asked_about():
     assert pick(["Paris"], resolved, desc, noun) is None  # France is not in Kentucky
     assert pick(["Lexington"], resolved, desc, noun) == "Lexington, Kentucky"
     assert pick(["Peru"], resolved, desc, "city in Indiana") is None
+    # Wikipedia's own "Toronto, Ontario" redirect places Toronto, whose
+    # description ("Most populous city in Canada") never names the province
+    assert pick(["Toronto, Ontario", "Toronto"], {"Toronto, Ontario": "Toronto", "Toronto": "Toronto"},
+                {"Toronto": "Most populous city in Canada"}, "city in Ontario") == "Toronto"
 
 
 def test_breeds_are_also_tried_with_the_species():
