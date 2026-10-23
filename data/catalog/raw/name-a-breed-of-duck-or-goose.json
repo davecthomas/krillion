@@ -1,6 +1,6 @@
 {
   "prompt": "Name a breed of duck or goose",
-  "noun": "poultry breed",
+  "noun": "duck or goose breed",
   "domain": "animals",
   "answers": {
     "very_common": [
