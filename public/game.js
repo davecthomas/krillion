@@ -67,6 +67,7 @@ function setDepth(m) {
   const f = Math.min(1, m / 4200);
   document.documentElement.style.setProperty('--sea', `hsl(${194 + f * 26} ${62 - f * 22}% ${19 - f * 15.5}%)`);
   $('gauge').innerHTML = `${fmt(m)} m<small>${bandFor(m)}</small>`;
+  if (window.Ocean) Ocean.goTo(m);  // the fish dives (or swims back up) to match
 }
 
 // ---------- Audio ----------
@@ -227,6 +228,7 @@ function show(id) {
   // The dive log sits beside the game while playing; the end screen has the full summary
   $('side').hidden = id !== 'play';
   document.querySelector('.app').classList.toggle('playing', id === 'play');
+  if (window.Ocean) Ocean.layout();
 }
 function pips() {
   $('pips').innerHTML = game.prompts.map((_, i) => {
@@ -337,6 +339,7 @@ function wrong(raw) {
   const key = words(raw).join(' ');
   if (game.tried.has(key)) return; game.tried.add(key);
   timer.left = Math.max(0, timer.left - PENALTY_MS); buzz();
+  if (window.Ocean) Ocean.miss();
   const b = $('bar'); b.classList.remove('hit'); void b.offsetWidth; b.classList.add('hit');
   const chip = document.createElement('span'); chip.className = 'miss'; chip.textContent = '✕ ' + raw; $('misses').appendChild(chip);
 }
@@ -361,6 +364,7 @@ async function endRound(hit, why) {
   const box = $('resultBox'); box.hidden = false;
   if (hit) {
     const t = TS[hit.tier]; chime(Math.round(t.pts / 20));
+    if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4);
     box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
     $('status').textContent = 'Got it.';
   } else {
@@ -478,23 +482,5 @@ $('copyBtn').onclick = () => {
 };
 function selectShare() { const r = document.createRange(); r.selectNodeContents($('share')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
 
-// ---------- Marine snow ----------
-(() => {
-  const cv = $('snow'), cx = cv.getContext('2d'); let W, H, pts = [];
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function size() {
-    const d = devicePixelRatio || 1; W = cv.width = innerWidth * d; H = cv.height = innerHeight * d;
-    pts = Array.from({length: 70}, () => ({x: Math.random() * W, y: Math.random() * H, r: (Math.random() * 1.6 + .4) * d, v: (Math.random() * .25 + .08) * d, a: Math.random() * .35 + .1}));
-  }
-  function draw() {
-    cx.clearRect(0, 0, W, H);
-    for (const p of pts) {
-      if (!still) { p.y -= p.v; p.x += Math.sin(p.y / 60) * .15; if (p.y < -4) { p.y = H + 4; p.x = Math.random() * W; } }
-      cx.fillStyle = `rgba(210,245,240,${p.a})`; cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 7); cx.fill();
-    }
-    if (!still) requestAnimationFrame(draw);
-  }
-  addEventListener('resize', size); size(); draw();
-})();
 
 setMode(scoring); home(); loadVoices();

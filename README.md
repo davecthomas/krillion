@@ -43,6 +43,13 @@ the question again or "skip" to pass, or type in the answer box.
   browser's speech recognition streams what you say, and the server judges it
   (see [Judging answers](#judging-answers)). Chrome sends the audio to Google's
   speech service; Safari uses Apple's.
+- **The dive.** A pink fish lives in the ocean behind the game and dives deeper
+  with every scored answer, trailing bubbles, while the camera follows it down
+  through five bands: kelp and light rays in the Shallows, coral and schools of
+  fish at Schooler, jellyfish in the Thermocline, anglerfish in the Deep Cut,
+  tube worms in the Trench. Rare answers set off sparkles, One in a Krillion a
+  burst of diamonds, and a wrong answer gets a wobble and a "blub". With
+  reduced motion turned on, the scene holds still and jumps to each new depth.
 - **Air and speed.** The clock starts after the game reads the question. A wrong
   answer costs 3 seconds, and a fast answer earns up to 50% more points.
 - **Two modes.** Rare wins pays the tiers below; Popular wins reverses them, so
@@ -218,7 +225,7 @@ uv run python -m pipeline.try_answers name-a-wine-grape "pinot grigo" --tiers
 
 ```
 server.py         local dev server: the page plus the JSON API
-public/           the voice game: index.html, styles.css, game.js
+public/           the voice game: index.html, styles.css, game.js, ocean.js (the dive scene)
 krillion/
   live.py         generates each game, keeps the history, builds answer lists
   service.py      dive, judge and reveal, free of any web framework
