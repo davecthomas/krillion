@@ -196,12 +196,15 @@ pre.share{font:15px/1.5 var(--fm);background:var(--panel);border:1px solid var(-
 .endBtn{margin-left:auto}
 .endBtn.confirm{border-color:var(--warn);color:var(--warn)}
 @media (min-width:1200px){
-  .app.playing.ranked{max-width:1260px;grid-template-columns:270px minmax(0,1fr) 300px}
-  .app.playing.ranked>section{grid-column:2}
-  .app.playing.ranked>.ladderCol{grid-column:1;grid-row:2/span 3;position:sticky;top:18px;max-height:calc(100dvh - 36px)}
-  .app.playing.ranked>.ladderCol .ladderList{max-height:calc(100dvh - 70px)}
-  .app.playing.ranked>.side{grid-column:3}
+  .app.ranked{max-width:1260px;display:grid;grid-template-columns:270px minmax(0,1fr) 300px;gap:20px 40px;align-items:start;align-content:start}
+  .app.ranked:not(.playing){max-width:1000px;grid-template-columns:270px minmax(0,1fr)}
+  .app.ranked>header{grid-column:1/-1}
+  .app.ranked>section{grid-column:2}
+  .app.ranked>.ladderCol{grid-column:1;grid-row:2/span 3;position:sticky;top:18px;max-height:calc(100dvh - 36px)}
+  .app.ranked .ladderList{max-height:calc(100dvh - 70px)}
+  .app.ranked>.side{grid-column:3}
 }
+
 @media (max-width:1199px){.ladderCol{display:none!important}}
 .lqRow .nm{flex:1;min-width:0}
 .lqSlot .pill{flex:0 1 auto}
