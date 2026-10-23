@@ -8,31 +8,30 @@ about 0.94 cosine with text-embedding-3-small; "dinosaur" vs "dinosaur genus"
 
 from __future__ import annotations
 
-import json
 import math
-from pathlib import Path
 
 from ai_api_unified import AIFactory
 
 DUPLICATE_AT = 0.84
-CACHE = Path(__file__).resolve().parent / ".cache" / "embeddings.json"
 
 
 class Embeddings:
+    """Unit-length embeddings by text. Repeats come from ai-api-unified's
+    response cache (persistent, see krillion/cache_store.py); the dict here
+    only saves re-normalizing within one process."""
+
     def __init__(self) -> None:
         self._client = None
-        self._cache: dict[str, list[float]] = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+        self._seen: dict[str, list[float]] = {}
 
     def __call__(self, text: str) -> list[float]:
-        if text not in self._cache:
+        if text not in self._seen:
             if self._client is None:
                 self._client = AIFactory.get_ai_embedding_client(embedding_engine="openai")
             v = self._client.generate_embeddings(text)["embedding"]
             n = math.sqrt(sum(x * x for x in v)) or 1.0
-            self._cache[text] = [x / n for x in v]
-            CACHE.parent.mkdir(parents=True, exist_ok=True)
-            CACHE.write_text(json.dumps(self._cache))
-        return self._cache[text]
+            self._seen[text] = [x / n for x in v]
+        return self._seen[text]
 
 
 def cosine(a: list[float], b: list[float]) -> float:

@@ -1,8 +1,9 @@
 """Polite, cached HTTP for Wikimedia APIs.
 
-Wikimedia asks for a descriptive User-Agent with contact details and
-rate-limits bursts, so every request goes through one client that caches to
-disk, spaces requests out, and backs off on 429.
+Wikimedia asks for a descriptive User-Agent with contact details. Its Action
+API (en.wikipedia.org/w/api.php) rate-limits bursts, so requests to it are
+spaced out; the pageviews REST API takes parallel requests. Everything caches
+to disk and backs off on 429.
 """
 
 from __future__ import annotations
@@ -39,8 +40,10 @@ def get_json(url: str, params: dict | None = None, *, cache: bool = True) -> dic
     path = CACHE_DIR / hashlib.sha1(full.encode()).hexdigest()
     if cache and path.exists():
         return json.loads(path.read_text())
+    throttled = "/w/api.php" in full
     for attempt in range(6):
-        _throttle()
+        if throttled:
+            _throttle()
         r = _client.send(req)
         if r.status_code == 429 or r.status_code >= 500:
             retry = float(r.headers.get("retry-after") or 2 ** attempt)

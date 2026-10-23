@@ -45,36 +45,23 @@ CATEGORY_SCHEMA = {
     },
 }
 
+# Option B: the model writes bare names only, grouped by how often people say
+# them. The group labels cost a few tokens each; per-answer fields (aliases,
+# article titles, salience numbers) cost ~20 output tokens per answer, so the
+# pipeline gets those from Wikipedia instead (titles by resolving the name,
+# aliases from redirects). Output tokens are ~95% of a game's cost.
+SALIENCE_GROUPS = {
+    "very_common": 5,  # most people say it within seconds
+    "common": 4,
+    "known": 3,
+    "uncommon": 2,
+    "obscure": 1,  # only specialists know it
+}
 ANSWER_SCHEMA = {
     "type": "object",
     "additionalProperties": False,
-    "required": ["answers"],
-    "properties": {
-        "answers": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["name", "aliases", "wikipedia_title", "salience"],
-                "properties": {
-                    "name": {"type": "string", "description": "Common English name, as a person would say it"},
-                    "aliases": {
-                        "type": "array",
-                        "items": {"type": "string"},
-                        "description": "Other names and spellings for the same thing",
-                    },
-                    "wikipedia_title": {
-                        "type": ["string", "null"],
-                        "description": "Exact title of the English Wikipedia article about this specific item, or null",
-                    },
-                    "salience": {
-                        "type": "integer",
-                        "description": "5 = most people say it within seconds; 1 = only specialists know it",
-                    },
-                },
-            },
-        }
-    },
+    "required": list(SALIENCE_GROUPS),
+    "properties": {g: {"type": "array", "items": {"type": "string"}} for g in SALIENCE_GROUPS},
 }
 
 
@@ -93,18 +80,22 @@ def _client():
     )
 
 
-def _structured(prompt: str, schema: dict, max_tokens: int) -> dict:
+def _structured(prompt: str, schema: dict, max_tokens: int, *, cache: bool = True) -> dict:
+    """One structured call. Identical requests are answered from ai-api-unified's
+    response cache (see krillion/cache_store.py) unless cache=False."""
     result = _client().send_structured_output(
         prompt,
         response_schema=schema,
         system_prompt=SYSTEM,
         max_response_tokens=max_tokens,
         request_timeout_seconds=600.0,
+        provider_options=None if cache else {"cache": "off"},
     )
     reason = str(getattr(result.finish_reason, "value", result.finish_reason))
     if reason != "complete" or result.data is None:
         raise RuntimeError(f"generation stopped early: {reason}")
-    log.info("tokens in=%s out=%s", result.usage.input_tokens, result.usage.output_tokens)
+    log.info("tokens in=%s out=%s cache_hit=%s", result.usage.input_tokens, result.usage.output_tokens,
+             getattr(result, "cache_hit", False))
     return result.data
 
 
@@ -129,7 +120,12 @@ Seed articles:
 A good category:
 - has membership that is factual and checkable: no opinions, no "best", no "favorite"
 - has at least 80 valid answers, from household names to obscure but real ones
-- is playable: a typical adult can name at least three answers without help
+- is playable: a typical adult can name at least three answers without help, so no specialist
+  jargon (financial ratios, algorithms, legal doctrines)
+- has a listable set of members, roughly 80 to 2,000: not so broad that almost any title counts
+  ("Name a debut album", "Name a song")
+- has answers that are single named things, never pairs, relations or descriptions
+  ("Name a border between two countries" fails)
 - has answers that are short names a person can say aloud in 1 to 4 words, not numbers or sentences
 - changes slowly: no current events, rankings, or people in the news
 - is family friendly
@@ -137,35 +133,41 @@ A good category:
 
 Spread them across different domains. Do not repeat or closely overlap these existing categories:
 {avoid}"""
-    data = _structured(prompt, CATEGORY_SCHEMA, 8_000)
+    # Never cached: every game must get new categories.
+    data = _structured(prompt, CATEGORY_SCHEMA, 8_000, cache=False)
     return [Category(**c) for c in data["categories"]]
 
 
 def generate_answers(category: Category, *, rounds: int = 2) -> list[dict]:
-    """List valid answers. A second round asks only for answers missing from
-    the first, which improves recall on the obscure end."""
+    """List valid answers as bare names, grouped by salience. A second round
+    asks only for answers missing from the first, which improves recall on
+    the obscure end. The prompt depends only on the category, so the response
+    cache serves a repeat build of the same category for free."""
     answers: list[dict] = []
+    rules = """- One canonical common English name per member, as a person would say it. No aliases, no
+  descriptions, no parentheses.
+- Each member once. Only true members: leave out anything you are unsure of, fictional items, and
+  broad groupings that contain members.
+- Group by how likely a typical adult is to say it when asked: very_common (most people say it within
+  seconds), common, known, uncommon, obscure (only specialists know it)."""
     for i in range(rounds):
         if i == 0:
             prompt = f"""Prompt: "{category.prompt}" (Wikipedia hint: {category.noun})
 
 List every valid answer you can, up to 300, from the most obvious to the most obscure.
-- Each answer is one distinct member. Put alternative names and spellings in aliases, never as separate answers.
-- Only true members. Leave out anything you are unsure of, fictional items, and broad groupings that contain members.
-- wikipedia_title is the exact English Wikipedia title for that specific item, such as "Date palm" or
-  "Pointer (dog breed)". Use null if you are not confident an article exists.
-- salience: how likely a typical adult is to say it when asked, 5 (most say it) to 1 (only specialists)."""
+{rules}"""
         else:
             listed = ", ".join(a["name"] for a in answers)
             prompt = f"""Prompt: "{category.prompt}" (Wikipedia hint: {category.noun})
 
 These answers are already listed: {listed}
 
-List further valid answers that are not in that list or its aliases, especially obscure but real ones,
-up to 200. Same rules: true members only, aliases instead of duplicates, exact Wikipedia title or null,
-salience 1 to 5. Return an empty list if you cannot think of more you are sure of."""
-        data = _structured(prompt, ANSWER_SCHEMA, 64_000)
-        new = data["answers"]
+List further valid answers that are not in that list, especially obscure but real ones, up to 200.
+Return empty groups if you cannot think of more you are sure of.
+{rules}"""
+        data = _structured(prompt, ANSWER_SCHEMA, 32_000)
+        new = [{"name": n.strip(), "aliases": [], "wikipedia_title": None, "salience": SALIENCE_GROUPS[g]}
+               for g in SALIENCE_GROUPS for n in data.get(g, []) if n and n.strip()]
         log.info("%s round %d: %d answers", category.prompt, i + 1, len(new))
         answers.extend(new)
         if not new:

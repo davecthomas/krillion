@@ -19,5 +19,25 @@
       "project_id": "your-gcp-project",
       "location": "global"
     }
-  }
+  },
+  "middleware": [
+    {
+      "name": "response_cache",
+      "enabled": true,
+      "settings": {
+        "max_entries": 50000,
+        "operations": {
+          "completions": {
+            "ttl_seconds": 2592000
+          },
+          "embeddings": {
+            "ttl_seconds": 2592000
+          },
+          "conversation": {
+            "enabled": false
+          }
+        }
+      }
+    }
+  ]
 }

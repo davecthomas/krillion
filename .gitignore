@@ -14,7 +14,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 
-# Pipeline caches and build output
+# Pipeline caches and scratch output
 pipeline/.cache/
 data/build/
 
@@ -24,3 +24,10 @@ node_modules/
 
 # OS
 .DS_Store
+
+# Generated per game, never committed: categories asked so far, their catalogs, recorded questions
+data/live/
+public/audio/
+
+# ai-api-unified response cache (persistent store)
+data/cache/

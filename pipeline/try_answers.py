@@ -1,9 +1,10 @@
-"""Try answers against a built catalog, the way the game will judge them.
+"""Try answers against the catalog of a category you've played, the way the
+game judges them (catalog matching only; the game also asks the AI judge).
 
-    uv run python -m pipeline.try_answers                       # list built catalogs
-    uv run python -m pipeline.try_answers name-a-breed-of-dog   # type answers, blank line to quit
-    uv run python -m pipeline.try_answers name-a-breed-of-dog "golden retreiver" "telomian"
-    uv run python -m pipeline.try_answers name-a-breed-of-dog --tiers   # show a sample of each tier
+    uv run python -m pipeline.try_answers                      # list played categories
+    uv run python -m pipeline.try_answers name-a-wine-grape    # type answers, blank line to quit
+    uv run python -m pipeline.try_answers name-a-wine-grape "cabernet" "pinot grigo"
+    uv run python -m pipeline.try_answers name-a-wine-grape --tiers   # a sample of each tier
 """
 
 from __future__ import annotations
@@ -14,7 +15,9 @@ import sys
 from krillion.match import Matcher
 from krillion.tiers import TIER_NAMES, TIER_POINTS
 
-from .build import CATALOG
+from krillion.live import LIVE
+
+CATALOG = LIVE / "catalog"
 
 
 def load(slug: str) -> tuple[dict, Matcher, dict]:

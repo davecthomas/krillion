@@ -1,63 +1,23 @@
-"""Catalog pipeline: generate -> verify -> score -> tier.
+"""Build one category's answer catalog: generate -> verify -> score -> tier.
 
-    uv run python -m pipeline.build propose --count 12   # AI proposes categories into data/categories.json
-    uv run python -m pipeline.build build --limit 5      # build catalogs for categories not built yet
-    uv run python -m pipeline.build build --only name-a-cheese --force
-
-Review data/categories.json between the two steps: set "enabled": false on
-any proposal you don't want.
+Live games call build_category() for each freshly generated category; see
+krillion/live.py.
 """
 
 from __future__ import annotations
 
-import argparse
 import datetime as dt
-import json
 import logging
 import re
-from pathlib import Path
 
 from wordfreq import zipf_frequency
 
 from krillion.normalize import key, slugify, words
 from krillion.tiers import TIER_NAMES, Signals, assign_tiers, commonness
 
-from . import generate, similar, wiki
+from . import generate, wiki
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
-CATEGORIES = DATA / "categories.json"
-CATALOG = DATA / "catalog"
 log = logging.getLogger("pipeline")
-
-
-def _load_categories() -> list[dict]:
-    return json.loads(CATEGORIES.read_text()) if CATEGORIES.exists() else []
-
-
-def _save_json(path: Path, data) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
-
-
-def cmd_propose(count: int) -> None:
-    cats = _load_categories()
-    # Random, but weighted toward topics people read about: draw 200, keep the 40 most viewed.
-    pool = wiki.random_articles(200)
-    views = wiki.pageviews(pool)
-    seeds = sorted(pool, key=lambda t: -views.get(t, 0))[:40]
-    new = generate.propose_categories(count, [c["prompt"] for c in cats], seeds)
-    embed = similar.Embeddings()
-    for c in new:
-        slug = slugify(c.prompt)
-        twin, score = similar.closest(c.prompt, [x["prompt"] for x in cats], embed)
-        if score >= similar.DUPLICATE_AT or any(x["slug"] == slug for x in cats):
-            print(f"  - {c.prompt}  (duplicate of {twin!r}, {score:.2f})")
-            continue
-        cats.append({"slug": slug, "prompt": c.prompt, "noun": c.noun, "domain": c.domain, "seed": c.seed,
-                     "estimated_answers": c.estimated_answers, "enabled": True})
-        print(f"  + {c.prompt}  ({c.domain}, ~{c.estimated_answers}; seed: {c.seed})")
-    _save_json(CATEGORIES, cats)
 
 
 _PAREN = re.compile(r"\s*\([^)]*\)\s*")
@@ -84,17 +44,22 @@ def _title_case(name: str) -> str:
     return name[:1].upper() + name[1:]
 
 
-def build_category(cat: dict) -> dict:
+def build_category(cat: dict, rounds: int = 2) -> dict:
+    """Generate, verify, score and tier one category. Live games use one
+    generation round so the catalog is ready within about a minute."""
     noun = cat["noun"]
     answers = _merge(generate.generate_answers(generate.Category(
-        cat.get("seed", ""), cat["prompt"], noun, cat.get("domain", ""), cat.get("estimated_answers", 0))))
+        cat.get("seed", ""), cat["prompt"], noun, cat.get("domain", ""), cat.get("estimated_answers", 0)),
+        rounds=rounds))
     log.info("%s: %d answers after merge", cat["prompt"], len(answers))
 
     # Verify: the model's title first, then the bare name, then "Name (noun)".
     candidates = []
     for a in answers:
         n = _title_case(a["name"])
-        a["_try"] = [t for t in (a.get("wikipedia_title"), f"{n} ({noun})", n) if t]
+        # The model gives bare names, so try the likely article titles in order:
+        # "Pointer (dog breed)", then "Pointer", then "Swiss cheese".
+        a["_try"] = [t for t in (a.get("wikipedia_title"), f"{n} ({noun})", n, f"{n} {noun}") if t]
         candidates += a["_try"]
     resolved = wiki.resolve(candidates)
     for a in answers:
@@ -171,41 +136,3 @@ def build_category(cat: dict) -> dict:
         # judge may still accept one at play time.
         "unverified": unverified,
     }
-
-
-def cmd_build(limit: int | None, only: str | None, force: bool) -> None:
-    cats = [c for c in _load_categories() if c.get("enabled", True)]
-    if only:
-        cats = [c for c in cats if c["slug"] == only]
-    todo = [c for c in cats if force or not (CATALOG / f"{c['slug']}.json").exists()]
-    for cat in todo[:limit]:
-        doc = build_category(cat)
-        _save_json(CATALOG / f"{cat['slug']}.json", doc)
-        counts = [sum(1 for a in doc["answers"] if a["tier"] == t) for t in range(6)]
-        print(f"  {cat['prompt']}: {len(doc['answers'])} verified answers ({len(doc['unverified'])} set aside), tiers {counts}")
-    _save_json(CATALOG / "index.json", sorted(
-        ({"slug": p.stem, "prompt": json.loads(p.read_text())["prompt"]}
-         for p in CATALOG.glob("*.json") if p.name != "index.json"), key=lambda c: c["slug"]))
-
-
-def main() -> None:
-    logging.basicConfig(level=logging.INFO, format="%(message)s")
-    for noisy in ("httpx", "httpcore", "openai", "ai_api_unified"):
-        logging.getLogger(noisy).setLevel(logging.WARNING)
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    sub = ap.add_subparsers(dest="cmd", required=True)
-    p = sub.add_parser("propose")
-    p.add_argument("--count", type=int, default=12)
-    b = sub.add_parser("build")
-    b.add_argument("--limit", type=int)
-    b.add_argument("--only")
-    b.add_argument("--force", action="store_true")
-    args = ap.parse_args()
-    if args.cmd == "propose":
-        cmd_propose(args.count)
-    else:
-        cmd_build(args.limit, args.only, args.force)
-
-
-if __name__ == "__main__":
-    main()

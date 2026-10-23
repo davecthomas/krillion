@@ -32,17 +32,24 @@
       <button type="button" role="radio" id="modePop" data-mode="popular">Popular wins</button>
     </div>
     <p class="lede" id="lede"></p>
-    <div id="todayBox" class="today" hidden></div>
     <div class="row">
-      <button class="btn" id="beginBtn">Begin today's dive</button>
-      <button class="btn ghost" id="practiceBtn">Practice dive</button>
+      <button class="btn" id="beginBtn">New dive</button>
     </div>
-    <p class="note" id="micNote"><strong>Hands-free:</strong> tap once to start, then just talk. Each prompt gives you 25 seconds of air, and the clock starts after the question is read. A wrong answer costs 3 seconds, and faster answers score more.</p>
+    <div class="voicePick">
+      <div class="eyebrow">Question voice</div>
+      <div class="row">
+        <label class="sel"><span>Voice</span><select id="voiceSel"></select></label>
+        <label class="sel"><span>Accent</span><select id="accentSel"></select></label>
+        <button class="btn ghost" id="previewBtn" type="button">Preview</button>
+      </div>
+      <p class="hint" id="voiceHint" aria-live="polite"></p>
+    </div>
+    <p class="note" id="micNote"><strong>Push to talk:</strong> the mic only hears you while you hold <kbd>Space</kbd> or the <strong>Hold to talk</strong> button, so you can talk an answer over first. Each question gives you 25 seconds of air, starting once it has been read. A wrong answer costs 3 seconds, and faster answers score more.</p>
     <div>
       <div class="eyebrow" style="margin-bottom:8px">Scoring · plus up to 50% more for speed</div>
       <div class="tiers" id="tierTable"></div>
     </div>
-    <p class="cmds">While a question is open, say your answer, or say <kbd>repeat</kbd> to hear it again and <kbd>skip</kbd> to pass.</p>
+    <p class="cmds">Hold <kbd>Space</kbd> and say your answer. Hold it and say <kbd>repeat</kbd> to hear the question again, or <kbd>skip</kbd> to pass.</p>
   </section>
 
   <!-- PLAY -->
@@ -61,6 +68,7 @@
         <div class="status" id="status" aria-live="polite">Reading the prompt…</div>
         <div class="heard" id="heard"></div>
       </div>
+      <button class="talk" id="talkBtn" type="button" aria-describedby="status">Hold to talk</button>
     </div>
     <div id="resultBox" hidden></div>
     <div class="misses" id="misses" aria-label="Rejected answers"></div>
@@ -90,7 +98,7 @@
       </div>
     </div>
     <div class="row">
-      <button class="btn" id="againBtn" type="button">Practice dive</button>
+      <button class="btn" id="againBtn" type="button">New dive</button>
       <button class="btn ghost" id="homeBtn" type="button">Back to surface</button>
     </div>
   </section>
