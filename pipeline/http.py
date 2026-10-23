@@ -24,7 +24,7 @@ USER_AGENT = "krillion-catalog/0.1 (https://github.com/davecthomas/krillion)"
 CACHE_DIR = Path(__file__).resolve().parent / ".cache" / "http"
 # Spacing per host, shared by every build process on this machine (make
 # JOBS=n): Wikipedia answers bursts from one address with 429s for minutes.
-INTERVALS_S = {"en.wikipedia.org": 0.25, "query.wikidata.org": 0.5, "books.google.com": 1.5}
+INTERVALS_S = {"en.wikipedia.org": 0.4, "query.wikidata.org": 0.5, "books.google.com": 1.5}
 CLOCKS = Path(__file__).resolve().parent / ".cache" / "clock"
 
 _client = httpx.Client(headers={"User-Agent": USER_AGENT}, timeout=90.0, follow_redirects=True)
