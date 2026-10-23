@@ -53,6 +53,25 @@ def _throttle(host: str) -> None:
         f.write(str(time.time()))
 
 
+def _pause(host: str, seconds: float) -> None:
+    """Hold every process's next request to this host for `seconds`: after a
+    429, one job waiting while the others keep asking only extends the block."""
+    CLOCKS.mkdir(parents=True, exist_ok=True)
+    with _lock, open(CLOCKS / host, "a+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        try:
+            last = float(f.read() or 0)
+        except ValueError:
+            last = 0.0
+        # _throttle waits until last + interval, so push last forward
+        until = time.time() + seconds - INTERVALS_S[host]
+        if until > last:
+            f.seek(0)
+            f.truncate()
+            f.write(str(until))
+
+
 def get_json(url: str, params: dict | None = None, *, cache: bool = True):
     req = _client.build_request("GET", url, params=params)
     full = str(req.url)
@@ -60,7 +79,7 @@ def get_json(url: str, params: dict | None = None, *, cache: bool = True):
     if cache and path.exists():
         return json.loads(path.read_text())
     host = urlsplit(full).hostname or ""
-    for attempt in range(6):
+    for attempt in range(10):
         _throttle(host)
         try:
             r = _client.send(req)
@@ -69,8 +88,11 @@ def get_json(url: str, params: dict | None = None, *, cache: bool = True):
             time.sleep(min(2 ** attempt, 30))
             continue
         if r.status_code == 429 or r.status_code >= 500:
-            retry = float(r.headers.get("retry-after") or 2 ** attempt)
-            time.sleep(min(retry, 60))
+            retry = min(float(r.headers.get("retry-after") or 2 ** attempt), 60)
+            if host in INTERVALS_S:
+                _pause(host, retry)  # the next _throttle waits it out
+            else:
+                time.sleep(retry)
             continue
         if r.status_code == 404:
             data = {}
