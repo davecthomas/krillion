@@ -117,14 +117,19 @@ New dive ─► seeds ─► propose ─► dedupe ─► questions (game starts
                      answer list ─► verify ─► score ─► tier ─► data/live/catalog/
 ```
 
-1. **Seed.** Sample 50 articles from Wikipedia's daily top-1,000 most-read
-   lists for three random days in the past two years, which takes about a
-   second. The surprise comes from the seeds. Without them, a model asked for
+1. **Seed.** Sample 50 articles from Wikipedia's daily most-read lists for
+   three random days in the past two years, which takes about a second. Each
+   day's list comes from readers in the US (85% of days) or Canada (15%). The
+   global English list leans toward whichever country reads the most that day,
+   often India, and it produced questions few North Americans could answer.
+   The surprise comes from the seeds. Without them, a model asked for
    categories returns the same dozen every time: dog breeds, cheeses, elements.
 2. **Propose.** `gpt-6-sol` climbs from seeds to playable categories ("Bowline"
    → "Name a knot"). A category needs factual membership, roughly 80 to 2,000
    members, answers that are single named things, and at least three answers a
-   typical adult can name unaided.
+   typical North American adult can name unaided. The prompt rules out
+   categories rooted in another country's culture, such as cricket or Bollywood
+   films; global subjects such as cheeses stay.
 3. **Dedupe.** Embeddings (`text-embedding-3-small`) reject any proposal within
    cosine 0.84 of a category you've already had. "Name a breed of dog" and
    "Name a dog breed" score 0.94; "cheese" and "French cheese" score 0.74 and
