@@ -1,6 +1,6 @@
 {
   "prompt": "Name a seabird or shorebird",
-  "noun": "bird",
+  "noun": "seabird",
   "domain": "animals",
   "answers": {
     "very_common": [
