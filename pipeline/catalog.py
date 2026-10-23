@@ -140,7 +140,7 @@ def _tries(name: str, noun: str) -> list[str]:
     if place:
         return list(dict.fromkeys([f"{n}, {place}", n]))
     first, short = noun.split()[0], noun.split()[-1]
-    return list(dict.fromkeys([f"{n} ({noun})", f"{n} ({short})", n, f"{n} {first}", f"{n} {noun}"]))
+    return list(dict.fromkeys([f"{n} ({noun})", f"{n} ({short})", f"{n} ({first})", n, f"{n} {first}", f"{n} {noun}"]))
 
 
 def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str) -> str | None:
