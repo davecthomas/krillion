@@ -1,0 +1,78 @@
+{
+  "prompt": "Name a Meryl Streep movie",
+  "noun": "Meryl Streep film",
+  "domain": "movies and tv",
+  "answers": {
+    "very_common": [
+      "The Devil Wears Prada",
+      "Mamma Mia!",
+      "Sophie's Choice",
+      "Kramer vs. Kramer",
+      "Out of Africa",
+      "The Iron Lady",
+      "Julie & Julia"
+    ],
+    "common": [
+      "The Deer Hunter",
+      "Silkwood",
+      "Doubt",
+      "Into the Woods",
+      "The Bridges of Madison County",
+      "Death Becomes Her",
+      "It's Complicated",
+      "Adaptation",
+      "The Hours",
+      "The Post",
+      "Little Women",
+      "Don't Look Up",
+      "August: Osage County",
+      "Florence Foster Jenkins",
+      "Mamma Mia! Here We Go Again",
+      "The River Wild",
+      "Postcards from the Edge",
+      "Manhattan"
+    ],
+    "known": [
+      "Fantastic Mr. Fox",
+      "Ironweed",
+      "A Cry in the Dark",
+      "Heartburn",
+      "Plenty",
+      "Falling in Love",
+      "The French Lieutenant's Woman",
+      "She-Devil",
+      "Defending Your Life",
+      "One True Thing",
+      "Marvin's Room",
+      "Music of the Heart",
+      "A Prairie Home Companion",
+      "The Manchurian Candidate",
+      "Lemony Snicket's A Series of Unfortunate Events",
+      "Hope Springs",
+      "Mary Poppins Returns",
+      "Ricki and the Flash",
+      "The Giver",
+      "Suffragette"
+    ],
+    "uncommon": [
+      "Julia",
+      "Still of the Night",
+      "The Seduction of Joe Tynan",
+      "Dancing at Lughnasa",
+      "Before and After",
+      "Lions for Lambs",
+      "Rendition",
+      "Evening",
+      "Prime",
+      "The Ant Bully",
+      "The Laundromat",
+      "The Prom",
+      "Let Them All Talk",
+      "The Homesman",
+      "Stuck on You"
+    ],
+    "obscure": [
+      "Dark Matter"
+    ]
+  }
+}

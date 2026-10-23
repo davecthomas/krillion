@@ -1,0 +1,81 @@
+{
+  "prompt": "Name a Frank Sinatra song",
+  "noun": "Frank Sinatra song",
+  "domain": "music",
+  "answers": {
+    "very_common": [
+      "My Way",
+      "Theme from New York, New York",
+      "Fly Me to the Moon",
+      "Strangers in the Night",
+      "That's Life",
+      "The Way You Look Tonight",
+      "Come Fly with Me",
+      "I've Got You Under My Skin",
+      "Summer Wind",
+      "Luck Be a Lady"
+    ],
+    "common": [
+      "The Lady Is a Tramp",
+      "It Was a Very Good Year",
+      "Somethin' Stupid",
+      "Night and Day",
+      "All the Way",
+      "Witchcraft",
+      "Young at Heart",
+      "Love and Marriage",
+      "High Hopes",
+      "I Get a Kick Out of You",
+      "You Make Me Feel So Young",
+      "My Kind of Town",
+      "The Best Is Yet to Come",
+      "Nice 'n' Easy",
+      "One for My Baby"
+    ],
+    "known": [
+      "In the Wee Small Hours of the Morning",
+      "Learnin' the Blues",
+      "Three Coins in the Fountain",
+      "Pennies from Heaven",
+      "Cycles",
+      "That Old Black Magic",
+      "All or Nothing at All",
+      "I'll Never Smile Again",
+      "Call Me Irresponsible",
+      "Pocketful of Miracles",
+      "Softly, as I Leave You",
+      "I've Got the World on a String",
+      "Come Rain or Come Shine",
+      "Angel Eyes",
+      "Time After Time"
+    ],
+    "uncommon": [
+      "Put Your Dreams Away",
+      "The House I Live In",
+      "Oh! Look at Me Now",
+      "I'll Be Seeing You",
+      "Day by Day",
+      "Polka Dots and Moonbeams",
+      "Everything Happens to Me",
+      "I'm a Fool to Want You",
+      "From Here to Eternity",
+      "Ring-a-Ding-Ding!",
+      "September of My Years",
+      "Love's Been Good to Me",
+      "Here's That Rainy Day",
+      "Old Devil Moon",
+      "Where or When",
+      "Too Marvelous for Words",
+      "Last Night When We Were Young"
+    ],
+    "obscure": [
+      "Five Minutes More",
+      "Hey! Jealous Lover",
+      "Stormy Weather",
+      "These Foolish Things",
+      "Bewitched, Bothered and Bewildered",
+      "I Could Write a Book",
+      "Don't Worry 'bout Me"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "prompt": "Name a famous speech",
+  "noun": "speech",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Gettysburg Address",
+      "I Have a Dream",
+      "Give me liberty, or give me death!",
+      "Tear down this wall!"
+    ],
+    "common": [
+      "We shall fight on the beaches",
+      "Ich bin ein Berliner",
+      "We choose to go to the Moon",
+      "Infamy Speech",
+      "Inaugural address of John F. Kennedy",
+      "Ain't I a Woman?",
+      "Sermon on the Mount",
+      "I've Been to the Mountaintop",
+      "George Washington's Farewell Address",
+      "Four Freedoms"
+    ],
+    "known": [
+      "Blood, toil, tears and sweat",
+      "This was their finest hour",
+      "Sinews of Peace",
+      "The Ballot or the Bullet",
+      "Checkers speech",
+      "Cross of Gold speech",
+      "House Divided Speech",
+      "Eisenhower's farewell address",
+      "First inaugural address of Franklin D. Roosevelt",
+      "Second inaugural address of Abraham Lincoln",
+      "Fourteen Points",
+      "Crisis of Confidence",
+      "A Time for Choosing",
+      "Evil empire speech"
+    ],
+    "uncommon": [
+      "Quit India speech",
+      "Tryst with Destiny",
+      "I Am Prepared to Die",
+      "Pericles' Funeral Oration",
+      "Speech to the Troops at Tilbury",
+      "Wind of Change",
+      "Rivers of Blood",
+      "The lady's not for turning",
+      "Never was so much owed by so many to so few",
+      "What to the Slave Is the Fourth of July?",
+      "Citizenship in a Republic",
+      "Atoms for Peace",
+      "A More Perfect Union",
+      "Women's Rights Are Human Rights",
+      "Beyond Vietnam: A Time to Break Silence",
+      "2004 Democratic National Convention keynote address"
+    ],
+    "obscure": [
+      "Cooper Union speech",
+      "Lyceum Address",
+      "Atlanta Compromise",
+      "American University speech",
+      "Report to the American People on Civil Rights",
+      "Appeal of 18 June",
+      "Je vous ai compris"
+    ]
+  }
+}

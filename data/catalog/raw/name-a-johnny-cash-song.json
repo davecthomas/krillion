@@ -1,0 +1,69 @@
+{
+  "prompt": "Name a Johnny Cash song",
+  "noun": "Johnny Cash song",
+  "domain": "music",
+  "answers": {
+    "very_common": [
+      "Ring of Fire",
+      "Folsom Prison Blues",
+      "I Walk the Line",
+      "A Boy Named Sue",
+      "Hurt",
+      "Man in Black",
+      "Jackson"
+    ],
+    "common": [
+      "Get Rhythm",
+      "One Piece at a Time",
+      "Big River",
+      "Cry! Cry! Cry!",
+      "Hey Porter",
+      "Ghost Riders in the Sky",
+      "The Man Comes Around",
+      "God's Gonna Cut You Down",
+      "I've Been Everywhere",
+      "Don't Take Your Guns to Town",
+      "Cocaine Blues",
+      "San Quentin",
+      "Highwayman"
+    ],
+    "known": [
+      "So Doggone Lonesome",
+      "There You Go",
+      "Home of the Blues",
+      "Ballad of a Teenage Queen",
+      "Guess Things Happen That Way",
+      "Five Feet High and Rising",
+      "Understand Your Man",
+      "The Ballad of Ira Hayes",
+      "Daddy Sang Bass",
+      "Sunday Mornin' Comin' Down",
+      "Orange Blossom Special",
+      "Tennessee Flat Top Box",
+      "I Still Miss Someone",
+      "Ragged Old Flag",
+      "Delia's Gone",
+      "Ain't No Grave",
+      "Long Black Veil"
+    ],
+    "uncommon": [
+      "The Rebel – Johnny Yuma",
+      "What Is Truth",
+      "Flesh and Blood",
+      "A Thing Called Love",
+      "Pickin' Time",
+      "Luther Played the Boogie",
+      "Give My Love to Rose",
+      "Train of Love",
+      "Next in Line",
+      "Don't Make Me Go",
+      "Wanted Man",
+      "Busted",
+      "The One on the Right Is on the Left",
+      "It Ain't Me Babe",
+      "Rock Island Line",
+      "Wreck of the Old 97"
+    ],
+    "obscure": []
+  }
+}
