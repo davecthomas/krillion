@@ -235,16 +235,18 @@ function show(id) {
   $('settingsBtn').hidden = id === 'play';
   // The dive log sits beside the game while playing; the end screen has the full summary
   $('side').hidden = id !== 'play';
-  $('ladder').hidden = id !== 'play';
+  // The rankings stay up after the dive so you can review every question
+  const rankings = id === 'play' || (id === 'end' && game && game.sections && game.sections.length > 0);
+  $('ladder').hidden = !rankings;
   const app = document.querySelector('.app');
   app.classList.toggle('playing', id === 'play');
-  app.classList.toggle('ranked', id === 'play' && rankedFits());
+  app.classList.toggle('ranked', rankings && rankedFits());
   // While the rankings column is up, its fish is the one that dives
-  if (window.Ocean) { Ocean.setFishVisible(!(id === 'play' && rankedFits())); Ocean.layout(); }
+  if (window.Ocean) { Ocean.setFishVisible(!(rankings && rankedFits())); Ocean.layout(); }
 }
 const wide = matchMedia('(min-width: 1200px)');
 const rankedFits = () => wide.matches;
-wide.addEventListener('change', () => { if (state === 'play') show('play'); });
+wide.addEventListener('change', () => { if (state === 'play' || state === 'end') show(state); });
 function pips() {
   $('pips').innerHTML = game.prompts.map((_, i) => {
     const r = game.rounds[i]; const c = r ? (r.tier >= 0 ? TS[r.tier].c : 'var(--line)') : 'transparent';
