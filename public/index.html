@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krillion Voice Dive</title>
+<meta name="description" content="A voice trivia game where the rarest correct answer wins.">
+<meta name="theme-color" content="#0b3a44">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">1 in a <b>Krillion</b> · voice</div>
+      <div class="pips" id="pips" aria-hidden="true" hidden></div>
+    </div>
+    <div class="gauge" id="gauge" aria-live="polite">0 m<small>depth</small></div>
+  </header>
+
+  <!-- START -->
+  <section id="start" style="display:grid;gap:22px">
+    <div>
+      <h1 class="title" id="headline">The obvious answer <em>sinks.</em></h1>
+    </div>
+    <div class="seg" role="radiogroup" aria-label="Scoring mode">
+      <button type="button" role="radio" id="modeRare" data-mode="rare">Rare wins</button>
+      <button type="button" role="radio" id="modePop" data-mode="popular">Popular wins</button>
+    </div>
+    <p class="lede" id="lede"></p>
+    <div id="todayBox" class="today" hidden></div>
+    <div class="row">
+      <button class="btn" id="beginBtn">Begin today's dive</button>
+      <button class="btn ghost" id="practiceBtn">Practice dive</button>
+    </div>
+    <p class="note" id="micNote"><strong>Hands-free:</strong> tap once to start, then just talk. Each prompt gives you 25 seconds of air, and the clock starts after the question is read. A wrong answer costs 3 seconds, and faster answers score more.</p>
+    <div>
+      <div class="eyebrow" style="margin-bottom:8px">Scoring · plus up to 50% more for speed</div>
+      <div class="tiers" id="tierTable"></div>
+    </div>
+    <p class="cmds">While a question is open, say your answer, or say <kbd>repeat</kbd> to hear it again and <kbd>skip</kbd> to pass.</p>
+  </section>
+
+  <!-- PLAY -->
+  <section id="play" hidden style="display:grid;gap:20px">
+    <div>
+      <div class="eyebrow" id="roundLabel">Prompt 1 of 7</div>
+      <h2 class="prompt" id="promptText">Name a cheese</h2>
+    </div>
+    <div class="air">
+      <div class="lab"><span>Air</span><b id="airSec">25.0 s</b></div>
+      <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+    </div>
+    <div class="mic">
+      <div class="orb" id="orb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V22h2v-3.07A7 7 0 0 0 19 12h-2Z"/></svg></div>
+      <div class="micText">
+        <div class="status" id="status" aria-live="polite">Reading the prompt…</div>
+        <div class="heard" id="heard"></div>
+      </div>
+    </div>
+    <div id="resultBox" hidden></div>
+    <div class="misses" id="misses" aria-label="Rejected answers"></div>
+    <form class="typeit" id="typeForm" autocomplete="off">
+      <input id="typeInput" placeholder="Or type (or dictate) an answer" aria-label="Answer">
+      <button class="btn ghost" type="submit">Go</button>
+    </form>
+    <div class="row">
+      <button class="btn ghost" id="repeatBtn" type="button">Hear it again</button>
+      <button class="btn ghost" id="skipBtn" type="button">Skip</button>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section id="end" hidden style="display:grid;gap:22px">
+    <div>
+      <div class="eyebrow" id="endLabel">Dive complete</div>
+      <p class="depth" id="endDepth">0<span>m</span></p>
+      <p class="band" id="endBand">Shallows</p>
+    </div>
+    <div class="log" id="log"></div>
+    <div style="display:grid;gap:10px">
+      <div class="eyebrow">Share</div>
+      <pre class="share" id="share"></pre>
+      <div class="row">
+        <button class="btn ghost" id="copyBtn" type="button">Copy result</button>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn" id="againBtn" type="button">Practice dive</button>
+      <button class="btn ghost" id="homeBtn" type="button">Back to surface</button>
+    </div>
+  </section>
+</div>
+<script src="game.js"></script>
+</body>
+</html>

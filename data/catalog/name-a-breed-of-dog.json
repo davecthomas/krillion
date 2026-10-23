@@ -1,0 +1,7486 @@
+{
+ "slug": "name-a-breed-of-dog",
+ "prompt": "Name a breed of dog",
+ "noun": "dog breed",
+ "domain": "animals",
+ "built_at": "2026-10-22T22:53:11+00:00",
+ "model": "gpt-6-sol",
+ "answers": [
+  {
+   "id": "german-shepherd",
+   "name": "German Shepherd",
+   "aliases": [
+    "Alsatian",
+    "Alsatian Wolf Dog",
+    "Alsatian dog",
+    "Alsation dog",
+    "Czech Shepherd",
+    "Deutscher Schäferhund",
+    "East German Shepherd Dog",
+    "German Shepard Dog",
+    "German Shepherd Dog",
+    "German Shepherd Dogs",
+    "German Shepherds",
+    "German Sheppard",
+    "German Shpherd",
+    "German shepard",
+    "German shepards",
+    "German sheperd",
+    "German sheperds in war",
+    "German shephard",
+    "German shephards",
+    "King Shepherd",
+    "Panda Shepherd",
+    "Schaeferhund",
+    "Schniebley",
+    "Schäferhund",
+    "Shiloh Shepherd",
+    "Shiloh Shepherd dog",
+    "Shiloh Shepherds"
+   ],
+   "article": "German Shepherd",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9819,
+   "signals": {
+    "pageviews": 793741,
+    "zipf": 3.86,
+    "salience": 5
+   }
+  },
+  {
+   "id": "golden-retriever",
+   "name": "Golden Retriever",
+   "aliases": [
+    "English cream retriever",
+    "Golden",
+    "Golden Retriever dog",
+    "Golden retreiver",
+    "Golden retrievers",
+    "Golden retriver",
+    "Golden retrivers",
+    "Red Retriever",
+    "Russian Retriever",
+    "Russian tracker"
+   ],
+   "article": "Golden Retriever",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9615,
+   "signals": {
+    "pageviews": 776208,
+    "zipf": 2.98,
+    "salience": 5
+   }
+  },
+  {
+   "id": "great-dane",
+   "name": "Great Dane",
+   "aliases": [
+    "Boarhound",
+    "Brindlequin",
+    "Deutsche Dogge",
+    "German Mastiff",
+    "Grand danois",
+    "Great Danes",
+    "Great daine"
+   ],
+   "article": "Great Dane",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9565,
+   "signals": {
+    "pageviews": 439608,
+    "zipf": 3.47,
+    "salience": 5
+   }
+  },
+  {
+   "id": "labrador-retriever",
+   "name": "Labrador Retriever",
+   "aliases": [
+    "Black labrador",
+    "Black labrador retriever",
+    "Brown lab",
+    "Chocolate Labrador",
+    "Chocolate Labrador Retriever",
+    "Chocolate lab",
+    "Dudley",
+    "Gold Labrador",
+    "Golden Labrador Retriever",
+    "Golden lab",
+    "Lab",
+    "Lab Mix",
+    "Lab dog",
+    "Lab retriever",
+    "Labordor retreiver",
+    "Labradog",
+    "Labrador",
+    "Labrador Retrievers",
+    "Labrador dog",
+    "Labrador retreiver",
+    "Labradors",
+    "Retriever",
+    "Yellow Labrador",
+    "Yellow lab",
+    "Yellow labrador retriever",
+    "Yellow labs"
+   ],
+   "article": "Labrador Retriever",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9536,
+   "signals": {
+    "pageviews": 716920,
+    "zipf": 2.82,
+    "salience": 5
+   }
+  },
+  {
+   "id": "chihuahua",
+   "name": "Chihuahua",
+   "aliases": [
+    "Chichuachua",
+    "Chichuachuas",
+    "Chihuahas",
+    "Chihuahua dog",
+    "Chihuahua dogs",
+    "Chihuahuas",
+    "Chihuahueño",
+    "Chiwahwah",
+    "Chiwawau",
+    "Chiwawaus",
+    "Chiwhawha",
+    "Deer head chihuahua",
+    "Hairless chihuahua",
+    "Tea cup chihuahua",
+    "Tea cup chihuahuas"
+   ],
+   "article": "Chihuahua (dog breed)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9526,
+   "signals": {
+    "pageviews": 657162,
+    "zipf": 3.21,
+    "salience": 5
+   }
+  },
+  {
+   "id": "border-collie",
+   "name": "Border Collie",
+   "aliases": [
+    "Australian Red",
+    "Border Collier",
+    "Border collies",
+    "Brilliant Border Collies"
+   ],
+   "article": "Border Collie",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9509,
+   "signals": {
+    "pageviews": 506606,
+    "zipf": 2.97,
+    "salience": 5
+   }
+  },
+  {
+   "id": "jack-russell-terrier",
+   "name": "Jack Russell Terrier",
+   "aliases": [
+    "Atlas Terrier",
+    "Atlas terriers",
+    "Australian Jack Russell Terrier",
+    "English Jack Russell Terrier",
+    "Irish Jack Russell Terrier",
+    "Jack Russel Terrier",
+    "Jack Russell",
+    "Jack Russell Club of Great Britain",
+    "Jack Russell Terrier Club of America",
+    "Jack Russels",
+    "Jack Terrier",
+    "Puddin Jack",
+    "Shorty Jack Russell Terrier"
+   ],
+   "article": "Jack Russell Terrier",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9477,
+   "signals": {
+    "pageviews": 425427,
+    "zipf": 3.2,
+    "salience": 5
+   }
+  },
+  {
+   "id": "shih-tzu",
+   "name": "Shih Tzu",
+   "aliases": [
+    "Schitzu",
+    "Shih Tsoo",
+    "Shih Tsu",
+    "Shih Tzus",
+    "Shiht tzu",
+    "Shish tzu puppies",
+    "Shit Zoo",
+    "Shit tzu",
+    "Shitsu",
+    "Shitzu"
+   ],
+   "article": "Shih Tzu",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9451,
+   "signals": {
+    "pageviews": 578242,
+    "zipf": 2.68,
+    "salience": 5
+   }
+  },
+  {
+   "id": "french-bulldog",
+   "name": "French Bulldog",
+   "aliases": [
+    "Bouledogue français",
+    "French Bulldogs",
+    "Frenchie"
+   ],
+   "article": "French Bulldog",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9427,
+   "signals": {
+    "pageviews": 375231,
+    "zipf": 3.37,
+    "salience": 5
+   }
+  },
+  {
+   "id": "bulldog",
+   "name": "Bulldog",
+   "aliases": [
+    "Bulldogs",
+    "English Bulldog",
+    "List of Bulldogs in popular culture",
+    "New English Bulldog"
+   ],
+   "article": "Bulldog",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9388,
+   "signals": {
+    "pageviews": 357239,
+    "zipf": 3.38,
+    "salience": 5
+   }
+  },
+  {
+   "id": "saint-bernard",
+   "name": "Saint Bernard",
+   "aliases": [
+    "Alpine Spaniel",
+    "Saint Bernard dogs",
+    "Saint bernard dog",
+    "St Bernard dog",
+    "St brenards",
+    "St. Bernard"
+   ],
+   "article": "St. Bernard (dog breed)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.938,
+   "signals": {
+    "pageviews": 310067,
+    "zipf": 3.87,
+    "salience": 5
+   }
+  },
+  {
+   "id": "australian-cattle-dog",
+   "name": "Australian Cattle Dog",
+   "aliases": [
+    "AuCaDo",
+    "Australian Cattle Dogs",
+    "Australian Heeler",
+    "Australian dog",
+    "Blue Cattle Dog",
+    "Blue Heeler",
+    "Cattle dog",
+    "Cattle dogs",
+    "Queensland Blue Heeler",
+    "Queensland Heeler",
+    "Red Heeler",
+    "Redtick Heeler"
+   ],
+   "article": "Australian Cattle Dog",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9295,
+   "signals": {
+    "pageviews": 501774,
+    "zipf": 4.05,
+    "salience": 4
+   }
+  },
+  {
+   "id": "beagle",
+   "name": "Beagle",
+   "aliases": [
+    "Animal testing on beagles",
+    "Beagel",
+    "Beagle dog",
+    "Beagle dogs",
+    "Beagle puppies",
+    "Beagles",
+    "Begle",
+    "Laboratory beagle",
+    "Pocket beagle"
+   ],
+   "article": "Beagle",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9208,
+   "signals": {
+    "pageviews": 449326,
+    "zipf": 3.06,
+    "salience": 5
+   }
+  },
+  {
+   "id": "siberian-husky",
+   "name": "Siberian Husky",
+   "aliases": [
+    "Arctic Husky",
+    "Husky",
+    "Seppala Husky",
+    "Seppala Siberian Sleddog",
+    "Seppala Siberian Sleddogs",
+    "Siberian Huskies",
+    "Siberian husky breed"
+   ],
+   "article": "Siberian Husky",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9185,
+   "signals": {
+    "pageviews": 308648,
+    "zipf": 3.0,
+    "salience": 5
+   }
+  },
+  {
+   "id": "poodle",
+   "name": "Poodle",
+   "aliases": [
+    "Attack poodle",
+    "Caniche",
+    "Corded Poodle",
+    "French Poodle",
+    "Medium Poodle",
+    "Mini poodle",
+    "Miniature Poodle",
+    "Parti poodle",
+    "Party poodle",
+    "Pomeranian Poodle",
+    "Poodle wool",
+    "Poodle-dog",
+    "Poodles",
+    "Pudelhund",
+    "Standard Poodle",
+    "Teacup Poodle",
+    "Toy Poodle",
+    "Toy Poodles"
+   ],
+   "article": "Poodle",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9166,
+   "signals": {
+    "pageviews": 443105,
+    "zipf": 3.02,
+    "salience": 5
+   }
+  },
+  {
+   "id": "cane-corso",
+   "name": "Cane Corso",
+   "aliases": [
+    "Cane Corso Italiano",
+    "Cane Corsos",
+    "Cane de Macellaio",
+    "Italian Corso Dog",
+    "Italian Mastiff",
+    "Italian Molosso",
+    "Sicilian Branchiero"
+   ],
+   "article": "Cane Corso",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.915,
+   "signals": {
+    "pageviews": 1248433,
+    "zipf": 2.68,
+    "salience": 4
+   }
+  },
+  {
+   "id": "pug",
+   "name": "Pug",
+   "aliases": [
+    "Dutch Bulldog",
+    "Dutch Mastiff",
+    "Mopshond",
+    "Pug breed information",
+    "Pug dog",
+    "Puggu",
+    "Puglet",
+    "Puglets",
+    "Pugs",
+    "Retro pug",
+    "Teacup pug"
+   ],
+   "article": "Pug",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.915,
+   "signals": {
+    "pageviews": 381073,
+    "zipf": 3.11,
+    "salience": 5
+   }
+  },
+  {
+   "id": "yorkshire-terrier",
+   "name": "Yorkshire Terrier",
+   "aliases": [
+    "Brown Yorkie",
+    "Brown Yorkshire Terrier",
+    "Chocolate Yorkshire Terrier",
+    "Chocolate yorkie",
+    "Red Yorkie",
+    "Red Yorkshire Terrier",
+    "Scottish Broken-haired Terrier",
+    "Yorkie",
+    "Yorkie Terrier",
+    "Yorkie Terriers",
+    "Yorkie dog",
+    "Yorkshi terrier",
+    "Yorkshire Terriers",
+    "Yorkshire terrior",
+    "Yorkshire terrirs"
+   ],
+   "article": "Yorkshire Terrier",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.914,
+   "signals": {
+    "pageviews": 266271,
+    "zipf": 3.18,
+    "salience": 5
+   }
+  },
+  {
+   "id": "chow-chow",
+   "name": "Chow Chow",
+   "aliases": [
+    "Chow",
+    "Songshi Quan"
+   ],
+   "article": "Chow Chow",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9124,
+   "signals": {
+    "pageviews": 476824,
+    "zipf": 3.13,
+    "salience": 4
+   }
+  },
+  {
+   "id": "australian-shepherd",
+   "name": "Australian Shepherd",
+   "aliases": [
+    "Aussie",
+    "Austrailian Shepard",
+    "Australian shepard",
+    "Australian shephard",
+    "Australian sheppard",
+    "Double Merle Australian Shepherd"
+   ],
+   "article": "Australian Shepherd",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9124,
+   "signals": {
+    "pageviews": 419705,
+    "zipf": 3.86,
+    "salience": 4
+   }
+  },
+  {
+   "id": "greyhound",
+   "name": "Greyhound",
+   "aliases": [
+    "English Greyhound",
+    "Grayhound",
+    "Greyhounds",
+    "Persian Greyhound"
+   ],
+   "article": "Greyhound",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9081,
+   "signals": {
+    "pageviews": 287465,
+    "zipf": 3.17,
+    "salience": 5
+   }
+  },
+  {
+   "id": "american-pit-bull-terrier",
+   "name": "American Pit Bull Terrier",
+   "aliases": [
+    "APBT",
+    "American Bull Terrier",
+    "American Pit Bull Terriers",
+    "American pit bull",
+    "Old Family Red Nose",
+    "Pit Bull Terrier"
+   ],
+   "article": "American Pit Bull Terrier",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.9032,
+   "signals": {
+    "pageviews": 422692,
+    "zipf": 3.17,
+    "salience": 4
+   }
+  },
+  {
+   "id": "boxer",
+   "name": "Boxer",
+   "aliases": [
+    "Boxer Dogs",
+    "Boxer dog",
+    "Deutscher Boxer",
+    "German Boxer",
+    "White Boxer"
+   ],
+   "article": "Boxer (dog breed)",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8988,
+   "signals": {
+    "pageviews": 187039,
+    "zipf": 3.74,
+    "salience": 5
+   }
+  },
+  {
+   "id": "dachshund",
+   "name": "Dachshund",
+   "aliases": [
+    "Badger dog",
+    "Dachsaund",
+    "Dachshound",
+    "Dachshuend",
+    "Dachshunds",
+    "Dachsound",
+    "Dachsund",
+    "Dachsunds",
+    "Dackel",
+    "Dackle",
+    "Dacshund",
+    "Daschshund",
+    "Daschund",
+    "Daschunds",
+    "Dashound",
+    "Dashshund",
+    "Dashund",
+    "Daxon",
+    "Doxen",
+    "Doxin",
+    "Liberty pups",
+    "Longhaired dachshund",
+    "Minature Dachshund",
+    "Mini Dachshund",
+    "Mini daschund",
+    "Miniature Dachshund",
+    "Sausage dog",
+    "Shaggy Dachshund",
+    "Teckel",
+    "Teckels",
+    "Teckle",
+    "Weiner dog",
+    "Wiener dog",
+    "Wire Hair Dachshund",
+    "Wire haired daschshund",
+    "Wurst hund"
+   ],
+   "article": "Dachshund",
+   "tier": 0,
+   "tier_name": "Plankton",
+   "commonness": 0.8985,
+   "signals": {
+    "pageviews": 1059526,
+    "zipf": 2.64,
+    "salience": 5
+   }
+  },
+  {
+   "id": "bull-terrier",
+   "name": "Bull Terrier",
+   "aliases": [
+    "English Bull Terrier",
+    "Irish Bull Terriers",
+    "Varkhond"
+   ],
+   "article": "Bull Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8951,
+   "signals": {
+    "pageviews": 350274,
+    "zipf": 3.21,
+    "salience": 4
+   }
+  },
+  {
+   "id": "rottweiler",
+   "name": "Rottweiler",
+   "aliases": [
+    "Rottie",
+    "Rottweilers",
+    "Rottweiller",
+    "Rottwieler",
+    "Rotweiler",
+    "Rotweiller",
+    "Weily"
+   ],
+   "article": "Rottweiler",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8939,
+   "signals": {
+    "pageviews": 735240,
+    "zipf": 2.59,
+    "salience": 5
+   }
+  },
+  {
+   "id": "newfoundland",
+   "name": "Newfoundland",
+   "aliases": [
+    "Newfie",
+    "Newfoundland dog",
+    "Newfoundland dogs"
+   ],
+   "article": "Newfoundland dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8924,
+   "signals": {
+    "pageviews": 272859,
+    "zipf": 3.38,
+    "salience": 4
+   }
+  },
+  {
+   "id": "shiba-inu",
+   "name": "Shiba Inu",
+   "aliases": [
+    "Japanese Shiba Inu",
+    "Sheba Inu",
+    "Shiba",
+    "Shiba Inu Dog",
+    "Shiba Inus",
+    "Shiba dog",
+    "Shiba ken",
+    "Siba inu"
+   ],
+   "article": "Shiba Inu",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8907,
+   "signals": {
+    "pageviews": 600943,
+    "zipf": 2.22,
+    "salience": 4
+   }
+  },
+  {
+   "id": "staffordshire-bull-terrier",
+   "name": "Staffordshire Bull Terrier",
+   "aliases": [
+    "Blue staffordshire bull terrier",
+    "Irish Staffie",
+    "Irish Staffordshire Bull Terrier",
+    "Irish Staffordshire Terrier",
+    "Irish bull terrier",
+    "Staffbull",
+    "Staffie",
+    "Staffies",
+    "Staffodshire bull terrier",
+    "Staffy"
+   ],
+   "article": "Staffordshire Bull Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8906,
+   "signals": {
+    "pageviews": 395453,
+    "zipf": 2.96,
+    "salience": 4
+   }
+  },
+  {
+   "id": "bernese-mountain-dog",
+   "name": "Bernese Mountain Dog",
+   "aliases": [
+    "Berner",
+    "Berner Sennenhund",
+    "Bernese Cattle Dog",
+    "Bernese Mountain Dogs",
+    "Bouvier Bernois",
+    "Burmese mountain dog"
+   ],
+   "article": "Bernese Mountain Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8873,
+   "signals": {
+    "pageviews": 539108,
+    "zipf": 2.23,
+    "salience": 4
+   }
+  },
+  {
+   "id": "pomeranian",
+   "name": "Pomeranian",
+   "aliases": [
+    "Dwarf Spitz",
+    "German Spitz Zwerg",
+    "Pom",
+    "Pom dog",
+    "Pomeranian dog",
+    "Zwergspitz"
+   ],
+   "article": "Pomeranian dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8838,
+   "signals": {
+    "pageviews": 505128,
+    "zipf": 2.58,
+    "salience": 5
+   }
+  },
+  {
+   "id": "belgian-malinois",
+   "name": "Belgian Malinois",
+   "aliases": [
+    "Belgian Laekenois",
+    "Belgian Laekenois dog",
+    "Belgian Malinoises",
+    "Belgian Sheepdog",
+    "Belgian Shepherd",
+    "Belgian Shepherd Groenendael",
+    "Belgian Shepherd Laekenois",
+    "Belgian Shepherd Malinois",
+    "Belgian Shepherd Tervueren",
+    "Belgian Shepherd Tervuren",
+    "Belgian Tervuren",
+    "Belgian shepherd dog",
+    "Groenendael",
+    "Groenendael dog",
+    "Laekenois",
+    "Laekenois dog",
+    "Malinois",
+    "Malinois dog",
+    "Terv",
+    "Tervuren",
+    "Tervuren dog"
+   ],
+   "article": "Belgian Shepherd",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8829,
+   "signals": {
+    "pageviews": 553297,
+    "zipf": 1.88,
+    "salience": 4
+   }
+  },
+  {
+   "id": "cavalier-king-charles-spaniel",
+   "name": "Cavalier King Charles Spaniel",
+   "aliases": [
+    "Cavalier",
+    "Cavalier KC Spaniel",
+    "Cavalier King Charles",
+    "Cavalier king charles spaniels",
+    "Cavalier spaniel",
+    "King Charles Cavalier",
+    "King Charles Cavalier Spaniel",
+    "King Charles Cavaliers"
+   ],
+   "article": "Cavalier King Charles Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8793,
+   "signals": {
+    "pageviews": 390834,
+    "zipf": 2.66,
+    "salience": 4
+   }
+  },
+  {
+   "id": "american-bully",
+   "name": "American Bully",
+   "aliases": [
+    "American Bully Excel",
+    "American Bully Kennel Club",
+    "American Bully XL",
+    "American Excel Bully",
+    "American XL bully dogs",
+    "American xl bully",
+    "Bully Excel",
+    "Bully XL",
+    "Excel Bully",
+    "Micro Bully",
+    "Pocket Bully",
+    "Toadline Bully",
+    "XL Bully",
+    "XL Bully Dog",
+    "XXL Bully"
+   ],
+   "article": "American Bully",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8718,
+   "signals": {
+    "pageviews": 455505,
+    "zipf": 3.86,
+    "salience": 3
+   }
+  },
+  {
+   "id": "rhodesian-ridgeback",
+   "name": "Rhodesian Ridgeback",
+   "aliases": [
+    "African Lion Dog",
+    "African Lion Hound",
+    "Rodesian Ridgeback",
+    "Van Rooyen's Lion Dogs"
+   ],
+   "article": "Rhodesian Ridgeback",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8631,
+   "signals": {
+    "pageviews": 425057,
+    "zipf": 1.78,
+    "salience": 4
+   }
+  },
+  {
+   "id": "irish-wolfhound",
+   "name": "Irish Wolfhound",
+   "aliases": [
+    "Celtic Hounds",
+    "Celtic hound",
+    "Irish Wolfshound"
+   ],
+   "article": "Irish Wolfhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.855,
+   "signals": {
+    "pageviews": 349029,
+    "zipf": 1.99,
+    "salience": 4
+   }
+  },
+  {
+   "id": "boston-terrier",
+   "name": "Boston Terrier",
+   "aliases": [
+    "American gentleman",
+    "Boston Bull Terrier",
+    "Boston bulldog"
+   ],
+   "article": "Boston Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8538,
+   "signals": {
+    "pageviews": 225425,
+    "zipf": 3.23,
+    "salience": 4
+   }
+  },
+  {
+   "id": "afghan-hound",
+   "name": "Afghan Hound",
+   "aliases": [
+    "Afghan Wolfhound",
+    "Afghan dog",
+    "Bakhmull",
+    "Baluchi Hound",
+    "Khalag Tazi",
+    "Sage Baluchi",
+    "Tazi"
+   ],
+   "article": "Afghan Hound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8488,
+   "signals": {
+    "pageviews": 203901,
+    "zipf": 3.29,
+    "salience": 4
+   }
+  },
+  {
+   "id": "great-pyrenees",
+   "name": "Great Pyrenees",
+   "aliases": [
+    "Chien de Montagne des Pyrénées",
+    "Great Pyrenee",
+    "Great pyreenes",
+    "Pyrenean Mountain Dog"
+   ],
+   "article": "Pyrenean Mountain Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.846,
+   "signals": {
+    "pageviews": 246884,
+    "zipf": 2.87,
+    "salience": 4
+   }
+  },
+  {
+   "id": "dalmatian",
+   "name": "Dalmatian",
+   "aliases": [
+    "Carriage Dog",
+    "Carriage Dogs",
+    "Dalmatian dog",
+    "Dalmatian dogs",
+    "Dalmation",
+    "Dalmation dog",
+    "Dalmation dogs",
+    "Firehouse Dogs",
+    "Plum Pudding Dog",
+    "Plum Pudding Dogs",
+    "Spotted Coach Dog",
+    "Spotted Coach Dogs"
+   ],
+   "article": "Dalmatian dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8455,
+   "signals": {
+    "pageviews": 252865,
+    "zipf": 2.66,
+    "salience": 5
+   }
+  },
+  {
+   "id": "alaskan-malamute",
+   "name": "Alaskan Malamute",
+   "aliases": [
+    "Alaska malamutes",
+    "Alaskan Malamutes",
+    "Alaskan malemute",
+    "Inuit Sled Dogs",
+    "Malamute"
+   ],
+   "article": "Alaskan Malamute",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8447,
+   "signals": {
+    "pageviews": 295776,
+    "zipf": 1.9,
+    "salience": 4
+   }
+  },
+  {
+   "id": "tibetan-mastiff",
+   "name": "Tibetan Mastiff",
+   "aliases": [
+    "Bhote Kukkur",
+    "Bhotekukur",
+    "Do-khyi",
+    "Himalayan mastiff",
+    "Tibetan wolfhound",
+    "Tibetian Dog",
+    "Tibetian Mastiff",
+    "Zangao"
+   ],
+   "article": "Tibetan Mastiff",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8407,
+   "signals": {
+    "pageviews": 252202,
+    "zipf": 2.53,
+    "salience": 4
+   }
+  },
+  {
+   "id": "west-highland-white-terrier",
+   "name": "West Highland White Terrier",
+   "aliases": [
+    "Highland White Terrier",
+    "Poltalloch Terrier",
+    "Roseneath Terrier",
+    "West Highland Terrier",
+    "West Highland White Terriers",
+    "West highland white terriors",
+    "Westie"
+   ],
+   "article": "West Highland White Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8391,
+   "signals": {
+    "pageviews": 195344,
+    "zipf": 3.11,
+    "salience": 4
+   }
+  },
+  {
+   "id": "anatolian-shepherd-dog",
+   "name": "Anatolian Shepherd Dog",
+   "aliases": [
+    "Anatolian Mastiff",
+    "Anatolian Shepard",
+    "Anatolian Shepherd",
+    "Anatolian karabas",
+    "Anatolian karabash",
+    "Central Anatolian Shepherd Dog",
+    "Coban Koepegi",
+    "Coban Köpegi",
+    "Kangal",
+    "Kangal Shepherd",
+    "Kangal Shepherd Dog",
+    "Kangal dog",
+    "Turkish Dog",
+    "Turkish Kangal",
+    "Turkish Shepherd",
+    "Turkish Shepherd Dog"
+   ],
+   "article": "Kangal Shepherd Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.839,
+   "signals": {
+    "pageviews": 502506,
+    "zipf": 2.45,
+    "salience": 3
+   }
+  },
+  {
+   "id": "maltese",
+   "name": "Maltese",
+   "aliases": [
+    "Bichon maltais",
+    "Maltese Dog",
+    "Maltese Dogs",
+    "Maltese Teacup",
+    "Maltese Terrier",
+    "Maltese lapdog",
+    "Maltese lion dog",
+    "Melitan"
+   ],
+   "article": "Maltese dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8384,
+   "signals": {
+    "pageviews": 243544,
+    "zipf": 3.03,
+    "salience": 4
+   }
+  },
+  {
+   "id": "basset-hound",
+   "name": "Basset Hound",
+   "aliases": [
+    "Basid hound",
+    "Basset hounds",
+    "Bassett hound"
+   ],
+   "article": "Basset Hound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8381,
+   "signals": {
+    "pageviews": 247969,
+    "zipf": 2.56,
+    "salience": 4
+   }
+  },
+  {
+   "id": "bichon-frise",
+   "name": "Bichon Frise",
+   "aliases": [
+    "Bichon Tenerife",
+    "Bichon à poil frisé",
+    "Bichons Frises",
+    "Bijon Frise",
+    "Bishon Frise"
+   ],
+   "article": "Bichon Frisé",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8341,
+   "signals": {
+    "pageviews": 271965,
+    "zipf": 1.7,
+    "salience": 4
+   }
+  },
+  {
+   "id": "english-mastiff",
+   "name": "English Mastiff",
+   "aliases": [
+    "Lyme Hall Mastiff",
+    "Lyme Hall Mastiffs",
+    "Mastie",
+    "Mastiff",
+    "Mastiue",
+    "Mastive",
+    "Mastyue",
+    "Mastyve"
+   ],
+   "article": "English Mastiff",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.829,
+   "signals": {
+    "pageviews": 226520,
+    "zipf": 2.58,
+    "salience": 4
+   }
+  },
+  {
+   "id": "english-springer-spaniel",
+   "name": "English Springer Spaniel",
+   "aliases": [
+    "English Springer",
+    "English Springer Spanial",
+    "English sprinter",
+    "Spaniel"
+   ],
+   "article": "English Springer Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8236,
+   "signals": {
+    "pageviews": 187768,
+    "zipf": 2.75,
+    "salience": 4
+   }
+  },
+  {
+   "id": "scottish-terrier",
+   "name": "Scottish Terrier",
+   "aliases": [
+    "Aberdeen Terrier",
+    "Scotch Terrier",
+    "Scottie",
+    "Scottie dog",
+    "Scottish Highlands White Terrier",
+    "Scottish Terriers",
+    "Scotty dog"
+   ],
+   "article": "Scottish Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.823,
+   "signals": {
+    "pageviews": 161674,
+    "zipf": 3.22,
+    "salience": 4
+   }
+  },
+  {
+   "id": "akita",
+   "name": "Akita",
+   "aliases": [
+    "Akita Dog",
+    "Akita Inu",
+    "Akita Inu Preservation Society",
+    "Akita Inu dog",
+    "Akita Shepherd",
+    "Akitas",
+    "American Akita",
+    "Great Japanese Dog",
+    "Japanese Akita",
+    "Japanese Akita Inu",
+    "Kuma Inu"
+   ],
+   "article": "Akita (dog breed)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8172,
+   "signals": {
+    "pageviews": 337950,
+    "zipf": 2.49,
+    "salience": 4
+   }
+  },
+  {
+   "id": "shar-pei",
+   "name": "Shar Pei",
+   "aliases": [
+    "Bone mouth",
+    "Chinese Shar-Pei",
+    "Familial Shar Pei fever",
+    "Hock fever",
+    "Mini Pei",
+    "Mini Shar Pei",
+    "Miniature Shar Pei",
+    "Shar Pei fever",
+    "Sharpay",
+    "Swollen hock syndrome",
+    "Traditional shar pei",
+    "Wrinkle dog"
+   ],
+   "article": "Shar Pei",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.817,
+   "signals": {
+    "pageviews": 217284,
+    "zipf": 2.38,
+    "salience": 4
+   }
+  },
+  {
+   "id": "miniature-schnauzer",
+   "name": "Miniature Schnauzer",
+   "aliases": [
+    "Minature Schnauzer",
+    "Mini Schnauzer",
+    "Miniature Schnauzers",
+    "Miniature Schnuazer",
+    "Schnauzer",
+    "White Schnauzer",
+    "White schnauzers",
+    "Zwergschnauzer"
+   ],
+   "article": "Miniature Schnauzer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8151,
+   "signals": {
+    "pageviews": 225152,
+    "zipf": 2.26,
+    "salience": 4
+   }
+  },
+  {
+   "id": "bloodhound",
+   "name": "Bloodhound",
+   "aliases": [
+    "Bloodhounds",
+    "Chien de Saint-Hubert",
+    "Saint Hubert Hound",
+    "St. Hubert Hound",
+    "St. Hubert's hound"
+   ],
+   "article": "Bloodhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8087,
+   "signals": {
+    "pageviews": 245376,
+    "zipf": 2.7,
+    "salience": 4
+   }
+  },
+  {
+   "id": "rough-collie",
+   "name": "Rough Collie",
+   "aliases": [
+    "Collie",
+    "Lassie dog",
+    "Rough dog",
+    "Scotch Collie",
+    "Scottish Collie",
+    "Tri-color collie"
+   ],
+   "article": "Rough Collie",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8062,
+   "signals": {
+    "pageviews": 158442,
+    "zipf": 2.97,
+    "salience": 4
+   }
+  },
+  {
+   "id": "nova-scotia-duck-tolling-retriever",
+   "name": "Nova Scotia Duck Tolling Retriever",
+   "aliases": [
+    "Duck Toller",
+    "Duck Tolling Retriever",
+    "Duck dog",
+    "Duck tolling",
+    "Little River Duck Dog",
+    "NSDTR",
+    "Nova Scotia Duck Toller",
+    "Nova Scotian Duck Tolling Retriever",
+    "Retriever",
+    "Toller",
+    "Yarmouth Toller"
+   ],
+   "article": "Nova Scotia Duck Tolling Retriever",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.805,
+   "signals": {
+    "pageviews": 307419,
+    "zipf": 2.43,
+    "salience": 3
+   }
+  },
+  {
+   "id": "irish-setter",
+   "name": "Irish Setter",
+   "aliases": [
+    "Irish Red Setter",
+    "Irish Settler",
+    "Red Setter",
+    "Red Setters"
+   ],
+   "article": "Irish Setter",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8045,
+   "signals": {
+    "pageviews": 156784,
+    "zipf": 2.98,
+    "salience": 4
+   }
+  },
+  {
+   "id": "english-cocker-spaniel",
+   "name": "English Cocker Spaniel",
+   "aliases": [
+    "Spaniel",
+    "Working cocker spaniel"
+   ],
+   "article": "English Cocker Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8025,
+   "signals": {
+    "pageviews": 172101,
+    "zipf": 2.51,
+    "salience": 4
+   }
+  },
+  {
+   "id": "samoyed",
+   "name": "Samoyed",
+   "aliases": [
+    "Samoiedskaïa Sabaka",
+    "Samoyed dog"
+   ],
+   "article": "Samoyed dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.8008,
+   "signals": {
+    "pageviews": 460158,
+    "zipf": 1.88,
+    "salience": 4
+   }
+  },
+  {
+   "id": "american-staffordshire-terrier",
+   "name": "American Staffordshire Terrier",
+   "aliases": [
+    "AmStaff",
+    "American Staffordshire",
+    "American Staffy"
+   ],
+   "article": "American Staffordshire Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7995,
+   "signals": {
+    "pageviews": 246922,
+    "zipf": 2.98,
+    "salience": 3
+   }
+  },
+  {
+   "id": "dobermann",
+   "name": "Dobermann",
+   "aliases": [
+    "Blue Doberman",
+    "Dobbermann",
+    "Doberman",
+    "Doberman Pincher",
+    "Doberman Pinscher",
+    "Doberman Pinschers",
+    "Dobermann pinscher",
+    "Red Doberman"
+   ],
+   "article": "Dobermann",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7994,
+   "signals": {
+    "pageviews": 426827,
+    "zipf": 1.47,
+    "salience": 5
+   }
+  },
+  {
+   "id": "vizsla",
+   "name": "Vizsla",
+   "aliases": [
+    "Hungarian Pointer",
+    "Hungarian Viszla",
+    "Hungarian Vizsla",
+    "Magyar vizsla",
+    "Viszla",
+    "Vizla",
+    "Vizslak"
+   ],
+   "article": "Vizsla",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7916,
+   "signals": {
+    "pageviews": 422564,
+    "zipf": 1.88,
+    "salience": 4
+   }
+  },
+  {
+   "id": "german-shorthaired-pointer",
+   "name": "German Shorthaired Pointer",
+   "aliases": [
+    "Deutsch Kurzhaar",
+    "GSP",
+    "German Shorthair Pointer",
+    "Kurzhaar",
+    "Pointer",
+    "Vorsteh",
+    "Vorsteher"
+   ],
+   "article": "German Shorthaired Pointer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7912,
+   "signals": {
+    "pageviews": 186236,
+    "zipf": 1.6,
+    "salience": 4
+   }
+  },
+  {
+   "id": "english-pointer",
+   "name": "English Pointer",
+   "aliases": [
+    "Pointer"
+   ],
+   "article": "Pointer (dog breed)",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7907,
+   "signals": {
+    "pageviews": 100648,
+    "zipf": 3.61,
+    "salience": 4
+   }
+  },
+  {
+   "id": "pembroke-welsh-corgi",
+   "name": "Pembroke Welsh Corgi",
+   "aliases": [
+    "Corgi",
+    "Pembroke Corgi",
+    "Welsh Corgi",
+    "Welsh Corgi Pembroke"
+   ],
+   "article": "Pembroke Welsh Corgi",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7894,
+   "signals": {
+    "pageviews": 154817,
+    "zipf": 2.62,
+    "salience": 4
+   }
+  },
+  {
+   "id": "shetland-sheepdog",
+   "name": "Shetland Sheepdog",
+   "aliases": [
+    "Bi-blue",
+    "Shelt",
+    "Sheltie",
+    "Shetland collie"
+   ],
+   "article": "Shetland Sheepdog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7822,
+   "signals": {
+    "pageviews": 155594,
+    "zipf": 2.37,
+    "salience": 4
+   }
+  },
+  {
+   "id": "american-bulldog",
+   "name": "American Bulldog",
+   "aliases": [
+    "American Bulldog Association",
+    "American Bulldogs",
+    "Country Bulldog",
+    "English White",
+    "Hill Bulldog",
+    "Old Southern White Bulldog",
+    "Scott's American Bulldog"
+   ],
+   "article": "American Bulldog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7801,
+   "signals": {
+    "pageviews": 165962,
+    "zipf": 3.38,
+    "salience": 3
+   }
+  },
+  {
+   "id": "dogo-argentino",
+   "name": "Dogo Argentino",
+   "aliases": [
+    "Antonio Nores Martínez",
+    "Argentine Dogo",
+    "Argentine Mastiff",
+    "Argentinian Dogo",
+    "Argentinian Fighting Dog",
+    "Argentinian Mastiff"
+   ],
+   "article": "Dogo Argentino",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7774,
+   "signals": {
+    "pageviews": 266471,
+    "zipf": 1.59,
+    "salience": 3
+   }
+  },
+  {
+   "id": "australian-kelpie",
+   "name": "Australian Kelpie",
+   "aliases": [
+    "Austrailian.Kelpie",
+    "Australian Kelpies",
+    "Australian Sheep Dog",
+    "Kelpie"
+   ],
+   "article": "Australian Kelpie",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7774,
+   "signals": {
+    "pageviews": 253054,
+    "zipf": 1.94,
+    "salience": 3
+   }
+  },
+  {
+   "id": "portuguese-water-dog",
+   "name": "Portuguese Water Dog",
+   "aliases": [
+    "Cão de agua Português",
+    "Portgagese water dogs",
+    "Portie",
+    "Portugese water dog",
+    "Portugese water dogs",
+    "Portuguese water dogs",
+    "Splash"
+   ],
+   "article": "Portuguese Water Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7746,
+   "signals": {
+    "pageviews": 156975,
+    "zipf": 3.98,
+    "salience": 3
+   }
+  },
+  {
+   "id": "rat-terrier",
+   "name": "Rat Terrier",
+   "aliases": [
+    "American Rat Terrier",
+    "Giant Decker",
+    "Rat dog"
+   ],
+   "article": "Rat Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7712,
+   "signals": {
+    "pageviews": 162947,
+    "zipf": 3.19,
+    "salience": 3
+   }
+  },
+  {
+   "id": "cocker-spaniel",
+   "name": "Cocker Spaniel",
+   "aliases": [
+    "Am Cocker Spaniel",
+    "American Cocker Spaniel",
+    "American Cocker Spaniel Puppies",
+    "American cocker",
+    "Spaniel"
+   ],
+   "article": "American Cocker Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7684,
+   "signals": {
+    "pageviews": 81227,
+    "zipf": 2.51,
+    "salience": 5
+   }
+  },
+  {
+   "id": "whippet",
+   "name": "Whippet",
+   "aliases": [
+    "English Whippet",
+    "Whippets",
+    "Wippet"
+   ],
+   "article": "Whippet",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.766,
+   "signals": {
+    "pageviews": 236597,
+    "zipf": 2.25,
+    "salience": 4
+   }
+  },
+  {
+   "id": "cairn-terrier",
+   "name": "Cairn Terrier",
+   "aliases": [
+    "Cairn terriers"
+   ],
+   "article": "Cairn Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7658,
+   "signals": {
+    "pageviews": 179650,
+    "zipf": 2.72,
+    "salience": 3
+   }
+  },
+  {
+   "id": "old-english-sheepdog",
+   "name": "Old English Sheepdog",
+   "aliases": [
+    "Bobtail",
+    "Bobtail Sheepdog",
+    "Bobtail dog",
+    "Bobtailed Sheepdog"
+   ],
+   "article": "Old English Sheepdog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7638,
+   "signals": {
+    "pageviews": 120606,
+    "zipf": 2.45,
+    "salience": 4
+   }
+  },
+  {
+   "id": "pekingese",
+   "name": "Pekingese",
+   "aliases": [
+    "Jingba",
+    "Pekinese",
+    "Pekingese dog",
+    "Pickanese"
+   ],
+   "article": "Pekingese",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7624,
+   "signals": {
+    "pageviews": 254922,
+    "zipf": 1.86,
+    "salience": 4
+   }
+  },
+  {
+   "id": "lhasa-apso",
+   "name": "Lhasa Apso",
+   "aliases": [
+    "Apso",
+    "Bhuteer Terrier",
+    "Kashmir terrier",
+    "Kasmir terrier",
+    "Lahsa Apso",
+    "Lasha Apso",
+    "Lhassa terrier"
+   ],
+   "article": "Lhasa Apso",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7615,
+   "signals": {
+    "pageviews": 249104,
+    "zipf": 1.53,
+    "salience": 3
+   }
+  },
+  {
+   "id": "catahoula-leopard-dog",
+   "name": "Catahoula Leopard Dog",
+   "aliases": [
+    "American Leopard Cur",
+    "Catahoula Hog Dog",
+    "Catahoula Leopard Hound",
+    "Catahoula Leopard puppies",
+    "Catahoula bulldog",
+    "Catahoula cur",
+    "Catahoula hound",
+    "Louisiana Catahoula Leopard Dog",
+    "Spotted Leopard Dog"
+   ],
+   "article": "Catahoula Leopard Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7594,
+   "signals": {
+    "pageviews": 234152,
+    "zipf": 1.84,
+    "salience": 3
+   }
+  },
+  {
+   "id": "english-setter",
+   "name": "English Setter",
+   "aliases": [
+    "Laverack",
+    "Lawerack",
+    "Llewellin Setter",
+    "Llewellyn Setter",
+    "Russian setter",
+    "Setter"
+   ],
+   "article": "English Setter",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7571,
+   "signals": {
+    "pageviews": 86475,
+    "zipf": 2.99,
+    "salience": 4
+   }
+  },
+  {
+   "id": "brittany",
+   "name": "Brittany",
+   "aliases": [
+    "Breton spaniel",
+    "Brittany Spaniel",
+    "Brittany dog",
+    "Epagneul Breton",
+    "French Brittany"
+   ],
+   "article": "Brittany Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7567,
+   "signals": {
+    "pageviews": 83871,
+    "zipf": 3.53,
+    "salience": 3
+   }
+  },
+  {
+   "id": "border-terrier",
+   "name": "Border Terrier",
+   "aliases": [
+    "Border terriers",
+    "Reedwater terrier"
+   ],
+   "article": "Border Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7564,
+   "signals": {
+    "pageviews": 143977,
+    "zipf": 3.23,
+    "salience": 3
+   }
+  },
+  {
+   "id": "goldendoodle",
+   "name": "Goldendoodle",
+   "aliases": [
+    "Black Goldendoodle",
+    "Curly Golden",
+    "GoldenPoo",
+    "Goldendoodle Association of North America",
+    "Goldendoodle Association of North America, Inc.",
+    "Goldendoodles",
+    "Goldenoodle",
+    "Goldipoo",
+    "Goldoodle",
+    "Groodle",
+    "Grudel",
+    "Grudle"
+   ],
+   "article": "Goldendoodle",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7542,
+   "signals": {
+    "pageviews": 268354,
+    "zipf": 1.62,
+    "salience": 4
+   }
+  },
+  {
+   "id": "italian-greyhound",
+   "name": "Italian Greyhound",
+   "aliases": [
+    "Levriero Italiano",
+    "Potsdam Greyhound",
+    "Segugio Cravin"
+   ],
+   "article": "Italian Greyhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7536,
+   "signals": {
+    "pageviews": 147888,
+    "zipf": 3.16,
+    "salience": 3
+   }
+  },
+  {
+   "id": "weimaraner",
+   "name": "Weimaraner",
+   "aliases": [
+    "Weimarama",
+    "Weimaramar",
+    "Weimarana",
+    "Weimaranar",
+    "Weimaraners",
+    "Weimararner",
+    "Weimarener",
+    "Weimeraner",
+    "Weimerarner",
+    "Wiemaraner",
+    "Wiemararner",
+    "Wiemeraner",
+    "Wiemerarner"
+   ],
+   "article": "Weimaraner",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7461,
+   "signals": {
+    "pageviews": 245520,
+    "zipf": 1.75,
+    "salience": 4
+   }
+  },
+  {
+   "id": "airedale-terrier",
+   "name": "Airedale Terrier",
+   "aliases": [
+    "Airdale Terrier",
+    "Airedale",
+    "Oorang airedale",
+    "Waterside Terrier"
+   ],
+   "article": "Airedale Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7453,
+   "signals": {
+    "pageviews": 179260,
+    "zipf": 1.99,
+    "salience": 3
+   }
+  },
+  {
+   "id": "basenji",
+   "name": "Basenji",
+   "aliases": [
+    "Avuvi",
+    "Barroo",
+    "Basengi",
+    "Basenjis"
+   ],
+   "article": "Basenji",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7453,
+   "signals": {
+    "pageviews": 264144,
+    "zipf": 1.56,
+    "salience": 4
+   }
+  },
+  {
+   "id": "labradoodle",
+   "name": "Labradoodle",
+   "aliases": [
+    "Australian Cobberdog",
+    "Cobberdog",
+    "Laberdoodle",
+    "Labradoodles",
+    "Poobrador"
+   ],
+   "article": "Labradoodle",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7395,
+   "signals": {
+    "pageviews": 173840,
+    "zipf": 2.03,
+    "salience": 4
+   }
+  },
+  {
+   "id": "caucasian-shepherd-dog",
+   "name": "Caucasian Shepherd Dog",
+   "aliases": [
+    "Caucasian Mountain Dog",
+    "Caucasian Mountain Shepherd",
+    "Caucasian Ovcharka",
+    "Caucasian Ovtcharka",
+    "Caucasian Owtcharka",
+    "Caucasian Sheepdog",
+    "Caucasian Shepherd",
+    "Caucasian dog",
+    "Kavkaski Ovcar",
+    "Kavkaz Dog",
+    "Kavkaz Mastiff",
+    "Kavkaz Volkodav",
+    "Kavkazskaya Ovcharka",
+    "Sage Ghafghazi"
+   ],
+   "article": "Caucasian Shepherd Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7389,
+   "signals": {
+    "pageviews": 254811,
+    "zipf": 3.3,
+    "salience": 2
+   }
+  },
+  {
+   "id": "miniature-pinscher",
+   "name": "Miniature Pinscher",
+   "aliases": [
+    "Min Pin",
+    "Minature pinscher",
+    "Miniature Pincher",
+    "Miniature Pinshers",
+    "Zwergpinscher"
+   ],
+   "article": "Miniature Pinscher",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7356,
+   "signals": {
+    "pageviews": 171965,
+    "zipf": 1.89,
+    "salience": 3
+   }
+  },
+  {
+   "id": "giant-schnauzer",
+   "name": "Giant Schnauzer",
+   "aliases": [
+    "Giant Schnuazer",
+    "Riesenschnauzer",
+    "Schnauzer"
+   ],
+   "article": "Giant Schnauzer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7318,
+   "signals": {
+    "pageviews": 158833,
+    "zipf": 2.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "king-charles-spaniel",
+   "name": "King Charles Spaniel",
+   "aliases": [
+    "Blenheim Spaniel",
+    "Charles Spaniel",
+    "English Toy Spaniel",
+    "English Toy Spaniels",
+    "Prince Charles Spaniel",
+    "Ruby Spaniel",
+    "Toy Spaniel"
+   ],
+   "article": "King Charles Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7304,
+   "signals": {
+    "pageviews": 131364,
+    "zipf": 2.81,
+    "salience": 3
+   }
+  },
+  {
+   "id": "cockapoo",
+   "name": "Cockapoo",
+   "aliases": [
+    "Cock-a-poo",
+    "Cockerdoodle",
+    "Cockerpoo",
+    "Spoodle"
+   ],
+   "article": "Cockapoo",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.724,
+   "signals": {
+    "pageviews": 204455,
+    "zipf": 1.57,
+    "salience": 4
+   }
+  },
+  {
+   "id": "borzoi",
+   "name": "Borzoi",
+   "aliases": [
+    "Borzois",
+    "Russian Wolfhound",
+    "Russian wolfhounds"
+   ],
+   "article": "Borzoi",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7237,
+   "signals": {
+    "pageviews": 334842,
+    "zipf": 1.66,
+    "salience": 3
+   }
+  },
+  {
+   "id": "chinese-crested-dog",
+   "name": "Chinese Crested Dog",
+   "aliases": [
+    "Chinese Crested",
+    "Chinese Crested Terrier",
+    "Chinese hairless crested dog",
+    "Guanmao"
+   ],
+   "article": "Chinese Crested Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7203,
+   "signals": {
+    "pageviews": 105230,
+    "zipf": 2.87,
+    "salience": 3
+   }
+  },
+  {
+   "id": "american-eskimo-dog",
+   "name": "American Eskimo Dog",
+   "aliases": [
+    "Amarican eskimo",
+    "American Eskimo spitz",
+    "American eskimo"
+   ],
+   "article": "American Eskimo Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7183,
+   "signals": {
+    "pageviews": 97872,
+    "zipf": 3.0,
+    "salience": 3
+   }
+  },
+  {
+   "id": "black-mouth-cur",
+   "name": "Black Mouth Cur",
+   "aliases": [
+    "Florida Cracker Cur",
+    "Southern Blackmouth Cur",
+    "Southern Cur"
+   ],
+   "article": "Black Mouth Cur",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7171,
+   "signals": {
+    "pageviews": 250523,
+    "zipf": 2.91,
+    "salience": 2
+   }
+  },
+  {
+   "id": "saluki",
+   "name": "Saluki",
+   "aliases": [
+    "Gazelle hound",
+    "Salouki"
+   ],
+   "article": "Saluki",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7131,
+   "signals": {
+    "pageviews": 260927,
+    "zipf": 1.73,
+    "salience": 3
+   }
+  },
+  {
+   "id": "carolina-dog",
+   "name": "Carolina Dog",
+   "aliases": [
+    "American Dingo",
+    "Carolina Dogs",
+    "Carolina Wild Dog",
+    "Carolina yellow dog",
+    "Dixie Dingo",
+    "Yaller dog",
+    "Yeller Dog"
+   ],
+   "article": "Carolina Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7103,
+   "signals": {
+    "pageviews": 176504,
+    "zipf": 4.42,
+    "salience": 2
+   }
+  },
+  {
+   "id": "neapolitan-mastiff",
+   "name": "Neapolitan Mastiff",
+   "aliases": [
+    "Cane da Presa Meridionale",
+    "Mastino Napoletano",
+    "Napolitan mastiff"
+   ],
+   "article": "Neapolitan Mastiff",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7065,
+   "signals": {
+    "pageviews": 114223,
+    "zipf": 2.36,
+    "salience": 3
+   }
+  },
+  {
+   "id": "brussels-griffon",
+   "name": "Brussels Griffon",
+   "aliases": [
+    "Belgian Griffon",
+    "Brabancon Griffon",
+    "Brussels Gryphon",
+    "Brussels griffin",
+    "Griffon Belge",
+    "Griffon bruxellois",
+    "Petit Brabançon",
+    "Petite Brabancon"
+   ],
+   "article": "Griffon Bruxellois",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7053,
+   "signals": {
+    "pageviews": 113865,
+    "zipf": 2.36,
+    "salience": 3
+   }
+  },
+  {
+   "id": "bullmastiff",
+   "name": "Bullmastiff",
+   "aliases": [
+    "Bull Mastiffs",
+    "Bull mastif",
+    "English Bullmastiff"
+   ],
+   "article": "Bullmastiff",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7051,
+   "signals": {
+    "pageviews": 182530,
+    "zipf": 1.38,
+    "salience": 4
+   }
+  },
+  {
+   "id": "dogue-de-bordeaux",
+   "name": "Dogue de Bordeaux",
+   "aliases": [
+    "Bordeaux Bulldog",
+    "Bordeaux French mastiffs",
+    "Bordeaux Mastiff",
+    "Bordeauxdog",
+    "Bordeuax Mastiff",
+    "Dog de Bordeaux",
+    "French Mastiff"
+   ],
+   "article": "Dogue de Bordeaux",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.7016,
+   "signals": {
+    "pageviews": 144733,
+    "zipf": 1.37,
+    "salience": 3
+   }
+  },
+  {
+   "id": "central-asian-shepherd-dog",
+   "name": "Central Asian Shepherd Dog",
+   "aliases": [
+    "Alabai",
+    "Alabay",
+    "Central Asia Shepherd Dog",
+    "Central Asian Bear Dog",
+    "Central Asian Mastiff",
+    "Central Asian Ovcharka",
+    "Central Asian Ovtcharka",
+    "Central Asian Sheepdog",
+    "Central Asian Shepherd",
+    "Nardicum Muhtar",
+    "Sredneasiatskaia Ovtcharka",
+    "Sredneaziatskaya Ovtcharka",
+    "Tobet",
+    "Turkmen Alabai",
+    "Turkmen Wolfhound",
+    "Turkment wolfdog",
+    "Volkodav"
+   ],
+   "article": "Central Asian Shepherd Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.699,
+   "signals": {
+    "pageviews": 164287,
+    "zipf": 3.79,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tibetan-terrier",
+   "name": "Tibetan Terrier",
+   "aliases": [],
+   "article": "Tibetan Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6987,
+   "signals": {
+    "pageviews": 82019,
+    "zipf": 3.05,
+    "salience": 3
+   }
+  },
+  {
+   "id": "chesapeake-bay-retriever",
+   "name": "Chesapeake Bay Retriever",
+   "aliases": [
+    "Chesapeak bay retriever",
+    "Chessie",
+    "Retriever"
+   ],
+   "article": "Chesapeake Bay Retriever",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.698,
+   "signals": {
+    "pageviews": 84555,
+    "zipf": 2.82,
+    "salience": 3
+   }
+  },
+  {
+   "id": "havanese",
+   "name": "Havanese",
+   "aliases": [
+    "Bichon Havanais",
+    "Havana Silk",
+    "Havana silk dog",
+    "Havanese Dog"
+   ],
+   "article": "Havanese dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6941,
+   "signals": {
+    "pageviews": 265485,
+    "zipf": 1.46,
+    "salience": 3
+   }
+  },
+  {
+   "id": "soft-coated-wheaten-terrier",
+   "name": "Soft-coated Wheaten Terrier",
+   "aliases": [
+    "SCWT",
+    "Wheaten Terrier",
+    "Wheaten Terriers",
+    "Wheaton terrier"
+   ],
+   "article": "Soft-coated Wheaten Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6906,
+   "signals": {
+    "pageviews": 105383,
+    "zipf": 1.72,
+    "salience": 3
+   }
+  },
+  {
+   "id": "perro-de-presa-canario",
+   "name": "Perro de Presa Canario",
+   "aliases": [
+    "Canary Dog",
+    "Canary Island mastiffs",
+    "Dogo Canario",
+    "Perro presa de Canario",
+    "Presa Canario",
+    "Presa Canarios"
+   ],
+   "article": "Presa Canario",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.688,
+   "signals": {
+    "pageviews": 283222,
+    "zipf": 1.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dutch-shepherd",
+   "name": "Dutch Shepherd",
+   "aliases": [
+    "Dutch shepherd dog",
+    "Hollandse Herder",
+    "Longhaired dutch shepherd"
+   ],
+   "article": "Dutch Shepherd",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6766,
+   "signals": {
+    "pageviews": 141261,
+    "zipf": 3.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "scottish-deerhound",
+   "name": "Scottish Deerhound",
+   "aliases": [
+    "Deerhound",
+    "Deerhound, Scottish",
+    "Deerhounds",
+    "Scotch deerhounds"
+   ],
+   "article": "Scottish Deerhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6696,
+   "signals": {
+    "pageviews": 97655,
+    "zipf": 1.3,
+    "salience": 3
+   }
+  },
+  {
+   "id": "leonberger",
+   "name": "Leonberger",
+   "aliases": [],
+   "article": "Leonberger",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6687,
+   "signals": {
+    "pageviews": 222058,
+    "zipf": 1.35,
+    "salience": 3
+   }
+  },
+  {
+   "id": "indian-pariah-dog",
+   "name": "Indian Pariah Dog",
+   "aliases": [
+    "Desi Dog",
+    "Desi Kutta",
+    "INDog",
+    "Indian Feral Dog",
+    "Indian Pye Dog",
+    "South Asian pariah dog"
+   ],
+   "article": "Indian pariah dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6682,
+   "signals": {
+    "pageviews": 160684,
+    "zipf": 2.76,
+    "salience": 2
+   }
+  },
+  {
+   "id": "xoloitzcuintli",
+   "name": "Xoloitzcuintli",
+   "aliases": [
+    "Mexican Hairless",
+    "Mexican Hairless Dog",
+    "Tepeizeuintli",
+    "Xolo",
+    "Xoloitzcuintle",
+    "Xoloitzcuintles",
+    "Xoloizcuintles",
+    "Xoloizcuintli"
+   ],
+   "article": "Xoloitzcuintle",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.66,
+   "signals": {
+    "pageviews": 354537,
+    "zipf": 0.0,
+    "salience": 3
+   }
+  },
+  {
+   "id": "norwegian-elkhound",
+   "name": "Norwegian Elkhound",
+   "aliases": [
+    "Elk-Hound",
+    "Norwegian Moose Dog"
+   ],
+   "article": "Norwegian Elkhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6596,
+   "signals": {
+    "pageviews": 89609,
+    "zipf": 1.24,
+    "salience": 3
+   }
+  },
+  {
+   "id": "german-wirehaired-pointer",
+   "name": "German Wirehaired Pointer",
+   "aliases": [
+    "Deutsch Drahthaar",
+    "Drahthaar",
+    "Drathaar",
+    "Pointer",
+    "Wirehaired Pointer"
+   ],
+   "article": "German Wirehaired Pointer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6576,
+   "signals": {
+    "pageviews": 87511,
+    "zipf": 1.19,
+    "salience": 3
+   }
+  },
+  {
+   "id": "czechoslovakian-wolfdog",
+   "name": "Czechoslovakian Wolfdog",
+   "aliases": [
+    "Ceskoslovensky Vlcak",
+    "Czech Wolfdog",
+    "Czechoslovak Wolfdog",
+    "Czechoslovakian Vlcak",
+    "Vlčák",
+    "Český vlčák"
+   ],
+   "article": "Czechoslovakian Wolfdog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6543,
+   "signals": {
+    "pageviews": 194641,
+    "zipf": 1.37,
+    "salience": 2
+   }
+  },
+  {
+   "id": "miniature-american-shepherd",
+   "name": "Miniature American Shepherd",
+   "aliases": [
+    "Miniature Australian Shepherd",
+    "North American Shepherd"
+   ],
+   "article": "Miniature American Shepherd",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6529,
+   "signals": {
+    "pageviews": 100271,
+    "zipf": 3.5,
+    "salience": 2
+   }
+  },
+  {
+   "id": "cardigan-welsh-corgi",
+   "name": "Cardigan Welsh Corgi",
+   "aliases": [
+    "Cardigan Corgi",
+    "Corgi",
+    "Welsh Corgi",
+    "Welsh Corgi Cardigan"
+   ],
+   "article": "Cardigan Welsh Corgi",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6513,
+   "signals": {
+    "pageviews": 61338,
+    "zipf": 2.66,
+    "salience": 3
+   }
+  },
+  {
+   "id": "alaskan-husky",
+   "name": "Alaskan Husky",
+   "aliases": [
+    "Alaskan huskies"
+   ],
+   "article": "Alaskan husky",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6458,
+   "signals": {
+    "pageviews": 57543,
+    "zipf": 2.94,
+    "salience": 3
+   }
+  },
+  {
+   "id": "flat-coated-retriever",
+   "name": "Flat-Coated Retriever",
+   "aliases": [
+    "Flatcoat",
+    "Flatcoat Retriever",
+    "Retriever"
+   ],
+   "article": "Flat-coated Retriever",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6427,
+   "signals": {
+    "pageviews": 114248,
+    "zipf": 2.9,
+    "salience": 2
+   }
+  },
+  {
+   "id": "german-spitz",
+   "name": "German Spitz",
+   "aliases": [
+    "Deutscher Spitz",
+    "German Spitz Gross",
+    "German Spitz Klein",
+    "German Spitz Mittel",
+    "Grossspitz",
+    "Großspitz",
+    "Kleinspitz",
+    "Mittelspitz"
+   ],
+   "article": "German Spitz",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6411,
+   "signals": {
+    "pageviews": 134026,
+    "zipf": 2.54,
+    "salience": 2
+   }
+  },
+  {
+   "id": "papillon",
+   "name": "Papillon",
+   "aliases": [
+    "Continental Toy Spaniel Papillon",
+    "Continental Toy Spaniels",
+    "Continental toy spaniel",
+    "Epagneul nain Continental",
+    "Papillion",
+    "Papillon dog",
+    "Phalène"
+   ],
+   "article": "Continental Toy Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.641,
+   "signals": {
+    "pageviews": 44975,
+    "zipf": 2.52,
+    "salience": 4
+   }
+  },
+  {
+   "id": "alaskan-klee-kai",
+   "name": "Alaskan Klee Kai",
+   "aliases": [
+    "Klee kai"
+   ],
+   "article": "Alaskan Klee Kai",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6401,
+   "signals": {
+    "pageviews": 143819,
+    "zipf": 2.41,
+    "salience": 2
+   }
+  },
+  {
+   "id": "american-foxhound",
+   "name": "American Foxhound",
+   "aliases": [
+    "Trigg Hound"
+   ],
+   "article": "American Foxhound",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6262,
+   "signals": {
+    "pageviews": 60774,
+    "zipf": 1.84,
+    "salience": 3
+   }
+  },
+  {
+   "id": "coton-de-tulear",
+   "name": "Coton de Tulear",
+   "aliases": [],
+   "article": "Coton de Tulear",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6245,
+   "signals": {
+    "pageviews": 160570,
+    "zipf": 1.11,
+    "salience": 2
+   }
+  },
+  {
+   "id": "lagotto-romagnolo",
+   "name": "Lagotto Romagnolo",
+   "aliases": [
+    "Lagotto"
+   ],
+   "article": "Lagotto Romagnolo",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6242,
+   "signals": {
+    "pageviews": 175222,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "standard-schnauzer",
+   "name": "Standard Schnauzer",
+   "aliases": [
+    "Mittelschnauzer",
+    "Schnauzer",
+    "Standard Schnuazer"
+   ],
+   "article": "Standard Schnauzer",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6221,
+   "signals": {
+    "pageviews": 57407,
+    "zipf": 2.27,
+    "salience": 3
+   }
+  },
+  {
+   "id": "japanese-chin",
+   "name": "Japanese Chin",
+   "aliases": [
+    "Japanese Chin Dogs",
+    "Japanese Spaniel",
+    "Japanese chin dog",
+    "Japanese pug"
+   ],
+   "article": "Japanese Chin",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6216,
+   "signals": {
+    "pageviews": 41678,
+    "zipf": 3.94,
+    "salience": 3
+   }
+  },
+  {
+   "id": "wire-fox-terrier",
+   "name": "Wire Fox Terrier",
+   "aliases": [
+    "Fox Terrier",
+    "Fox Terrier Wire",
+    "Shaggy Fox Terrier",
+    "Wire Hair Fox Terrier",
+    "Wire-Haired Fox Terrier",
+    "Wired Fox Terrier",
+    "Wirehaired Terrier"
+   ],
+   "article": "Wire Fox Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6213,
+   "signals": {
+    "pageviews": 81796,
+    "zipf": 3.2,
+    "salience": 2
+   }
+  },
+  {
+   "id": "parson-russell-terrier",
+   "name": "Parson Russell Terrier",
+   "aliases": [
+    "Parson Jack Russell Terrier",
+    "Parson Russell",
+    "Parson Terrier",
+    "Parson russel terrier"
+   ],
+   "article": "Parson Russell Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6183,
+   "signals": {
+    "pageviews": 95002,
+    "zipf": 2.67,
+    "salience": 2
+   }
+  },
+  {
+   "id": "clumber-spaniel",
+   "name": "Clumber Spaniel",
+   "aliases": [
+    "Clumber spaniels",
+    "Spaniel"
+   ],
+   "article": "Clumber Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6163,
+   "signals": {
+    "pageviews": 135075,
+    "zipf": 1.52,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bedlington-terrier",
+   "name": "Bedlington Terrier",
+   "aliases": [
+    "Rodbery Terrier",
+    "Rothbury Terrier"
+   ],
+   "article": "Bedlington Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6158,
+   "signals": {
+    "pageviews": 127161,
+    "zipf": 1.71,
+    "salience": 2
+   }
+  },
+  {
+   "id": "keeshond",
+   "name": "Keeshond",
+   "aliases": [
+    "Dutch Barge Dog",
+    "German Spitz Wolf",
+    "German Spitz Wolfs",
+    "Keeshonden",
+    "Keeshund",
+    "Wolfspitz",
+    "Wolfsspitz"
+   ],
+   "article": "Keeshond",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6157,
+   "signals": {
+    "pageviews": 131405,
+    "zipf": 1.17,
+    "salience": 3
+   }
+  },
+  {
+   "id": "white-swiss-shepherd-dog",
+   "name": "White Swiss Shepherd Dog",
+   "aliases": [
+    "Berger Blanc Suisse",
+    "Swiss Shepherd",
+    "White Swiss Shepherd"
+   ],
+   "article": "White Swiss Shepherd Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6144,
+   "signals": {
+    "pageviews": 68286,
+    "zipf": 3.7,
+    "salience": 2
+   }
+  },
+  {
+   "id": "patterdale-terrier",
+   "name": "Patterdale Terrier",
+   "aliases": [
+    "Black Fell Terrier"
+   ],
+   "article": "Patterdale Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6119,
+   "signals": {
+    "pageviews": 127423,
+    "zipf": 1.53,
+    "salience": 2
+   }
+  },
+  {
+   "id": "black-russian-terrier",
+   "name": "Black Russian Terrier",
+   "aliases": [
+    "Russian Black Terrier",
+    "Tchiorny Terrier"
+   ],
+   "article": "Black Russian Terrier",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6117,
+   "signals": {
+    "pageviews": 70014,
+    "zipf": 3.23,
+    "salience": 2
+   }
+  },
+  {
+   "id": "greater-swiss-mountain-dog",
+   "name": "Greater Swiss Mountain Dog",
+   "aliases": [
+    "Grand Bouvier Suisse",
+    "Great Swiss Mountain Dog",
+    "Greater Swiss Mountain Dogs",
+    "Grosser Schweizer Sennenhund",
+    "Swissy"
+   ],
+   "article": "Greater Swiss Mountain Dog",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.6082,
+   "signals": {
+    "pageviews": 64496,
+    "zipf": 4.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "boykin-spaniel",
+   "name": "Boykin Spaniel",
+   "aliases": [
+    "Boykin Spaniels"
+   ],
+   "article": "Boykin Spaniel",
+   "tier": 2,
+   "tier_name": "Schooler",
+   "commonness": 0.604,
+   "signals": {
+    "pageviews": 94308,
+    "zipf": 2.3,
+    "salience": 2
+   }
+  },
+  {
+   "id": "nederlandse-kooikerhondje",
+   "name": "Nederlandse Kooikerhondje",
+   "aliases": [
+    "Dutch Decoy Dog",
+    "Kooiker Dog",
+    "Kooiker Hound",
+    "Kooikerhond",
+    "Kooikerhondje",
+    "Small Dutch Waterfowl Dog"
+   ],
+   "article": "Kooikerhondje",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.602,
+   "signals": {
+    "pageviews": 148371,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "komondor",
+   "name": "Komondor",
+   "aliases": [
+    "Hungarian sheepdog",
+    "Komondorok",
+    "Mop dog",
+    "Rope Dog"
+   ],
+   "article": "Komondor",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6015,
+   "signals": {
+    "pageviews": 102634,
+    "zipf": 1.14,
+    "salience": 3
+   }
+  },
+  {
+   "id": "korean-jindo",
+   "name": "Korean Jindo",
+   "aliases": [
+    "Chindo",
+    "Chindokkae",
+    "Jindo",
+    "Jindo Gae",
+    "Jindo dog",
+    "Korea Jindo Dog",
+    "Korean Jindo Dog"
+   ],
+   "article": "Korean Jindo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6005,
+   "signals": {
+    "pageviews": 100555,
+    "zipf": 1.64,
+    "salience": 2
+   }
+  },
+  {
+   "id": "japanese-spitz",
+   "name": "Japanese Spitz",
+   "aliases": [
+    "Jap Spitz"
+   ],
+   "article": "Japanese Spitz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.6004,
+   "signals": {
+    "pageviews": 82360,
+    "zipf": 2.54,
+    "salience": 2
+   }
+  },
+  {
+   "id": "cavapoo",
+   "name": "Cavapoo",
+   "aliases": [
+    "Cavapoodle",
+    "Cavoodle"
+   ],
+   "article": "Cavapoo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5996,
+   "signals": {
+    "pageviews": 162728,
+    "zipf": 0.0,
+    "salience": 3
+   }
+  },
+  {
+   "id": "mountain-cur",
+   "name": "Mountain Cur",
+   "aliases": [],
+   "article": "Mountain Cur",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5988,
+   "signals": {
+    "pageviews": 70467,
+    "zipf": 2.91,
+    "salience": 2
+   }
+  },
+  {
+   "id": "canaan-dog",
+   "name": "Canaan Dog",
+   "aliases": [],
+   "article": "Canaan Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5982,
+   "signals": {
+    "pageviews": 67887,
+    "zipf": 3.04,
+    "salience": 2
+   }
+  },
+  {
+   "id": "pharaoh-hound",
+   "name": "Pharaoh Hound",
+   "aliases": [
+    "Kelb-tal Fenek",
+    "Pharao hound",
+    "Pharaoh Dog",
+    "Pharaoh Hounds",
+    "Pharoah breed",
+    "Pharoah hound"
+   ],
+   "article": "Pharaoh Hound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5977,
+   "signals": {
+    "pageviews": 67217,
+    "zipf": 3.07,
+    "salience": 2
+   }
+  },
+  {
+   "id": "maltipoo",
+   "name": "Maltipoo",
+   "aliases": [
+    "Beagador",
+    "Beaglier",
+    "Bernedoodle",
+    "Bich-poo",
+    "Bicha-poo",
+    "Borador",
+    "Cavachon",
+    "Cavashon",
+    "Chihuachshund",
+    "Chihueagle",
+    "Chisenji",
+    "Chiweenie",
+    "Chiweiner",
+    "Chorkie",
+    "Chug",
+    "Daniff",
+    "Dorgi",
+    "Dorgis",
+    "Doxie-Pin",
+    "French pug",
+    "Frenchie Pug",
+    "Gerberian Shepsky",
+    "Goldador",
+    "Jack Tzu",
+    "Jackabee",
+    "Jug",
+    "Labrottie",
+    "Lhasa poo",
+    "List of crossbred dogs",
+    "List of dog crossbreeds",
+    "Mal-shi",
+    "Malt-A-Poo",
+    "Maltalier",
+    "Maltepoo",
+    "Maultipoo",
+    "Moodle",
+    "Morkie",
+    "Pappom",
+    "Papshund",
+    "Peekapoo",
+    "Pekapoo",
+    "Pekeapoo",
+    "Pomchi",
+    "Pompchy",
+    "Poochon",
+    "Pugairn",
+    "Pugese",
+    "Rottador",
+    "Schnocker",
+    "Schnoodle",
+    "Schnoodles",
+    "Sheepadoodle",
+    "Shichon",
+    "Shih Apso",
+    "Shih-poo",
+    "Shipoo",
+    "Texas Heeler",
+    "Tzu Frise",
+    "Wee-Poo",
+    "Westiepoo",
+    "Whoodle",
+    "Yorkie Pin",
+    "Yorkie poos",
+    "Yorkiepoo",
+    "Yorkipoo",
+    "Yorktese",
+    "Zuchon"
+   ],
+   "article": "List of dog crossbreeds",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5972,
+   "signals": {
+    "pageviews": 95549,
+    "zipf": 1.18,
+    "salience": 3
+   }
+  },
+  {
+   "id": "irish-terrier",
+   "name": "Irish Terrier",
+   "aliases": [],
+   "article": "Irish Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5969,
+   "signals": {
+    "pageviews": 64257,
+    "zipf": 3.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "german-pinscher",
+   "name": "German Pinscher",
+   "aliases": [
+    "Deutscher Pinscher",
+    "Swiss Shorthaired Pinscher"
+   ],
+   "article": "German Pinscher",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5964,
+   "signals": {
+    "pageviews": 92998,
+    "zipf": 1.9,
+    "salience": 2
+   }
+  },
+  {
+   "id": "greenland-dog",
+   "name": "Greenland Dog",
+   "aliases": [
+    "Esquimaux dog",
+    "Greenland Huskeys",
+    "Greenland Huskies",
+    "Greenland dogs",
+    "Greenland husky",
+    "Greenland sled dogs",
+    "Greenlandic sled dog",
+    "Gronlandshund",
+    "Gruenlandshund",
+    "Grønlandshund",
+    "Grünlandshund"
+   ],
+   "article": "Greenland Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5964,
+   "signals": {
+    "pageviews": 62203,
+    "zipf": 3.41,
+    "salience": 2
+   }
+  },
+  {
+   "id": "plott-hound",
+   "name": "Plott Hound",
+   "aliases": [
+    "Platt hound",
+    "Plot hound",
+    "Plott",
+    "Pot Hound"
+   ],
+   "article": "Plott Hound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.591,
+   "signals": {
+    "pageviews": 91862,
+    "zipf": 1.75,
+    "salience": 2
+   }
+  },
+  {
+   "id": "maremmano-abruzzese-sheepdog",
+   "name": "Maremmano-Abruzzese Sheepdog",
+   "aliases": [
+    "Abruzzenhund",
+    "Abruzzese Mastiff",
+    "Abruzzese Wolfdog",
+    "Abruzzese sheepdog",
+    "Cane da pastore Abruzzese",
+    "Cane da pastore Maremmano-Abbruzzese",
+    "Maremma Sheepdog",
+    "Maremma and Abruzzes Sheepdog",
+    "Maremma-Abruzzese Sheepdog",
+    "Pastore Abruzzese",
+    "Pastore Maremmano",
+    "Pastore Maremmano-Abruzzese"
+   ],
+   "article": "Maremmano-Abruzzese Sheepdog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.586,
+   "signals": {
+    "pageviews": 122707,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "boerboel",
+   "name": "Boerboel",
+   "aliases": [
+    "African Boerboel",
+    "Boerboels in Nigeria",
+    "Boerbol",
+    "Boerbull",
+    "South African Boerboel",
+    "South African Mastiff"
+   ],
+   "article": "Boerboel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5859,
+   "signals": {
+    "pageviews": 326306,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "karelian-bear-dog",
+   "name": "Karelian Bear Dog",
+   "aliases": [
+    "Carelian bear dog"
+   ],
+   "article": "Karelian Bear Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5835,
+   "signals": {
+    "pageviews": 82201,
+    "zipf": 1.89,
+    "salience": 2
+   }
+  },
+  {
+   "id": "skye-terrier",
+   "name": "Skye Terrier",
+   "aliases": [],
+   "article": "Skye Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.573,
+   "signals": {
+    "pageviews": 60194,
+    "zipf": 2.99,
+    "salience": 2
+   }
+  },
+  {
+   "id": "puli",
+   "name": "Puli",
+   "aliases": [
+    "Puli dog"
+   ],
+   "article": "Puli dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5726,
+   "signals": {
+    "pageviews": 82529,
+    "zipf": 2.11,
+    "salience": 2
+   }
+  },
+  {
+   "id": "norfolk-terrier",
+   "name": "Norfolk Terrier",
+   "aliases": [],
+   "article": "Norfolk Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5724,
+   "signals": {
+    "pageviews": 58625,
+    "zipf": 3.14,
+    "salience": 2
+   }
+  },
+  {
+   "id": "northern-inuit-dog",
+   "name": "Northern Inuit Dog",
+   "aliases": [
+    "British Timber Dog",
+    "Northen inuit dog",
+    "Northern Inuit",
+    "Tamasakan Dog",
+    "Tamascan",
+    "Tamascan Dog",
+    "Tamaskan",
+    "Tamaskan Dog",
+    "Tamaskan husky",
+    "Utonagan"
+   ],
+   "article": "Tamaskan Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5714,
+   "signals": {
+    "pageviews": 60252,
+    "zipf": 2.94,
+    "salience": 2
+   }
+  },
+  {
+   "id": "norwich-terrier",
+   "name": "Norwich Terrier",
+   "aliases": [
+    "Jones Terrier",
+    "Norwich terriers"
+   ],
+   "article": "Norwich Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5675,
+   "signals": {
+    "pageviews": 56111,
+    "zipf": 3.11,
+    "salience": 2
+   }
+  },
+  {
+   "id": "manchester-terrier",
+   "name": "Manchester Terrier",
+   "aliases": [
+    "Manchester Terriers"
+   ],
+   "article": "Manchester Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5674,
+   "signals": {
+    "pageviews": 51767,
+    "zipf": 3.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tosa",
+   "name": "Tosa",
+   "aliases": [
+    "Japanese Fighting Dog",
+    "Japanese Mastiff",
+    "Japanese Tosa",
+    "Tosa Fighting Dog",
+    "Tosa Inu",
+    "Tosa Ken",
+    "Tosa Token",
+    "Tosa dog"
+   ],
+   "article": "Tosa (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5627,
+   "signals": {
+    "pageviews": 73932,
+    "zipf": 2.08,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bouvier-des-flandres",
+   "name": "Bouvier des Flandres",
+   "aliases": [
+    "Flanders Cattle Dog"
+   ],
+   "article": "Bouvier des Flandres",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5624,
+   "signals": {
+    "pageviews": 81039,
+    "zipf": 1.28,
+    "salience": 2
+   }
+  },
+  {
+   "id": "redbone-coonhound",
+   "name": "Redbone Coonhound",
+   "aliases": [
+    "Redbone Hound"
+   ],
+   "article": "Redbone Coonhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5621,
+   "signals": {
+    "pageviews": 73611,
+    "zipf": 1.48,
+    "salience": 2
+   }
+  },
+  {
+   "id": "fila-brasileiro",
+   "name": "Fila Brasileiro",
+   "aliases": [
+    "Brazilian Mastiff",
+    "Cabeçudo Boiadeiro",
+    "Fila Brasiliero",
+    "Fila Braziliero",
+    "Fila dog"
+   ],
+   "article": "Fila Brasileiro",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5602,
+   "signals": {
+    "pageviews": 65901,
+    "zipf": 1.96,
+    "salience": 2
+   }
+  },
+  {
+   "id": "peruvian-hairless-dog",
+   "name": "Peruvian Hairless Dog",
+   "aliases": [
+    "Canis aegyptius",
+    "Peruvian Hairless",
+    "Peruvian Inca Orchid",
+    "Peruvian Inca orchid dog",
+    "Viringo"
+   ],
+   "article": "Peruvian Hairless Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5602,
+   "signals": {
+    "pageviews": 59124,
+    "zipf": 2.78,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bracco-italiano",
+   "name": "Bracco Italiano",
+   "aliases": [
+    "Italian Pointer",
+    "Italian Pointing Dog"
+   ],
+   "article": "Bracco Italiano",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5597,
+   "signals": {
+    "pageviews": 66968,
+    "zipf": 1.85,
+    "salience": 2
+   }
+  },
+  {
+   "id": "english-foxhound",
+   "name": "English Foxhound",
+   "aliases": [
+    "International Foxhound Association"
+   ],
+   "article": "English Foxhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5585,
+   "signals": {
+    "pageviews": 37875,
+    "zipf": 1.84,
+    "salience": 3
+   }
+  },
+  {
+   "id": "gordon-setter",
+   "name": "Gordon Setter",
+   "aliases": [],
+   "article": "Gordon Setter",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.558,
+   "signals": {
+    "pageviews": 53242,
+    "zipf": 2.97,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bluetick-coonhound",
+   "name": "Bluetick Coonhound",
+   "aliases": [
+    "Bluetick",
+    "Bluetick dog",
+    "Bluetick hound"
+   ],
+   "article": "Bluetick Coonhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.557,
+   "signals": {
+    "pageviews": 80689,
+    "zipf": 0.98,
+    "salience": 2
+   }
+  },
+  {
+   "id": "smooth-collie",
+   "name": "Smooth Collie",
+   "aliases": [
+    "Collie",
+    "Smooth Collies"
+   ],
+   "article": "Smooth Collie",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5561,
+   "signals": {
+    "pageviews": 53085,
+    "zipf": 2.96,
+    "salience": 2
+   }
+  },
+  {
+   "id": "biewer-terrier",
+   "name": "Biewer Terrier",
+   "aliases": [
+    "Biewer"
+   ],
+   "article": "Biewer Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5552,
+   "signals": {
+    "pageviews": 83365,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "miniature-bull-terrier",
+   "name": "Miniature Bull Terrier",
+   "aliases": [
+    "Minitature Bull Terrier"
+   ],
+   "article": "Miniature Bull Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5543,
+   "signals": {
+    "pageviews": 48458,
+    "zipf": 3.09,
+    "salience": 2
+   }
+  },
+  {
+   "id": "spanish-water-dog",
+   "name": "Spanish Water Dog",
+   "aliases": [
+    "Perro de Agua Español",
+    "Spanish water dogs"
+   ],
+   "article": "Spanish Water Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5491,
+   "signals": {
+    "pageviews": 43997,
+    "zipf": 4.53,
+    "salience": 2
+   }
+  },
+  {
+   "id": "spanish-greyhound",
+   "name": "Spanish Greyhound",
+   "aliases": [
+    "Galgo Español",
+    "Garrotting the galgos",
+    "Spanish Galgo"
+   ],
+   "article": "Galgo Español",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5473,
+   "signals": {
+    "pageviews": 46517,
+    "zipf": 3.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "treeing-walker-coonhound",
+   "name": "Treeing Walker Coonhound",
+   "aliases": [
+    "Treeing Walker",
+    "Treeing walker coonhounds"
+   ],
+   "article": "Treeing Walker Coonhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5453,
+   "signals": {
+    "pageviews": 66982,
+    "zipf": 1.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "beauceron",
+   "name": "Beauceron",
+   "aliases": [
+    "Bas-Rouge",
+    "Berger de Beauce",
+    "French Shorthaired Shepherd dog"
+   ],
+   "article": "Beauceron",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5399,
+   "signals": {
+    "pageviews": 177869,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "new-guinea-singing-dog",
+   "name": "New Guinea Singing Dog",
+   "aliases": [
+    "Canis hallstromi",
+    "Hallstrom Dog",
+    "Hallstrom's dog",
+    "Hallstromi",
+    "NGSD",
+    "New Guinea Dingo",
+    "New Guinea Highland Dog",
+    "New Guinea Wild Dog",
+    "New Guinea highland wild dog",
+    "Papua New Guinea Singing Dog",
+    "Singer",
+    "Singing Dog"
+   ],
+   "article": "New Guinea singing dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5395,
+   "signals": {
+    "pageviews": 148756,
+    "zipf": 3.92,
+    "salience": 1
+   }
+  },
+  {
+   "id": "australian-silky-terrier",
+   "name": "Australian Silky Terrier",
+   "aliases": [
+    "Australian silky",
+    "Silky Terrier",
+    "Sydney Silky"
+   ],
+   "article": "Australian Silky Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5369,
+   "signals": {
+    "pageviews": 46455,
+    "zipf": 2.94,
+    "salience": 2
+   }
+  },
+  {
+   "id": "english-shepherd",
+   "name": "English Shepherd",
+   "aliases": [
+    "English Shepherd dog"
+   ],
+   "article": "English Shepherd",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5368,
+   "signals": {
+    "pageviews": 41541,
+    "zipf": 3.88,
+    "salience": 2
+   }
+  },
+  {
+   "id": "puggle",
+   "name": "Puggle",
+   "aliases": [
+    "Puggles"
+   ],
+   "article": "Puggle",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5347,
+   "signals": {
+    "pageviews": 43476,
+    "zipf": 1.58,
+    "salience": 3
+   }
+  },
+  {
+   "id": "welsh-terrier",
+   "name": "Welsh Terrier",
+   "aliases": [],
+   "article": "Welsh Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5341,
+   "signals": {
+    "pageviews": 43941,
+    "zipf": 3.19,
+    "salience": 2
+   }
+  },
+  {
+   "id": "smooth-fox-terrier",
+   "name": "Smooth Fox Terrier",
+   "aliases": [
+    "Fox Terrier",
+    "Fox Terrier Smooth"
+   ],
+   "article": "Smooth Fox Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5326,
+   "signals": {
+    "pageviews": 43014,
+    "zipf": 3.2,
+    "salience": 2
+   }
+  },
+  {
+   "id": "portuguese-podengo",
+   "name": "Portuguese Podengo",
+   "aliases": [
+    "Podengo",
+    "Podengo Portugues",
+    "Podengo Portugueso",
+    "Portuguese Podengo Medio",
+    "Portuguese Podengo Pequeno"
+   ],
+   "article": "Portuguese Podengo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5298,
+   "signals": {
+    "pageviews": 61180,
+    "zipf": 1.18,
+    "salience": 2
+   }
+  },
+  {
+   "id": "welsh-springer-spaniel",
+   "name": "Welsh Springer Spaniel",
+   "aliases": [
+    "Spaniel",
+    "Welsh cocker spaniel",
+    "Welsh spaniel",
+    "Welsh springer"
+   ],
+   "article": "Welsh Springer Spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5252,
+   "signals": {
+    "pageviews": 45414,
+    "zipf": 2.73,
+    "salience": 2
+   }
+  },
+  {
+   "id": "lakeland-terrier",
+   "name": "Lakeland Terrier",
+   "aliases": [],
+   "article": "Lakeland Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5248,
+   "signals": {
+    "pageviews": 45329,
+    "zipf": 2.75,
+    "salience": 2
+   }
+  },
+  {
+   "id": "kerry-blue-terrier",
+   "name": "Kerry Blue Terrier",
+   "aliases": [
+    "Irish Blue Terrier",
+    "Kerry Blue",
+    "Spiculosis"
+   ],
+   "article": "Kerry Blue Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5219,
+   "signals": {
+    "pageviews": 41182,
+    "zipf": 3.14,
+    "salience": 2
+   }
+  },
+  {
+   "id": "swedish-vallhund",
+   "name": "Swedish Vallhund",
+   "aliases": [
+    "Vaestgoetaspets",
+    "Vallhund",
+    "Västgötaspets"
+   ],
+   "article": "Swedish Vallhund",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5206,
+   "signals": {
+    "pageviews": 63412,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "finnish-lapphund",
+   "name": "Finnish Lapphund",
+   "aliases": [],
+   "article": "Finnish Lapphund",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5194,
+   "signals": {
+    "pageviews": 63167,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "spanish-mastiff",
+   "name": "Spanish Mastiff",
+   "aliases": [
+    "Mastín Español",
+    "Mastín Extremeño",
+    "Mastín Ganadero",
+    "Mastín Leonés"
+   ],
+   "article": "Spanish Mastiff",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5179,
+   "signals": {
+    "pageviews": 45112,
+    "zipf": 2.58,
+    "salience": 2
+   }
+  },
+  {
+   "id": "irish-water-spaniel",
+   "name": "Irish Water Spaniel",
+   "aliases": [
+    "Spaniel"
+   ],
+   "article": "Irish Water Spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.513,
+   "signals": {
+    "pageviews": 41870,
+    "zipf": 2.81,
+    "salience": 2
+   }
+  },
+  {
+   "id": "thai-ridgeback",
+   "name": "Thai Ridgeback",
+   "aliases": [
+    "Siamese ridgeback",
+    "Thai Ridgeback Dog",
+    "Thai ridgebag dog"
+   ],
+   "article": "Thai Ridgeback",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5108,
+   "signals": {
+    "pageviews": 46695,
+    "zipf": 1.86,
+    "salience": 2
+   }
+  },
+  {
+   "id": "wirehaired-pointing-griffon",
+   "name": "Wirehaired Pointing Griffon",
+   "aliases": [
+    "French Wirehaired Pointing Griffon",
+    "Griffon Korthals",
+    "Korthals Griffon",
+    "Russian Setter"
+   ],
+   "article": "Wirehaired Pointing Griffon",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5105,
+   "signals": {
+    "pageviews": 55438,
+    "zipf": 1.16,
+    "salience": 2
+   }
+  },
+  {
+   "id": "field-spaniel",
+   "name": "Field Spaniel",
+   "aliases": [
+    "Spaniel"
+   ],
+   "article": "Field Spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5089,
+   "signals": {
+    "pageviews": 40440,
+    "zipf": 2.82,
+    "salience": 2
+   }
+  },
+  {
+   "id": "schipperke",
+   "name": "Schipperke",
+   "aliases": [],
+   "article": "Schipperke",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.5072,
+   "signals": {
+    "pageviews": 124150,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "australian-terrier",
+   "name": "Australian Terrier",
+   "aliases": [],
+   "article": "Australian Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4983,
+   "signals": {
+    "pageviews": 31185,
+    "zipf": 3.23,
+    "salience": 2
+   }
+  },
+  {
+   "id": "ibizan-hound",
+   "name": "Ibizan Hound",
+   "aliases": [
+    "Ca Eivissenc",
+    "Ibizian Hound",
+    "Podenco Ibicenco",
+    "Podenco Ibizenco"
+   ],
+   "article": "Ibizan Hound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4974,
+   "signals": {
+    "pageviews": 48301,
+    "zipf": 1.1,
+    "salience": 2
+   }
+  },
+  {
+   "id": "tibetan-spaniel",
+   "name": "Tibetan Spaniel",
+   "aliases": [
+    "Tibetian Spaniel"
+   ],
+   "article": "Tibetan spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4972,
+   "signals": {
+    "pageviews": 36841,
+    "zipf": 2.74,
+    "salience": 2
+   }
+  },
+  {
+   "id": "finnish-spitz",
+   "name": "Finnish Spitz",
+   "aliases": [],
+   "article": "Finnish Spitz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4951,
+   "signals": {
+    "pageviews": 39376,
+    "zipf": 2.51,
+    "salience": 2
+   }
+  },
+  {
+   "id": "black-and-tan-coonhound",
+   "name": "Black and Tan Coonhound",
+   "aliases": [
+    "American Black & Tan Coonhound"
+   ],
+   "article": "Black and Tan Coonhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4921,
+   "signals": {
+    "pageviews": 44397,
+    "zipf": 1.64,
+    "salience": 2
+   }
+  },
+  {
+   "id": "affenpinscher",
+   "name": "Affenpinscher",
+   "aliases": [
+    "Monkey dog"
+   ],
+   "article": "Affenpinscher",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4908,
+   "signals": {
+    "pageviews": 95543,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "saarloos-wolfdog",
+   "name": "Saarloos Wolfdog",
+   "aliases": [
+    "Leendert Saarloos",
+    "Saarloos Wolfdogs",
+    "Saarloos Wolfhound",
+    "Saarloos wolfhond",
+    "Sarloos",
+    "Sarloos wolfdog"
+   ],
+   "article": "Saarloos wolfdog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4861,
+   "signals": {
+    "pageviews": 48327,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "spinone-italiano",
+   "name": "Spinone Italiano",
+   "aliases": [
+    "Italian Spinone",
+    "Italiano Spinone",
+    "Spinone",
+    "Spinoni",
+    "Spinoni Italiani"
+   ],
+   "article": "Spinone Italiano",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4837,
+   "signals": {
+    "pageviews": 47851,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "russian-toy",
+   "name": "Russian Toy",
+   "aliases": [
+    "Moscow Toy Terrier",
+    "Russian Toy Terrier",
+    "Russkiy Toy"
+   ],
+   "article": "Russian Toy",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4818,
+   "signals": {
+    "pageviews": 26326,
+    "zipf": 4.22,
+    "salience": 2
+   }
+  },
+  {
+   "id": "icelandic-sheepdog",
+   "name": "Icelandic Sheepdog",
+   "aliases": [
+    "Iceland Dog",
+    "Icelandic Spitz",
+    "Icelandic dog"
+   ],
+   "article": "Icelandic Sheepdog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4768,
+   "signals": {
+    "pageviews": 33773,
+    "zipf": 2.39,
+    "salience": 2
+   }
+  },
+  {
+   "id": "toy-fox-terrier",
+   "name": "Toy Fox Terrier",
+   "aliases": [
+    "American Toy Terrier",
+    "Fox Terrier",
+    "Fox Terrier Toy"
+   ],
+   "article": "Toy Fox Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4762,
+   "signals": {
+    "pageviews": 28125,
+    "zipf": 3.19,
+    "salience": 2
+   }
+  },
+  {
+   "id": "harrier",
+   "name": "Harrier",
+   "aliases": [
+    "Harrier dog"
+   ],
+   "article": "Harrier (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4748,
+   "signals": {
+    "pageviews": 22828,
+    "zipf": 2.7,
+    "salience": 2
+   }
+  },
+  {
+   "id": "eurasier",
+   "name": "Eurasier",
+   "aliases": [
+    "Eurasian dog"
+   ],
+   "article": "Eurasier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4714,
+   "signals": {
+    "pageviews": 74004,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "briard",
+   "name": "Briard",
+   "aliases": [],
+   "article": "Briard",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4705,
+   "signals": {
+    "pageviews": 51122,
+    "zipf": 1.3,
+    "salience": 2
+   }
+  },
+  {
+   "id": "american-water-spaniel",
+   "name": "American Water Spaniel",
+   "aliases": [
+    "Spaniel"
+   ],
+   "article": "American Water Spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.467,
+   "signals": {
+    "pageviews": 28488,
+    "zipf": 2.82,
+    "salience": 2
+   }
+  },
+  {
+   "id": "norwegian-lundehund",
+   "name": "Norwegian Lundehund",
+   "aliases": [
+    "Lundehund",
+    "Norsk Lundehund",
+    "Norwegian puffin dog",
+    "Puffin dog",
+    "Vogelhund"
+   ],
+   "article": "Norwegian Lundehund",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4652,
+   "signals": {
+    "pageviews": 44391,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "akbash",
+   "name": "Akbash",
+   "aliases": [
+    "Akbas Dog",
+    "Akbash Dog"
+   ],
+   "article": "Akbash",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4642,
+   "signals": {
+    "pageviews": 68448,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bully-kutta",
+   "name": "Bully Kutta",
+   "aliases": [
+    "Alangu Mastiff",
+    "Bully Cutha",
+    "Bully Dog",
+    "Indian Bully Kutta",
+    "Pakistani Bully",
+    "Pakistani Mastiff",
+    "Punjabi Mastiff",
+    "Sindh Mastiff"
+   ],
+   "article": "Bully Kutta",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4601,
+   "signals": {
+    "pageviews": 98418,
+    "zipf": 1.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kuvasz",
+   "name": "Kuvasz",
+   "aliases": [
+    "Hungarian Kuvasz",
+    "Hungarian mastiff",
+    "Kuvaszok"
+   ],
+   "article": "Kuvasz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4581,
+   "signals": {
+    "pageviews": 66475,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "american-hairless-terrier",
+   "name": "American Hairless Terrier",
+   "aliases": [
+    "American Hairless"
+   ],
+   "article": "American Hairless Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4479,
+   "signals": {
+    "pageviews": 25470,
+    "zipf": 2.74,
+    "salience": 2
+   }
+  },
+  {
+   "id": "sussex-spaniel",
+   "name": "Sussex Spaniel",
+   "aliases": [
+    "Spaniel"
+   ],
+   "article": "Sussex Spaniel",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4453,
+   "signals": {
+    "pageviews": 25189,
+    "zipf": 2.77,
+    "salience": 2
+   }
+  },
+  {
+   "id": "canadian-eskimo-dog",
+   "name": "Canadian Eskimo Dog",
+   "aliases": [
+    "Canadian Inuit Dog",
+    "Inuit Dog",
+    "Qimmiq",
+    "Qimmit",
+    "RCMP dog killings"
+   ],
+   "article": "Canadian Eskimo Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4424,
+   "signals": {
+    "pageviews": 64923,
+    "zipf": 2.99,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mudi",
+   "name": "Mudi",
+   "aliases": [
+    "Mudi dog"
+   ],
+   "article": "Mudi",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.435,
+   "signals": {
+    "pageviews": 31955,
+    "zipf": 1.55,
+    "salience": 2
+   }
+  },
+  {
+   "id": "jagdterrier",
+   "name": "Jagdterrier",
+   "aliases": [
+    "Deutscher Jagdterrier",
+    "German Hunting Terrier"
+   ],
+   "article": "Jagdterrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4335,
+   "signals": {
+    "pageviews": 56098,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "curly-coated-retriever",
+   "name": "Curly-Coated Retriever",
+   "aliases": [
+    "Retriever"
+   ],
+   "article": "Curly-coated Retriever",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4308,
+   "signals": {
+    "pageviews": 22056,
+    "zipf": 2.83,
+    "salience": 2
+   }
+  },
+  {
+   "id": "bolognese",
+   "name": "Bolognese",
+   "aliases": [
+    "Bichon Bolognese",
+    "Bolognese dog"
+   ],
+   "article": "Bolognese (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4307,
+   "signals": {
+    "pageviews": 15637,
+    "zipf": 2.59,
+    "salience": 2
+   }
+  },
+  {
+   "id": "barbet",
+   "name": "Barbet",
+   "aliases": [
+    "Barbet dog",
+    "French Water Dog"
+   ],
+   "article": "Barbet (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4297,
+   "signals": {
+    "pageviews": 28975,
+    "zipf": 1.66,
+    "salience": 2
+   }
+  },
+  {
+   "id": "polish-lowland-sheepdog",
+   "name": "Polish Lowland Sheepdog",
+   "aliases": [
+    "Polish Lowland Shepherd",
+    "Polski Owczarek Nizinny",
+    "Valee Sheepdog"
+   ],
+   "article": "Polish Lowland Sheepdog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4241,
+   "signals": {
+    "pageviews": 23023,
+    "zipf": 2.33,
+    "salience": 2
+   }
+  },
+  {
+   "id": "petit-basset-griffon-vendeen",
+   "name": "Petit Basset Griffon Vendéen",
+   "aliases": [
+    "PBGV",
+    "PGBV",
+    "Petite Basset Griffon Vendeen"
+   ],
+   "article": "Petit Basset Griffon Vendéen",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.422,
+   "signals": {
+    "pageviews": 31055,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "small-munsterlander",
+   "name": "Small Münsterländer",
+   "aliases": [
+    "Kleiner Munsterlander",
+    "Small Muensterlaender"
+   ],
+   "article": "Small Münsterländer",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4183,
+   "signals": {
+    "pageviews": 30224,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "azawakh",
+   "name": "Azawakh",
+   "aliases": [
+    "Azawakh Hound",
+    "Azawkh",
+    "Tuareg Sloughi"
+   ],
+   "article": "Azawakh",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4171,
+   "signals": {
+    "pageviews": 46638,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "indian-spitz",
+   "name": "Indian Spitz",
+   "aliases": [],
+   "article": "Indian Spitz",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4155,
+   "signals": {
+    "pageviews": 61169,
+    "zipf": 2.54,
+    "salience": 1
+   }
+  },
+  {
+   "id": "otterhound",
+   "name": "Otterhound",
+   "aliases": [],
+   "article": "Otterhound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.413,
+   "signals": {
+    "pageviews": 46303,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "large-munsterlander",
+   "name": "Large Münsterländer",
+   "aliases": [
+    "Large Muensterlaender"
+   ],
+   "article": "Large Münsterländer",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4109,
+   "signals": {
+    "pageviews": 28615,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "dandie-dinmont-terrier",
+   "name": "Dandie Dinmont Terrier",
+   "aliases": [
+    "Dandie",
+    "Dandie Dinmont",
+    "Dandy Dinmont",
+    "Dinmont"
+   ],
+   "article": "Dandie Dinmont Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4027,
+   "signals": {
+    "pageviews": 70389,
+    "zipf": 0.94,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sloughi",
+   "name": "Sloughi",
+   "aliases": [
+    "Arabian Greyhound"
+   ],
+   "article": "Sloughi",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.4008,
+   "signals": {
+    "pageviews": 42397,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "greek-shepherd",
+   "name": "Greek Shepherd",
+   "aliases": [
+    "Greek Sheepdog",
+    "Molossus of Epirus"
+   ],
+   "article": "Greek Shepherd",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3825,
+   "signals": {
+    "pageviews": 38500,
+    "zipf": 3.8,
+    "salience": 1
+   }
+  },
+  {
+   "id": "teddy-roosevelt-terrier",
+   "name": "Teddy Roosevelt Terrier",
+   "aliases": [],
+   "article": "Teddy Roosevelt Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3775,
+   "signals": {
+    "pageviews": 42196,
+    "zipf": 3.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kai-ken",
+   "name": "Kai Ken",
+   "aliases": [
+    "Kai",
+    "Tora Inu"
+   ],
+   "article": "Kai Ken",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3702,
+   "signals": {
+    "pageviews": 34774,
+    "zipf": 3.64,
+    "salience": 1
+   }
+  },
+  {
+   "id": "english-white-terrier",
+   "name": "English White Terrier",
+   "aliases": [
+    "English White Terriers",
+    "White English Terrier"
+   ],
+   "article": "English White Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3702,
+   "signals": {
+    "pageviews": 35850,
+    "zipf": 3.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "himalayan-sheepdog",
+   "name": "Himalayan Sheepdog",
+   "aliases": [
+    "Bhote kukur",
+    "Bhotia Dog",
+    "Gaddi Dog",
+    "Gaddi Kutta",
+    "Kumaon Mastiff",
+    "Kumaun Mastiff"
+   ],
+   "article": "Himalayan Sheepdog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.37,
+   "signals": {
+    "pageviews": 46341,
+    "zipf": 2.37,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chinook",
+   "name": "Chinook",
+   "aliases": [
+    "Chinook dog"
+   ],
+   "article": "Chinook (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.367,
+   "signals": {
+    "pageviews": 22772,
+    "zipf": 2.9,
+    "salience": 1
+   }
+  },
+  {
+   "id": "karakachan-dog",
+   "name": "Karakachan Dog",
+   "aliases": [
+    "Bulgarian Shepherd",
+    "Bulgarian Shepherd Dog",
+    "Karakachan",
+    "Karakachan Shepherd"
+   ],
+   "article": "Karakachan dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3653,
+   "signals": {
+    "pageviews": 60721,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pyrenean-mastiff",
+   "name": "Pyrenean Mastiff",
+   "aliases": [
+    "Mastín Pirineo",
+    "Mastín del Pirineo"
+   ],
+   "article": "Pyrenean Mastiff",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3639,
+   "signals": {
+    "pageviews": 46793,
+    "zipf": 1.82,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hokkaido",
+   "name": "Hokkaido",
+   "aliases": [
+    "Ainu dog",
+    "Ainu-ken",
+    "Hokkaido dog",
+    "Hokkaidō-inu"
+   ],
+   "article": "Hokkaido (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3617,
+   "signals": {
+    "pageviews": 22535,
+    "zipf": 2.86,
+    "salience": 1
+   }
+  },
+  {
+   "id": "taiwan-dog",
+   "name": "Taiwan Dog",
+   "aliases": [
+    "Formosa Mountain Dog",
+    "Formosan Dog",
+    "Formosan Mountain Dog",
+    "Taiwanese Dog"
+   ],
+   "article": "Taiwan Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3616,
+   "signals": {
+    "pageviews": 31357,
+    "zipf": 4.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mudhol-hound",
+   "name": "Mudhol Hound",
+   "aliases": [
+    "Caravan Hound",
+    "Mudhol dog",
+    "Pashmi"
+   ],
+   "article": "Mudhol Hound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3604,
+   "signals": {
+    "pageviews": 59892,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pumi",
+   "name": "Pumi",
+   "aliases": [
+    "Pumi dog"
+   ],
+   "article": "Pumi dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3547,
+   "signals": {
+    "pageviews": 27144,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "east-european-shepherd",
+   "name": "East European Shepherd",
+   "aliases": [
+    "Belarusian Ovcharka",
+    "Byelorussian Ovcharka",
+    "East European Ovcharka",
+    "East European Ovtcharka",
+    "East European Shepherd Dog"
+   ],
+   "article": "East European Shepherd",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3544,
+   "signals": {
+    "pageviews": 30287,
+    "zipf": 3.85,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lowchen",
+   "name": "Lowchen",
+   "aliases": [
+    "Little Lion Dog",
+    "Loewchen",
+    "Petit chien lion"
+   ],
+   "article": "Löwchen",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3517,
+   "signals": {
+    "pageviews": 26700,
+    "zipf": 0.0,
+    "salience": 2
+   }
+  },
+  {
+   "id": "billy",
+   "name": "Billy",
+   "aliases": [
+    "Billy Dog"
+   ],
+   "article": "Billy (dog breed)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3503,
+   "signals": {
+    "pageviews": 7796,
+    "zipf": 4.33,
+    "salience": 1
+   }
+  },
+  {
+   "id": "shikoku",
+   "name": "Shikoku",
+   "aliases": [
+    "Japanese wolfdog",
+    "Shikoku Ken",
+    "Shikoku dog",
+    "Shikoku-Inu"
+   ],
+   "article": "Shikoku dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3474,
+   "signals": {
+    "pageviews": 31707,
+    "zipf": 2.19,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sarplaninac",
+   "name": "Sarplaninac",
+   "aliases": [
+    "Charplaninatz",
+    "Karaman",
+    "Macedonian Karaman",
+    "Qen i Sharrit",
+    "Sarplaninec",
+    "Serbian Shepherd Dog",
+    "Shar Mountain Dog",
+    "Sharko",
+    "Sharplaninac",
+    "Sharplaninats",
+    "Sharplaninatz",
+    "Sharplaninec",
+    "Sharplaninets",
+    "Sharplaninetz",
+    "Sharr Mountain Dog",
+    "Sharr dog",
+    "Sharrplaninatz",
+    "Shepherd Dog Sharplanina",
+    "Shepherd Dog Šarplanina",
+    "Yugoslavian Shepherd Dog",
+    "Šar Mountain Dog",
+    "Šarac",
+    "Šarec",
+    "Šarko"
+   ],
+   "article": "Šarplaninac",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3465,
+   "signals": {
+    "pageviews": 72277,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "russian-tsvetnaya-bolonka",
+   "name": "Russian Tsvetnaya Bolonka",
+   "aliases": [
+    "Bolonka"
+   ],
+   "article": "Bolonka",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3456,
+   "signals": {
+    "pageviews": 51757,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bavarian-mountain-hound",
+   "name": "Bavarian Mountain Hound",
+   "aliases": [
+    "Bavarian Hound",
+    "Bavarian Mountain Scenthound",
+    "Bayerischer Gebirgsschweißhund"
+   ],
+   "article": "Bavarian Mountain Hound",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3434,
+   "signals": {
+    "pageviews": 33042,
+    "zipf": 2.94,
+    "salience": 1
+   }
+  },
+  {
+   "id": "glen-of-imaal-terrier",
+   "name": "Glen of Imaal Terrier",
+   "aliases": [
+    "Irish Glen of Imaal Terrier"
+   ],
+   "article": "Glen of Imaal Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3419,
+   "signals": {
+    "pageviews": 49346,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rajapalayam",
+   "name": "Rajapalayam",
+   "aliases": [
+    "Paleiyakaran",
+    "Poligar Hound",
+    "Polygar Hound",
+    "Rajapalayam dog"
+   ],
+   "article": "Rajapalayam dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3312,
+   "signals": {
+    "pageviews": 64045,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mcnab-dog",
+   "name": "McNab Dog",
+   "aliases": [
+    "McNab",
+    "McNab Herding Dog"
+   ],
+   "article": "McNab dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3296,
+   "signals": {
+    "pageviews": 34580,
+    "zipf": 2.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sealyham-terrier",
+   "name": "Sealyham Terrier",
+   "aliases": [
+    "Sealyham"
+   ],
+   "article": "Sealyham Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3259,
+   "signals": {
+    "pageviews": 45630,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "africanis",
+   "name": "Africanis",
+   "aliases": [
+    "Bantu Hound",
+    "Hottentot Hunting Dog",
+    "Hottentot dog",
+    "Hottentott Hound",
+    "Kafir Hound",
+    "Khoikhoi Hound",
+    "Khoikhoi dog",
+    "Zulu Hound"
+   ],
+   "article": "Africanis",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3199,
+   "signals": {
+    "pageviews": 60073,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hamiltonstovare",
+   "name": "Hamiltonstovare",
+   "aliases": [
+    "Hamilton Hound",
+    "Hamiltonstoevare",
+    "Swedish Foxhound"
+   ],
+   "article": "Hamiltonstövare",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3179,
+   "signals": {
+    "pageviews": 59509,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "basset-fauve-de-bretagne",
+   "name": "Basset Fauve de Bretagne",
+   "aliases": [
+    "Fauve"
+   ],
+   "article": "Basset Fauve de Bretagne",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3143,
+   "signals": {
+    "pageviews": 35610,
+    "zipf": 1.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "romanian-carpathian-shepherd-dog",
+   "name": "Romanian Carpathian Shepherd Dog",
+   "aliases": [
+    "Caine Ciobanesc Carpatian",
+    "Caine Ciobanesc Carpatin",
+    "Carpathian Sheepdog",
+    "Carpathian Shepherd Dog",
+    "Carpatin",
+    "Ciobanesc Românesc Carpatin",
+    "Romanian Carpathian Shepherd",
+    "Romanian Carpatin Herder",
+    "Rumanian Carpathian"
+   ],
+   "article": "Carpathian Shepherd Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3091,
+   "signals": {
+    "pageviews": 29928,
+    "zipf": 2.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ca-de-bou",
+   "name": "Ca de Bou",
+   "aliases": [
+    "Majorca Mastiff",
+    "Majorcan bulldog",
+    "Mallorca Mastiff",
+    "Mallorcan bulldog",
+    "Mallorquin Bulldog",
+    "Perro de Presa Mallorquin",
+    "Perro dogo mallorquín",
+    "Presa Mallorquin"
+   ],
+   "article": "Ca de Bou",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3064,
+   "signals": {
+    "pageviews": 26857,
+    "zipf": 2.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sakhalin-husky",
+   "name": "Sakhalin Husky",
+   "aliases": [
+    "Karafuto-Ken"
+   ],
+   "article": "Sakhalin Husky",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3062,
+   "signals": {
+    "pageviews": 29098,
+    "zipf": 2.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "alaunt",
+   "name": "Alaunt",
+   "aliases": [],
+   "article": "Alaunt",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3046,
+   "signals": {
+    "pageviews": 50138,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rafeiro-do-alentejo",
+   "name": "Rafeiro do Alentejo",
+   "aliases": [
+    "Alentejo Mastiff",
+    "Portuguese Mastiff",
+    "Rafeiro of Alentejo"
+   ],
+   "article": "Rafeiro do Alentejo",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3037,
+   "signals": {
+    "pageviews": 39567,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "alano-espanol",
+   "name": "Alano Español",
+   "aliases": [
+    "Dogo español",
+    "Perro de Toro",
+    "Spanish Alano",
+    "Spanish Bulldog",
+    "Spanish dogo"
+   ],
+   "article": "Alano Español",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3024,
+   "signals": {
+    "pageviews": 33621,
+    "zipf": 1.28,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bohemian-shepherd",
+   "name": "Bohemian Shepherd",
+   "aliases": [
+    "Chodsky pes",
+    "Czech Sheepdog"
+   ],
+   "article": "Bohemian Shepherd",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.3016,
+   "signals": {
+    "pageviews": 21975,
+    "zipf": 3.35,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ecuadorian-hairless-dog",
+   "name": "Ecuadorian Hairless Dog",
+   "aliases": [
+    "Bolivian Hairless Dog",
+    "Bolivian Khala",
+    "Hairless Dogs",
+    "Hairless dog",
+    "Khala",
+    "Naked dog",
+    "Thai Hairless Dog"
+   ],
+   "article": "Hairless dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.301,
+   "signals": {
+    "pageviews": 26484,
+    "zipf": 2.58,
+    "salience": 1
+   }
+  },
+  {
+   "id": "georgian-shepherd",
+   "name": "Georgian Shepherd",
+   "aliases": [
+    "Georgian dog",
+    "Georgian mountain dog",
+    "Georgian nagazi",
+    "Georgian shepherd dog",
+    "Nagazi"
+   ],
+   "article": "Georgian Shepherd",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2994,
+   "signals": {
+    "pageviews": 20756,
+    "zipf": 3.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kombai",
+   "name": "Kombai",
+   "aliases": [
+    "Combai",
+    "Kombai dog"
+   ],
+   "article": "Kombai dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2985,
+   "signals": {
+    "pageviews": 47440,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gull-terrier",
+   "name": "Gull Terrier",
+   "aliases": [
+    "Gull Terr",
+    "Indian Bull Terrier"
+   ],
+   "article": "Gull Terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2969,
+   "signals": {
+    "pageviews": 24067,
+    "zipf": 2.8,
+    "salience": 1
+   }
+  },
+  {
+   "id": "appenzeller-sennenhund",
+   "name": "Appenzeller Sennenhund",
+   "aliases": [
+    "Appenzell Cattle Dog",
+    "Appenzell Mountain Dog",
+    "Appenzeller Cattle Dog",
+    "Appenzeller Mountain Dog"
+   ],
+   "article": "Appenzeller Sennenhund",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2926,
+   "signals": {
+    "pageviews": 35543,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "entlebucher-mountain-dog",
+   "name": "Entlebucher Mountain Dog",
+   "aliases": [
+    "Entelbuch Mountain Dog",
+    "Entelbuch Mountain Dogs",
+    "Entelbucher Cattle Dog",
+    "Entelbucher Cattle Dogs",
+    "Entlebuch Cattle Dog",
+    "Entlebucher",
+    "Entlebucher Mountain Dogs",
+    "Entlebucher Sennenhund"
+   ],
+   "article": "Entlebucher Mountain Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2914,
+   "signals": {
+    "pageviews": 35192,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "basque-shepherd-dog",
+   "name": "Basque Shepherd Dog",
+   "aliases": [
+    "Basque Herder",
+    "Basque Sheepdog",
+    "Euskal Artzain Txakurra",
+    "Pastor Vasco",
+    "Perro de Pastor Vasco",
+    "Perro de Vasco"
+   ],
+   "article": "Basque Shepherd Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2883,
+   "signals": {
+    "pageviews": 20514,
+    "zipf": 3.1,
+    "salience": 1
+   }
+  },
+  {
+   "id": "english-toy-terrier",
+   "name": "English Toy Terrier",
+   "aliases": [
+    "English Toy Terrier (Black & Tan)"
+   ],
+   "article": "English Toy Terrier (Black & Tan)",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2861,
+   "signals": {
+    "pageviews": 20029,
+    "zipf": 3.2,
+    "salience": 1
+   }
+  },
+  {
+   "id": "aksaray-malaklisi",
+   "name": "Aksaray Malaklisi",
+   "aliases": [
+    "Aksaray Malaklisi dog",
+    "Aksaray malaklısı",
+    "Malakli",
+    "Malaklı",
+    "Turkish Mastiff"
+   ],
+   "article": "Aksaray Malaklisi",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.284,
+   "signals": {
+    "pageviews": 33369,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "abyssinian-sand-terrier",
+   "name": "Abyssinian Sand Terrier",
+   "aliases": [
+    "Abyssinian hairless dog",
+    "African Hairless Dog"
+   ],
+   "article": "Abyssinian sand terrier",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2839,
+   "signals": {
+    "pageviews": 25418,
+    "zipf": 2.27,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cirneco-delletna",
+   "name": "Cirneco dell'Etna",
+   "aliases": [],
+   "article": "Cirneco dell'Etna",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2791,
+   "signals": {
+    "pageviews": 31482,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "romanian-raven-shepherd-dog",
+   "name": "Romanian Raven Shepherd Dog",
+   "aliases": [
+    "Corb Shepherd"
+   ],
+   "article": "Romanian Raven Shepherd Dog",
+   "tier": 3,
+   "tier_name": "Rare",
+   "commonness": 0.2787,
+   "signals": {
+    "pageviews": 17299,
+    "zipf": 3.25,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kars-dog",
+   "name": "Kars Dog",
+   "aliases": [],
+   "article": "Kars dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2773,
+   "signals": {
+    "pageviews": 23407,
+    "zipf": 2.3,
+    "salience": 1
+   }
+  },
+  {
+   "id": "aidi",
+   "name": "Aidi",
+   "aliases": [
+    "Atlas Mountain Dog",
+    "Atlas Shepherd Dog",
+    "Chien de l'Atlas"
+   ],
+   "article": "Aidi",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2759,
+   "signals": {
+    "pageviews": 29994,
+    "zipf": 1.04,
+    "salience": 1
+   }
+  },
+  {
+   "id": "volpino-italiano",
+   "name": "Volpino Italiano",
+   "aliases": [
+    "Italian Volpino"
+   ],
+   "article": "Volpino Italiano",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2741,
+   "signals": {
+    "pageviews": 30992,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pyrenean-shepherd",
+   "name": "Pyrenean Shepherd",
+   "aliases": [
+    "Berger de Pyrenees",
+    "Berger des Pyrenees",
+    "Berger des Pyrenese",
+    "Petit Berger",
+    "Pyrenean Sheepdog",
+    "Pyrenean Shepherd Dog",
+    "Pyrenees Sheepdog"
+   ],
+   "article": "Pyrenean Sheepdog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2723,
+   "signals": {
+    "pageviews": 23926,
+    "zipf": 1.9,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pudelpointer",
+   "name": "Pudelpointer",
+   "aliases": [],
+   "article": "Pudelpointer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2688,
+   "signals": {
+    "pageviews": 38457,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sarabi-dog",
+   "name": "Sarabi Dog",
+   "aliases": [
+    "Iranian Mastiff",
+    "Sarabi Mastiff",
+    "Sarabi Shepherd Dog"
+   ],
+   "article": "Sarabi dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.268,
+   "signals": {
+    "pageviews": 25332,
+    "zipf": 1.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "phu-quoc-ridgeback",
+   "name": "Phu Quoc Ridgeback",
+   "aliases": [
+    "Phu Quoc dog",
+    "Phu quoc ridgeback dog"
+   ],
+   "article": "Phu Quoc Ridgeback",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2671,
+   "signals": {
+    "pageviews": 24906,
+    "zipf": 1.61,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bergamasco-shepherd",
+   "name": "Bergamasco Shepherd",
+   "aliases": [
+    "Bergamasco",
+    "Bergamasco Sheepdog",
+    "Bergamasco Shepherd Dog",
+    "Cane da pastore Bergamasco"
+   ],
+   "article": "Bergamasco Shepherd Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2669,
+   "signals": {
+    "pageviews": 433,
+    "zipf": 1.5,
+    "salience": 2
+   }
+  },
+  {
+   "id": "chippiparai",
+   "name": "Chippiparai",
+   "aliases": [],
+   "article": "Chippiparai",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2668,
+   "signals": {
+    "pageviews": 37043,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bucovina-shepherd-dog",
+   "name": "Bucovina Shepherd Dog",
+   "aliases": [
+    "Ciobanescu de Bucovina",
+    "Ciobãnesc de Bucovina",
+    "Romanian Bucovina Shepherd"
+   ],
+   "article": "Bucovina Shepherd Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.263,
+   "signals": {
+    "pageviews": 26280,
+    "zipf": 1.22,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kuchi-dog",
+   "name": "Kuchi Dog",
+   "aliases": [
+    "Afghan Shepherd",
+    "Koochee dog",
+    "Kuchi",
+    "Sage Koochee",
+    "Sage kuczi"
+   ],
+   "article": "Kuchi dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2621,
+   "signals": {
+    "pageviews": 22801,
+    "zipf": 1.71,
+    "salience": 1
+   }
+  },
+  {
+   "id": "podenco-canario",
+   "name": "Podenco Canario",
+   "aliases": [
+    "Canarian Warren Hound",
+    "Canary Island Podenco"
+   ],
+   "article": "Podenco Canario",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2618,
+   "signals": {
+    "pageviews": 28404,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "armenian-gampr",
+   "name": "Armenian Gampr",
+   "aliases": [
+    "Armenian Gampr dog",
+    "Gampr"
+   ],
+   "article": "Armenian Gampr",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2606,
+   "signals": {
+    "pageviews": 28370,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "brazilian-terrier",
+   "name": "Brazilian Terrier",
+   "aliases": [
+    "Fox Paulistinha",
+    "Terrier Brasileiro"
+   ],
+   "article": "Brazilian Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2602,
+   "signals": {
+    "pageviews": 14428,
+    "zipf": 3.2,
+    "salience": 1
+   }
+  },
+  {
+   "id": "yakutian-laika",
+   "name": "Yakutian Laika",
+   "aliases": [],
+   "article": "Yakutian Laika",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2593,
+   "signals": {
+    "pageviews": 28250,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "japanese-terrier",
+   "name": "Japanese Terrier",
+   "aliases": [
+    "Nihon Teria"
+   ],
+   "article": "Japanese Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2592,
+   "signals": {
+    "pageviews": 13865,
+    "zipf": 3.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "catalan-sheepdog",
+   "name": "Catalan Sheepdog",
+   "aliases": [
+    "Catalan Sheepdogs",
+    "Catalonian Sheepdogs",
+    "Catalonian Shepherd",
+    "Catalonian Shepherds",
+    "Catalonian sheepdog",
+    "Gos d'Atura Català",
+    "Gos d'atura",
+    "Perro de pastor catalán"
+   ],
+   "article": "Catalan Sheepdog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2592,
+   "signals": {
+    "pageviews": 20190,
+    "zipf": 2.41,
+    "salience": 1
+   }
+  },
+  {
+   "id": "gull-dong",
+   "name": "Gull Dong",
+   "aliases": [
+    "Gull Dongs"
+   ],
+   "article": "Gull Dong",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2577,
+   "signals": {
+    "pageviews": 16494,
+    "zipf": 2.93,
+    "salience": 1
+   }
+  },
+  {
+   "id": "stabyhoun",
+   "name": "Stabyhoun",
+   "aliases": [
+    "Frisian Pointer",
+    "Frisian Pointers",
+    "Stabij",
+    "Stabijhoun"
+   ],
+   "article": "Stabyhoun",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2565,
+   "signals": {
+    "pageviews": 33519,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kunming-dog",
+   "name": "Kunming Dog",
+   "aliases": [
+    "Kunming Wolfdog"
+   ],
+   "article": "Kunming dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2552,
+   "signals": {
+    "pageviews": 17578,
+    "zipf": 2.66,
+    "salience": 1
+   }
+  },
+  {
+   "id": "polish-greyhound",
+   "name": "Polish Greyhound",
+   "aliases": [
+    "Chart Polski"
+   ],
+   "article": "Polish Greyhound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2544,
+   "signals": {
+    "pageviews": 14312,
+    "zipf": 3.14,
+    "salience": 1
+   }
+  },
+  {
+   "id": "french-spaniel",
+   "name": "French Spaniel",
+   "aliases": [
+    "Epagneul Francais"
+   ],
+   "article": "French Spaniel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2538,
+   "signals": {
+    "pageviews": 16168,
+    "zipf": 2.82,
+    "salience": 1
+   }
+  },
+  {
+   "id": "west-siberian-laika",
+   "name": "West Siberian Laika",
+   "aliases": [
+    "Zapadno-Sibirskaïa Laïka"
+   ],
+   "article": "West Siberian Laika",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2512,
+   "signals": {
+    "pageviews": 20034,
+    "zipf": 2.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "andalusian-hound",
+   "name": "Andalusian Hound",
+   "aliases": [
+    "Podenco Andaluz"
+   ],
+   "article": "Podenco Andaluz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2506,
+   "signals": {
+    "pageviews": 19225,
+    "zipf": 2.41,
+    "salience": 1
+   }
+  },
+  {
+   "id": "danish-swedish-farmdog",
+   "name": "Danish-Swedish Farmdog",
+   "aliases": [
+    "Danish Farmdog",
+    "Danish Pinscher",
+    "Danish chicken dog",
+    "Swedish Farmdog"
+   ],
+   "article": "Danish–Swedish Farmdog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2495,
+   "signals": {
+    "pageviews": 26311,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "plummer-terrier",
+   "name": "Plummer Terrier",
+   "aliases": [],
+   "article": "Plummer Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2486,
+   "signals": {
+    "pageviews": 16067,
+    "zipf": 2.71,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kishu-ken",
+   "name": "Kishu Ken",
+   "aliases": [
+    "Kishu",
+    "Kishu Inu"
+   ],
+   "article": "Kishu",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2466,
+   "signals": {
+    "pageviews": 22456,
+    "zipf": 1.33,
+    "salience": 1
+   }
+  },
+  {
+   "id": "taigan",
+   "name": "Taigan",
+   "aliases": [
+    "Kyrgyz Taighany"
+   ],
+   "article": "Taigan",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2422,
+   "signals": {
+    "pageviews": 29761,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "croatian-sheepdog",
+   "name": "Croatian Sheepdog",
+   "aliases": [
+    "Croatian Shepherd"
+   ],
+   "article": "Croatian Sheepdog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2413,
+   "signals": {
+    "pageviews": 16968,
+    "zipf": 2.39,
+    "salience": 1
+   }
+  },
+  {
+   "id": "rampur-greyhound",
+   "name": "Rampur Greyhound",
+   "aliases": [
+    "North-Indian Greyhound",
+    "Rampur Hound"
+   ],
+   "article": "Rampur Greyhound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2406,
+   "signals": {
+    "pageviews": 19598,
+    "zipf": 1.82,
+    "salience": 1
+   }
+  },
+  {
+   "id": "estrela-mountain-dog",
+   "name": "Estrela Mountain Dog",
+   "aliases": [
+    "Cão da Serra da Estrela",
+    "Serra da Estrela Dog"
+   ],
+   "article": "Estrela Mountain Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.239,
+   "signals": {
+    "pageviews": 19771,
+    "zipf": 1.67,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bosnian-coarse-haired-hound",
+   "name": "Bosnian Coarse-haired Hound",
+   "aliases": [
+    "Barak",
+    "Barak Hound",
+    "Barak dog",
+    "Bosanski Ostrodlaki Gonic Barak",
+    "Bosanski Oštrodlaki Gonič",
+    "Bosnian Barak",
+    "Bosnian Broken-haired Hound",
+    "Bosnian Hound",
+    "Bosnian Rough-coated Hound",
+    "Bosnian Roughhaired Hound",
+    "Illyrian Hound"
+   ],
+   "article": "Barak hound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2388,
+   "signals": {
+    "pageviews": 13834,
+    "zipf": 2.79,
+    "salience": 1
+   }
+  },
+  {
+   "id": "argentine-pila",
+   "name": "Argentine Pila",
+   "aliases": [
+    "Argentine Pila Dog",
+    "Hairless Khala",
+    "Perro Pila Argentino"
+   ],
+   "article": "Argentine Pila",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2356,
+   "signals": {
+    "pageviews": 16997,
+    "zipf": 2.04,
+    "salience": 1
+   }
+  },
+  {
+   "id": "hungarian-greyhound",
+   "name": "Hungarian Greyhound",
+   "aliases": [
+    "Agar",
+    "Hungarian Sighthound",
+    "Magyar Agár"
+   ],
+   "article": "Magyar Agár",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2346,
+   "signals": {
+    "pageviews": 12196,
+    "zipf": 3.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "swedish-elkhound",
+   "name": "Swedish Elkhound",
+   "aliases": [
+    "Jaemthund",
+    "Jamthundt",
+    "Jämthund",
+    "Swedish Jamthund"
+   ],
+   "article": "Jämthund",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.234,
+   "signals": {
+    "pageviews": 20326,
+    "zipf": 1.24,
+    "salience": 1
+   }
+  },
+  {
+   "id": "portuguese-pointer",
+   "name": "Portuguese Pointer",
+   "aliases": [
+    "Perdigueiro Português"
+   ],
+   "article": "Portuguese Pointer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2336,
+   "signals": {
+    "pageviews": 9971,
+    "zipf": 3.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ratonero-bodeguero-andaluz",
+   "name": "Ratonero Bodeguero Andaluz",
+   "aliases": [
+    "Andalusian Terrier",
+    "Andalusian Wine-Cellar Rat-Hunting Dog",
+    "Ratonero"
+   ],
+   "article": "Andalusian Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2322,
+   "signals": {
+    "pageviews": 22767,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "tornjak",
+   "name": "Tornjak",
+   "aliases": [
+    "Bosanski Tornjak",
+    "Bosnian Shepard",
+    "Bosnian Tornjak",
+    "Bosnian mountain dog"
+   ],
+   "article": "Tornjak",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.232,
+   "signals": {
+    "pageviews": 26871,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "mackenzie-river-husky",
+   "name": "Mackenzie River Husky",
+   "aliases": [
+    "Freight Husky",
+    "Mackenzie Freight Husky",
+    "Mackenzie Husky"
+   ],
+   "article": "Mackenzie River husky",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.231,
+   "signals": {
+    "pageviews": 11065,
+    "zipf": 3.11,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cane-di-oropa",
+   "name": "Cane di Oropa",
+   "aliases": [
+    "Cane Lupino del Gigante",
+    "Cane d'Oropa",
+    "Dogo Sardesco",
+    "Dogo Sardo",
+    "List of Italian dog breeds",
+    "Oropa Shepherd",
+    "Pastore Biellese",
+    "Pastore d'Oropa",
+    "Sardinian Dogo",
+    "Spino degli Iblei"
+   ],
+   "article": "List of Italian dog breeds",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.231,
+   "signals": {
+    "pageviews": 22628,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lucas-terrier",
+   "name": "Lucas Terrier",
+   "aliases": [],
+   "article": "Lucas Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2278,
+   "signals": {
+    "pageviews": 10714,
+    "zipf": 3.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bakharwal-dog",
+   "name": "Bakharwal Dog",
+   "aliases": [
+    "Bakarwal Mastiff",
+    "Bakarwal dog",
+    "Bakharwal",
+    "Gujjar",
+    "Gujjar Watchdog",
+    "Kashmir Mastiff",
+    "Kashmir Sheepdog",
+    "Kashmiri Bakharwal Dog",
+    "Kashmiri sheepdog"
+   ],
+   "article": "Bakharwal dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2273,
+   "signals": {
+    "pageviews": 22441,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "tenterfield-terrier",
+   "name": "Tenterfield Terrier",
+   "aliases": [],
+   "article": "Tenterfield Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2253,
+   "signals": {
+    "pageviews": 17088,
+    "zipf": 1.57,
+    "salience": 1
+   }
+  },
+  {
+   "id": "braque-francais",
+   "name": "Braque Français",
+   "aliases": [
+    "Braque français, type Gascogne",
+    "Braque français, type Pyrénées",
+    "French Gascony pointer",
+    "French Pointing Dog",
+    "French Pyrenean pointer"
+   ],
+   "article": "Braque Français",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2253,
+   "signals": {
+    "pageviews": 15257,
+    "zipf": 2.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "finnish-hound",
+   "name": "Finnish Hound",
+   "aliases": [
+    "Finnish Bracke"
+   ],
+   "article": "Finnish Hound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2247,
+   "signals": {
+    "pageviews": 9602,
+    "zipf": 3.23,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-basset-griffon-vendeen",
+   "name": "Grand Basset Griffon Vendéen",
+   "aliases": [
+    "Griffon Vendeen"
+   ],
+   "article": "Grand Basset Griffon Vendéen",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2199,
+   "signals": {
+    "pageviews": 20363,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "romanian-mioritic-shepherd-dog",
+   "name": "Romanian Mioritic Shepherd Dog",
+   "aliases": [
+    "Mioritic"
+   ],
+   "article": "Romanian Mioritic Shepherd Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2174,
+   "signals": {
+    "pageviews": 20308,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "karst-shepherd",
+   "name": "Karst Shepherd",
+   "aliases": [
+    "Karst Shepherd Dog",
+    "Krasky Ovcar",
+    "Kraševec",
+    "Kraški ovčar"
+   ],
+   "article": "Karst Shepherd",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2161,
+   "signals": {
+    "pageviews": 12749,
+    "zipf": 2.5,
+    "salience": 1
+   }
+  },
+  {
+   "id": "drever",
+   "name": "Drever",
+   "aliases": [],
+   "article": "Drever",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2151,
+   "signals": {
+    "pageviews": 11304,
+    "zipf": 1.54,
+    "salience": 1
+   }
+  },
+  {
+   "id": "lapponian-herder",
+   "name": "Lapponian Herder",
+   "aliases": [
+    "Lapinporokoira",
+    "Reindeer Herder"
+   ],
+   "article": "Lapponian Herder",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.21,
+   "signals": {
+    "pageviews": 19526,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "blue-picardy-spaniel",
+   "name": "Blue Picardy Spaniel",
+   "aliases": [
+    "Bleu Picard",
+    "Epagneul Bleu de Picardie",
+    "Épagneul Bleu de Picardi"
+   ],
+   "article": "Blue Picardy Spaniel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2093,
+   "signals": {
+    "pageviews": 13178,
+    "zipf": 1.97,
+    "salience": 1
+   }
+  },
+  {
+   "id": "norwegian-buhund",
+   "name": "Norwegian Buhund",
+   "aliases": [
+    "Buhund",
+    "Norsk Buhund"
+   ],
+   "article": "Norwegian Buhund",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2063,
+   "signals": {
+    "pageviews": 18965,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "corsican-dog",
+   "name": "Corsican Dog",
+   "aliases": [
+    "Cursinu"
+   ],
+   "article": "Corsican Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2062,
+   "signals": {
+    "pageviews": 11044,
+    "zipf": 2.45,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bourbonnais-pointer",
+   "name": "Bourbonnais Pointer",
+   "aliases": [
+    "Bourbonnais Pointing Dog",
+    "Bourbonnais'nseisoja",
+    "Bourbonnaiser vorstehhund",
+    "Bracco del Bourbonnais",
+    "Braco del Borbonesado",
+    "Braque de Bourbon",
+    "Braque du Bourbonnais"
+   ],
+   "article": "Braque du Bourbonnais",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.206,
+   "signals": {
+    "pageviews": 13592,
+    "zipf": 1.69,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kanni",
+   "name": "Kanni",
+   "aliases": [],
+   "article": "Kanni",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2054,
+   "signals": {
+    "pageviews": 21812,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cesky-terrier",
+   "name": "Cesky Terrier",
+   "aliases": [
+    "Czech Terrier",
+    "Český Teriér"
+   ],
+   "article": "Cesky Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2052,
+   "signals": {
+    "pageviews": 14412,
+    "zipf": 1.36,
+    "salience": 1
+   }
+  },
+  {
+   "id": "deutscher-wachtelhund",
+   "name": "Deutscher Wachtelhund",
+   "aliases": [
+    "German Quail Dog",
+    "German Spaniel",
+    "German quail"
+   ],
+   "article": "German Spaniel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2051,
+   "signals": {
+    "pageviews": 17757,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "old-danish-pointer",
+   "name": "Old Danish Pointer",
+   "aliases": [
+    "Gammel Dansk Hønsehund",
+    "Old Danish Chicken Dog"
+   ],
+   "article": "Old Danish Pointer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.2047,
+   "signals": {
+    "pageviews": 7021,
+    "zipf": 3.44,
+    "salience": 1
+   }
+  },
+  {
+   "id": "picardy-spaniel",
+   "name": "Picardy Spaniel",
+   "aliases": [
+    "Epagneul Picard"
+   ],
+   "article": "Picardy Spaniel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1994,
+   "signals": {
+    "pageviews": 11429,
+    "zipf": 1.97,
+    "salience": 1
+   }
+  },
+  {
+   "id": "artois-hound",
+   "name": "Artois Hound",
+   "aliases": [
+    "Chien D'Artois"
+   ],
+   "article": "Artois Hound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1982,
+   "signals": {
+    "pageviews": 10789,
+    "zipf": 2.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "danish-spitz",
+   "name": "Danish Spitz",
+   "aliases": [],
+   "article": "Danish Spitz",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1976,
+   "signals": {
+    "pageviews": 9645,
+    "zipf": 2.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "basset-bleu-de-gascogne",
+   "name": "Basset Bleu de Gascogne",
+   "aliases": [
+    "Blue Gascony Basset"
+   ],
+   "article": "Basset Bleu de Gascogne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1971,
+   "signals": {
+    "pageviews": 13668,
+    "zipf": 1.3,
+    "salience": 1
+   }
+  },
+  {
+   "id": "east-siberian-laika",
+   "name": "East Siberian Laika",
+   "aliases": [
+    "Vostotchno-Sibirskaïa Laïka"
+   ],
+   "article": "East Siberian Laika",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.197,
+   "signals": {
+    "pageviews": 10846,
+    "zipf": 2.18,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chilean-terrier",
+   "name": "Chilean Terrier",
+   "aliases": [
+    "Chilean Foxterrier",
+    "Chilean Rat Terrier"
+   ],
+   "article": "Chilean Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.196,
+   "signals": {
+    "pageviews": 7703,
+    "zipf": 3.03,
+    "salience": 1
+   }
+  },
+  {
+   "id": "telomian",
+   "name": "Telomian",
+   "aliases": [
+    "Telemonian"
+   ],
+   "article": "Telomian",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1931,
+   "signals": {
+    "pageviews": 19455,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-bleu-de-gascogne",
+   "name": "Grand Bleu de Gascogne",
+   "aliases": [
+    "Bleu de Gascogne"
+   ],
+   "article": "Grand Bleu de Gascogne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.192,
+   "signals": {
+    "pageviews": 12951,
+    "zipf": 1.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "bangkaew-dog",
+   "name": "Bangkaew Dog",
+   "aliases": [
+    "Bangkaew",
+    "Thai Bangkaew Dog"
+   ],
+   "article": "Thai Bangkaew Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1916,
+   "signals": {
+    "pageviews": 15372,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "saint-germain-pointer",
+   "name": "Saint-Germain Pointer",
+   "aliases": [
+    "Braque Saint-Germain",
+    "St. Germain Pointer"
+   ],
+   "article": "Braque Saint-Germain",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1914,
+   "signals": {
+    "pageviews": 6965,
+    "zipf": 3.08,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cimarron-uruguayo",
+   "name": "Cimarrón Uruguayo",
+   "aliases": [
+    "Perro Cimarron",
+    "Uroguayan Feral Dog",
+    "Uroguyan Feral Dog",
+    "Uruguayan Cimarron"
+   ],
+   "article": "Cimarrón Uruguayo",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1891,
+   "signals": {
+    "pageviews": 14480,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "auvergne-pointer",
+   "name": "Auvergne Pointer",
+   "aliases": [
+    "Braque d'Auvergne"
+   ],
+   "article": "Braque d'Auvergne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1872,
+   "signals": {
+    "pageviews": 8926,
+    "zipf": 2.48,
+    "salience": 1
+   }
+  },
+  {
+   "id": "porcelaine",
+   "name": "Porcelaine",
+   "aliases": [
+    "Briquet Franc-Comtois",
+    "Chien de Franche-Comtee",
+    "Chien de Franche-Comté",
+    "Franche-Comte dog",
+    "Franche-Comtee dog",
+    "Franche-Comtee dogbreed",
+    "Franche-Comté dogbreed",
+    "Porcelaine Hound"
+   ],
+   "article": "Porcelaine",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1867,
+   "signals": {
+    "pageviews": 9392,
+    "zipf": 1.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sporting-lucas-terrier",
+   "name": "Sporting Lucas Terrier",
+   "aliases": [],
+   "article": "Sporting Lucas Terrier",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1866,
+   "signals": {
+    "pageviews": 5524,
+    "zipf": 3.14,
+    "salience": 1
+   }
+  },
+  {
+   "id": "burgos-pointer",
+   "name": "Burgos Pointer",
+   "aliases": [
+    "Burgalese Pointer",
+    "Burgos Pointing Dog",
+    "Burgos Retriever",
+    "Perdiguero de Burgos"
+   ],
+   "article": "Burgos Pointer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1856,
+   "signals": {
+    "pageviews": 8699,
+    "zipf": 2.56,
+    "salience": 1
+   }
+  },
+  {
+   "id": "sardinian-shepherd-dog",
+   "name": "Sardinian Shepherd Dog",
+   "aliases": [
+    "Cane Fonnese",
+    "Pastore Fonnese",
+    "Sardinian Sheperd Dog"
+   ],
+   "article": "Sardinian Shepherd Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1845,
+   "signals": {
+    "pageviews": 9232,
+    "zipf": 2.29,
+    "salience": 1
+   }
+  },
+  {
+   "id": "banjara-hound",
+   "name": "Banjara Hound",
+   "aliases": [
+    "Vanjari Hound"
+   ],
+   "article": "Banjara Hound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1843,
+   "signals": {
+    "pageviews": 10341,
+    "zipf": 1.75,
+    "salience": 1
+   }
+  },
+  {
+   "id": "cao-de-gado-transmontano",
+   "name": "Cão de Gado Transmontano",
+   "aliases": [
+    "Transmontano Cattle Dog",
+    "Transmontano Mastiff"
+   ],
+   "article": "Cão de Gado Transmontano",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1817,
+   "signals": {
+    "pageviews": 13729,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "jonangi",
+   "name": "Jonangi",
+   "aliases": [],
+   "article": "Jonangi",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1808,
+   "signals": {
+    "pageviews": 15988,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "podenco-valenciano",
+   "name": "Podenco Valenciano",
+   "aliases": [
+    "Xarnego Valenciano"
+   ],
+   "article": "Podenco Valenciano",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1768,
+   "signals": {
+    "pageviews": 13434,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "tibetan-kyi-apso",
+   "name": "Tibetan Kyi Apso",
+   "aliases": [
+    "Kinnaur Sheepdog",
+    "Kyi Apso"
+   ],
+   "article": "Tibetan Kyi Apso",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.175,
+   "signals": {
+    "pageviews": 9910,
+    "zipf": 1.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "basset-artesien-normand",
+   "name": "Basset Artésien Normand",
+   "aliases": [
+    "Norman Artesian Basset"
+   ],
+   "article": "Basset Artésien Normand",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1731,
+   "signals": {
+    "pageviews": 12843,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "majorca-shepherd-dog",
+   "name": "Majorca Shepherd Dog",
+   "aliases": [
+    "Ca de Bestiar",
+    "Majorca Sheepdog",
+    "Perro de Pastor Mallorquin"
+   ],
+   "article": "Ca de Bestiar",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1695,
+   "signals": {
+    "pageviews": 6191,
+    "zipf": 2.65,
+    "salience": 1
+   }
+  },
+  {
+   "id": "drentsche-patrijshond",
+   "name": "Drentsche Patrijshond",
+   "aliases": [
+    "Drentsche Partridge Dog",
+    "Drentse Patrijshond",
+    "Dutch Partridge Dog"
+   ],
+   "article": "Drentse Patrijshond",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1694,
+   "signals": {
+    "pageviews": 12475,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "portuguese-sheepdog",
+   "name": "Portuguese Sheepdog",
+   "aliases": [
+    "Cão da Serra de Aires",
+    "Portugese Sheepdog",
+    "Portuguese shepherd"
+   ],
+   "article": "Portuguese Sheepdog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1675,
+   "signals": {
+    "pageviews": 6427,
+    "zipf": 2.44,
+    "salience": 1
+   }
+  },
+  {
+   "id": "eurohound",
+   "name": "Eurohound",
+   "aliases": [],
+   "article": "Eurohound",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1675,
+   "signals": {
+    "pageviews": 13528,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "swedish-lapphund",
+   "name": "Swedish Lapphund",
+   "aliases": [],
+   "article": "Swedish Lapphund",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1669,
+   "signals": {
+    "pageviews": 12188,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "norrbottenspets",
+   "name": "Norrbottenspets",
+   "aliases": [
+    "Norbottenspets",
+    "Norbottenspetz",
+    "Nordic Spitz"
+   ],
+   "article": "Norrbottenspets",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1624,
+   "signals": {
+    "pageviews": 12788,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-anglo-francais-tricolore",
+   "name": "Grand Anglo-Français Tricolore",
+   "aliases": [
+    "Anglo Francais Tricolor",
+    "French Tricolor Hound",
+    "Grand Anglo-Francais Tricolor Hound",
+    "Great Anglo-French Hound"
+   ],
+   "article": "Grand Anglo-Français Tricolore",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1611,
+   "signals": {
+    "pageviews": 8794,
+    "zipf": 1.51,
+    "salience": 1
+   }
+  },
+  {
+   "id": "griffon-fauve-de-bretagne",
+   "name": "Griffon Fauve de Bretagne",
+   "aliases": [
+    "Fauve de Bretagne"
+   ],
+   "article": "Griffon Fauve de Bretagne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1606,
+   "signals": {
+    "pageviews": 8866,
+    "zipf": 1.45,
+    "salience": 1
+   }
+  },
+  {
+   "id": "anglo-francais-de-petite-venerie",
+   "name": "Anglo-Français de Petite Vénerie",
+   "aliases": [
+    "Anglo-Francais de Moyen Vénerie",
+    "Anglo-Francais de Petit Venerie"
+   ],
+   "article": "Anglo-Français de Petite Vénerie",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1595,
+   "signals": {
+    "pageviews": 10799,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-anglo-francais-blanc-et-noir",
+   "name": "Grand Anglo-Français Blanc et Noir",
+   "aliases": [],
+   "article": "Grand Anglo-Français Blanc et Noir",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1574,
+   "signals": {
+    "pageviews": 4526,
+    "zipf": 2.47,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ariege-pointer",
+   "name": "Ariège Pointer",
+   "aliases": [
+    "Ariege Pointing Dog",
+    "Braque d'Ariège",
+    "Braque de Toulouse",
+    "Braque de l'Ariège",
+    "Braque du Midi"
+   ],
+   "article": "Ariège Pointer",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1567,
+   "signals": {
+    "pageviews": 9213,
+    "zipf": 1.01,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chien-francais-blanc-et-noir",
+   "name": "Chien Français Blanc et Noir",
+   "aliases": [
+    "Francais blanc et noir"
+   ],
+   "article": "Chien Français Blanc et Noir",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1558,
+   "signals": {
+    "pageviews": 5470,
+    "zipf": 2.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-anglo-francais-blanc-et-orange",
+   "name": "Grand Anglo-Français Blanc et Orange",
+   "aliases": [],
+   "article": "Grand Anglo-Français Blanc et Orange",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1532,
+   "signals": {
+    "pageviews": 3573,
+    "zipf": 2.52,
+    "salience": 1
+   }
+  },
+  {
+   "id": "poitevin",
+   "name": "Poitevin",
+   "aliases": [
+    "Poitevin hound"
+   ],
+   "article": "Poitevin (dog breed)",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1522,
+   "signals": {
+    "pageviews": 1639,
+    "zipf": 1.32,
+    "salience": 1
+   }
+  },
+  {
+   "id": "grand-griffon-vendeen",
+   "name": "Grand Griffon Vendéen",
+   "aliases": [
+    "French Griffon Vendeén",
+    "Griffon Vendéen"
+   ],
+   "article": "Grand Griffon Vendéen",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1521,
+   "signals": {
+    "pageviews": 9706,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chien-francais-blanc-et-orange",
+   "name": "Chien Français Blanc et Orange",
+   "aliases": [
+    "Français blanc et orange"
+   ],
+   "article": "Chien Français Blanc et Orange",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1509,
+   "signals": {
+    "pageviews": 4036,
+    "zipf": 2.34,
+    "salience": 1
+   }
+  },
+  {
+   "id": "briquet-griffon-vendeen",
+   "name": "Briquet Griffon Vendéen",
+   "aliases": [
+    "Briquette Griffon Vendeen"
+   ],
+   "article": "Briquet Griffon Vendéen",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1484,
+   "signals": {
+    "pageviews": 9497,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "griffon-bleu-de-gascogne",
+   "name": "Griffon Bleu de Gascogne",
+   "aliases": [
+    "Blue Gascony Griffon"
+   ],
+   "article": "Griffon Bleu de Gascogne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1458,
+   "signals": {
+    "pageviews": 7690,
+    "zipf": 1.28,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pachon-navarro",
+   "name": "Pachón Navarro",
+   "aliases": [
+    "Andean tiger hound",
+    "Double-nosed",
+    "Double-nosed Andean",
+    "Double-nosed Andean Tiger Hound",
+    "Navarran Pointer",
+    "Navarro Pointer",
+    "Pachon de Victoria",
+    "Pachones Navarros",
+    "Pachón de Vitoria",
+    "Perdiguero Navarro",
+    "Tiger hound"
+   ],
+   "article": "Pachón Navarro",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1435,
+   "signals": {
+    "pageviews": 9056,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "castro-laboreiro-dog",
+   "name": "Castro Laboreiro Dog",
+   "aliases": [
+    "Cão de Castro Laboreiro",
+    "Dog of Castro Laboreiro",
+    "Portuguese Cattle Dog",
+    "Portuguese Watch Dog"
+   ],
+   "article": "Castro Laboreiro Dog",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1386,
+   "signals": {
+    "pageviews": 8736,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "griffon-nivernais",
+   "name": "Griffon Nivernais",
+   "aliases": [
+    "Griffon Nervais"
+   ],
+   "article": "Griffon Nivernais",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1349,
+   "signals": {
+    "pageviews": 8028,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ariegeois",
+   "name": "Ariégeois",
+   "aliases": [],
+   "article": "Ariégeois",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1327,
+   "signals": {
+    "pageviews": 8317,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "segugio-maremmano",
+   "name": "Segugio Maremmano",
+   "aliases": [],
+   "article": "Segugio Maremmano",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1324,
+   "signals": {
+    "pageviews": 7720,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "chien-francais-tricolore",
+   "name": "Chien Français Tricolore",
+   "aliases": [
+    "Français tricolore"
+   ],
+   "article": "Chien Français Tricolore",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1298,
+   "signals": {
+    "pageviews": 3988,
+    "zipf": 1.49,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ratonero-mallorquin",
+   "name": "Ratonero Mallorquín",
+   "aliases": [
+    "Ca Rater Mallorqui",
+    "Majorca Ratter"
+   ],
+   "article": "Ca Rater Mallorquí",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1287,
+   "signals": {
+    "pageviews": 7508,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "petit-bleu-de-gascogne",
+   "name": "Petit Bleu de Gascogne",
+   "aliases": [
+    "Bleu de Gascogne",
+    "Petit Griffon Bleu de Gascogne",
+    "Petite Bleu de Gascogne"
+   ],
+   "article": "Petit Bleu de Gascogne",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1287,
+   "signals": {
+    "pageviews": 4229,
+    "zipf": 1.31,
+    "salience": 1
+   }
+  },
+  {
+   "id": "garafian-shepherd",
+   "name": "Garafian Shepherd",
+   "aliases": [
+    "Pastor Garafiano"
+   ],
+   "article": "Pastor Garafiano",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1275,
+   "signals": {
+    "pageviews": 7128,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "prague-ratter",
+   "name": "Prague Ratter",
+   "aliases": [
+    "Praszky krysarik",
+    "Prazsky krysarik",
+    "Prazsky krysavik"
+   ],
+   "article": "Prague Ratter",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.123,
+   "signals": {
+    "pageviews": 566,
+    "zipf": 1.54,
+    "salience": 1
+   }
+  },
+  {
+   "id": "segugio-dellappennino",
+   "name": "Segugio dell'Appennino",
+   "aliases": [
+    "Piccolo Lepraiolo Italiano",
+    "Piccolo Segugio dell'Appennino"
+   ],
+   "article": "Segugio dell'Appennino",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1225,
+   "signals": {
+    "pageviews": 6341,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "maneto",
+   "name": "Maneto",
+   "aliases": [
+    "Andalusian Hound Maneto",
+    "Podenco Maneto"
+   ],
+   "article": "Maneto",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1205,
+   "signals": {
+    "pageviews": 6301,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "villano-de-las-encartaciones",
+   "name": "Villano de Las Encartaciones",
+   "aliases": [],
+   "article": "Villano de Las Encartaciones",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1201,
+   "signals": {
+    "pageviews": 6196,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "pont-audemer-spaniel",
+   "name": "Pont-Audemer Spaniel",
+   "aliases": [
+    "Epagneul Pont-Audemer",
+    "Epagneul de Pont-Audemer"
+   ],
+   "article": "Pont-Audemer Spaniel",
+   "tier": 4,
+   "tier_name": "Deep Cut",
+   "commonness": 0.1151,
+   "signals": {
+    "pageviews": 5440,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ratonero-valenciano",
+   "name": "Ratonero Valenciano",
+   "aliases": [
+    "Gos Rater Valencià",
+    "Valencian Terrier"
+   ],
+   "article": "Ratonero Valenciano",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1139,
+   "signals": {
+    "pageviews": 5266,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kaikadi",
+   "name": "Kaikadi",
+   "aliases": [
+    "Kaikadi dog"
+   ],
+   "article": "Kaikadi dog",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1092,
+   "signals": {
+    "pageviews": 3751,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "ratonero-murciano",
+   "name": "Ratonero Murciano",
+   "aliases": [
+    "Murcian Ratter",
+    "Ratonero Murciano de Huerta"
+   ],
+   "article": "Ratonero Murciano",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1053,
+   "signals": {
+    "pageviews": 2379,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "kintamani",
+   "name": "Kintamani",
+   "aliases": [
+    "Bali Dog",
+    "Bali Street Dog",
+    "Balinese Kintamani",
+    "Kintamani dog"
+   ],
+   "article": "Kintamani (dog breed)",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1051,
+   "signals": {
+    "pageviews": 1622,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  },
+  {
+   "id": "armant",
+   "name": "Armant",
+   "aliases": [
+    "Armant dog",
+    "Egyptian Sheepdog",
+    "Ermenti",
+    "Hawara Dog"
+   ],
+   "article": "Armant (dog breed)",
+   "tier": 5,
+   "tier_name": "One in a Krillion",
+   "commonness": 0.1041,
+   "signals": {
+    "pageviews": 607,
+    "zipf": 0.0,
+    "salience": 1
+   }
+  }
+ ],
+ "unverified": [
+  "Aussiedoodle",
+  "Australian Labradoodle",
+  "Azerbaijan Shepherd Dog",
+  "Baladi Dog",
+  "Basset d'Artois",
+  "Boerboel Mastiff",
+  "Cane da Pastore Maremmano-Abruzzese",
+  "Cane di Macomer",
+  "Cane di Mannara",
+  "Dogo Guatemalteco",
+  "Galician Shepherd Dog",
+  "Pandikona",
+  "Pashmi Hound",
+  "Pastore della Sila",
+  "Pomsky",
+  "Sardinian Hound",
+  "Segugio Italiano",
+  "Swedish White Elkhound",
+  "Tibetan Laika",
+  "Zulu Dog"
+ ]
+}
