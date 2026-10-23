@@ -110,3 +110,13 @@ def test_shards_split_every_question_exactly_once():
     assert set().union(*shards) == set(slugs)
     assert sum(len(x) for x in shards) == len(slugs)
     assert all(len(x) > 40 for x in shards)  # roughly even
+
+
+def test_pageviews_survive_continuation_responses(monkeypatch):
+    from pipeline import wiki
+
+    blocks = [{"pages": [{"title": "Honda Civic", "pageviews": {"d1": 100, "d2": None}}, {"title": "Honda e"}]},
+              {"pages": [{"title": "Honda Civic"}, {"title": "Honda e", "pageviews": {"d1": 7}}]}]
+    monkeypatch.setattr(wiki, "is_cached", lambda url: False)
+    monkeypatch.setattr(wiki, "_query", lambda titles, **kw: blocks)
+    assert wiki.pageviews(["Honda Civic", "Honda e"]) == {"Honda Civic": 100, "Honda e": 7}
