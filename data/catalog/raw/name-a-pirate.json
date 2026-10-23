@@ -1,0 +1,76 @@
+{
+  "prompt": "Name a pirate",
+  "noun": "pirate",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Blackbeard",
+      "Captain Kidd",
+      "Anne Bonny",
+      "Mary Read",
+      "Calico Jack",
+      "Henry Morgan",
+      "Francis Drake",
+      "Jean Lafitte",
+      "Bartholomew Roberts"
+    ],
+    "common": [
+      "Grace O'Malley",
+      "Ching Shih",
+      "Henry Every",
+      "Edward Low",
+      "Stede Bonnet",
+      "Black Sam Bellamy",
+      "Charles Vane",
+      "Benjamin Hornigold",
+      "William Dampier",
+      "Thomas Tew"
+    ],
+    "known": [
+      "Edward England",
+      "Howell Davis",
+      "Olivier Levasseur",
+      "Francis l'Olonnais",
+      "Bartholomew Sharp",
+      "John Taylor",
+      "Christopher Condent",
+      "Hayreddin Barbarossa",
+      "Oruç Reis",
+      "Turgut Reis",
+      "Klaus Störtebeker",
+      "Eustace the Monk",
+      "Jean Bart",
+      "Robert Surcouf",
+      "Zheng Yi",
+      "Koxinga",
+      "Wang Zhi",
+      "Cheung Po Tsai",
+      "Laurens de Graaf"
+    ],
+    "uncommon": [
+      "Michel de Grammont",
+      "Roche Braziliano",
+      "Alexandre Exquemelin",
+      "Nicholas van Hoorn",
+      "George Lowther",
+      "Israel Hands",
+      "Richard Worley",
+      "Walter Kennedy",
+      "Thomas Anstis",
+      "John Phillips",
+      "Rachel Wall",
+      "Jacquotte Delahaye",
+      "Sayyida al Hurra",
+      "Jeanne de Clisson",
+      "Peter Easton"
+    ],
+    "obscure": [
+      "Henry Mainwaring",
+      "John Ward",
+      "Simon Danziker",
+      "Murat Reis",
+      "Kemal Reis",
+      "Lady Mary Killigrew"
+    ]
+  }
+}

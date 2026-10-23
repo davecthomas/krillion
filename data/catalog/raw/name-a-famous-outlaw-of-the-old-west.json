@@ -1,0 +1,83 @@
+{
+  "prompt": "Name a famous outlaw of the Old West",
+  "noun": "outlaw",
+  "domain": "history",
+  "wikipedia_category": "Category:Outlaws of the American Old West",
+  "answers": {
+    "very_common": [
+      "Billy the Kid",
+      "Jesse James",
+      "Butch Cassidy",
+      "Sundance Kid",
+      "Belle Starr",
+      "John Wesley Hardin",
+      "Black Bart",
+      "Sam Bass"
+    ],
+    "common": [
+      "Frank James",
+      "Cole Younger",
+      "Ike Clanton",
+      "Johnny Ringo",
+      "Curly Bill Brocious",
+      "Kid Curry",
+      "Bill Doolin",
+      "Pearl Hart",
+      "Joaquin Murrieta",
+      "Tom Ketchum",
+      "Henry Starr",
+      "Cherokee Bill",
+      "Bill Longley",
+      "Clay Allison"
+    ],
+    "known": [
+      "Bob Dalton",
+      "Grat Dalton",
+      "Emmett Dalton",
+      "Jim Younger",
+      "Bob Younger",
+      "Jim Miller",
+      "Dave Rudabaugh",
+      "Tom O'Folliard",
+      "Charlie Bowdre",
+      "Elzy Lay",
+      "Harvey Logan",
+      "Ben Kilpatrick",
+      "Laura Bullion",
+      "Etta Place",
+      "Tom McLaury",
+      "Frank McLaury",
+      "Billy Clanton",
+      "Frank Stilwell",
+      "Rufus Buck",
+      "Ned Christie",
+      "Ben Thompson",
+      "King Fisher"
+    ],
+    "uncommon": [
+      "Tiburcio Vásquez",
+      "Bill Dalton",
+      "Bitter Creek Newcomb",
+      "Dynamite Dick",
+      "Arkansas Tom Jones",
+      "Little Britches",
+      "Cattle Annie",
+      "Zip Wyatt",
+      "Al Jennings",
+      "Elmer McCurdy",
+      "Rose Dunn",
+      "Flatnose George Curry",
+      "Harry Tracy",
+      "Bill Miner",
+      "Boone Helm",
+      "Henry Plummer",
+      "George Ives",
+      "Big Nose George",
+      "Jack Slade"
+    ],
+    "obscure": [
+      "Black Jack Christian",
+      "Joel Fowler"
+    ]
+  }
+}

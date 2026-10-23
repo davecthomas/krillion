@@ -1,0 +1,28 @@
+{
+  "prompt": "Name a Looney Tunes character",
+  "noun": "Looney Tunes character",
+  "domain": "film and TV",
+  "answers": {
+    "very_common": [
+      "Bugs Bunny",
+      "Daffy Duck",
+      "Porky Pig",
+      "Tweety",
+      "Sylvester",
+      "Road Runner",
+      "Wile E. Coyote",
+      "Tasmanian Devil",
+      "Elmer Fudd",
+      "Yosemite Sam"
+    ],
+    "common": [
+      "Pepé Le Pew",
+      "Speedy Gonzales",
+      "Foghorn Leghorn",
+      "Marvin the Martian"
+    ],
+    "known": [],
+    "uncommon": [],
+    "obscure": []
+  }
+}

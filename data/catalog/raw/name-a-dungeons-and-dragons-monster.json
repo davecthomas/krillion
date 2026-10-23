@@ -1,0 +1,78 @@
+{
+  "prompt": "Name a Dungeons & Dragons monster",
+  "noun": "Dungeons & Dragons monster",
+  "domain": "games and toys",
+  "answers": {
+    "very_common": [
+      "Beholder",
+      "Mind flayer",
+      "Owlbear",
+      "Lich",
+      "Gelatinous cube",
+      "Mimic",
+      "Tarrasque"
+    ],
+    "common": [
+      "Kobold",
+      "Displacer beast",
+      "Rust monster",
+      "Drow",
+      "Hobgoblin",
+      "Bugbear",
+      "Gnoll",
+      "Kuo-toa",
+      "Githyanki"
+    ],
+    "known": [
+      "Aboleth",
+      "Umber hulk",
+      "Carrion crawler",
+      "Purple worm",
+      "Roper",
+      "Death knight",
+      "Dracolich",
+      "Demilich",
+      "Duergar",
+      "Svirfneblin",
+      "Yuan-ti",
+      "Lizardfolk"
+    ],
+    "uncommon": [
+      "Bulette",
+      "Ankheg",
+      "Otyugh",
+      "Intellect devourer",
+      "Flumph",
+      "Modron",
+      "Slaad",
+      "Githzerai",
+      "Rakshasa",
+      "Pit fiend",
+      "Balor",
+      "Marilith",
+      "Succubus",
+      "Sahuagin",
+      "Kenku",
+      "Tabaxi",
+      "Aarakocra",
+      "Thri-kreen",
+      "Myconid",
+      "Shambling mound"
+    ],
+    "obscure": [
+      "Neogi",
+      "Xorn",
+      "Bodak",
+      "Vrock",
+      "Glabrezu",
+      "Quasit",
+      "Barghest",
+      "Behir",
+      "Blink dog",
+      "Phase spider",
+      "Grell",
+      "Gibbering mouther",
+      "Stirge"
+    ]
+  }
+}

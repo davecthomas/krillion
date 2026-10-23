@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a LEGO theme",
+  "noun": "Lego theme",
+  "domain": "games and toys",
+  "answers": {
+    "very_common": [
+      "Lego Star Wars",
+      "Lego City",
+      "Lego Technic",
+      "Lego Friends",
+      "Lego Ninjago",
+      "Lego Harry Potter",
+      "Lego Marvel Super Heroes",
+      "Lego Batman",
+      "Lego Creator",
+      "Lego Duplo"
+    ],
+    "common": [
+      "Lego Castle",
+      "Lego Space",
+      "Lego Pirates",
+      "Lego Bionicle",
+      "Lego Minecraft",
+      "Lego Architecture",
+      "Lego Ideas",
+      "Lego Disney",
+      "Lego Jurassic World",
+      "Lego DC Comics Super Heroes",
+      "Lego Speed Champions",
+      "Lego Mindstorms"
+    ],
+    "known": [
+      "Lego Town",
+      "Lego Train",
+      "Lego Indiana Jones",
+      "Lego The Lord of the Rings",
+      "Lego The Hobbit",
+      "Lego Super Mario",
+      "Lego Monkie Kid",
+      "Lego Hidden Side",
+      "Lego Elves",
+      "Lego Chima",
+      "Lego Exo-Force",
+      "Lego Hero Factory",
+      "Lego Atlantis",
+      "Lego Alpha Team",
+      "Lego Belville",
+      "Lego Fabuland"
+    ],
+    "uncommon": [
+      "Lego Adventurers",
+      "Lego Rock Raiders",
+      "Lego Knights' Kingdom",
+      "Lego Nexo Knights",
+      "Lego Galidor",
+      "Lego Znap"
+    ],
+    "obscure": [
+      "Lego Scala",
+      "Lego Clikits",
+      "Lego Jack Stone",
+      "Lego Mixels",
+      "Lego Vidiyo",
+      "Lego Dots",
+      "Lego Dreamzzz",
+      "Lego Brickheadz",
+      "Lego Dimensions",
+      "Lego Serious Play"
+    ]
+  }
+}

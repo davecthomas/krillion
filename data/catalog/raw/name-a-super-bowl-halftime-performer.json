@@ -54,7 +54,6 @@
       "No Doubt",
       "Sting",
       "Phil Collins",
-      "Tina Turner",
       "Boyz II Men",
       "Smokey Robinson",
       "Martha Reeves"
@@ -80,14 +79,12 @@
       "Clint Black",
       "Tony Bennett",
       "Patti LaBelle",
-      "Teddy Pendergrass",
       "Queen Latifah",
       "James Brown",
       "ZZ Top",
       "The Blues Brothers"
     ],
     "obscure": [
-      "Grambling State University Tiger Marching Band",
       "Up with People",
       "Carol Channing",
       "Ella Fitzgerald",
@@ -95,23 +92,11 @@
       "Pete Fountain",
       "Doc Severinsen",
       "Chubby Checker",
-      "Gloria Estefan",
       "Miami Sound Machine",
       "Wynonna Judd",
       "The Judds",
       "Travis Tritt",
-      "Clint Holmes",
-      "Savion Glover",
-      "Indigo Girls",
-      "Huey Lewis and the News",
-      "Marilyn McCoo",
-      "Mickey Rooney",
-      "Willie Nelson",
-      "Charlie Daniels",
-      "Kool & the Gang",
-      "Chuck Berry",
-      "Elton John",
-      "Dan Aykroyd"
+      "Savion Glover"
     ]
   }
 }

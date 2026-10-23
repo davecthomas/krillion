@@ -1,0 +1,55 @@
+{
+  "prompt": "Name a dice game",
+  "noun": "dice game",
+  "domain": "games and toys",
+  "wikipedia_category": "Category:Dice games",
+  "answers": {
+    "very_common": [
+      "Yahtzee",
+      "Craps",
+      "Farkle",
+      "Bunco",
+      "Liar's dice",
+      "Shut the box",
+      "Left Right Center",
+      "Pig"
+    ],
+    "common": [
+      "Zombie Dice",
+      "Perudo",
+      "Chuck-a-luck",
+      "Sic bo",
+      "Ship, Captain, and Crew",
+      "Bar dice",
+      "Poker dice",
+      "Cee-lo",
+      "Qwixx",
+      "Can't Stop",
+      "Yacht",
+      "Mexico",
+      "Hazard",
+      "Beetle"
+    ],
+    "known": [
+      "Balut",
+      "Generala",
+      "Chō-han",
+      "Crown and Anchor",
+      "Hoo Hey How",
+      "Cootie",
+      "Pass the Pigs",
+      "King of Tokyo",
+      "Roll Through the Ages",
+      "Bang! The Dice Game",
+      "Dice Throne",
+      "Martian Dice",
+      "Tenzi",
+      "Mia",
+      "Schocken",
+      "Meiern",
+      "Ludo"
+    ],
+    "uncommon": [],
+    "obscure": []
+  }
+}
