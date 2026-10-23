@@ -304,7 +304,7 @@
     const diving = Math.abs(camVel) > 30;
     if (diving && Math.random() < dt * 22) addBubble(x - 10 + Math.random() * 6, y - 8, 1.5 + Math.random() * 3.5);
     let tilt = Math.max(-.7, Math.min(.7, camVel / 380));
-    if (wobble > 0) { tilt += Math.sin(time * 34) * .3 * wobble; wobble = Math.max(0, wobble - dt); }
+    if (wobble > 0) { tilt += Math.sin(time * 34) * .3 * wobble; wobble = Math.max(0, wobble - dt * 1.4); }
     const wag = Math.sin(time * (diving ? 16 : 6)) * (diving ? .45 : .25);
     // A soft light around the fish keeps it visible in the dark
     glow(x, y, 70, 'rgba(255,170,190,A)', .08 + Math.min(.14, cam / 25000));
@@ -336,10 +336,12 @@
   }
 
   // ---------- Celebrations ----------
-  function effects(dt) {
+  // Motion uses the capped step (dt); lifetimes count real time (age), so
+  // popups and sparkles fade on schedule even when the browser drops frames.
+  function effects(dt, age) {
     for (let i = sparkles.length - 1; i >= 0; i--) {
       const s = sparkles[i];
-      s.life -= dt; if (s.life <= 0) { sparkles.splice(i, 1); continue; }
+      s.life -= age; if (s.life <= 0) { sparkles.splice(i, 1); continue; }
       s.vy += 40 * dt; s.x += s.vx * dt; s.y += s.vy * dt; s.rot += dt * 4;
       cx.globalAlpha = Math.min(1, s.life / s.max * 1.6);
       if (s.kind === 'diamond') {
@@ -354,7 +356,7 @@
     cx.textAlign = 'center';
     for (let i = popups.length - 1; i >= 0; i--) {
       const p = popups[i];
-      p.life -= dt; if (p.life <= 0) { popups.splice(i, 1); continue; }
+      p.life -= age; if (p.life <= 0) { popups.splice(i, 1); continue; }
       p.y -= 26 * dt;
       cx.globalAlpha = Math.min(1, p.life / .6);
       cx.font = `800 ${p.size}px Unbounded, system-ui, sans-serif`;
@@ -374,7 +376,7 @@
 
   // ---------- Loop ----------
   function frame(now) {
-    const dt = Math.min(.05, (now - last) / 1000); last = now; time += dt;
+    const age = Math.max(0, (now - last) / 1000), dt = Math.min(.05, age); last = now; time += dt;
     const prev = cam;
     if (dive) {
       const k = Math.min(1, (now - dive.start) / dive.dur);
@@ -384,7 +386,7 @@
     camVel = dt > 0 ? (cam - prev) / dt : 0;
     cx.clearRect(0, 0, W, H);
     lightRays(); plants(); jellies(); anglers(); schools(); bandMarkers();
-    marineSnow(dt); bubbleLayer(dt); fish(dt); effects(dt);
+    marineSnow(dt); bubbleLayer(dt); fish(dt); effects(dt, age);
     if (!still) requestAnimationFrame(frame);
   }
   const redraw = () => { if (still) { last = performance.now(); frame(last); } };
