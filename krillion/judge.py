@@ -48,13 +48,20 @@ def _get_client():
     return _client
 
 
-def judge(prompt: str, alts: list[str]) -> dict | None:
-    """{"name", "tier"} for a correct answer, else None."""
+def judge(prompt: str, alts: list[str], shortlist: list[str] | None = None) -> dict | None:
+    """{"name", "tier"} for a correct answer, else None. `shortlist` holds the
+    list answers closest to what was heard; when the player meant one of them,
+    the judge returns that exact name so the caller can find it on the list."""
     heard = " / ".join(f'"{a}"' for a in alts[:3])
+    near = ""
+    if shortlist:
+        near = ("\nAnswers on our list that are close to what was heard: "
+                + "; ".join(shortlist)
+                + ".\nIf the player meant one of these, return that exact name.")
     try:
         r = _get_client().send_structured_output(
             f'Trivia prompt: "{prompt}".\n'
-            f"The player said (speech-to-text alternatives, best first; may be misheard): {heard}\n"
+            f"The player said (speech-to-text alternatives, best first; may be misheard): {heard}{near}\n"
             "Is it a real, correct answer to the prompt? Be strict about correctness and generous about "
             "speech-recognition spelling. If it is, give its canonical name and how likely a typical "
             "North American adult is to say it (salience 1-5).",

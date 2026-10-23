@@ -221,7 +221,7 @@ that will replace the weights.
 | Write questions | Claude Code, `/krillion-catalog` | your Claude plan's usage, about 2,000 output tokens a question |
 | Build and package | Wikipedia, Wikidata, Google Trends and Ngram, wordfreq | free |
 | Start a game | reads the bank | free |
-| Judge an answer missing from the list | `gpt-6-luna`, thinking off | under $0.002 a game |
+| Judge an answer missing from the list | `gpt-6-luna`, thinking off, plus one embedding | under $0.002 a game |
 | Question audio, when turned on | Gemini 2.5 Pro TTS, 7 short clips | about a cent a game (check Vertex billing) |
 
 Speech recognition runs in the browser, and matching costs nothing.
@@ -233,31 +233,45 @@ someone has already given costs nothing. Entries expire after 30 days.
 
 ## Judging answers
 
-`krillion/match.py` checks what the player said against the answer list. The
-cheapest stage runs first, and each later stage runs only when the one before it
-missed:
+`krillion/match.py` checks what the player said against the answer list.
+Speech recognition sends up to five guesses, best first. The best guess goes
+through every stage below; the others may only match a name exactly, as a
+whole phrase, so a weak guess ("porties", a nickname for the Portuguese Water
+Dog) never beats a clear one ("Pyrenees"). The cheapest stage runs first:
 
 1. **Exact.** Normalize (case, accents, punctuation, filler such as "um, I'll
    say"), handle plurals, then look up the name and aliases.
-2. **Typo.** [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+2. **Partial.** The heard words appear in exactly one answer's name:
+   "Pyrenees" is Great Pyrenees.
+3. **Typo.** [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
    distance, so a swapped pair ("gouad") counts as one edit (plain Levenshtein
    counts two). The allowance grows with length: none up to 4 letters (Mali and
    Bali must stay apart), 1 up to 8, 2 beyond that. Words most answers share
    ("cake" in a cake category) earn no allowance.
-3. **Sound.** [Double Metaphone](https://en.wikipedia.org/wiki/Metaphone#Double_Metaphone)
+4. **Sound.** [Double Metaphone](https://en.wikipedia.org/wiki/Metaphone#Double_Metaphone)
    codes catch speech-recognition mishearings that edit distance cannot:
    "grew air" matches gruyère, "ketsal" matches quetzal.
+5. **Other guesses.** Exact whole-phrase matches only.
 
-The typo and sound stages never guess between two entries. A fuzzy hit counts
-only when it is closer than the best hit for any other entry.
+The partial, typo and sound stages never guess between two entries. When the
+heard words sit in several names ("water dog"), the matcher skips the fuzzy
+stages and leaves the choice to the judge.
 
 Anything still unmatched goes to the AI judge (`gpt-6-luna` with thinking off,
-about 1–2 seconds). It rates how common a valid answer is for a North American
-adult, and its best tier is Deep Cut: One in a Krillion needs a verified list
-entry. Without an OpenAI key, an answer missing from the list is a miss.
+about 1–2 seconds) with a shortlist of up to eight list answers: those whose
+names hold the heard words, then the nearest by embedding
+(`text-embedding-3-small`, `krillion/neighbors.py`). When the judge names a
+list answer, the answer scores at that entry's rank and tier: "pyrenese" is
+Great Pyrenees, #38 of 616. Otherwise it rates how common a valid answer is for
+a North American adult, and its best tier is Deep Cut: One in a Krillion needs
+a verified list entry. Without an OpenAI key, an answer missing from the list
+is a miss.
 
-Embeddings stay out of matching. They measure relatedness: Gouda and Edam sit
-close together, and merging them would wreck a game scored on rarity.
+Embeddings only build the shortlist; the judge decides. They measure
+relatedness: Gouda and Edam sit close together, and treating closeness as a
+match would wreck a game scored on rarity. Each question's answer names are
+embedded once, in one batch call (about $0.0002), when a dive starts, and kept
+in `data/cache/embeddings/`.
 
 To check matching against a built question:
 
@@ -278,6 +292,7 @@ krillion/
   bank.py         the question bank and the asked-list
   service.py      dive, judge and reveal, free of any web framework
   judge.py        AI judge for answers the list can't settle
+  neighbors.py    embedding shortlist for the judge
   match.py        exact → typo → sound matcher
   ladder.py       the slice of the answer list an answer slides into
   normalize.py    text normalization; both sides must agree on it
