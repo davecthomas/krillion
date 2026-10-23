@@ -49,7 +49,7 @@ def test_every_committed_raw_question_is_well_formed():
         assert raw["prompt"].startswith(("Name a ", "Name an ")), p.name
         assert raw["noun"] and raw.get("domain"), p.name
         assert set(raw["answers"]) <= set(catalog.SALIENCE), p.name
-        assert sum(len(v) for v in raw["answers"].values()) >= 60, p.name
+        assert sum(len(v) for v in raw["answers"].values()) >= 40, p.name  # closed lists such as the 50 states
 
 
 def test_writer_answers_land_on_the_right_article():

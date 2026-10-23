@@ -72,6 +72,9 @@ questions aloud** in Settings (the gear, top right).
   the middle of its tier, marked "new"; a skipped question shows its ladder
   with "No answer". On a screen under 1,200 px wide, the result shows the
   rank as text instead.
+- **Review, then move on.** After each question the game waits on a **Next question** button
+  (or Enter), so you can scroll the rankings and see where your answer landed. The last
+  question's button reads **See results**.
 - **End a dive early.** End dive, next to Skip, takes two presses, then jumps
   to the summary of the questions played so far.
 - **Air and speed.** The clock starts when the question appears, or after the

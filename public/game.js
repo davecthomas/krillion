@@ -320,6 +320,7 @@ async function revealFor(slug) {
 
 async function playRound() {
   const my = ++token, p = game.prompts[game.i];
+  cancelNext();
   openSection(game.i, p.prompt);
   disarmEnd();
   p.revealing = null;  // fetched at the end of the round, when the answer list is likelier to be ready
@@ -424,20 +425,29 @@ async function endRound(hit, why) {
       if (rankedFits() && slot) { played = true; await fallInto(sec, slot, land); }
     } else sectionNote(sec, 'The ranking appears when this answer list is ready.');
     if (my !== token) return;
-    if (!played) { land(); await new Promise(res => setTimeout(res, 2400)); }
-    else await new Promise(res => setTimeout(res, 1200));
-    if (my !== token) return;
+    if (!played) land();
   } else {
     box.innerHTML = `<div class="result" style="color:var(--muted)"><div class="tn">${why === 'skip' ? 'Skipped' : 'Out of air'}</div><div class="tp">${revealHTML(M.reveal, bestList)}</div></div>`;
     $('status').textContent = '';
     r.player = null;
     loadSectionLadder(game, r, game.i);
-    // Results are shown, not spoken: a beat to read them, then the next question
-    await new Promise(res => setTimeout(res, 3200)); if (my !== token) return;
   }
+  // The player moves on when ready, after a look at the rankings.
+  await waitForNext(game.i + 1 >= game.prompts.length); if (my !== token) return;
   game.i++;
   if (game.i < game.prompts.length) playRound(); else finish();
 }
+
+// Between questions the game waits for Next question (or Enter).
+let advance = null;
+function waitForNext(last) {
+  const b = $('nextBtn');
+  b.textContent = last ? 'See results' : 'Next question';
+  b.hidden = false;
+  b.focus({preventScroll: true});
+  return new Promise(res => { advance = () => { advance = null; b.hidden = true; res(); }; });
+}
+function cancelNext() { advance = null; $('nextBtn').hidden = true; }
 
 // ---------- Rankings column ----------
 // One list for the whole dive: a section per question, added as the question
@@ -540,7 +550,7 @@ function endEarly() {
     endArmed = setTimeout(disarmEnd, 3000);
     return;
   }
-  disarmEnd();
+  disarmEnd(); cancelNext();
   token++; timer.running = false; judging = false; phase = 'done';
   stopRec(); stopVoice();
   game.endedEarly = true;
@@ -606,7 +616,7 @@ const shareText = (m, band, rounds, sc = 'rare') =>
   `1 in a Krillion · voice · ${MODES[sc].label}\n${fmt(m)} m · ${band}\n${rounds.map(r => r.tier >= 0 ? MODES[sc].tiers[r.tier].emoji : '⬛').join('')}`;
 
 function home() {
-  token++; state = 'start'; stopRec(); timer.running = false; stopVoice();
+  token++; state = 'start'; stopRec(); timer.running = false; stopVoice(); cancelNext();
   setDepth(0); show('start');
 }
 
@@ -646,6 +656,11 @@ addEventListener('keydown', e => {
   if (e.code !== 'Space' || typing(document.activeElement) || state !== 'play' || settings.open) return;
   e.preventDefault(); if (!e.repeat) talkDown();
 });
+addEventListener('keydown', e => {
+  if (e.key === 'Enter' && advance && state === 'play' && !typing(document.activeElement) && !settings.open) {
+    e.preventDefault(); advance();
+  }
+});
 addEventListener('keyup', e => { if (e.code === 'Space' && holding) { e.preventDefault(); talkUp(); } });
 addEventListener('blur', talkUp);  // switching windows mid-hold must not leave the mic open
 const tb = $('talkBtn');
@@ -655,6 +670,7 @@ tb.addEventListener('contextmenu', e => e.preventDefault());
 $('homeBtn').onclick = home;
 $('repeatBtn').onclick = repeat;
 $('endBtn').onclick = endEarly;
+$('nextBtn').onclick = () => { if (advance) advance(); };
 $('skipBtn').onclick = () => { if (state === 'play' && phase === 'answer') endRound(null, 'skip'); };
 $('typeForm').addEventListener('submit', e => { e.preventDefault(); const v = $('typeInput').value.trim(); if (!v) return; $('typeInput').value = ''; heard([v], true); });
 $('copyBtn').onclick = () => {
