@@ -103,14 +103,30 @@ def _on_topic(title: str, description: str, noun: str) -> bool:
 # Descriptions of things that are clearly not a member of any game category:
 # places, people, organizations and works. "Cheddar" the village, "Goa" the
 # state and "Third Reich" (Nazi Germany) all match.
-_OTHER_MEANING = re.compile(
-    r"\b(village|town|city|state|county|region|commune|municipality|province|district|capital|country|"
-    r"island|river|neighbo(u)?rhood|suburb|borough|parish|department|prefecture|territory|kingdom|empire|"
-    r"politician|actor|actress|singer|rapper|footballer|player|businessman|businesswoman|writer|author|"
-    r"poet|painter|musician|band|album|song|film|television series|tv series|novel|book|magazine|"
-    r"newspaper|website|political party|organization|organisation|surname|given name|disambiguation|"
-    r"general|statesman|dictator|military leader)\b",
-    re.IGNORECASE)
+_NOT_A_THING = r"surname|given name|disambiguation"
+_PLACES = (r"village|town|city|state|county|region|commune|municipality|province|district|capital|country|"
+           r"island|river|neighbo(u)?rhood|suburb|borough|parish|department|prefecture|territory|kingdom|empire")
+_PEOPLE_AND_WORKS = (r"politician|actor|actress|singer|rapper|footballer|player|businessman|businesswoman|"
+                     r"writer|author|poet|painter|musician|band|album|song|film|television series|tv series|"
+                     r"novel|book|magazine|newspaper|website|political party|organization|organisation|"
+                     r"general|statesman|dictator|military leader")
+_OTHER_MEANING = re.compile(rf"\b({_NOT_A_THING}|{_PLACES}|{_PEOPLE_AND_WORKS})\b", re.IGNORECASE)
+# Where people and works are the members (a band among one-hit wonders, a
+# film among horror films), only a place is clearly something else; in
+# history and myth, empires and kingdoms are members too.
+_OTHER_MEANING_FOR_PEOPLE = re.compile(rf"\b({_NOT_A_THING}|{_PLACES})\b", re.IGNORECASE)
+_OTHER_MEANING_FOR_HISTORY = re.compile(rf"\b({_NOT_A_THING})\b", re.IGNORECASE)
+PEOPLE_DOMAINS = {"music", "film and TV", "movies and tv", "people", "sports", "books", "theater", "arts",
+                  "art and architecture", "games and toys"}
+HISTORY_DOMAINS = {"history", "mythology and religion"}
+
+
+def _other_meaning(domain: str | None) -> re.Pattern:
+    if domain in HISTORY_DOMAINS:
+        return _OTHER_MEANING_FOR_HISTORY
+    if domain in PEOPLE_DOMAINS:
+        return _OTHER_MEANING_FOR_PEOPLE
+    return _OTHER_MEANING
 
 
 def _plausible(title: str, description: str, noun: str) -> bool:
@@ -134,7 +150,7 @@ def _in_place(title: str, description: str, place: str) -> bool:
     return all(w in text for w in words(place))
 
 
-_QUALIFIERS = ("fruit", "plant", "vegetable", "food", "dish", "animal")
+_QUALIFIERS = ("fruit", "plant", "vegetable", "food", "dish", "animal", "character", "band")
 
 
 def _tries(name: str, noun: str) -> list[str]:
@@ -170,7 +186,7 @@ LIVING_DOMAINS = {"animals", "plants", "nature", "food and drink"}
 
 
 def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str,
-                  living: bool = True) -> str | None:
+                  living: bool = True, domain: str | None = None) -> str | None:
     """First candidate whose description names the noun; failing that, the
     first that is not clearly something else (a place, person or work).
     Broad categories need the fallback: Wikipedia calls most vegetables
@@ -189,7 +205,7 @@ def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, st
             return art
     for art in found:
         d = desc.get(art, "")
-        if _OTHER_MEANING.search(d) or (not living and _SPECIES.search(d)):
+        if _other_meaning(domain).search(d) or (not living and _SPECIES.search(d)):
             continue
         return art
     return None
@@ -246,14 +262,14 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     desc = wiki.descriptions(sorted(set(resolved.values())))
     living = raw["domain"] in LIVING_DOMAINS
     for a in answers:
-        a["article"] = _pick_article(a["_try"], resolved, desc, noun, living)
+        a["article"] = _pick_article(a["_try"], resolved, desc, noun, living, raw["domain"])
     missed = [a for a in answers if not a["article"]]
     if missed:
         more = wiki.resolve([t for a in missed for t in _second_tries(a["name"], noun)])
         resolved.update(more)
         desc.update(wiki.descriptions(sorted(set(more.values()) - set(desc))))
         for a in missed:
-            a["article"] = _pick_article(a["_try"] + _second_tries(a["name"], noun), resolved, desc, noun, living)
+            a["article"] = _pick_article(a["_try"] + _second_tries(a["name"], noun), resolved, desc, noun, living, raw["domain"])
     for a in answers:
         del a["_try"]
 
