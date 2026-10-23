@@ -1,7 +1,10 @@
 """Record questions with Gemini TTS on Vertex AI, once per voice and accent.
 
-Clips live at public/audio/<voice>-<accent>/<slug>.mp3. The server records a
-missing clip the first time someone asks for it, then serves the file. The
+Clips live at public/audio/<voice>-<accent>/<slug>.mp3. Recording is just in
+time: the page asks for each question's clip while the player answers the one
+before (a clip takes about 4 seconds, a round 25 or more), which keeps Vertex
+requests to about one every 30 seconds. The server records a missing clip the
+first time someone asks for it, then serves the file. The
 set of clips is bounded (categories x voices x accents), so the endpoint can't
 be used to synthesize arbitrary text.
 """
@@ -11,7 +14,6 @@ from __future__ import annotations
 import logging
 import threading
 import uuid
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from . import voices
@@ -21,26 +23,44 @@ STYLE = ("You are the warm, upbeat host of a deep-sea trivia game show, asking t
          "Clear and lively, a little playful, never shouty.")
 
 log = logging.getLogger(__name__)
-_client = None
+# Vertex limits requests per minute per model. When the Pro voice model hits its
+# quota, the Flash model (a separate quota) records the clip instead.
+FALLBACK_MODEL = "gemini-2.5-flash-tts"
+_clients: dict[str, object] = {}
 _client_lock = threading.Lock()
 _path_locks: dict[Path, threading.Lock] = {}
 _locks_lock = threading.Lock()
-_warming: set[str] = set()
-_pool = ThreadPoolExecutor(max_workers=3, thread_name_prefix="tts-warm")
 
 
 def clip_path(slug: str, voice: str, accent: str) -> Path:
     return AUDIO / voices.folder(voice, accent) / f"{slug}.mp3"
 
 
-def _get_client():
-    global _client
+def _get_client(model: str | None = None):
     with _client_lock:
-        if _client is None:
+        key = model or "default"
+        if key not in _clients:
             from ai_api_unified import AIFactory  # imported lazily: playing needs no TTS setup
 
-            _client = AIFactory.get_ai_voice_client(voice_engine="google")
-        return _client
+            client = AIFactory.get_ai_voice_client(voice_engine="google")
+            if model:
+                client.selected_model = next(m for m in client.list_models_capabilities if m.name == model)
+            _clients[key] = client
+        return _clients[key]
+
+
+def _over_quota(exc: Exception) -> bool:
+    text = str(exc)
+    return getattr(exc, "code", None) == 429 or "429" in text or "Quota exceeded" in text
+
+
+def _synthesize(client, prompt: str, voice: str, accent: str) -> bytes:
+    lang, _, adjective = voices.ACCENTS[accent]
+    selection = client.get_voice_by_name(voice).model_copy(update={"locale": lang, "language": lang})
+    fmt = next(f for f in client.list_output_formats if f.key == "mp3_24000")
+    return client.text_to_voice_with_emotion_prompt(
+        emotion_prompt=f"{STYLE} Speak with {adjective} English accent.",
+        text_to_convert=f"{prompt}.", voice=selection, audio_format=fmt)
 
 
 def _lock_for(path: Path) -> threading.Lock:
@@ -54,13 +74,13 @@ def record(slug: str, prompt: str, voice: str, accent: str, *, force: bool = Fal
     with _lock_for(path):
         if path.exists() and not force:
             return path
-        client = _get_client()
-        lang, _, adjective = voices.ACCENTS[accent]
-        selection = client.get_voice_by_name(voice).model_copy(update={"locale": lang, "language": lang})
-        fmt = next(f for f in client.list_output_formats if f.key == "mp3_24000")
-        audio = client.text_to_voice_with_emotion_prompt(
-            emotion_prompt=f"{STYLE} Speak with {adjective} English accent.",
-            text_to_convert=f"{prompt}.", voice=selection, audio_format=fmt)
+        try:
+            audio = _synthesize(_get_client(), prompt, voice, accent)
+        except Exception as exc:
+            if not _over_quota(exc):
+                raise
+            log.warning("TTS quota reached; recording %s with %s", slug, FALLBACK_MODEL)
+            audio = _synthesize(_get_client(FALLBACK_MODEL), prompt, voice, accent)
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_name(f"{path.stem}.{uuid.uuid4().hex}.tmp")
         tmp.write_bytes(audio)
@@ -74,27 +94,3 @@ PREVIEW_TEXT = "Welcome to Krillion. Here comes your first question."
 def record_preview(voice: str, accent: str) -> Path:
     """A short greeting for the voice picker's Preview button."""
     return record("_preview", PREVIEW_TEXT.rstrip("."), voice, accent)
-
-
-def warm(voice: str, accent: str, prompts: dict[str, str]) -> bool:
-    """Record a game's questions in the background, so each is ready before
-    it is asked. Returns False if this voice is already warming up."""
-    key = voices.folder(voice, accent) + ":" + ",".join(sorted(prompts))
-    with _locks_lock:
-        if key in _warming:
-            return False
-        _warming.add(key)
-
-    def run() -> None:
-        try:
-            for slug, prompt in prompts.items():
-                if not clip_path(slug, voice, accent).exists():
-                    record(slug, prompt, voice, accent)
-        except Exception:
-            log.exception("warming %s failed", key)
-        finally:
-            with _locks_lock:
-                _warming.discard(key)
-
-    _pool.submit(run)
-    return True

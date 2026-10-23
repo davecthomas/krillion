@@ -49,13 +49,14 @@ class Handler(SimpleHTTPRequestHandler):
         q = {k: v[0] for k, v in parse_qs(url.query).items()}
         try:
             if url.path == "/api/dive":
-                voice, accent = voices.resolve(q.get("voice"), q.get("accent"))
+                voices.resolve(q.get("voice"), q.get("accent"))  # reject unknown voices early
+                # Questions are recorded just in time: the page asks for each
+                # question's clip while the player answers the one before.
                 try:
                     game = service.dive()
                 except Exception:
                     log.exception("generating a game failed")
                     return self._json(503, {"error": "Couldn't generate new questions. Try again in a moment."})
-                tts.warm(voice, accent, {p["slug"]: p["prompt"] for p in game["prompts"]})
                 return self._json(200, game)
             if url.path == "/api/reveal":
                 return self._json(200, service.reveal(q.get("slug", "")))
