@@ -33,8 +33,8 @@ the question again or "skip" to pass, or type in the answer box.
   while you play the current one, so a new dive usually starts at once.
 - **Voice out, for the question only.** Gemini TTS on Vertex AI reads each
   question, directed as an upbeat game-show host. Pick any of 30 Gemini voices
-  and an American, British, Australian or Indian accent on the start screen,
-  and press **Preview** to hear it. The server records each question in the
+  and an American, British, Australian or Indian accent under **Settings**
+  (the gear, top right), and press **Preview** to hear it. The server records each question in the
   chosen voice in about 4 seconds, in the background while you play. When a
   recording fails, the browser's own speech reads the question in the chosen
   accent. Results appear on screen with a chime; the game never speaks them.

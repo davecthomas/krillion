@@ -219,7 +219,12 @@ function orb() {
   if ($('talkBtn')) talkUI();
 }
 
-function show(id) { ['start', 'play', 'end'].forEach(s => $(s).hidden = s !== id); $('pips').hidden = id !== 'play'; }
+function show(id) {
+  ['start', 'play', 'end'].forEach(s => $(s).hidden = s !== id);
+  $('pips').hidden = id !== 'play';
+  // Settings are for between dives: opening them mid-question would eat air
+  $('settingsBtn').hidden = id === 'play';
+}
 function pips() {
   $('pips').innerHTML = game.prompts.map((_, i) => {
     const r = game.rounds[i]; const c = r ? (r.tier >= 0 ? TS[r.tier].c : 'var(--line)') : 'transparent';
@@ -400,10 +405,17 @@ $('againBtn').onclick = () => startGame();
 $('voiceSel').onchange = chooseVoice; $('accentSel').onchange = chooseVoice;
 $('previewBtn').onclick = previewVoice;
 
+// Settings dialog: the gear opens it; Escape, the close button or a click on
+// the backdrop closes it.
+const settings = $('settings');
+$('settingsBtn').onclick = () => settings.showModal();
+settings.addEventListener('click', e => { if (e.target === settings) settings.close(); });
+settings.addEventListener('close', () => { stopVoice(); $('settingsBtn').focus(); });
+
 // Push to talk: hold Space anywhere except while typing, or hold the button
 const typing = el => el && (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA');
 addEventListener('keydown', e => {
-  if (e.code !== 'Space' || typing(document.activeElement) || state !== 'play') return;
+  if (e.code !== 'Space' || typing(document.activeElement) || state !== 'play' || settings.open) return;
   e.preventDefault(); if (!e.repeat) talkDown();
 });
 addEventListener('keyup', e => { if (e.code === 'Space' && holding) { e.preventDefault(); talkUp(); } });
