@@ -99,14 +99,38 @@ def _on_topic(title: str, description: str, noun: str) -> bool:
     return all(text & _forms(w) for w in words(noun))
 
 
+# Descriptions of things that are clearly not a member of any game category:
+# places, people, organizations and works. "Cheddar" the village, "Goa" the
+# state and "Third Reich" (Nazi Germany) all match.
+_OTHER_MEANING = re.compile(
+    r"\b(village|town|city|state|county|region|commune|municipality|province|district|capital|country|"
+    r"island|river|neighbo(u)?rhood|suburb|borough|parish|department|prefecture|territory|kingdom|empire|"
+    r"politician|actor|actress|singer|rapper|footballer|player|businessman|businesswoman|writer|author|"
+    r"poet|painter|musician|band|album|song|film|television series|tv series|novel|book|magazine|"
+    r"newspaper|website|political party|organization|organisation|surname|given name|disambiguation)\b",
+    re.IGNORECASE)
+
+
 def _plausible(title: str, description: str, noun: str) -> bool:
-    """The lenient check for the writer's own answers: the title or short
-    description uses any word of the noun ("Strategy board game" for chess),
-    or the article has no description to go on."""
-    if not description:
-        return True
+    """The writer's answer landed on an article about the noun: the title or
+    short description uses a word of the noun ("Strategy board game")."""
     text = set(words(title)) | set(words(description))
     return any(text & _forms(w) for w in words(noun))
+
+
+def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str) -> str | None:
+    """First candidate whose description names the noun; failing that, the
+    first that is not clearly something else (a place, person or work).
+    Broad categories need the fallback: Wikipedia calls most vegetables
+    "Species of plant", never "vegetable"."""
+    found = [resolved[t] for t in tries if t in resolved]
+    for art in found:
+        if _plausible(art, desc.get(art, ""), noun):
+            return art
+    for art in found:
+        if not _OTHER_MEANING.search(desc.get(art, "")):
+            return art
+    return None
 
 
 def _extra_members(raw: dict, noun: str, known: set[str]) -> list[dict]:
@@ -161,8 +185,7 @@ def package(raw: dict, *, use_trends: bool = True) -> dict:
     # candidate whose short description is about the noun.
     desc = wiki.descriptions(sorted(set(resolved.values())))
     for a in answers:
-        a["article"] = next((resolved[t] for t in a.pop("_try")
-                             if t in resolved and _plausible(resolved[t], desc.get(resolved[t], ""), noun)), None)
+        a["article"] = _pick_article(a.pop("_try"), resolved, desc, noun)
 
     known_articles = {a["article"] for a in answers if a["article"]}
     known_names = {a["name"] for a in answers}

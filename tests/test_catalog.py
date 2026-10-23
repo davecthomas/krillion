@@ -52,16 +52,17 @@ def test_every_committed_raw_question_is_well_formed():
         assert sum(len(v) for v in raw["answers"].values()) >= 60, p.name
 
 
-@pytest.mark.parametrize("title, description, noun, ok", [
-    ("Chess", "Strategy board game", "board game", True),
-    ("Nazi Germany", "German state from 1933 to 1945", "board game", False),
-    ("Goa", "State in India", "board game", False),
-    ("Cheddar, Somerset", "Village in Somerset, England", "cheese", False),
-    ("Cheddar cheese", "Hard English cheese", "cheese", True),
-    ("Some article", "", "cheese", True),  # nothing to judge by
-])
-def test_writer_answers_must_land_on_an_article_about_the_noun(title, description, noun, ok):
-    assert catalog._plausible(title, description, noun) is ok
+def test_writer_answers_land_on_the_right_article():
+    resolved = {"Cheddar (cheese)": "Cheddar cheese", "Cheddar": "Cheddar, Somerset",
+                "Goa": "Goa", "Carrot": "Carrot", "Bur oak": "Quercus macrocarpa"}
+    desc = {"Cheddar cheese": "Hard English cheese", "Cheddar, Somerset": "Village in Somerset, England",
+            "Goa": "State in India", "Carrot": "Root vegetable",
+            "Quercus macrocarpa": "Species of oak native to North America"}
+    pick = catalog._pick_article
+    assert pick(["Cheddar", "Cheddar (cheese)"], resolved, desc, "cheese") == "Cheddar cheese"  # noun match wins
+    assert pick(["Goa (board game)", "Goa"], resolved, desc, "board game") is None  # a state, not a game
+    assert pick(["Bur oak"], resolved, desc, "tree") == "Quercus macrocarpa"  # no noun, but nothing else either
+    assert pick(["Carrot"], resolved, desc, "vegetable") == "Carrot"
 
 
 def test_stars_and_galaxies_are_not_constellations():
