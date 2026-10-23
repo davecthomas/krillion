@@ -235,9 +235,16 @@ function show(id) {
   $('settingsBtn').hidden = id === 'play';
   // The dive log sits beside the game while playing; the end screen has the full summary
   $('side').hidden = id !== 'play';
-  document.querySelector('.app').classList.toggle('playing', id === 'play');
-  if (window.Ocean) Ocean.layout();
+  $('ladder').hidden = id !== 'play';
+  const app = document.querySelector('.app');
+  app.classList.toggle('playing', id === 'play');
+  app.classList.toggle('ranked', id === 'play' && rankedFits());
+  // While the rankings column is up, its fish is the one that dives
+  if (window.Ocean) { Ocean.setFishVisible(!(id === 'play' && rankedFits())); Ocean.layout(); }
 }
+const wide = matchMedia('(min-width: 1200px)');
+const rankedFits = () => wide.matches;
+wide.addEventListener('change', () => { if (state === 'play') show('play'); });
 function pips() {
   $('pips').innerHTML = game.prompts.map((_, i) => {
     const r = game.rounds[i]; const c = r ? (r.tier >= 0 ? TS[r.tier].c : 'var(--line)') : 'transparent';
@@ -289,8 +296,9 @@ function beginDive() {
   if (actx && actx.state === 'suspended') actx.resume();
   if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {});
   TS = MODES[scoring].tiers;
-  game = {scoring, prompts: readyPrompts, i: 0, rounds: [], score: 0};
+  game = {scoring, prompts: readyPrompts, i: 0, rounds: [], score: 0, sections: []};
   readyPrompts = null;
+  $('ladderList').innerHTML = '';
   state = 'play';
   renderSide(); setDepth(0); show('play'); playRound();
 }
@@ -310,6 +318,8 @@ async function revealFor(slug) {
 
 async function playRound() {
   const my = ++token, p = game.prompts[game.i];
+  openSection(game.i, p.prompt);
+  disarmEnd();
   p.revealing = null;  // fetched at the end of the round, when the answer list is likelier to be ready
   phase = 'speaking'; judging = false;
   $('roundLabel').textContent = `Prompt ${game.i + 1} of ${game.prompts.length} · ${MODES[game.scoring].label}`;
@@ -363,7 +373,7 @@ async function heard(alts, typed) {
   try { r = await api('/api/judge', {slug: p.slug, alts}); } catch (e) {}
   judging = false;
   if (my !== token || state !== 'play') return;
-  if (r && r.hit) { endRound({tier: r.hit.tier, display: r.hit.name}); return; }
+  if (r && r.hit) { endRound({id: r.hit.id, tier: r.hit.tier, display: r.hit.name, ladder: r.hit.ladder}); return; }
   orb();
   wrong(raw);
 }
@@ -395,23 +405,151 @@ async function endRound(hit, why) {
   if (r.pending) watchReveal(game, r);
   const box = $('resultBox'); box.hidden = false;
   if (hit) {
-    const t = TS[hit.tier]; chime(Math.round(t.pts / 20));
-    if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4);
-    box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
+    const t = TS[hit.tier];
+    const lad = hit.ladder;
+    const rankText = lad ? (lad.rank ? ` · #${lad.rank} of ${lad.total}` : ' · not on the list') : '';
+    box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)}${rankText} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
     $('status').textContent = 'Got it.';
+    // The fish falls through a slice of the answer list and slots in at the
+    // answer's rank; the celebration fires as it lands. Without room for the
+    // ladder (narrow screens) it celebrates straight away.
+    const land = at => { chime(Math.round(t.pts / 20)); if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4, at); };
+    const sec = game.sections[game.i];
+    r.answerId = hit.id; r.player = {name: hit.display, tier: hit.tier};
+    let played = false;
+    if (lad) {
+      const slot = fillSection(sec, lad, r.player);
+      if (rankedFits() && slot) { played = true; await fallInto(sec, slot, land); }
+    } else sectionNote(sec, 'The ranking appears when this answer list is ready.');
+    if (my !== token) return;
+    if (!played) { land(); await new Promise(res => setTimeout(res, 2400)); }
+    else await new Promise(res => setTimeout(res, 1200));
+    if (my !== token) return;
   } else {
     box.innerHTML = `<div class="result" style="color:var(--muted)"><div class="tn">${why === 'skip' ? 'Skipped' : 'Out of air'}</div><div class="tp">${revealHTML(M.reveal, bestList)}</div></div>`;
     $('status').textContent = '';
+    r.player = null;
+    loadSectionLadder(game, r, game.i);
+    // Results are shown, not spoken: a beat to read them, then the next question
+    await new Promise(res => setTimeout(res, 3200)); if (my !== token) return;
   }
-  // Results are shown, not spoken: a beat to read them, then the next question
-  await new Promise(res => setTimeout(res, hit ? 2400 : 3200)); if (my !== token) return;
   game.i++;
   if (game.i < game.prompts.length) playRound(); else finish();
 }
 
+// ---------- Rankings column ----------
+// One list for the whole dive: a section per question, added as the question
+// starts, so the list grows and scrolls up as you play. Scroll back any time.
+const FISH_SVG = `<svg class="lqFish" viewBox="0 0 40 30" aria-hidden="true"><path d="M9 15 1 7v16z" fill="#ff6f8f"/><path d="M14 4q6-6 12 0z" fill="#ff6f8f"/><ellipse cx="22" cy="15" rx="15" ry="11" fill="#ff8aa3"/><ellipse cx="23" cy="19" rx="10" ry="5" fill="#ffe9ee" opacity=".6"/><circle cx="29" cy="12" r="4.3" fill="#fff"/><circle cx="30" cy="12.3" r="2.4" fill="#1d2433"/><circle cx="30.8" cy="11.2" r=".9" fill="#fff"/><ellipse cx="28" cy="18" rx="2.6" ry="1.5" fill="#ff7896" opacity=".7"/></svg>`;
+
+function openSection(i, prompt) {
+  const list = $('ladderList');
+  const sec = document.createElement('section');
+  sec.className = 'lq';
+  sec.innerHTML = `<h4 class="lqHead"><span class="lqNum">${i + 1}</span><span>${esc(prompt)}</span></h4><ol class="lqRows"></ol><div class="lqNote">Answering…</div>`;
+  list.appendChild(sec);
+  game.sections[i] = sec;
+  list.scrollTo({top: list.scrollHeight, behavior: still ? 'auto' : 'smooth'});  // the newest question scrolls into view
+}
+function sectionNote(sec, text) { if (sec) sec.querySelector('.lqNote').textContent = text; }
+
+// Fill a section with its ladder; returns the player's (still closed) slot
+function fillSection(sec, lad, player) {
+  if (!sec || !lad) return null;
+  const ol = sec.querySelector('.lqRows');
+  const withSlot = player && lad.position != null;
+  const items = withSlot ? [...lad.rows.slice(0, lad.position), {player: true, tier: player.tier}, ...lad.rows.slice(lad.position)] : lad.rows;
+  let prev = null, slot = null, html = '';
+  for (const it of items) {
+    if (it.tier !== prev) { html += `<li class="lqTier" style="color:${TS[it.tier].c}">${TS[it.tier].name}</li>`; prev = it.tier; }
+    if (it.player) html += `<li class="lqSlot" style="--c:${TS[player.tier].c}"><span class="pill">${esc(player.name)}</span><span class="rk">${lad.rank ? '#' + lad.rank : 'new'}</span></li>`;
+    else html += `<li class="lqRow"><span class="nm">${esc(it.name)}</span><span class="rk">#${it.rank}</span></li>`;
+  }
+  ol.innerHTML = html;
+  if (withSlot) slot = ol.querySelector('.lqSlot');
+  sectionNote(sec, !player ? 'No answer' : lad.rank ? `Your answer ranked #${lad.rank} of ${lad.total}` : 'Not on the list: placed by the AI judge');
+  return slot;
+}
+
+// The fish falls past the words and slides into the answer's slot
+function fallInto(sec, slot, onLand) {
+  return new Promise(resolve => {
+    const list = $('ladderList');
+    sec.insertAdjacentHTML('beforeend', FISH_SVG);
+    const fish = sec.lastElementChild;
+    const startY = sec.querySelector('.lqHead').offsetTop, target = slot.offsetTop;
+    const span = Math.max(1, target - startY);
+    const dur = Math.min(1700, 700 + span * 2.2);
+    let landed = false;
+    const land = () => {
+      if (landed) return; landed = true;
+      slot.classList.add('open');
+      slot.scrollIntoView({block: 'nearest', behavior: still ? 'auto' : 'smooth'});
+      const b = slot.getBoundingClientRect();
+      onLand({x: b.left + 16, y: b.top + 15});
+      setTimeout(resolve, 350);
+    };
+    list.scrollTo({top: Math.max(0, sec.offsetTop - 8), behavior: still ? 'auto' : 'smooth'});
+    if (still) { fish.style.transform = `translateY(${target}px)`; land(); return; }
+    // Words wiggle as the fish brushes past them
+    for (const row of sec.querySelectorAll('.lqRow')) {
+      if (row.offsetTop >= target) continue;
+      const k = (row.offsetTop - startY) / span;
+      setTimeout(() => row.classList.add('brush'), dur * Math.sqrt(Math.max(0, k)));
+    }
+    fish.animate(
+      [{transform: `translateY(${startY}px) rotate(40deg)`}, {transform: `translateY(${target}px) rotate(0deg)`}],
+      {duration: dur, easing: 'cubic-bezier(.5,0,.7,1)', fill: 'forwards'},
+    ).finished.then(land, land);
+    // Browsers pause animations in background tabs; land on schedule anyway
+    setTimeout(() => { fish.style.transform = `translateY(${target}px)`; land(); }, dur + 250);
+  });
+}
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// A section without a ladder yet (skipped, or the list was still building):
+// fetch it, waiting for the list if needed
+async function loadSectionLadder(g, r, i) {
+  const q = new URLSearchParams({slug: r.slug});
+  if (r.answerId) q.set('answer', r.answerId); else if (r.player) q.set('tier', r.player.tier);
+  for (let n = 0; n < 60; n++) {
+    let res = null;
+    try { res = await api('/api/ladder?' + q); } catch (e) { return; }
+    if (game !== g) return;
+    if (!res.pending) {
+      if (res.ladder) { const slot = fillSection(g.sections[i], res.ladder, r.player); if (slot) slot.classList.add('open'); }
+      else sectionNote(g.sections[i], r.player ? '' : 'No answer');
+      return;
+    }
+    sectionNote(g.sections[i], 'Waiting for this answer list…');
+    await new Promise(res2 => setTimeout(res2, 4000));
+  }
+}
+
+// ---------- End a dive early ----------
+// Two presses, so a stray click can't end the game
+let endArmed = null;
+function disarmEnd() { clearTimeout(endArmed); endArmed = null; const b = $('endBtn'); b.textContent = 'End dive'; b.classList.remove('confirm'); }
+function endEarly() {
+  if (state !== 'play') return;
+  const b = $('endBtn');
+  if (!endArmed) {
+    b.textContent = 'Press again to end'; b.classList.add('confirm');
+    endArmed = setTimeout(disarmEnd, 3000);
+    return;
+  }
+  disarmEnd();
+  token++; timer.running = false; judging = false; phase = 'done';
+  stopRec(); stopVoice();
+  game.endedEarly = true;
+  finish();
+}
+
 function finish() {
   state = 'end'; const m = game.score * 4, band = bandFor(m);
-  $('endLabel').textContent = `Dive complete · ${MODES[game.scoring].label}`;
+  $('endLabel').textContent = game.endedEarly
+    ? `Dive ended early · ${game.rounds.length} of ${game.prompts.length} questions · ${MODES[game.scoring].label}`
+    : `Dive complete · ${MODES[game.scoring].label}`;
   $('endDepth').innerHTML = `${fmt(m)}<span>m</span>`; $('endBand').textContent = band;
   renderLog(game.rounds);
   $('share').textContent = shareText(m, band, game.rounds, game.scoring);
@@ -450,6 +588,7 @@ async function watchReveal(g, r) {
     if (rv.pending) continue;
     r.krills = g.scoring === 'rare' ? rv.krillion : rv.top; r.krill = r.krills[0] || ''; r.pending = false;
     renderSide();
+    if (r.player) loadSectionLadder(g, r, g.rounds.indexOf(r));
     if (state === 'end') renderLog(g.rounds);
   }
 }
@@ -513,6 +652,7 @@ tb.addEventListener('pointerdown', e => { e.preventDefault(); tb.setPointerCaptu
 tb.addEventListener('contextmenu', e => e.preventDefault());
 $('homeBtn').onclick = home;
 $('repeatBtn').onclick = repeat;
+$('endBtn').onclick = endEarly;
 $('skipBtn').onclick = () => { if (state === 'play' && phase === 'answer') endRound(null, 'skip'); };
 $('typeForm').addEventListener('submit', e => { e.preventDefault(); const v = $('typeInput').value.trim(); if (!v) return; $('typeInput').value = ''; heard([v], true); });
 $('copyBtn').onclick = () => {

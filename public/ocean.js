@@ -29,6 +29,7 @@
   let dive = null;               // {from, to, start, dur}
   let time = 0, last = performance.now();
   let wobble = 0;                // seconds of "no!" head-shake left
+  let fishVisible = true;        // hidden while the rankings column has its own fish
   const bubbles = [], sparkles = [], popups = [], snow = [];
 
   // Seeded random numbers, so the world looks the same every visit
@@ -360,13 +361,13 @@
       p.y -= 26 * dt;
       cx.globalAlpha = Math.min(1, p.life / .6);
       cx.font = `800 ${p.size}px Unbounded, system-ui, sans-serif`;
-      cx.fillStyle = p.color; cx.fillText(p.text, p.x, p.y);
+      const half = cx.measureText(p.text).width / 2 + 6;  // keep it on screen
+      cx.fillStyle = p.color; cx.fillText(p.text, Math.max(half, Math.min(W - half, p.x)), p.y);
       cx.globalAlpha = 1;
     }
     cx.textAlign = 'left';
   }
-  function burst(n, kind, colors, speed) {
-    const {x, y} = fishPos();
+  function burst(n, kind, colors, speed, x, y) {
     for (let i = 0; i < n; i++) {
       const a = Math.random() * TAU, v = speed * (.4 + Math.random() * .8);
       sparkles.push({x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - speed * .3, r: 3 + Math.random() * 4,
@@ -375,7 +376,9 @@
   }
 
   // ---------- Loop ----------
-  function frame(now) {
+  let manual = false;  // set by the test hook: only stepped frames draw
+  function frame(now, stepped) {
+    if (manual && !stepped) { requestAnimationFrame(frame); return; }
     const age = Math.max(0, (now - last) / 1000), dt = Math.min(.05, age); last = now; time += dt;
     const prev = cam;
     if (dive) {
@@ -386,8 +389,10 @@
     camVel = dt > 0 ? (cam - prev) / dt : 0;
     cx.clearRect(0, 0, W, H);
     lightRays(); plants(); jellies(); anglers(); schools(); bandMarkers();
-    marineSnow(dt); bubbleLayer(dt); fish(dt); effects(dt, age);
-    if (!still) requestAnimationFrame(frame);
+    marineSnow(dt); bubbleLayer(dt);
+    if (fishVisible) fish(dt);
+    effects(dt, age);
+    if (!still && !stepped) requestAnimationFrame(frame);
   }
   const redraw = () => { if (still) { last = performance.now(); frame(last); } };
 
@@ -401,14 +406,15 @@
       const dur = m < cam ? 1300 : Math.min(3200, 900 + dist * 2.4);
       dive = {from: cam, to: m, start: performance.now(), dur};
     },
-    celebrate(points, metres) {
-      const {x, y} = fishPos();
+    // at: {x, y} on screen to celebrate somewhere other than the ocean fish
+    celebrate(points, metres, at) {
+      const {x, y} = at || fishPos();
       popups.push({text: `+${metres} m`, x, y: y - 34, life: 1.8, size: 15, color: '#e9f7f6'});
       if (still) { redraw(); return; }
       for (let i = 0; i < 6 + points / 10; i++) addBubble(x + (Math.random() - .5) * 30, y, 2 + Math.random() * 5);
-      if (points >= 60) burst(points >= 85 ? 26 : 14, 'star', ['#5fe3d2', '#c8b8ff', '#fff6b0'], 120);
+      if (points >= 60) burst(points >= 85 ? 26 : 14, 'star', ['#5fe3d2', '#c8b8ff', '#fff6b0'], 120, x, y);
       if (points >= 100) {
-        burst(30, 'diamond', ['#ff8a9e', '#8fd0ff', '#5fe3d2'], 170);
+        burst(30, 'diamond', ['#ff8a9e', '#8fd0ff', '#5fe3d2'], 170, x, y);
         popups.push({text: '💎 One in a Krillion', x, y: y + 52, life: 2.4, size: 13, color: '#ff8a9e'});
       }
     },
@@ -420,6 +426,11 @@
       redraw();
     },
     layout() { layout(); redraw(); },
+    setFishVisible(v) { fishVisible = v; redraw(); },
+    // Test hook: draw one frame as of time t (ms, performance.now() clock), so
+    // the animation can be stepped where the browser runs no frames (hidden tabs).
+    _frameAt(t) { manual = true; frame(t, true); },
+    _resume() { manual = false; last = performance.now(); },
   };
 
   addEventListener('resize', () => { size(); redraw(); });

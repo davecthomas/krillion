@@ -12,6 +12,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from . import judge as ai_judge
+from . import ladder
 from .live import LiveGames, NotReady, default_games
 from .match import Matcher
 from .tiers import KRILLION, PLANKTON
@@ -58,18 +59,24 @@ def judge(slug: str, alts: list[str]) -> dict:
     """Catalog first (exact, typo, sound); the AI judge for anything it can't settle."""
     alts = [a for a in alts if isinstance(a, str) and a.strip()][:5]
     q = prompt(slug)  # KeyError for unknown categories
+    answers = None
     try:
-        _, matcher, by_id = catalog(slug)
+        doc, matcher, by_id = catalog(slug)
+        answers = doc["answers"]
         m = matcher.match(alts)
         if m:
             a = by_id[m.entry_id]
-            return {"hit": {"id": a["id"], "name": a["name"], "tier": a["tier"], "method": m.method}}
+            rank = next(i for i, x in enumerate(answers) if x["id"] == a["id"])
+            return {"hit": {"id": a["id"], "name": a["name"], "tier": a["tier"], "method": m.method,
+                            "ladder": ladder.build(answers, rank=rank)}}
     except (NotReady, KeyError):
         pass
     j = ai_judge.judge(q, alts) if alts else None
     if not j:
         return {"hit": None}
-    return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge"}}
+    # Not on the list: if the list exists, it still gets a place in its tier
+    lad = ladder.build(answers, tier=j["tier"]) if answers else None
+    return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge", "ladder": lad}}
 
 
 def reveal(slug: str) -> dict:
@@ -86,3 +93,24 @@ def reveal(slug: str) -> dict:
     krill = [a["name"] for a in answers if a["tier"] == KRILLION][::-1]
     top = [a["name"] for a in answers if a["tier"] == PLANKTON]
     return {"pending": False, "krillion": krill or [answers[-1]["name"]], "top": top or [answers[0]["name"]]}
+
+
+def ladder_for(slug: str, answer_id: str | None = None, tier: int | None = None) -> dict:
+    """A question's ranking ladder after the fact: for a skipped question
+    (tier samples only), or once a list that was still building is ready."""
+    prompt(slug)
+    try:
+        doc, _, _ = catalog(slug)
+    except NotReady:
+        return {"pending": True}
+    except KeyError:
+        return {"pending": False, "ladder": None}
+    answers = doc["answers"]
+    rank = next((i for i, a in enumerate(answers) if a["id"] == answer_id), None) if answer_id else None
+    if rank is not None:
+        lad = ladder.build(answers, rank=rank)
+    elif tier is not None:
+        lad = ladder.build(answers, tier=tier)
+    else:
+        lad = ladder.build(answers)
+    return {"pending": False, "ladder": lad}

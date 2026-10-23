@@ -114,8 +114,15 @@
     <div class="row">
       <button class="btn ghost" id="repeatBtn" type="button">Hear it again</button>
       <button class="btn ghost" id="skipBtn" type="button">Skip</button>
+      <button class="btn ghost endBtn" id="endBtn" type="button">End dive</button>
     </div>
   </section>
+
+  <!-- RANKINGS: every question's answer ladder, in one list that grows as you play -->
+  <aside id="ladder" class="ladderCol" hidden aria-label="Answer rankings">
+    <div class="eyebrow">Rankings</div>
+    <div id="ladderList" class="ladderList" tabindex="0"></div>
+  </aside>
 
   <!-- DIVE LOG: every finished question stays here, with all its winning answers -->
   <aside id="side" class="side" hidden aria-label="This dive so far">
@@ -131,6 +138,10 @@
       <p class="depth" id="endDepth">0<span>m</span></p>
       <p class="band" id="endBand">Shallows</p>
     </div>
+    <div class="row">
+      <button class="btn" id="againBtn" type="button">New dive</button>
+      <button class="btn ghost" id="homeBtn" type="button">Back to surface</button>
+    </div>
     <div class="log" id="log"></div>
     <div style="display:grid;gap:10px">
       <div class="eyebrow">Share</div>
@@ -138,10 +149,6 @@
       <div class="row">
         <button class="btn ghost" id="copyBtn" type="button">Copy result</button>
       </div>
-    </div>
-    <div class="row">
-      <button class="btn" id="againBtn" type="button">New dive</button>
-      <button class="btn ghost" id="homeBtn" type="button">Back to surface</button>
     </div>
   </section>
 </div>
