@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a country in Africa",
+  "noun": "African country",
+  "domain": "geography",
+  "answers": {
+    "very_common": [
+      "Egypt",
+      "South Africa",
+      "Kenya",
+      "Nigeria",
+      "Morocco",
+      "Ethiopia",
+      "Ghana",
+      "Madagascar",
+      "Somalia",
+      "Rwanda"
+    ],
+    "common": [
+      "Algeria",
+      "Libya",
+      "Tunisia",
+      "Sudan",
+      "Tanzania",
+      "Uganda",
+      "Zimbabwe",
+      "Zambia",
+      "Congo",
+      "Democratic Republic of the Congo",
+      "Angola",
+      "Namibia",
+      "Botswana",
+      "Senegal",
+      "Liberia"
+    ],
+    "known": [
+      "Sierra Leone",
+      "Ivory Coast",
+      "Mali",
+      "Niger",
+      "Chad",
+      "Cameroon",
+      "Mozambique",
+      "Malawi",
+      "Mauritius",
+      "Seychelles",
+      "Eritrea",
+      "Djibouti",
+      "South Sudan",
+      "Lesotho",
+      "Eswatini",
+      "Burkina Faso",
+      "Guinea",
+      "Togo",
+      "Benin",
+      "Gabon",
+      "Central African Republic",
+      "Burundi",
+      "Gambia",
+      "Cape Verde",
+      "Mauritania"
+    ],
+    "uncommon": [
+      "Guinea-Bissau",
+      "Equatorial Guinea",
+      "São Tomé and Príncipe",
+      "Comoros",
+      "Western Sahara"
+    ],
+    "obscure": []
+  }
+}

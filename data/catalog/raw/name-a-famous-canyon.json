@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a famous canyon",
+  "noun": "canyon",
+  "domain": "geography",
+  "answers": {
+    "very_common": [
+      "Grand Canyon",
+      "Bryce Canyon",
+      "Antelope Canyon",
+      "Zion Canyon",
+      "Black Canyon of the Gunnison",
+      "Hells Canyon",
+      "Glen Canyon",
+      "Canyon de Chelly",
+      "Kings Canyon",
+      "Copper Canyon"
+    ],
+    "common": [
+      "Palo Duro Canyon",
+      "Royal Gorge",
+      "Grand Canyon of the Yellowstone",
+      "Columbia River Gorge",
+      "Snake River Canyon",
+      "Waimea Canyon",
+      "Fish River Canyon",
+      "Colca Canyon",
+      "Cotahuasi Canyon",
+      "Yarlung Tsangpo Grand Canyon",
+      "Verdon Gorge",
+      "Tara River Canyon",
+      "Blyde River Canyon",
+      "Marble Canyon"
+    ],
+    "known": [
+      "Cataract Canyon",
+      "Labyrinth Canyon",
+      "Buckskin Gulch",
+      "The Narrows",
+      "Paria Canyon",
+      "Coyote Gulch",
+      "Little Wild Horse Canyon",
+      "Oak Creek Canyon",
+      "Sabino Canyon",
+      "Boquillas Canyon",
+      "Santa Elena Canyon",
+      "Gunnison Gorge",
+      "Glenwood Canyon",
+      "Ausable Chasm",
+      "Tallulah Gorge",
+      "Linville Gorge",
+      "New River Gorge",
+      "Red River Gorge",
+      "Little River Canyon",
+      "Providence Canyon",
+      "Pine Creek Gorge",
+      "Flume Gorge"
+    ],
+    "uncommon": [
+      "Johnston Canyon",
+      "Maligne Canyon",
+      "Grand Canyon of the Stikine",
+      "Ouimet Canyon",
+      "Agawa Canyon",
+      "Fraser Canyon",
+      "Titus Canyon",
+      "Westwater Canyon",
+      "Desolation Canyon"
+    ],
+    "obscure": []
+  }
+}
