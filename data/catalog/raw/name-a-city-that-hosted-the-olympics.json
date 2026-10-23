@@ -1,0 +1,60 @@
+{
+  "prompt": "Name a city that hosted the Olympics",
+  "noun": "city",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Los Angeles",
+      "London",
+      "Paris",
+      "Beijing",
+      "Tokyo",
+      "Atlanta",
+      "Sydney",
+      "Rio de Janeiro",
+      "Athens",
+      "Barcelona"
+    ],
+    "common": [
+      "Salt Lake City",
+      "Vancouver",
+      "Calgary",
+      "Montreal",
+      "Lake Placid",
+      "Moscow",
+      "Seoul",
+      "Munich",
+      "Berlin",
+      "Rome",
+      "Mexico City",
+      "Sochi",
+      "Turin",
+      "Pyeongchang",
+      "St. Louis"
+    ],
+    "known": [
+      "Squaw Valley",
+      "Albertville",
+      "Lillehammer",
+      "Nagano",
+      "Sarajevo",
+      "Innsbruck",
+      "Grenoble",
+      "Sapporo",
+      "Oslo",
+      "Cortina d'Ampezzo",
+      "St. Moritz",
+      "Chamonix",
+      "Garmisch-Partenkirchen",
+      "Amsterdam",
+      "Antwerp",
+      "Stockholm",
+      "Helsinki",
+      "Melbourne"
+    ],
+    "uncommon": [
+      "Milan"
+    ],
+    "obscure": []
+  }
+}
