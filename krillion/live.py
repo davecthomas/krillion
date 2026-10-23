@@ -165,7 +165,8 @@ class LiveGames:
     def _save_history(self) -> None:
         with self._lock:
             data = json.dumps(self.history, indent=1, ensure_ascii=False)
-        tmp = self._history_path.with_suffix(".tmp")
+        # A unique temp name: two writers (threads or processes) must never share one.
+        tmp = self._history_path.with_name(f"history.{uuid.uuid4().hex}.tmp")
         tmp.write_text(data)
         tmp.replace(self._history_path)
 

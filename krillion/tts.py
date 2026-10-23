@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import logging
 import threading
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -61,7 +62,7 @@ def record(slug: str, prompt: str, voice: str, accent: str, *, force: bool = Fal
             emotion_prompt=f"{STYLE} Speak with {adjective} English accent.",
             text_to_convert=f"{prompt}.", voice=selection, audio_format=fmt)
         path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(".tmp")
+        tmp = path.with_name(f"{path.stem}.{uuid.uuid4().hex}.tmp")
         tmp.write_bytes(audio)
         tmp.replace(path)
         return path
