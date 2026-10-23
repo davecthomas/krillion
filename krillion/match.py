@@ -1,16 +1,21 @@
 """Match a typed or spoken answer to a catalog entry.
 
-Cheapest first, and each stage only runs when the one before it missed:
+Speech recognition sends several guesses, best first. The best guess gets
+every stage; the others may only match exactly, as a whole phrase, because a
+weak guess ("porties") must never beat a clear one ("Pyrenees"):
 
-1. exact     normalized key or alias, with naive plurals
-2. typo      Damerau-Levenshtein (a swap counts as one edit), allowance
-             scaled by length
-3. sound     Double Metaphone codes, for speech-recognition mishearings
-             such as "grew air" for gruyère
+1. exact     the best guess's normalized key or alias, with naive plurals
+2. partial   the best guess's words appear in exactly one answer's name
+             ("Pyrenees" -> Great Pyrenees)
+3. typo      Damerau-Levenshtein on the best guess (a swap counts as one
+             edit), allowance scaled by length
+4. sound     Double Metaphone codes on the best guess, for mishearings such
+             as "grew air" for gruyère
+5. exact     the other guesses, whole phrase only
 
-Stages 2 and 3 never guess between two entries: a fuzzy hit is accepted only
-when it is closer than the best hit for any other entry. Anything still
-unmatched is left to the caller (an AI judge, then the miss list).
+Stages 2-4 never guess between two entries: a hit is accepted only when it
+beats every other entry. Anything still unmatched goes to the caller's AI
+judge, with candidates() as its shortlist.
 """
 
 from __future__ import annotations
@@ -68,6 +73,8 @@ class Matcher:
         self.exact: dict[str, str] = {}
         self.fuzzy: list[tuple[str, str]] = []  # (distinctive key, entry_id)
         self.sound: dict[str, list[tuple[str, str]]] = {}  # code -> [(key, entry_id)]
+        self.name_words: dict[str, set[str]] = {}  # distinctive word -> entries with it in their name
+        self.alias_words: dict[str, set[str]] = {}  # ... or in an alias
 
         entries = [(eid, list(names)) for eid, names in entries]
         self.generic = _generic_words(names[0] for _, names in entries if names)
@@ -86,7 +93,13 @@ class Matcher:
                         self.exact[v] = entry_id
                     else:
                         self.exact.setdefault(v, entry_id)
-                d = self._distinct(words(name))
+                ws = words(name)
+                for w in ws:
+                    if w not in self.generic and len(w) >= 3:
+                        for v in variants(w):
+                            (self.name_words if name is names[0] else self.alias_words).setdefault(
+                                v, set()).add(entry_id)
+                d = self._distinct(ws)
                 if d:
                     self.fuzzy.append((d, entry_id))
                     for c in _codes(d):
@@ -182,15 +195,50 @@ class Matcher:
                 if code != c and abs(len(code) - len(c)) <= 1 and DamerauLevenshtein.distance(code, c, score_cutoff=1) <= 1:
                     yield code, pairs
 
+    def _heard_words(self, text: str) -> list[str]:
+        return [w for w in words(text) if w not in self.generic and len(w) >= 3]
+
+    def _containing(self, text: str, index: dict[str, set[str]]) -> set[str]:
+        """Entries whose name (or alias) holds every distinctive heard word."""
+        ws = self._heard_words(text)
+        if not ws:
+            return set()
+        found = None
+        for w in ws:
+            hits = set().union(*(index.get(v, set()) for v in variants(w)))
+            found = hits if found is None else found & hits
+        return found or set()
+
+    def _partial(self, text: str) -> Match | None:
+        hits = self._containing(text, self.name_words)
+        if len(hits) == 1:
+            return Match(next(iter(hits)), "partial")
+        return None
+
     # -- public ---------------------------------------------------------
 
     def match(self, text: str | Iterable[str]) -> Match | None:
         """Match one answer, or a list of recognizer alternatives (best first)."""
-        alts = [text] if isinstance(text, str) else list(text)
-        gram_lists = [self._ngrams(a) for a in alts if a and a.strip()]
-        for stage in (self._exact, self._typo, self._sound):
-            for grams in gram_lists:
-                hit = stage(grams)
-                if hit:
-                    return hit
+        alts = [a for a in ([text] if isinstance(text, str) else list(text)) if a and a.strip()]
+        if not alts:
+            return None
+        top = self._ngrams(alts[0])
+        hit = self._exact(top) or self._partial(alts[0])
+        # Heard words that sit in several names ("water dog") are a real
+        # choice for the judge, not a typo to fuzz toward some other name.
+        if not hit and not self._containing(alts[0], self.name_words):
+            hit = self._typo(top) or self._sound(top)
+        if hit:
+            return hit
+        for a in alts[1:]:
+            entry = self.exact.get(key(a)) or next((self.exact[v] for v in variants(key(a)) if v in self.exact), None)
+            if entry:
+                return Match(entry, "exact")
         return None
+
+    def candidates(self, text: str, limit: int = 8) -> list[str]:
+        """Entries the heard words point at, for the AI judge's shortlist:
+        names holding every heard word first, then aliases."""
+        out = sorted(self._containing(text, self.name_words))
+        out += sorted(self._containing(text, self.alias_words) - set(out))
+        return out[:limit]

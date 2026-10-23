@@ -1,0 +1,82 @@
+{
+  "prompt": "Name a bee or wasp",
+  "noun": "bee",
+  "domain": "animals",
+  "answers": {
+    "very_common": [
+      "Honey bee",
+      "Bumblebee",
+      "Yellowjacket",
+      "Hornet",
+      "Carpenter bee",
+      "Paper wasp"
+    ],
+    "common": [
+      "Killer bee",
+      "Mud dauber",
+      "Asian giant hornet",
+      "Mason bee",
+      "Tarantula hawk",
+      "Cicada killer",
+      "Sweat bee",
+      "Bald-faced hornet",
+      "European hornet",
+      "Velvet ant"
+    ],
+    "known": [
+      "Leafcutter bee",
+      "Digger bee",
+      "Mining bee",
+      "Orchid bee",
+      "Stingless bee",
+      "Cuckoo bee",
+      "Squash bee",
+      "Fig wasp",
+      "Gall wasp",
+      "Ichneumon wasp",
+      "Spider wasp",
+      "Potter wasp",
+      "Sand wasp",
+      "Emerald cockroach wasp",
+      "Beewolf",
+      "Asian hornet",
+      "German wasp"
+    ],
+    "uncommon": [
+      "Blue orchard bee",
+      "Alkali bee",
+      "Giant honey bee",
+      "Dwarf honey bee",
+      "Eastern honey bee",
+      "Braconid wasp",
+      "Thread-waisted wasp",
+      "Cuckoo wasp",
+      "Chalcid wasp",
+      "Pollen wasp",
+      "Great black wasp",
+      "Great golden digger wasp",
+      "European paper wasp",
+      "Rusty patched bumblebee",
+      "Common eastern bumblebee",
+      "Buff-tailed bumblebee",
+      "Wool carder bee",
+      "Southern yellowjacket",
+      "Eastern yellowjacket",
+      "Red mason bee"
+    ],
+    "obscure": [
+      "Wallace's giant bee",
+      "Valley carpenter bee",
+      "Eastern carpenter bee",
+      "Plasterer bee",
+      "Yellow-faced bee",
+      "Small carpenter bee",
+      "Long-horned bee",
+      "Ensign wasp",
+      "Fairyfly",
+      "Cuckoo bumblebee",
+      "Polistes carnifex",
+      "Scolia"
+    ]
+  }
+}

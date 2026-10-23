@@ -1,0 +1,73 @@
+{
+  "prompt": "Name a Robin Williams movie",
+  "noun": "Robin Williams film",
+  "domain": "movies and tv",
+  "answers": {
+    "very_common": [
+      "Mrs. Doubtfire",
+      "Good Will Hunting",
+      "Aladdin",
+      "Dead Poets Society",
+      "Jumanji",
+      "Good Morning, Vietnam",
+      "Hook",
+      "Patch Adams",
+      "Night at the Museum"
+    ],
+    "common": [
+      "The Birdcage",
+      "Flubber",
+      "Jack",
+      "Popeye",
+      "Awakenings",
+      "The Fisher King",
+      "Bicentennial Man",
+      "What Dreams May Come",
+      "One Hour Photo",
+      "Insomnia",
+      "Robots",
+      "Happy Feet",
+      "Fathers' Day",
+      "RV",
+      "Toys",
+      "Man of the Year",
+      "License to Wed",
+      "Old Dogs",
+      "FernGully: The Last Rainforest",
+      "Night at the Museum: Battle of the Smithsonian",
+      "Night at the Museum: Secret of the Tomb"
+    ],
+    "known": [
+      "The World According to Garp",
+      "Moscow on the Hudson",
+      "Cadillac Man",
+      "Nine Months",
+      "Death to Smoochy",
+      "World's Greatest Dad",
+      "August Rush",
+      "The Night Listener",
+      "Jakob the Liar",
+      "Being Human",
+      "Club Paradise",
+      "The Survivors",
+      "The Best of Times",
+      "Lee Daniels' The Butler",
+      "The Adventures of Baron Munchausen"
+    ],
+    "uncommon": [
+      "Deconstructing Harry",
+      "The Final Cut",
+      "House of D",
+      "The Big White",
+      "Shakes the Clown",
+      "Dead Again",
+      "Seize the Day",
+      "Boulevard",
+      "The Angriest Man in Brooklyn",
+      "Absolutely Anything",
+      "The Face of Love",
+      "A Merry Friggin' Christmas"
+    ],
+    "obscure": []
+  }
+}

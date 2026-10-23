@@ -1,0 +1,66 @@
+{
+  "prompt": "Name a US vice president",
+  "noun": "Vice President of the United States",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Kamala Harris",
+      "Mike Pence",
+      "Joe Biden",
+      "Dick Cheney",
+      "Al Gore",
+      "Dan Quayle",
+      "George H. W. Bush",
+      "JD Vance",
+      "Thomas Jefferson",
+      "John Adams"
+    ],
+    "common": [
+      "Walter Mondale",
+      "Nelson Rockefeller",
+      "Gerald Ford",
+      "Spiro Agnew",
+      "Hubert Humphrey",
+      "Lyndon B. Johnson",
+      "Richard Nixon",
+      "Harry S. Truman",
+      "Aaron Burr",
+      "Theodore Roosevelt"
+    ],
+    "known": [
+      "Calvin Coolidge",
+      "Andrew Johnson",
+      "Hannibal Hamlin",
+      "John C. Calhoun",
+      "Martin Van Buren",
+      "Henry A. Wallace",
+      "John Nance Garner",
+      "Charles Curtis",
+      "Alben W. Barkley",
+      "Chester A. Arthur",
+      "John Tyler",
+      "Millard Fillmore",
+      "George Clinton",
+      "Elbridge Gerry",
+      "Daniel D. Tompkins"
+    ],
+    "uncommon": [
+      "Richard Mentor Johnson",
+      "George M. Dallas",
+      "William R. King",
+      "John C. Breckinridge",
+      "Schuyler Colfax",
+      "Henry Wilson",
+      "William A. Wheeler",
+      "Thomas A. Hendricks",
+      "Levi P. Morton",
+      "Adlai Stevenson I",
+      "Garret Hobart",
+      "Charles W. Fairbanks",
+      "James S. Sherman",
+      "Thomas R. Marshall",
+      "Charles G. Dawes"
+    ],
+    "obscure": []
+  }
+}

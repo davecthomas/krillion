@@ -1,0 +1,74 @@
+{
+  "prompt": "Name a Tom Hanks movie",
+  "noun": "Tom Hanks film",
+  "domain": "film and TV",
+  "answers": {
+    "very_common": [
+      "Forrest Gump",
+      "Toy Story",
+      "Big",
+      "Cast Away",
+      "Saving Private Ryan",
+      "Philadelphia",
+      "Apollo 13",
+      "The Green Mile",
+      "Sleepless in Seattle",
+      "You've Got Mail"
+    ],
+    "common": [
+      "Splash",
+      "The Da Vinci Code",
+      "Catch Me If You Can",
+      "A League of Their Own",
+      "Captain Phillips",
+      "Sully",
+      "The Polar Express",
+      "Toy Story 2",
+      "Toy Story 3",
+      "Toy Story 4",
+      "The Terminal",
+      "Angels & Demons",
+      "Bridge of Spies",
+      "Turner & Hooch",
+      "Elvis"
+    ],
+    "known": [
+      "Road to Perdition",
+      "Inferno",
+      "The Post",
+      "A Man Called Otto",
+      "Saving Mr. Banks",
+      "The Money Pit",
+      "Bachelor Party",
+      "The 'Burbs",
+      "Joe Versus the Volcano",
+      "Dragnet",
+      "That Thing You Do!",
+      "Charlie Wilson's War",
+      "Larry Crowne",
+      "Cloud Atlas",
+      "Greyhound",
+      "News of the World",
+      "A Beautiful Day in the Neighborhood",
+      "Finch"
+    ],
+    "uncommon": [
+      "The Bonfire of the Vanities",
+      "Volunteers",
+      "Nothing in Common",
+      "Punchline",
+      "Extremely Loud & Incredibly Close",
+      "The Ladykillers",
+      "A Hologram for the King",
+      "The Circle",
+      "Asteroid City",
+      "The Man with One Red Shoe",
+      "Here"
+    ],
+    "obscure": [
+      "He Knows You're Alone",
+      "Mazes and Monsters",
+      "Every Time We Say Goodbye"
+    ]
+  }
+}

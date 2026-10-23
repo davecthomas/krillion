@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a type of aircraft",
+  "noun": "aircraft",
+  "domain": "vehicles",
+  "answers": {
+    "very_common": [
+      "Airplane",
+      "Helicopter",
+      "Hot air balloon",
+      "Blimp",
+      "Glider",
+      "Seaplane",
+      "Biplane",
+      "Fighter aircraft"
+    ],
+    "common": [
+      "Airliner",
+      "Bomber",
+      "Cargo aircraft",
+      "Business jet",
+      "Airship",
+      "Zeppelin",
+      "Hang glider",
+      "Paraglider",
+      "Gyrocopter",
+      "Tiltrotor"
+    ],
+    "known": [
+      "Monoplane",
+      "Triplane",
+      "Turboprop",
+      "Floatplane",
+      "Flying boat",
+      "Amphibious aircraft",
+      "Autogyro",
+      "Sailplane",
+      "Motor glider",
+      "Stealth aircraft",
+      "Attack aircraft",
+      "Interceptor aircraft",
+      "Trainer aircraft",
+      "Gunship",
+      "Regional jet"
+    ],
+    "uncommon": [
+      "Ornithopter",
+      "Compound helicopter",
+      "Quadcopter",
+      "Powered parachute",
+      "Paramotor",
+      "Barrage balloon",
+      "Gas balloon",
+      "Rozière balloon",
+      "Aerostat",
+      "Ground-effect vehicle",
+      "Ekranoplan",
+      "Spaceplane"
+    ],
+    "obscure": [
+      "Blended wing body",
+      "Gyrodyne",
+      "Cyclogyro",
+      "Rocket plane",
+      "Target drone",
+      "Loitering munition",
+      "Airborne early warning and control",
+      "Maritime patrol aircraft",
+      "Electronic warfare aircraft"
+    ]
+  }
+}

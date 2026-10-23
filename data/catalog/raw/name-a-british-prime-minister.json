@@ -1,0 +1,75 @@
+{
+  "prompt": "Name a British prime minister",
+  "noun": "British prime minister",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Winston Churchill",
+      "Margaret Thatcher",
+      "Tony Blair",
+      "Boris Johnson",
+      "Theresa May",
+      "Neville Chamberlain"
+    ],
+    "common": [
+      "David Cameron",
+      "Gordon Brown",
+      "John Major",
+      "Rishi Sunak",
+      "Liz Truss",
+      "Keir Starmer",
+      "Benjamin Disraeli",
+      "William Gladstone",
+      "Clement Attlee",
+      "Harold Wilson"
+    ],
+    "known": [
+      "David Lloyd George",
+      "Robert Peel",
+      "Anthony Eden",
+      "Harold Macmillan",
+      "Edward Heath",
+      "James Callaghan",
+      "Robert Walpole",
+      "William Pitt the Younger",
+      "William Pitt the Elder",
+      "Duke of Wellington",
+      "Stanley Baldwin",
+      "Ramsay MacDonald",
+      "H. H. Asquith",
+      "Lord Palmerston"
+    ],
+    "uncommon": [
+      "Arthur Balfour",
+      "Lord Salisbury",
+      "Earl Grey",
+      "Lord Melbourne",
+      "Lord North",
+      "Alec Douglas-Home",
+      "Bonar Law",
+      "Henry Campbell-Bannerman",
+      "Spencer Perceval",
+      "George Canning",
+      "Lord Liverpool",
+      "Lord John Russell",
+      "Lord Derby",
+      "Lord Aberdeen",
+      "Lord Rosebery"
+    ],
+    "obscure": [
+      "Earl of Wilmington",
+      "Henry Pelham",
+      "Duke of Newcastle",
+      "Duke of Devonshire",
+      "Earl of Bute",
+      "George Grenville",
+      "Marquess of Rockingham",
+      "Duke of Grafton",
+      "Earl of Shelburne",
+      "Duke of Portland",
+      "Henry Addington",
+      "Lord Grenville",
+      "Viscount Goderich"
+    ]
+  }
+}

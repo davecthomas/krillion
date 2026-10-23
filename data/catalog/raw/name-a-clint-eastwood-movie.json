@@ -1,0 +1,82 @@
+{
+  "prompt": "Name a Clint Eastwood movie",
+  "noun": "Clint Eastwood film",
+  "domain": "movies and tv",
+  "answers": {
+    "very_common": [
+      "Dirty Harry",
+      "Gran Torino",
+      "The Good, the Bad and the Ugly",
+      "Unforgiven",
+      "Million Dollar Baby",
+      "A Fistful of Dollars",
+      "American Sniper"
+    ],
+    "common": [
+      "For a Few Dollars More",
+      "The Outlaw Josey Wales",
+      "Escape from Alcatraz",
+      "Every Which Way but Loose",
+      "Any Which Way You Can",
+      "Magnum Force",
+      "Sudden Impact",
+      "Pale Rider",
+      "High Plains Drifter",
+      "Hang 'Em High",
+      "Heartbreak Ridge",
+      "In the Line of Fire",
+      "The Bridges of Madison County",
+      "Mystic River",
+      "Space Cowboys",
+      "The Mule",
+      "Letters from Iwo Jima",
+      "Flags of Our Fathers",
+      "Sully",
+      "Where Eagles Dare",
+      "Kelly's Heroes",
+      "Play Misty for Me"
+    ],
+    "known": [
+      "The Enforcer",
+      "The Dead Pool",
+      "Tightrope",
+      "Firefox",
+      "The Gauntlet",
+      "Bronco Billy",
+      "Paint Your Wagon",
+      "Two Mules for Sister Sara",
+      "Coogan's Bluff",
+      "The Beguiled",
+      "Joe Kidd",
+      "Thunderbolt and Lightfoot",
+      "The Eiger Sanction",
+      "Changeling",
+      "Invictus",
+      "J. Edgar",
+      "Jersey Boys",
+      "Trouble with the Curve",
+      "Richard Jewell",
+      "Cry Macho",
+      "Juror #2",
+      "Absolute Power",
+      "A Perfect World",
+      "The Rookie"
+    ],
+    "uncommon": [
+      "Honkytonk Man",
+      "Pink Cadillac",
+      "Bird",
+      "White Hunter Black Heart",
+      "True Crime",
+      "Blood Work",
+      "Hereafter",
+      "The 15:17 to Paris",
+      "Midnight in the Garden of Good and Evil",
+      "City Heat"
+    ],
+    "obscure": [
+      "Revenge of the Creature",
+      "Tarantula!"
+    ]
+  }
+}

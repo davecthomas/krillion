@@ -1,0 +1,74 @@
+{
+  "prompt": "Name a type of chair",
+  "noun": "chair",
+  "domain": "household",
+  "wikipedia_category": "Category:Chairs",
+  "answers": {
+    "very_common": [
+      "Rocking chair",
+      "Recliner",
+      "Armchair",
+      "Office chair",
+      "High chair",
+      "Folding chair",
+      "Bean bag chair",
+      "Wheelchair"
+    ],
+    "common": [
+      "Adirondack chair",
+      "Bar stool",
+      "Lounge chair",
+      "Barber chair",
+      "Electric chair",
+      "Director's chair",
+      "Wingback chair",
+      "Papasan chair"
+    ],
+    "known": [
+      "Eames Lounge Chair",
+      "Barcelona chair",
+      "Egg chair",
+      "Windsor chair",
+      "Morris chair",
+      "Ladderback chair",
+      "Chaise longue",
+      "Butterfly chair",
+      "Massage chair",
+      "Tulip chair",
+      "Wassily Chair",
+      "Panton Chair",
+      "Shaker chair",
+      "Bentwood chair"
+    ],
+    "uncommon": [
+      "Bergère",
+      "Fauteuil",
+      "Klismos",
+      "Savonarola chair",
+      "Curule seat",
+      "Sedan chair",
+      "Glastonbury chair",
+      "Hitchcock chair",
+      "Thonet No. 14",
+      "Chiavari chair",
+      "Red and Blue Chair",
+      "Zig-Zag chair",
+      "Womb chair",
+      "Ball Chair",
+      "Ant Chair",
+      "Swan chair",
+      "Series 7"
+    ],
+    "obscure": [
+      "Wainscot chair",
+      "Sling chair",
+      "Campeche chair",
+      "Cesca chair",
+      "Paimio Chair",
+      "MR10",
+      "Peacock chair",
+      "Platner chair",
+      "Wishbone Chair"
+    ]
+  }
+}

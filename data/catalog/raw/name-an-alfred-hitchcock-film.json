@@ -1,0 +1,72 @@
+{
+  "prompt": "Name an Alfred Hitchcock film",
+  "noun": "film",
+  "domain": "film and TV",
+  "answers": {
+    "very_common": [
+      "Psycho",
+      "The Birds",
+      "Vertigo",
+      "Rear Window",
+      "North by Northwest",
+      "Dial M for Murder",
+      "Rebecca",
+      "Strangers on a Train",
+      "To Catch a Thief",
+      "Notorious"
+    ],
+    "common": [
+      "The Man Who Knew Too Much",
+      "Rope",
+      "Spellbound",
+      "Lifeboat",
+      "Shadow of a Doubt",
+      "Marnie",
+      "Frenzy",
+      "The 39 Steps",
+      "The Lady Vanishes",
+      "Family Plot",
+      "Torn Curtain",
+      "Topaz",
+      "Saboteur",
+      "Suspicion",
+      "The Trouble with Harry"
+    ],
+    "known": [
+      "Foreign Correspondent",
+      "Mr. & Mrs. Smith",
+      "Jamaica Inn",
+      "Young and Innocent",
+      "Sabotage",
+      "Secret Agent",
+      "The Lodger",
+      "Blackmail",
+      "The Ring",
+      "Murder!",
+      "Rich and Strange",
+      "Number Seventeen",
+      "Waltzes from Vienna",
+      "The Paradine Case",
+      "Under Capricorn",
+      "Stage Fright",
+      "I Confess",
+      "The Wrong Man",
+      "The Pleasure Garden",
+      "The Mountain Eagle",
+      "Downhill",
+      "Easy Virtue",
+      "Champagne",
+      "The Farmer's Wife",
+      "The Manxman"
+    ],
+    "uncommon": [],
+    "obscure": [
+      "Juno and the Paycock",
+      "The Skin Game",
+      "Elstree Calling",
+      "Bon Voyage",
+      "Aventure Malgache",
+      "Always Tell Your Wife"
+    ]
+  }
+}

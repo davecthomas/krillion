@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a country in Europe",
+  "noun": "European country",
+  "domain": "geography",
+  "answers": {
+    "very_common": [
+      "France",
+      "Germany",
+      "Italy",
+      "Spain",
+      "United Kingdom",
+      "England",
+      "Ireland",
+      "Greece",
+      "Portugal",
+      "Switzerland"
+    ],
+    "common": [
+      "Netherlands",
+      "Belgium",
+      "Austria",
+      "Sweden",
+      "Norway",
+      "Denmark",
+      "Finland",
+      "Poland",
+      "Russia",
+      "Ukraine",
+      "Scotland",
+      "Iceland",
+      "Czech Republic",
+      "Hungary",
+      "Croatia"
+    ],
+    "known": [
+      "Romania",
+      "Bulgaria",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Bosnia and Herzegovina",
+      "Montenegro",
+      "Albania",
+      "North Macedonia",
+      "Kosovo",
+      "Moldova",
+      "Belarus",
+      "Lithuania",
+      "Latvia",
+      "Estonia",
+      "Luxembourg",
+      "Monaco",
+      "Liechtenstein",
+      "San Marino",
+      "Vatican City",
+      "Andorra",
+      "Malta",
+      "Cyprus",
+      "Wales",
+      "Turkey"
+    ],
+    "uncommon": [
+      "Georgia",
+      "Armenia",
+      "Azerbaijan",
+      "Kazakhstan",
+      "Northern Ireland"
+    ],
+    "obscure": []
+  }
+}

@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from krillion import service, tts, voices
+from krillion.bank import BankEmpty
 
 PUBLIC = Path(__file__).resolve().parent / "public"
 MAX_BODY = 8_192
@@ -54,9 +55,11 @@ class Handler(SimpleHTTPRequestHandler):
                 # question's clip while the player answers the one before.
                 try:
                     game = service.dive()
+                except BankEmpty:
+                    raise
                 except Exception:
-                    log.exception("generating a game failed")
-                    return self._json(503, {"error": "Couldn't generate new questions. Try again in a moment."})
+                    log.exception("starting a game failed")
+                    return self._json(503, {"error": "Couldn't start a game. Try again in a moment."})
                 return self._json(200, game)
             if url.path == "/api/reveal":
                 return self._json(200, service.reveal(q.get("slug", "")))
@@ -71,6 +74,8 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._clip(lambda: tts.record_preview(voice, accent))
             if url.path == "/api/audio":
                 return self._audio(q)
+        except BankEmpty as e:
+            return self._json(503, {"error": str(e)})
         except KeyError:
             return self._json(404, {"error": "unknown category, voice or accent"})
         if url.path.startswith("/api/"):
@@ -97,6 +102,8 @@ class Handler(SimpleHTTPRequestHandler):
             body = self._body()
             if path == "/api/judge":
                 return self._json(200, service.judge(str(body.get("slug", "")), list(body.get("alts", []))))
+        except BankEmpty as e:
+            return self._json(503, {"error": str(e)})
         except KeyError:
             return self._json(404, {"error": "unknown category, voice or accent"})
         except (ValueError, TypeError):
@@ -120,7 +127,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
-    service.games().prepare_next()  # generate the first game before anyone asks
+    n = service.bank().remaining()
+    if n == 0:
+        print("The question bank is empty or fully played. Write questions with /krillion-catalog, then `make catalog`.")
+    else:
+        print(f"{n} unplayed questions in the bank")
     print(f"Krillion on http://localhost:{args.port}")
     ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
 

@@ -1,0 +1,61 @@
+{
+  "prompt": "Name a US president",
+  "noun": "president",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Thomas Jefferson",
+      "John F. Kennedy",
+      "Franklin D. Roosevelt",
+      "Theodore Roosevelt",
+      "Barack Obama",
+      "Ronald Reagan",
+      "Donald Trump",
+      "Joe Biden"
+    ],
+    "common": [
+      "Bill Clinton",
+      "George W. Bush",
+      "George H. W. Bush",
+      "Jimmy Carter",
+      "Richard Nixon",
+      "Dwight D. Eisenhower",
+      "Harry S. Truman",
+      "John Adams",
+      "Andrew Jackson",
+      "Ulysses S. Grant",
+      "Woodrow Wilson",
+      "James Madison",
+      "Gerald Ford",
+      "Lyndon B. Johnson",
+      "James Monroe"
+    ],
+    "known": [
+      "John Quincy Adams",
+      "Herbert Hoover",
+      "Calvin Coolidge",
+      "William Howard Taft",
+      "William McKinley",
+      "Grover Cleveland",
+      "Andrew Johnson",
+      "James K. Polk",
+      "Warren G. Harding",
+      "Martin Van Buren"
+    ],
+    "uncommon": [
+      "William Henry Harrison",
+      "John Tyler",
+      "Zachary Taylor",
+      "Millard Fillmore",
+      "Franklin Pierce",
+      "James Buchanan",
+      "Rutherford B. Hayes",
+      "James A. Garfield",
+      "Chester A. Arthur",
+      "Benjamin Harrison"
+    ],
+    "obscure": []
+  }
+}

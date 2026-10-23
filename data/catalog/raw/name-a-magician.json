@@ -1,0 +1,73 @@
+{
+  "prompt": "Name a magician",
+  "noun": "magician",
+  "domain": "people",
+  "wikipedia_category": "Category:American magicians",
+  "answers": {
+    "very_common": [
+      "David Copperfield",
+      "Harry Houdini",
+      "David Blaine",
+      "Penn Jillette",
+      "Teller",
+      "Criss Angel"
+    ],
+    "common": [
+      "Siegfried Fischbacher",
+      "Roy Horn",
+      "Doug Henning",
+      "Lance Burton",
+      "Mac King",
+      "Shin Lim",
+      "Derren Brown",
+      "James Randi",
+      "Ricky Jay",
+      "Harry Blackstone Jr.",
+      "Dynamo",
+      "Mat Franco",
+      "Piff the Magic Dragon",
+      "Harry Anderson"
+    ],
+    "known": [
+      "Harry Blackstone Sr.",
+      "Howard Thurston",
+      "Harry Kellar",
+      "Jean Eugène Robert-Houdin",
+      "Dai Vernon",
+      "Mark Wilson",
+      "Justin Willman",
+      "Michael Carbonaro",
+      "Hans Klok",
+      "Tommy Cooper",
+      "Paul Daniels",
+      "Chung Ling Soo",
+      "Channing Pollock",
+      "Andre Kole",
+      "Jeff McBride",
+      "Max Maven",
+      "Juan Tamariz",
+      "Darcy Oake",
+      "Collins Key"
+    ],
+    "uncommon": [
+      "Joseph Dunninger",
+      "John Nevil Maskelyne",
+      "Alexander Herrmann",
+      "Adelaide Herrmann",
+      "Charles Joseph Carter",
+      "The Great Lafayette",
+      "Servais Le Roy",
+      "Horace Goldin",
+      "P. T. Selbit",
+      "Kuda Bux",
+      "Fred Kaps",
+      "Tommy Wonder",
+      "David Berglas",
+      "Dorothy Dietrich",
+      "Rudy Coby",
+      "Joshua Jay",
+      "Nate Staniforth"
+    ],
+    "obscure": []
+  }
+}
