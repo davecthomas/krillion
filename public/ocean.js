@@ -81,6 +81,7 @@
   }
   // The fish swims in the left margin when there is room, else near the edge
   function fishPos() {
+    if (ladder) return {x: ladder.fx, y: ladder.fy};
     const gutter = (W - contentW) / 2;
     const x = gutter > 130 ? gutter * .5 : Math.max(40, W * .1);
     return {x, y: H * FISH_Y};
@@ -300,15 +301,16 @@
   // ---------- The fish ----------
   function fish(dt) {
     const {x, y: y0} = fishPos();
-    const y = y0 + Math.sin(time * 1.6) * 5;
+    const y = y0 + (ladder ? 0 : Math.sin(time * 1.6) * 5);
     const diving = Math.abs(camVel) > 30;
     if (diving && Math.random() < dt * 22) addBubble(x - 10 + Math.random() * 6, y - 8, 1.5 + Math.random() * 3.5);
-    let tilt = Math.max(-.7, Math.min(.7, camVel / 380));
+    let tilt = ladder ? ladder.tilt : Math.max(-.7, Math.min(.7, camVel / 380));
     if (wobble > 0) { tilt += Math.sin(time * 34) * .3 * wobble; wobble = Math.max(0, wobble - dt * 1.4); }
     const wag = Math.sin(time * (diving ? 16 : 6)) * (diving ? .45 : .25);
     // A soft light around the fish keeps it visible in the dark
     glow(x, y, 70, 'rgba(255,170,190,A)', .08 + Math.min(.14, cam / 25000));
     cx.save(); cx.translate(x, y); cx.rotate(tilt);
+    if (ladder) cx.scale(ladder.scale, ladder.scale);
     // tail
     cx.fillStyle = '#ff6f8f';
     cx.save(); cx.translate(-22, 0); cx.rotate(wag);
@@ -333,6 +335,128 @@
     cx.strokeStyle = '#7a2a3d'; cx.lineWidth = 1.6; cx.lineCap = 'round';
     cx.beginPath(); cx.arc(21, 3, 3.2, .2, Math.PI * .8); cx.stroke();
     cx.restore();
+  }
+
+  // ---------- Ranking ladder ----------
+  // When an answer is graded, a slice of the answer list, most common first,
+  // appears down the left margin. The fish falls past the words, the answers
+  // below its spot slide down to open a gap, and it slides in carrying the
+  // player's answer.
+  const ROW = 22, HEAD = 20, MIN_GUTTER = 170;
+  let ladder = null;
+  const clamp01 = k => Math.max(0, Math.min(1, k));
+
+  function ladderLayout(l, gapK) {
+    // Rows in rank order with the player's answer at l.position; a tier label
+    // heads each tier. The player's row (and a label only it needs) grows in
+    // with gapK, which is how the gap opens.
+    const seq = [...l.rows.slice(0, l.position), {player: true, name: l.answer, tier: l.tier}, ...l.rows.slice(l.position)];
+    const onlyPlayer = !l.rows.some(r => r.tier === l.tier);
+    let y = l.top, prev = null, slotY = 0;
+    const out = [];
+    for (const it of seq) {
+      if (it.tier !== prev) {
+        const h = HEAD * (it.player && onlyPlayer ? gapK : 1);
+        out.push({head: true, tier: it.tier, y: y + h * .7, a: it.player && onlyPlayer ? gapK : 1});
+        y += h; prev = it.tier;
+      }
+      const h = it.player ? ROW * gapK : ROW;
+      if (it.player) slotY = y + h / 2;
+      else out.push({row: it, y: y + ROW * .68});
+      y += h;
+    }
+    return {items: out, slotY, bottom: y};
+  }
+
+  function fitText(text, maxW) {
+    if (cx.measureText(text).width <= maxW) return text;
+    while (text.length > 1 && cx.measureText(text + '…').width > maxW) text = text.slice(0, -1);
+    return text + '…';
+  }
+
+  function updateLadder(now) {
+    const l = ladder, t = now - l.start;
+    const fallEnd = l.fadeIn + l.fallDur, holdEnd = fallEnd + l.gapDur + l.hold, end = holdEnd + l.fadeOut;
+    l.alpha = still ? 1 : t < l.fadeIn ? t / l.fadeIn : t > holdEnd ? 1 - (t - holdEnd) / l.fadeOut : 1;
+    l.gapK = still ? 1 : ease(clamp01((t - fallEnd) / l.gapDur));
+    const lay = ladderLayout(l, l.gapK);
+    l.lay = lay;
+    if (still || t >= fallEnd) {
+      if (!l.landed) { l.landed = true; l.onLand && l.onLand(); }
+      l.fy = lay.slotY; l.tilt = 0;
+    } else if (t >= l.fadeIn) {
+      const k = clamp01((t - l.fadeIn) / l.fallDur);
+      l.fy = (l.top - 40) + (lay.slotY - (l.top - 40)) * (k * k * (3 - 2 * k));
+      l.tilt = .55 * (1 - k * k);
+    } else { l.fy = l.top - 40; l.tilt = .55; }
+    if (t > holdEnd) {  // swim back to the usual spot as the ladder fades
+      const k = ease(clamp01((t - holdEnd) / l.fadeOut));
+      const home = l.home();
+      l.fx = l.slotX + (home.x - l.slotX) * k; l.fy = l.fy + (home.y - l.fy) * k;
+      l.scale = l.small + (1 - l.small) * k;
+    }
+    if (t >= end) { const done = l.resolve; ladder = null; done(true); }
+  }
+
+  function drawLadder(now) {
+    const l = ladder, lay = l.lay;
+    if (!lay) return;
+    cx.save(); cx.globalAlpha = l.alpha;
+    cx.fillStyle = 'rgba(4,20,30,.42)';
+    cx.beginPath(); cx.roundRect(6, l.top - 22, l.gutter - 12, lay.bottom - l.top + 34, 14); cx.fill();
+    const textX = l.textX, maxW = l.gutter - textX - 34;
+    for (const it of lay.items) {
+      if (it.head) {
+        cx.globalAlpha = l.alpha * it.a;
+        cx.font = '600 10px "JetBrains Mono", ui-monospace, monospace';
+        cx.fillStyle = l.colors[it.tier]; cx.fillText(l.labels[it.tier].toUpperCase(), textX, it.y);
+        cx.globalAlpha = l.alpha;
+        continue;
+      }
+      const r = it.row;
+      // Words wiggle as the falling fish brushes past them
+      if (r.passed == null && l.fy >= it.y - 6 && !l.landed) r.passed = now;
+      const since = r.passed == null ? 1e9 : now - r.passed;
+      const dx = still ? 0 : 7 * Math.sin(since / 35) * Math.exp(-since / 260);
+      cx.font = '13px "Atkinson Hyperlegible", system-ui, sans-serif';
+      cx.fillStyle = 'rgba(233,247,246,.86)'; cx.fillText(fitText(r.name, maxW), textX + dx, it.y);
+      cx.font = '500 10px "JetBrains Mono", ui-monospace, monospace';
+      cx.fillStyle = 'rgba(200,230,226,.5)'; cx.textAlign = 'right';
+      cx.fillText(`#${r.rank}`, l.gutter - 14, it.y); cx.textAlign = 'left';
+    }
+    if (l.landed) {  // the player's answer, in a pill of its tier colour
+      const pa = l.gapK, y = lay.slotY;
+      cx.globalAlpha = l.alpha * pa;
+      cx.font = '700 13px "Atkinson Hyperlegible", system-ui, sans-serif';
+      const label = fitText(l.answer, maxW - 8);
+      const w = Math.min(maxW + 26, cx.measureText(label).width + 18);
+      cx.fillStyle = l.color; cx.beginPath(); cx.roundRect(textX - 8, y - 11, w, 22, 11); cx.fill();
+      cx.fillStyle = 'hsl(200 70% 8%)'; cx.fillText(label, textX + 1, y + 4.5);
+      cx.font = '700 10px "JetBrains Mono", ui-monospace, monospace';
+      cx.fillStyle = l.color; cx.textAlign = 'right';
+      cx.fillText(l.rank ? `#${l.rank}` : 'new', l.gutter - 14, y + 4); cx.textAlign = 'left';
+    }
+    cx.restore();
+  }
+
+  function startLadder(o) {
+    const gutter = (W - contentW) / 2;
+    if (gutter < MIN_GUTTER || !o.rows || !o.rows.length) return Promise.resolve(false);
+    return new Promise(resolve => {
+      const small = .62;
+      ladder = {
+        ...o, gutter, resolve, small, scale: small,
+        top: Math.max(78, H * .12), textX: 70, slotX: 36, fx: 36, fy: 0, tilt: .55,
+        start: performance.now(), fadeIn: 300, fallDur: Math.min(1700, 700 + o.position * 70),
+        gapDur: 280, hold: 1500, fadeOut: 450, alpha: 0, gapK: 0, landed: false,
+        home: () => { const g = (W - contentW) / 2; return {x: g > 130 ? g * .5 : Math.max(40, W * .1), y: H * FISH_Y}; },
+      };
+      ladder.rows = o.rows.map(r => ({...r}));
+      if (still) {
+        updateLadder(performance.now()); redraw();
+        setTimeout(() => { if (ladder) { const done = ladder.resolve; ladder = null; redraw(); done(true); } }, 2200);
+      }
+    });
   }
 
   // ---------- Celebrations ----------
@@ -360,7 +484,8 @@
       p.y -= 26 * dt;
       cx.globalAlpha = Math.min(1, p.life / .6);
       cx.font = `800 ${p.size}px Unbounded, system-ui, sans-serif`;
-      cx.fillStyle = p.color; cx.fillText(p.text, p.x, p.y);
+      const half = cx.measureText(p.text).width / 2 + 6;  // keep it on screen
+      cx.fillStyle = p.color; cx.fillText(p.text, Math.max(half, Math.min(W - half, p.x)), p.y);
       cx.globalAlpha = 1;
     }
     cx.textAlign = 'left';
@@ -375,7 +500,9 @@
   }
 
   // ---------- Loop ----------
-  function frame(now) {
+  let manual = false;  // set by the test hook: only stepped frames draw
+  function frame(now, stepped) {
+    if (manual && !stepped) { requestAnimationFrame(frame); return; }
     const age = Math.max(0, (now - last) / 1000), dt = Math.min(.05, age); last = now; time += dt;
     const prev = cam;
     if (dive) {
@@ -384,10 +511,13 @@
       if (k >= 1) dive = null;
     }
     camVel = dt > 0 ? (cam - prev) / dt : 0;
+    if (ladder && !still) updateLadder(now);
     cx.clearRect(0, 0, W, H);
     lightRays(); plants(); jellies(); anglers(); schools(); bandMarkers();
-    marineSnow(dt); bubbleLayer(dt); fish(dt); effects(dt, age);
-    if (!still) requestAnimationFrame(frame);
+    marineSnow(dt); bubbleLayer(dt);
+    if (ladder) drawLadder(now);
+    fish(dt); effects(dt, age);
+    if (!still && !stepped) requestAnimationFrame(frame);
   }
   const redraw = () => { if (still) { last = performance.now(); frame(last); } };
 
@@ -420,6 +550,15 @@
       redraw();
     },
     layout() { layout(); redraw(); },
+    // Rank a graded answer: the fish falls through a slice of the answer list
+    // and slots in. {rows: [{name, tier, rank}], position, answer, tier, rank,
+    // color, colors: {tier: css colour}, labels: {tier: name}, onLand}. Resolves
+    // true when finished, or false at once if there's no margin to draw it in.
+    slot(o) { return startLadder(o); },
+    // Test hook: draw one frame as of time t (ms, performance.now() clock), so
+    // the animation can be stepped where the browser runs no frames (hidden tabs).
+    _frameAt(t) { manual = true; frame(t, true); },
+    _resume() { manual = false; last = performance.now(); },
   };
 
   addEventListener('resize', () => { size(); redraw(); });

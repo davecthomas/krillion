@@ -12,6 +12,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from . import judge as ai_judge
+from . import ladder
 from .live import LiveGames, NotReady, default_games
 from .match import Matcher
 from .tiers import KRILLION, PLANKTON
@@ -58,18 +59,24 @@ def judge(slug: str, alts: list[str]) -> dict:
     """Catalog first (exact, typo, sound); the AI judge for anything it can't settle."""
     alts = [a for a in alts if isinstance(a, str) and a.strip()][:5]
     q = prompt(slug)  # KeyError for unknown categories
+    answers = None
     try:
-        _, matcher, by_id = catalog(slug)
+        doc, matcher, by_id = catalog(slug)
+        answers = doc["answers"]
         m = matcher.match(alts)
         if m:
             a = by_id[m.entry_id]
-            return {"hit": {"id": a["id"], "name": a["name"], "tier": a["tier"], "method": m.method}}
+            rank = next(i for i, x in enumerate(answers) if x["id"] == a["id"])
+            return {"hit": {"id": a["id"], "name": a["name"], "tier": a["tier"], "method": m.method,
+                            "ladder": ladder.build(answers, rank=rank)}}
     except (NotReady, KeyError):
         pass
     j = ai_judge.judge(q, alts) if alts else None
     if not j:
         return {"hit": None}
-    return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge"}}
+    # Not on the list: if the list exists, it still gets a place in its tier
+    lad = ladder.build(answers, tier=j["tier"]) if answers else None
+    return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge", "ladder": lad}}
 
 
 def reveal(slug: str) -> dict:

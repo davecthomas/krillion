@@ -363,7 +363,7 @@ async function heard(alts, typed) {
   try { r = await api('/api/judge', {slug: p.slug, alts}); } catch (e) {}
   judging = false;
   if (my !== token || state !== 'play') return;
-  if (r && r.hit) { endRound({tier: r.hit.tier, display: r.hit.name}); return; }
+  if (r && r.hit) { endRound({tier: r.hit.tier, display: r.hit.name, ladder: r.hit.ladder}); return; }
   orb();
   wrong(raw);
 }
@@ -395,18 +395,39 @@ async function endRound(hit, why) {
   if (r.pending) watchReveal(game, r);
   const box = $('resultBox'); box.hidden = false;
   if (hit) {
-    const t = TS[hit.tier]; chime(Math.round(t.pts / 20));
-    if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4);
-    box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
+    const t = TS[hit.tier];
+    const lad = hit.ladder;
+    const rankText = lad ? (lad.rank ? ` · #${lad.rank} of ${lad.total}` : ' · not on the list') : '';
+    box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)}${rankText} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
     $('status').textContent = 'Got it.';
+    // The fish falls through a slice of the answer list and slots in at the
+    // answer's rank; the celebration fires as it lands. Without room for the
+    // ladder (narrow screens) it celebrates straight away.
+    const land = () => { chime(Math.round(t.pts / 20)); if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4); };
+    const played = lad && window.Ocean ? await Ocean.slot(ladderFor(lad, hit, land)) : false;
+    if (my !== token) return;
+    if (!played) { land(); await new Promise(res => setTimeout(res, 2400)); }
+    else await new Promise(res => setTimeout(res, 300));
+    if (my !== token) return;
   } else {
     box.innerHTML = `<div class="result" style="color:var(--muted)"><div class="tn">${why === 'skip' ? 'Skipped' : 'Out of air'}</div><div class="tp">${revealHTML(M.reveal, bestList)}</div></div>`;
     $('status').textContent = '';
+    // Results are shown, not spoken: a beat to read them, then the next question
+    await new Promise(res => setTimeout(res, 3200)); if (my !== token) return;
   }
-  // Results are shown, not spoken: a beat to read them, then the next question
-  await new Promise(res => setTimeout(res, hit ? 2400 : 3200)); if (my !== token) return;
   game.i++;
   if (game.i < game.prompts.length) playRound(); else finish();
+}
+
+// What the ocean needs to draw the ranking ladder: canvas can't read CSS
+// variables, so tier colours are resolved here.
+function ladderFor(lad, hit, onLand) {
+  const css = getComputedStyle(document.documentElement);
+  const color = c => (c.startsWith('var(') ? css.getPropertyValue(c.slice(4, -1)).trim() : c) || '#5fe3d2';
+  const colors = {}, labels = {};
+  TS.forEach((x, i) => { colors[i] = color(x.c); labels[i] = x.name; });
+  return {rows: lad.rows, position: lad.position, rank: lad.rank, answer: hit.display, tier: hit.tier,
+    color: colors[hit.tier], colors, labels, onLand};
 }
 
 function finish() {

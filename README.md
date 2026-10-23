@@ -54,6 +54,13 @@ aloud, turn on **Read questions aloud** in Settings (the gear, top right).
   tube worms in the Trench. Rare answers set off sparkles, One in a Krillion a
   burst of diamonds, and a wrong answer gets a wobble and a "blub". With
   reduced motion turned on, the scene holds still and jumps to each new depth.
+- **Where your answer ranks.** When an answer scores, a slice of the answer
+  list appears down the left margin, most common at the top: two answers from
+  each tier plus the ones ranked just above and below yours. The fish falls
+  past the words, the answers below its spot slide down to open a gap, and it
+  slides in carrying your answer, at its exact rank ("#71 of 182"). An answer
+  only the AI judge recognized goes in the middle of its tier, marked "new".
+  On a screen too narrow for the margin, the result shows the rank as text.
 - **Air and speed.** The clock starts when the question appears, or after the
   game reads it aloud. A wrong
   answer costs 3 seconds, and a fast answer earns up to 50% more points.
@@ -70,7 +77,7 @@ The page calls a small JSON API, served locally by `server.py`:
 | Endpoint | Returns |
 | --- | --- |
 | `GET /api/dive?voice=Kore&accent=gb` | A new game: seven freshly generated questions |
-| `POST /api/judge` `{"slug", "alts"}` | The matched answer and its tier, or `null` |
+| `POST /api/judge` `{"slug", "alts"}` | The matched answer, its tier and rank, and its ranking ladder, or `null` |
 | `GET /api/reveal?slug=...` | Every One in a Krillion answer and every top answer, or `pending` |
 | `GET /api/voices` | The voices and accents on offer |
 | `GET /api/preview?voice=...&accent=...` | A short greeting in that voice |
@@ -236,6 +243,7 @@ krillion/
   service.py      dive, judge and reveal, free of any web framework
   judge.py        AI judge for answers the list can't settle
   match.py        exact → typo → sound matcher
+  ladder.py       the slice of the answer list an answer slides into
   normalize.py    text normalization; both sides must agree on it
   tiers.py        signal blending and tier assignment
   voices.py       the voices and accents players can choose
