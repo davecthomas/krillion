@@ -93,3 +93,24 @@ def reveal(slug: str) -> dict:
     krill = [a["name"] for a in answers if a["tier"] == KRILLION][::-1]
     top = [a["name"] for a in answers if a["tier"] == PLANKTON]
     return {"pending": False, "krillion": krill or [answers[-1]["name"]], "top": top or [answers[0]["name"]]}
+
+
+def ladder_for(slug: str, answer_id: str | None = None, tier: int | None = None) -> dict:
+    """A question's ranking ladder after the fact: for a skipped question
+    (tier samples only), or once a list that was still building is ready."""
+    prompt(slug)
+    try:
+        doc, _, _ = catalog(slug)
+    except NotReady:
+        return {"pending": True}
+    except KeyError:
+        return {"pending": False, "ladder": None}
+    answers = doc["answers"]
+    rank = next((i for i, a in enumerate(answers) if a["id"] == answer_id), None) if answer_id else None
+    if rank is not None:
+        lad = ladder.build(answers, rank=rank)
+    elif tier is not None:
+        lad = ladder.build(answers, tier=tier)
+    else:
+        lad = ladder.build(answers)
+    return {"pending": False, "ladder": lad}

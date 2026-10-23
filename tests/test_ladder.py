@@ -11,7 +11,7 @@ def names(lad):
 
 
 def test_on_list_answer_slots_between_its_neighbors():
-    lad = ladder.build(ANSWERS, rank=10)  # a10, a Rare answer
+    lad = ladder.build(ANSWERS, rank=10, per_tier=2, around=2)  # a10, a Rare answer
     assert lad["rank"] == 11 and lad["total"] == 20
     assert "a10" not in names(lad)  # the page inserts the player's own answer
     above, below = names(lad)[: lad["position"]], names(lad)[lad["position"]:]
@@ -19,7 +19,7 @@ def test_on_list_answer_slots_between_its_neighbors():
 
 
 def test_every_tier_is_represented_in_rank_order():
-    lad = ladder.build(ANSWERS, rank=4)
+    lad = ladder.build(ANSWERS, rank=4, per_tier=2)
     tiers = [r["tier"] for r in lad["rows"]]
     assert set(tiers) == {PLANKTON, SCHOOLER, RARE, DEEP_CUT, KRILLION}
     assert tiers == sorted(tiers)
@@ -32,6 +32,12 @@ def test_judged_answer_goes_mid_tier_without_a_rank():
     slot_neighbor_above = lad["rows"][lad["position"] - 1]
     assert slot_neighbor_above["tier"] in (RARE, DEEP_CUT)
     assert lad["rows"][lad["position"]]["tier"] == DEEP_CUT
+
+
+def test_question_with_no_answer_gets_tier_samples_only():
+    lad = ladder.build(ANSWERS)
+    assert lad["position"] is None and lad["rank"] is None
+    assert {r["tier"] for r in lad["rows"]} == {PLANKTON, SCHOOLER, RARE, DEEP_CUT, KRILLION}
 
 
 def test_top_and_bottom_ranks():

@@ -60,6 +60,10 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._json(200, game)
             if url.path == "/api/reveal":
                 return self._json(200, service.reveal(q.get("slug", "")))
+            if url.path == "/api/ladder":
+                tier = q.get("tier")
+                return self._json(200, service.ladder_for(
+                    q.get("slug", ""), q.get("answer") or None, int(tier) if tier and tier.isdigit() else None))
             if url.path == "/api/voices":
                 return self._json(200, voices.options())
             if url.path == "/api/preview":

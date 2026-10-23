@@ -114,8 +114,15 @@
     <div class="row">
       <button class="btn ghost" id="repeatBtn" type="button">Hear it again</button>
       <button class="btn ghost" id="skipBtn" type="button">Skip</button>
+      <button class="btn ghost endBtn" id="endBtn" type="button">End dive</button>
     </div>
   </section>
+
+  <!-- RANKINGS: every question's answer ladder, in one list that grows as you play -->
+  <aside id="ladder" class="ladderCol" hidden aria-label="Answer rankings">
+    <div class="eyebrow">Rankings</div>
+    <div id="ladderList" class="ladderList" tabindex="0"></div>
+  </aside>
 
   <!-- DIVE LOG: every finished question stays here, with all its winning answers -->
   <aside id="side" class="side" hidden aria-label="This dive so far">
