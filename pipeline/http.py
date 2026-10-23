@@ -72,6 +72,11 @@ def _pause(host: str, seconds: float) -> None:
             f.write(str(until))
 
 
+def is_cached(url: str, params: dict | None = None) -> bool:
+    req = _client.build_request("GET", url, params=params)
+    return (CACHE_DIR / hashlib.sha1(str(req.url).encode()).hexdigest()).exists()
+
+
 def get_json(url: str, params: dict | None = None, *, cache: bool = True):
     req = _client.build_request("GET", url, params=params)
     full = str(req.url)
