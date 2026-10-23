@@ -118,12 +118,41 @@ def _plausible(title: str, description: str, noun: str) -> bool:
     return any(text & _forms(w) for w in words(noun))
 
 
+_PLACE = re.compile(r"\b(?:city|town|municipality|village|community) in (.+)$", re.IGNORECASE)
+
+
+def _place(noun: str) -> str | None:
+    """"Kentucky" for "city in Kentucky": the place every answer must be in."""
+    m = _PLACE.search(noun)
+    return m.group(1).strip() if m else None
+
+
+def _in_place(title: str, description: str, place: str) -> bool:
+    text = set(words(title)) | set(words(description))
+    return all(w in text for w in words(place))
+
+
+def _tries(name: str, noun: str) -> list[str]:
+    """Article titles to look up for a writer's answer, best first. A city is
+    titled "Paris, Kentucky"; a breed often "Dorset sheep"."""
+    n = _title_case(name)
+    place = _place(noun)
+    if place:
+        return list(dict.fromkeys([f"{n}, {place}", n]))
+    first, short = noun.split()[0], noun.split()[-1]
+    return list(dict.fromkeys([f"{n} ({noun})", f"{n} ({short})", n, f"{n} {first}", f"{n} {noun}"]))
+
+
 def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str) -> str | None:
     """First candidate whose description names the noun; failing that, the
     first that is not clearly something else (a place, person or work).
     Broad categories need the fallback: Wikipedia calls most vegetables
     "Species of plant", never "vegetable"."""
     found = [resolved[t] for t in tries if t in resolved]
+    place = _place(noun)
+    if place:
+        # "Paris" alone is Paris, France: a town counts only if it is in the place
+        return next((art for art in found if _in_place(art, desc.get(art, ""), place)), None)
     for art in found:
         if _plausible(art, desc.get(art, ""), noun):
             return art
@@ -173,11 +202,9 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     log.info("%s: %d answers from the writer", raw["prompt"], len(answers))
 
     # Verify: "Pointer (dog breed)", "Puli (dog)", then "Pointer", then "Swiss cheese".
-    short = noun.split()[-1]
     candidates = []
     for a in answers:
-        n = _title_case(a["name"])
-        a["_try"] = list(dict.fromkeys([f"{n} ({noun})", f"{n} ({short})", n, f"{n} {noun}"]))
+        a["_try"] = _tries(a["name"], noun)
         candidates += a["_try"]
     resolved = wiki.resolve(candidates)
     # A bare name often lands on another meaning: "Cheddar" is a village,

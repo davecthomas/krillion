@@ -65,6 +65,25 @@ def test_writer_answers_land_on_the_right_article():
     assert pick(["Carrot"], resolved, desc, "vegetable") == "Carrot"
 
 
+def test_towns_must_be_in_the_place_asked_about():
+    resolved = {"Paris, Kentucky": "Paris, Kentucky", "Paris": "Paris", "Peru, Indiana": "Peru, Indiana",
+                "Peru": "Peru", "Lexington": "Lexington, Kentucky"}
+    desc = {"Paris, Kentucky": "City in Kentucky, United States", "Paris": "Capital and largest city of France",
+            "Peru, Indiana": "City in Indiana, United States", "Peru": "Country in South America",
+            "Lexington, Kentucky": "City in Kentucky, United States"}
+    pick = catalog._pick_article
+    noun = "city in Kentucky"
+    assert catalog._tries("Paris", noun) == ["Paris, Kentucky", "Paris"]
+    assert pick(["Paris, Kentucky", "Paris"], resolved, desc, noun) == "Paris, Kentucky"
+    assert pick(["Paris"], resolved, desc, noun) is None  # France is not in Kentucky
+    assert pick(["Lexington"], resolved, desc, noun) == "Lexington, Kentucky"
+    assert pick(["Peru"], resolved, desc, "city in Indiana") is None
+
+
+def test_breeds_are_also_tried_with_the_species():
+    assert "Dorset sheep" in catalog._tries("Dorset", "sheep breed")
+
+
 def test_stars_and_galaxies_are_not_constellations():
     assert not catalog._on_topic("Mira", "Red giant star in the constellation Cetus", "constellation")
     assert not catalog._on_topic("Whirlpool Galaxy", "Galaxy in the constellation Canes Venatici", "constellation")
