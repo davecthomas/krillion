@@ -132,6 +132,9 @@ def _in_place(title: str, description: str, place: str) -> bool:
     return all(w in text for w in words(place))
 
 
+_QUALIFIERS = ("fruit", "plant", "vegetable", "food", "dish", "animal")
+
+
 def _tries(name: str, noun: str) -> list[str]:
     """Article titles to look up for a writer's answer, best first. A city is
     titled "Paris, Kentucky"; a breed often "Dorset sheep"."""
@@ -144,7 +147,10 @@ def _tries(name: str, noun: str) -> list[str]:
     # "duck or goose breed": a member is a "Cayuga duck" or a "Toulouse goose"
     kinds = [parts[0]] + [parts[i + 1] for i, w in enumerate(parts[:-1]) if w == "or"]
     tries = [f"{n} ({noun})", f"{n} ({short})", *(f"{n} ({k})" for k in kinds), n,
-             *(f"{n} {k}" for k in kinds), f"{n} {noun}"]
+             *(f"{n} {k}" for k in kinds), f"{n} {noun}",
+             # When the bare name is a disambiguation page and the noun is a
+             # word Wikipedia doesn't use ("citrus"): "Lime (fruit)"
+             *(f"{n} ({q})" for q in _QUALIFIERS)]
     return list(dict.fromkeys(tries))
 
 
