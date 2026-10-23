@@ -13,6 +13,8 @@ dependencies = [
 
 [dependency-groups]
 dev = ["pytest>=8.3", "scipy>=1.14"]
+# Google Trends for the catalog build (optional: the build skips the signal without it)
+build = ["pytrends>=4.9.2", "urllib3<2"]  # pytrends still uses a urllib3 1.x argument
 
 [tool.uv]
 package = false

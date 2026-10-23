@@ -5,35 +5,41 @@ A voice trivia game where the obvious answer sinks. You hear a prompt such as
 rarer it is, the more it scores. Cheddar is Plankton. Cooleeney, a farmhouse
 cheese from Tipperary, is One in a Krillion.
 
-There is no question bank. AI generates every game's categories when you
-start it, checks them against every category you've had before, and the game
-scores the answers from data.
+Questions come from a bank built ahead of time. A Claude Code skill writes
+the categories and answer lists on your own Claude plan, and a deterministic
+build step checks every answer against Wikipedia and Wikidata, then ranks
+it with pageviews, word frequency, Google Books and Google Trends. Starting a
+game makes no AI calls, and the game remembers which questions you've played,
+so none repeats.
 
 ## Play it locally
 
-Requires Python 3.11–3.13, [uv](https://docs.astral.sh/uv/), an OpenAI API
-key, and optionally a Google Cloud service account for the recorded voices.
+Requires Python 3.11–3.13 and [uv](https://docs.astral.sh/uv/). An OpenAI API
+key turns on the AI judge for valid answers missing from a list, and a Google
+Cloud service account turns on the recorded voices. The game runs without
+either.
 
 ```bash
 uv sync
 cp .env.example .env                  # OPENAI_API_KEY, GOOGLE_APPLICATION_CREDENTIALS
 cp models.example.json models.json    # model selections; set your Google Cloud project
-uv run python server.py               # http://localhost:8000
+make serve                            # http://localhost:8765
 ```
 
-Open the page in Chrome, Edge or Safari and click **New dive**. When the
-questions are ready, press **Start**. Each question appears with 25 seconds of
-air. Hold Space (or the **Hold to talk** button), say your answer, and let go.
-Say "skip" to pass, or type in the answer box. To hear the questions read
-aloud, turn on **Read questions aloud** in Settings (the gear, top right).
+The committed question package (`data/packages/default.jsonl.gz`) unpacks on
+first start. Open the page in Chrome, Edge or Safari and click **New dive**,
+then **Start**. Each question appears with 25 seconds of air. Hold Space (or
+the **Hold to talk** button), say your answer, and let go. Say "skip" to pass,
+or type in the answer box. To hear the questions read aloud, turn on **Read
+questions aloud** in Settings (the gear, top right).
 
 ## The game
 
-- **Every dive is new.** Each New dive gets seven freshly generated categories,
-  and none repeats one you've had before. The dive waits on a ready screen
-  until you press Start; Back keeps it for your next New dive. The server
-  prepares the next game while you play the current one, so a new dive is
-  usually ready at once.
+- **Every dive is new.** Each New dive draws seven questions you haven't
+  played, from as many different domains as the bank allows, and records them
+  in `data/live/asked.json`. No question repeats until you've played the whole
+  bank; then the server asks you to build more. The dive waits on a ready
+  screen until you press Start; Back keeps it for your next New dive.
 - **Questions read aloud, if you want them.** Off by default: turn on **Read
   questions aloud** in Settings. Gemini TTS on Vertex AI then reads each
   question, directed as an upbeat game-show host, and "repeat" reads it again. Pick any of 30 Gemini voices
@@ -75,17 +81,16 @@ aloud, turn on **Read questions aloud** in Settings (the gear, top right).
 - **Dive log.** A panel beside the game (below it on a phone) keeps every
   finished question with your answer and all its One in a Krillion answers (all
   the top answers in Popular mode). The end-of-dive summary lists every winning
-  answer for every question. A list still building when its question ends fills
-  in as soon as it's ready.
+  answer for every question.
 
 The page calls a small JSON API, served locally by `server.py`:
 
 | Endpoint | Returns |
 | --- | --- |
-| `GET /api/dive?voice=Kore&accent=gb` | A new game: seven freshly generated questions |
+| `GET /api/dive?voice=Kore&accent=gb` | A new game: seven questions you haven't played |
 | `POST /api/judge` `{"slug", "alts"}` | The matched answer, its tier and rank, and its ranking ladder, or `null` |
-| `GET /api/ladder?slug=...&answer=...` | A question's ranking ladder after the fact (skipped questions, late lists) |
-| `GET /api/reveal?slug=...` | Every One in a Krillion answer and every top answer, or `pending` |
+| `GET /api/ladder?slug=...&answer=...` | A question's ranking ladder after the fact (skipped questions) |
+| `GET /api/reveal?slug=...` | Every One in a Krillion answer and every top answer |
 | `GET /api/voices` | The voices and accents on offer |
 | `GET /api/preview?voice=...&accent=...` | A short greeting in that voice |
 | `GET /api/audio?slug=...&voice=...&accent=...` | The recorded question, recording it first if needed |
@@ -108,53 +113,83 @@ Each question has a list of valid answers, and every answer sits in one tier:
 Nobody writes these tiers by hand. The game builds them from data, and player
 answers will refine them.
 
-## How a game is generated
+## How the question bank is built
 
 ```
-New dive ─► seeds ─► propose ─► dedupe ─► questions (game starts)
-                                            │
-                     in the background, per question:
-                     answer list ─► verify ─► score ─► tier ─► data/live/catalog/
+/krillion-catalog ─► data/catalog/raw/*.json        (written on your Claude plan)
+make catalog      ─► data/catalog/questions/*.json  (verify, add, score, tier)
+make package      ─► data/packages/default.jsonl.gz (committed; the game unpacks it)
 ```
 
-1. **Seed.** Sample 50 articles from Wikipedia's daily top-1,000 most-read
-   lists for three random days in the past two years, which takes about a
-   second. The surprise comes from the seeds. Without them, a model asked for
-   categories returns the same dozen every time: dog breeds, cheeses, elements.
-2. **Propose.** `gpt-6-sol` climbs from seeds to playable categories ("Bowline"
-   → "Name a knot"). A category needs factual membership, roughly 80 to 2,000
-   members, answers that are single named things, and at least three answers a
-   typical adult can name unaided.
-3. **Dedupe.** Embeddings (`text-embedding-3-small`) reject any proposal within
-   cosine 0.84 of a category you've already had. "Name a breed of dog" and
-   "Name a dog breed" score 0.94; "cheese" and "French cheese" score 0.74 and
-   both stay. The history lives in `data/live/history.json`.
-4. **Answer list.** `gpt-6-sol` lists every valid answer it knows as bare names,
-   grouped from most common to obscure. The grouping is the model's salience
-   guess; aliases and article titles come from Wikipedia in the next step.
-5. **Verify.** Look up each name on Wikipedia, 50 per request: "Name (noun)",
-   then "Name", then "Name noun", following redirects and rejecting
-   disambiguation pages. The pipeline sets aside answers with no article, because
-   that is where made-up answers turn up. The redirects pointing at each article become
-   aliases, including common misspellings such as "Golden retreiver".
-6. **Score.** Blend three signals, each turned into a percentile within its
-   category first:
-   - Wikipedia pageviews over the last 12 months (weight 0.40)
-   - [wordfreq](https://github.com/rspeer/wordfreq) Zipf frequency (0.25, cut to
-     0.08 for multi-word names)
-   - the model's salience group (0.35)
-7. **Tier.** Rank by the blended score: roughly the top 6% are Plankton, then
+`make questions` runs the last two steps together.
+
+1. **Write.** The [`/krillion-catalog`](.claude/skills/krillion-catalog/SKILL.md)
+   skill asks how many questions to write (default 500), reads what exists so
+   it never repeats a prompt, and writes one file per question: the prompt,
+   the noun Wikipedia uses to disambiguate members ("dog breed"), optionally
+   the Wikipedia category and Wikidata class that list members, and 60–150
+   answers grouped from very common to obscure. It runs in Claude Code on
+   the plan of whoever runs it, so writing questions costs no API money. It
+   writes in batches of 20 and resumes where it left off. The audience is
+   North American: no categories rooted in another country's culture, such
+   as cricket or Bollywood films. Global subjects such as cheeses stay.
+2. **Verify.** Look up each name on Wikipedia, 50 per request: "Name (noun)",
+   "Name (last word of noun)", then "Name", then "Name noun", following
+   redirects and rejecting disambiguation pages. The first article whose short
+   description is about the noun wins, because a bare name often means
+   something else: "Cheddar" is a village, and "Goa" an Indian state rather
+   than the board game. The build sets aside answers with no such article,
+   because that is where made-up answers turn up.
+3. **Add.** Members the writer missed come from the Wikipedia category tree
+   (two levels of subcategories) and from Wikidata instances of the class. A
+   member stays only when its title or short description uses every word of
+   the noun and doesn't describe a book, film, person or theory: the check drops
+   "Sadie (dog)", a show winner, and "Knots Unravelled", a book. Added members
+   get the lowest salience, which is where good One in a Krillion answers come
+   from. The build adds at most 400, keeping those with the most language
+   editions.
+4. **Aliases.** The redirects pointing at each article become aliases,
+   including common misspellings such as "Golden retreiver".
+5. **Score.** Blend six signals, each turned into a percentile within its
+   question first. A signal missing for an answer drops out of its blend.
+
+   | Signal | Weight | Source |
+   | --- | --- | --- |
+   | Wikipedia pageviews, last 12 months | 0.30 | Wikimedia REST API |
+   | Writer's salience group | 0.20 | the raw file |
+   | Word frequency (Zipf) | 0.15, 0.05 for multi-word names | [wordfreq](https://github.com/rspeer/wordfreq) |
+   | US search interest, five years | 0.15 | Google Trends, forty best-known answers |
+   | Wikipedia language editions | 0.10 | Wikidata sitelinks |
+   | American English book frequency, 2015–2019 | 0.10 | Google Books Ngram, 150 best-known answers |
+
+   When the article needed more than the spoken name ("Mouse (knot)",
+   "Newfoundland dog"), the name has another meaning, so word frequency,
+   Ngram and Trends are left out for it.
+6. **Tier.** Rank by the blended score: roughly the top 6% are Plankton, then
    Schooler to 35%, Rare to 70%, and Deep Cut after that. The least common 3% (at
    most five) become One in a Krillion. Too Clever stays empty: no text signal can
    tell "rare" from "rare but everyone says it", so only player answers can fill
    it.
+7. **Package.** Every built question goes into one gzipped JSON Lines file,
+   one question per line, sorted by slug so unchanged questions produce the
+   same bytes. A manifest beside it lists the count, domains and slugs. The
+   format loads straight into a database: one row per line, keyed by slug.
 
-An answer list takes about two minutes to build. Until it's ready, the AI judge
-scores answers to that question.
+Building takes a few minutes per question, because the build spaces out its
+requests to Wikipedia, Wikidata and Google. It caches every response in
+`pipeline/.cache/`, so a rebuild after a scoring change is fast. Google Trends
+and Books Ngram have no official API: a failure there means a missing signal,
+never a failed build. Trends rate-limits after a few dozen requests, so after
+two failures in a row the build skips it for the rest of that question.
+`--no-trends` skips Trends.
 
-### Why three signals
+To publish questions you wrote, commit the raw files and the package. A
+local build always wins over a packaged one, so a question you rebuilt is
+never overwritten when the package unpacks.
 
-Before building, we tested each signal against hand-written tiers for 8
+### Why several signals
+
+Before building, we tested two signals against hand-written tiers for 8
 categories. Spearman rank correlation, where −1 is perfect agreement:
 
 | Signal | Dog breeds | Birds | Fruit |
@@ -169,41 +204,28 @@ Each signal fails in its own way:
   phrase from its separate words, so "wife carrying" looks common too.
 - **Pageviews count curiosity.** Secretarybird draws 465k views a year because
   it is fun to read about, yet few people would name it first.
+- **Search interest counts need.** Chihuahua outscores Labrador Retriever on
+  Google Trends, partly because people search for a breed while choosing one.
 
 Blending the signals spreads those errors out. Player data is the ground truth
 that will replace the weights.
 
 ## Cost and caching
 
-All model calls go through
-[ai-api-unified](https://pypi.org/project/ai-api-unified/). Output tokens are
-most of the cost, so the answer-list step asks for bare names: grouping them by
-salience costs a few tokens per group, where per-answer aliases, titles and
-scores cost about 20 tokens per answer. For "Name a breed of dog" that cut one
-generation pass from 7,675 output tokens to 1,969, and Wikipedia verified 264
-of the 268 resulting answers.
-
-Estimated cost of one seven-question game:
-
-| Step | Model | Cost |
+| Step | What runs | Cost |
 | --- | --- | --- |
-| Propose categories | `gpt-6-sol`, 1 call | about $0.02 |
-| Dedupe | `text-embedding-3-small` | under $0.0001 |
-| Answer lists | `gpt-6-sol`, 7 calls of about 2,000 output tokens | about $0.14 |
-| Judge unmatched answers | `gpt-6-luna`, thinking off | under $0.002 |
-| Question audio | Gemini 2.5 Pro TTS, 7 short clips | about a cent (check Vertex billing) |
-| **Total** | | **about $0.17** |
+| Write questions | Claude Code, `/krillion-catalog` | your Claude plan's usage, about 2,000 output tokens a question |
+| Build and package | Wikipedia, Wikidata, Google Trends and Ngram, wordfreq | free |
+| Start a game | reads the bank | free |
+| Judge an answer missing from the list | `gpt-6-luna`, thinking off | under $0.002 a game |
+| Question audio, when turned on | Gemini 2.5 Pro TTS, 7 short clips | about a cent a game (check Vertex billing) |
 
-Speech recognition runs in the browser, and matching, wordfreq and Wikipedia
-cost nothing.
+Speech recognition runs in the browser, and matching costs nothing.
 
-ai-api-unified's response cache is on (`middleware` in `models.json`), backed
-by a SQLite store in `data/cache/` so it survives restarts
-(`krillion/cache_store.py`). The cache answers an identical request at no
-cost: rebuilding a category's answer list, judging an answer someone has
-already given, or embedding a category already checked. Entries expire after 30
-days. Category proposals bypass the cache, since every game needs new ones.
-The pipeline caches Wikimedia responses separately in `pipeline/.cache/`.
+The judge's calls go through [ai-api-unified](https://pypi.org/project/ai-api-unified/)
+with its response cache on (`middleware` in `models.json`), backed by a SQLite
+store in `data/cache/` (`krillion/cache_store.py`), so judging an answer
+someone has already given costs nothing. Entries expire after 30 days.
 
 ## Judging answers
 
@@ -226,27 +248,30 @@ The typo and sound stages never guess between two entries. A fuzzy hit counts
 only when it is closer than the best hit for any other entry.
 
 Anything still unmatched goes to the AI judge (`gpt-6-luna` with thinking off,
-about 1–2 seconds), which also scores every answer while a question's list is
-still building. It rates how common a valid answer is, and its best tier is
-Deep Cut: One in a Krillion needs a verified list entry.
+about 1–2 seconds). It rates how common a valid answer is for a North American
+adult, and its best tier is Deep Cut: One in a Krillion needs a verified list
+entry. Without an OpenAI key, an answer missing from the list is a miss.
 
 Embeddings stay out of matching. They measure relatedness: Gouda and Edam sit
 close together, and merging them would wreck a game scored on rarity.
 
-To check matching against a list from a game you've played:
+To check matching against a built question:
 
 ```bash
-uv run python -m pipeline.try_answers                     # list played categories
-uv run python -m pipeline.try_answers name-a-wine-grape "pinot grigo" --tiers
+uv run python -m pipeline.try_answers                     # list built questions
+uv run python -m pipeline.try_answers name-a-knot "bowlin" --tiers
 ```
 
 ## Repository layout
 
 ```
+Makefile          catalog, package, questions, serve, test
 server.py         local dev server: the page plus the JSON API
 public/           the voice game: index.html, styles.css, game.js, ocean.js (the dive scene)
+.claude/skills/krillion-catalog/
+                  the skill that writes raw questions on your Claude plan
 krillion/
-  live.py         generates each game, keeps the history, builds answer lists
+  bank.py         the question bank and the asked-list
   service.py      dive, judge and reveal, free of any web framework
   judge.py        AI judge for answers the list can't settle
   match.py        exact → typo → sound matcher
@@ -257,47 +282,49 @@ krillion/
   tts.py          records questions with Gemini TTS, once per voice and accent
   cache_store.py  persistent store for ai-api-unified's response cache
 pipeline/
-  generate.py     AI categories and answer lists
-  build.py        verify, score and tier one answer list
-  wiki.py         Wikipedia lookups, redirects, pageviews, random seeds
-  similar.py      embedding duplicate check
-  http.py         cached HTTP client for Wikimedia
-  try_answers.py  check answers against a list from the command line
+  catalog.py      build raw questions: verify, add members, score, tier
+  package.py      bundle built questions into a package, and unpack one
+  wiki.py         Wikipedia lookups, descriptions, redirects, pageviews
+  wikidata.py     Wikidata class members and sitelink counts
+  categories.py   Wikipedia category tree members
+  signals.py      Google Books Ngram and Google Trends
+  http.py         cached, per-host throttled HTTP client
+  try_answers.py  check answers against a built question
+data/
+  catalog/raw/    raw questions from the skill (committed)
+  packages/       built question packages (committed)
 tests/
 ```
 
-Generated at play time and git-ignored: `data/live/` (categories asked and
-their answer lists), `data/cache/` (response cache), `public/audio/` (recorded
-questions). `.env`, `models.json` and service-account key files are git-ignored
-too. Commit only the `.example` files.
+Local and git-ignored: `data/catalog/questions/` (built questions),
+`data/live/` (which questions this machine has asked), `data/cache/` (response
+cache), `public/audio/` (recorded questions). `.env`, `models.json` and
+service-account key files are git-ignored too. Commit only the `.example`
+files.
 
-Run the tests with `uv run pytest`.
+Run the tests with `make test`.
 
 ## Status
 
 Built:
 
-- live generation: a new set of categories for every game, never repeating one
-  already asked
+- a question bank written on a Claude plan and built from open data, with an
+  asked-list so no question repeats
 - the voice game, with push to talk and 30 voices in four accents
 - the answer matcher and the AI judge, with tests
-- response caching with a persistent store
 
 Known issues:
 
-- **Category quality varies.** Most proposals play well; some are too broad or
-  too specialist.
-- **The AI judge scores the first question or two of a game**, since their
-  answer lists are still building.
+- **The default package is small.** Run `/krillion-catalog` to grow it; 500
+  questions take a long session and an overnight build.
+- **Category trees stray.** The on-topic check keeps most junk out, but a
+  member whose description mentions the noun in passing can slip in.
 - **An article proves only that a thing exists.** "Blue cheese dressing" once
-  passed as a cheese. A membership check with `gpt-6-luna` would catch it.
+  passed as a cheese.
 
 Next:
 
-- **Free answer lists.** Fill answer lists from Wikidata and Wikipedia "List
-  of" pages, and use the model only for the gaps.
-- **Share categories between players.** Track what each player has seen, so a
-  category built for one player serves everyone else for free.
-- **API on Vercel**, on Postgres, recording every submitted answer.
-- **Learning from players.** Shift each tier toward players' answer share as
-  plays build up. This fills Too Clever and calibrates the signal weights.
+- **Vercel + Postgres.** Import the package into Postgres and keep the
+  asked-list per player.
+- **Learn from players.** Replace the signal weights with how often players
+  give each answer, which also fills Too Clever.

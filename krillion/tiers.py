@@ -1,8 +1,9 @@
 """Turn per-answer signals into a commonness score and a tier.
 
 Every signal becomes a percentile within its category before blending, so
-pageviews (millions), Zipf scores (0-8) and salience (1-5) are comparable and
-one category's scale never leaks into another.
+pageviews (millions), Zipf scores (0-8), sitelink counts and salience (1-5)
+are comparable and one category's scale never leaks into another. A signal
+that is missing for an answer drops out of that answer's blend.
 
 Weights are a starting point. Player answer counts will replace them as the
 ground truth once there is enough play.
@@ -17,10 +18,17 @@ PLANKTON, TOO_CLEVER, SCHOOLER, RARE, DEEP_CUT, KRILLION = range(6)
 TIER_NAMES = ["Plankton", "Too Clever", "Schooler", "Rare", "Deep Cut", "One in a Krillion"]
 TIER_POINTS = [10, 15, 30, 60, 85, 100]
 
-WEIGHTS = {"pageviews": 0.40, "zipf": 0.25, "salience": 0.35}
+WEIGHTS = {
+    "pageviews": 0.30,  # Wikipedia pageviews, 12 months
+    "zipf": 0.15,  # wordfreq
+    "salience": 0.20,  # the writer's guess
+    "sitelinks": 0.10,  # how many Wikipedia languages have the article
+    "ngram": 0.10,  # Google Books, American English
+    "trends": 0.15,  # Google Trends, US
+}
 # wordfreq scores a phrase from its separate words, so "wife carrying" looks
 # common. Trust it far less for multi-word names.
-ZIPF_WEIGHT_MULTIWORD = 0.08
+ZIPF_WEIGHT_MULTIWORD = 0.05
 
 PLANKTON_SHARE, PLANKTON_MIN = 0.06, 3
 SCHOOLER_UNTIL = 0.35
@@ -31,10 +39,13 @@ KRILLION_SHARE, KRILLION_MAX = 0.03, 5
 @dataclass
 class Signals:
     pageviews: int | None  # None when no verified article
-    zipf: float
+    zipf: float | None  # None for an ambiguous word, whose frequency belongs to another meaning
     salience: int
     multiword: bool
     verified: bool
+    sitelinks: int | None = None
+    ngram: float | None = None
+    trends: float | None = None
 
 
 def percentiles(values: list[float | None]) -> list[float | None]:
@@ -58,24 +69,29 @@ def percentiles(values: list[float | None]) -> list[float | None]:
 
 
 def commonness(signals: list[Signals]) -> list[float]:
-    pv = percentiles([s.pageviews for s in signals])
-    zf = percentiles([s.zipf for s in signals])
-    sl = percentiles([float(s.salience) for s in signals])
+    cols = {
+        name: percentiles([getattr(s, name) if getattr(s, name) is None else float(getattr(s, name))
+                           for s in signals])
+        for name in WEIGHTS
+    }
     out = []
-    for s, p, z, l in zip(signals, pv, zf, sl):
+    for i, s in enumerate(signals):
         parts = []
-        if p is not None:
-            parts.append((WEIGHTS["pageviews"], p))
-        parts.append((ZIPF_WEIGHT_MULTIWORD if s.multiword else WEIGHTS["zipf"], z))
-        parts.append((WEIGHTS["salience"], l))
+        for name, weight in WEIGHTS.items():
+            v = cols[name][i]
+            if v is None:
+                continue
+            if name == "zipf" and s.multiword:
+                weight = ZIPF_WEIGHT_MULTIWORD
+            parts.append((weight, v))
         total = sum(w for w, _ in parts)
-        out.append(sum(w * v for w, v in parts) / total)
+        out.append(sum(w * v for w, v in parts) / total if total else 0.5)
     return out
 
 
 def assign_tiers(scores: list[float], verified: list[bool]) -> list[int]:
     """Most common first: Plankton, Schooler, Rare, Deep Cut. The least
-    common *verified* answers become One in a Krillion, so an answer the model
+    common *verified* answers become One in a Krillion, so an answer the writer
     may have made up can never pay top points. Too Clever stays empty until
     player data shows which rare-on-paper answers players actually give."""
     n = len(scores)

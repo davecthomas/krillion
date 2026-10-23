@@ -2,7 +2,7 @@
 
 - resolve(): map candidate titles to real articles, 50 per request, following
   redirects and rejecting disambiguation pages.
-- popular_seeds(): random seeds from the daily most-read lists.
+- descriptions(): short descriptions, to check a member is on topic.
 - redirect_aliases(): the redirects pointing at an article, which are
   crowd-sourced alternate names ("Gruyere" -> "Gruyère cheese").
 - pageviews(): human pageviews over the last 12 full months.
@@ -68,6 +68,18 @@ def resolve(candidates: list[str]) -> dict[str, str]:
     return found
 
 
+def descriptions(titles: list[str]) -> dict[str, str]:
+    """{article title: short description}, e.g. "Mouse (knot)" -> "Knot used to make a rope thicker"."""
+    out: dict[str, str] = {}
+    unique = list(dict.fromkeys(titles))
+    for i in range(0, len(unique), BATCH):
+        for q in _query(unique[i : i + BATCH], prop="description"):
+            for p in q.get("pages", []):
+                if p.get("description"):
+                    out[p["title"]] = p["description"]
+    return out
+
+
 def redirect_aliases(titles: list[str]) -> dict[str, list[str]]:
     """{article title: [redirect titles]} for main-namespace redirects."""
     out: dict[str, list[str]] = {}
@@ -78,29 +90,6 @@ def redirect_aliases(titles: list[str]) -> dict[str, list[str]]:
                 for r in p.get("redirects", []) or []:
                     out.setdefault(p["title"], []).append(r["title"])
     return out
-
-
-TOP = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access"
-_NOT_ARTICLES = ("Main_Page", "Special:", "Wikipedia:", "Portal:", "File:", "Help:", "Talk:", "User:", "-")
-
-
-def popular_seeds(n: int = 50, days: int = 3, rng=None) -> list[str]:
-    """Random seeds that lean toward topics people know: sample n articles from
-    the daily top-1,000 most-viewed lists of a few random days in the last two
-    years. One request per day, cached, so this takes about a second."""
-    import random
-
-    rng = rng or random.Random()
-    latest = dt.date.today() - dt.timedelta(days=2)  # the newest day can lag
-    pool: set[str] = set()
-    for _ in range(days):
-        day = latest - dt.timedelta(days=rng.randrange(730))
-        data = get_json(f"{TOP}/{day:%Y/%m/%d}")
-        for item in (data.get("items") or [{}])[0].get("articles", []):
-            title = item["article"]
-            if not title.startswith(_NOT_ARTICLES) and title != "Main_Page":
-                pool.add(title.replace("_", " "))
-    return rng.sample(sorted(pool), min(n, len(pool)))
 
 
 def _window(today: dt.date | None = None) -> tuple[str, str]:

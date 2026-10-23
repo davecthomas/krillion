@@ -1,7 +1,7 @@
-"""Try answers against the catalog of a category you've played, the way the
-game judges them (catalog matching only; the game also asks the AI judge).
+"""Try answers against a built question, the way the game judges them
+(list matching only; the game also asks the AI judge).
 
-    uv run python -m pipeline.try_answers                      # list played categories
+    uv run python -m pipeline.try_answers                      # list built questions
     uv run python -m pipeline.try_answers name-a-wine-grape    # type answers, blank line to quit
     uv run python -m pipeline.try_answers name-a-wine-grape "cabernet" "pinot grigo"
     uv run python -m pipeline.try_answers name-a-wine-grape --tiers   # a sample of each tier
@@ -12,12 +12,9 @@ from __future__ import annotations
 import json
 import sys
 
+from krillion.bank import QUESTIONS as CATALOG
 from krillion.match import Matcher
 from krillion.tiers import TIER_NAMES, TIER_POINTS
-
-from krillion.live import LIVE
-
-CATALOG = LIVE / "catalog"
 
 
 def load(slug: str) -> tuple[dict, Matcher, dict]:
@@ -51,9 +48,8 @@ def main() -> None:
     args = sys.argv[1:]
     if not args:
         for p in sorted(CATALOG.glob("*.json")):
-            if p.name != "index.json":
-                d = json.loads(p.read_text())
-                print(f"  {p.stem:<34} {d['prompt']} ({len(d['answers'])} answers)")
+            d = json.loads(p.read_text())
+            print(f"  {p.stem:<34} {d['prompt']} ({len(d['answers'])} answers)")
         return
     doc, matcher, by_id = load(args[0])
     print(f"{doc['prompt']}: {len(doc['answers'])} answers")

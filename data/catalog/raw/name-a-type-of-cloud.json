@@ -1,0 +1,14 @@
+{
+  "prompt": "Name a type of cloud",
+  "noun": "cloud",
+  "domain": "science",
+  "wikipedia_category": "Category:Cloud types",
+  "wikidata_class": "Q8074",
+  "answers": {
+    "very_common": ["Cumulus", "Cirrus", "Stratus", "Cumulonimbus", "Nimbus"],
+    "common": ["Altocumulus", "Altostratus", "Cirrocumulus", "Cirrostratus", "Nimbostratus", "Stratocumulus", "Thunderhead", "Mammatus", "Lenticular cloud", "Funnel cloud", "Wall cloud", "Shelf cloud", "Contrail", "Fog", "Mushroom cloud", "Anvil cloud"],
+    "known": ["Arcus cloud", "Roll cloud", "Noctilucent cloud", "Nacreous cloud", "Polar stratospheric cloud", "Mackerel sky", "Mares' tails", "Cumulus congestus", "Cumulus humilis", "Cumulus mediocris", "Cumulus fractus", "Towering cumulus", "Pileus", "Cap cloud", "Banner cloud", "Virga", "Fallstreak hole", "Hole-punch cloud", "Asperitas", "Undulatus asperatus", "Kelvin-Helmholtz cloud", "Fluctus", "Morning Glory cloud", "Pyrocumulus", "Pyrocumulonimbus", "Flammagenitus", "Scud cloud", "Pannus", "Incus", "Castellanus", "Floccus", "Lenticularis", "Stratiformis", "Undulatus", "Radiatus", "Lacunosus", "Fibratus", "Uncinus", "Nebulosus", "Velum", "Tuba", "Cavum", "Volutus", "Homogenitus", "Horseshoe vortex cloud", "Mother-of-pearl cloud", "Ice fog", "Sea smoke", "Haze", "Mist", "Marine layer", "Cloud street", "Distrail", "Supercell", "Overshooting top", "Flanking line", "Haboob"],
+    "uncommon": ["Polar mesospheric cloud", "Actinoform cloud", "Ship tracks", "Aviaticus", "Calvus", "Capillatus", "Translucidus", "Opacus", "Perlucidus", "Duplicatus", "Intortus", "Vertebratus", "Spissatus", "Praecipitatio", "Cauda", "Murus", "Flumen", "Cataractagenitus", "Silvagenitus", "Homomutatus", "Orographic cloud", "Foehn wall", "Chinook arch", "Rotor cloud", "Wave cloud", "Billow cloud", "Beaver tail", "Tail cloud", "Inflow band", "Eruption column", "Pyroclastic cloud", "Cumulonimbus incus", "Cumulonimbus calvus", "Cumulonimbus capillatus", "Altocumulus castellanus", "Altocumulus lenticularis", "Cirrus uncinus", "Cirrus fibratus", "Cirrus spissatus", "Cirrostratus nebulosus", "Stratus nebulosus", "Stratus fractus", "Stratocumulus lenticularis", "Cumulus radiatus", "Cirrus radiatus", "Altocumulus floccus", "Cirrocumulus floccus"],
+    "obscure": ["Cirrus Kelvin-Helmholtz", "Altocumulus volutus", "Stratocumulus volutus", "Altocumulus cavum", "Cirrocumulus cavum", "Cirrus homogenitus", "Cumulus homogenitus", "Stratocumulus cataractagenitus", "Stratus silvagenitus", "Cumulonimbus flammagenitus", "Cirrus homomutatus", "Stratocumulus asperitas", "Altocumulus asperitas", "Cirrus intortus", "Cirrus vertebratus", "Cirrocumulus lacunosus", "Altocumulus lacunosus", "Stratocumulus lacunosus", "Altostratus duplicatus", "Cirrostratus duplicatus", "Altocumulus perlucidus", "Stratocumulus perlucidus", "Cumulonimbus murus", "Cumulonimbus cauda", "Cumulonimbus flumen"]
+  }
+}

@@ -1,0 +1,33 @@
+{
+ "format": 1,
+ "name": "default",
+ "questions": 14,
+ "answers": 4062,
+ "domains": {
+  "animals": 1,
+  "everyday life": 1,
+  "food and drink": 6,
+  "games and toys": 1,
+  "music": 1,
+  "nature": 1,
+  "science": 2,
+  "theater": 1
+ },
+ "packaged_at": "2026-10-23T17:13:48+00:00",
+ "slugs": [
+  "name-a-board-game",
+  "name-a-breakfast-cereal",
+  "name-a-breed-of-dog",
+  "name-a-broadway-musical",
+  "name-a-candy-bar",
+  "name-a-cheese",
+  "name-a-cocktail",
+  "name-a-constellation",
+  "name-a-knot",
+  "name-a-musical-instrument",
+  "name-a-pasta-shape",
+  "name-a-sandwich",
+  "name-a-type-of-cloud",
+  "name-a-type-of-tree"
+ ]
+}

@@ -266,7 +266,7 @@ async function newDive() {
   setupRec();
   const btns = [$('beginBtn'), $('againBtn')];
   if (!readyPrompts) {
-    // The server usually has a dive prepared; if not, generating takes 20-50 seconds.
+    // Questions come from the built bank, so this is quick.
     btns.forEach(b => { b.disabled = true; b.textContent = 'Generating new questions…'; });
     const v = voiceCfg ? `?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}` : '';
     let d;
