@@ -149,11 +149,19 @@ def _tries(name: str, noun: str) -> list[str]:
     # "duck or goose breed": a member is a "Cayuga duck" or a "Toulouse goose"
     kinds = [parts[0]] + [parts[i + 1] for i, w in enumerate(parts[:-1]) if w == "or"]
     tries = [f"{n} ({noun})", f"{n} ({short})", *(f"{n} ({k})" for k in kinds), n,
-             *(f"{n} {k}" for k in kinds), f"{n} {noun}",
-             # When the bare name is a disambiguation page and the noun is a
-             # word Wikipedia doesn't use ("citrus"): "Lime (fruit)"
-             *(f"{n} ({q})" for q in _QUALIFIERS)]
+             *(f"{n} {k}" for k in kinds), f"{n} {noun}"]
     return list(dict.fromkeys(tries))
+
+
+def _second_tries(name: str, noun: str) -> list[str]:
+    """For an answer the first tries missed: the bare name was a
+    disambiguation page and the noun isn't a word Wikipedia uses as a
+    qualifier ("citrus"), so try "Lime (fruit)". Asked only for misses,
+    which keeps the lookups (and Wikipedia's rate limits) down."""
+    if _place(noun):
+        return []
+    n = _title_case(name)
+    return [f"{n} ({q})" for q in _QUALIFIERS]
 
 
 # An animal or plant: never a Batman villain ("Great White Shark", "Firefly")
@@ -236,8 +244,18 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     # "Goa" a state, "Third Reich" redirects to Nazi Germany. Take the first
     # candidate whose short description is about the noun.
     desc = wiki.descriptions(sorted(set(resolved.values())))
+    living = raw["domain"] in LIVING_DOMAINS
     for a in answers:
-        a["article"] = _pick_article(a.pop("_try"), resolved, desc, noun, raw["domain"] in LIVING_DOMAINS)
+        a["article"] = _pick_article(a["_try"], resolved, desc, noun, living)
+    missed = [a for a in answers if not a["article"]]
+    if missed:
+        more = wiki.resolve([t for a in missed for t in _second_tries(a["name"], noun)])
+        resolved.update(more)
+        desc.update(wiki.descriptions(sorted(set(more.values()) - set(desc))))
+        for a in missed:
+            a["article"] = _pick_article(a["_try"] + _second_tries(a["name"], noun), resolved, desc, noun, living)
+    for a in answers:
+        del a["_try"]
 
     known_articles = {a["article"] for a in answers if a["article"]}
     known_names = {a["name"] for a in answers}
