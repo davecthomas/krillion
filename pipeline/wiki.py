@@ -2,6 +2,7 @@
 
 - resolve(): map candidate titles to real articles, 50 per request, following
   redirects and rejecting disambiguation pages.
+- popular_seeds(): random seeds from the daily most-read lists.
 - redirect_aliases(): the redirects pointing at an article, which are
   crowd-sourced alternate names ("Gruyere" -> "Gruyère cheese").
 - pageviews(): human pageviews over the last 12 full months.
@@ -79,11 +80,27 @@ def redirect_aliases(titles: list[str]) -> dict[str, list[str]]:
     return out
 
 
-def random_articles(n: int = 40) -> list[str]:
-    """Random main-namespace article titles: the source of surprise for new categories."""
-    data = get_json(API, {"action": "query", "list": "random", "rnnamespace": 0, "rnlimit": min(n, 500),
-                          "format": "json", "formatversion": 2}, cache=False)
-    return [r["title"] for r in data.get("query", {}).get("random", [])]
+TOP = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access"
+_NOT_ARTICLES = ("Main_Page", "Special:", "Wikipedia:", "Portal:", "File:", "Help:", "Talk:", "User:", "-")
+
+
+def popular_seeds(n: int = 50, days: int = 3, rng=None) -> list[str]:
+    """Random seeds that lean toward topics people know: sample n articles from
+    the daily top-1,000 most-viewed lists of a few random days in the last two
+    years. One request per day, cached, so this takes about a second."""
+    import random
+
+    rng = rng or random.Random()
+    latest = dt.date.today() - dt.timedelta(days=2)  # the newest day can lag
+    pool: set[str] = set()
+    for _ in range(days):
+        day = latest - dt.timedelta(days=rng.randrange(730))
+        data = get_json(f"{TOP}/{day:%Y/%m/%d}")
+        for item in (data.get("items") or [{}])[0].get("articles", []):
+            title = item["article"]
+            if not title.startswith(_NOT_ARTICLES) and title != "Main_Page":
+                pool.add(title.replace("_", " "))
+    return rng.sample(sorted(pool), min(n, len(pool)))
 
 
 def _window(today: dt.date | None = None) -> tuple[str, str]:
@@ -93,7 +110,7 @@ def _window(today: dt.date | None = None) -> tuple[str, str]:
     return start.strftime("%Y%m%d00"), end.strftime("%Y%m%d00")
 
 
-def pageviews(titles: list[str], workers: int = 4) -> dict[str, int]:
+def pageviews(titles: list[str], workers: int = 8) -> dict[str, int]:
     start, end = _window()
 
     def one(title: str) -> tuple[str, int]:

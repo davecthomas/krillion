@@ -116,3 +116,16 @@ pre.share{font:15px/1.5 var(--fm);background:var(--panel);border:1px solid var(-
 .reveal:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
 .reveal .more{color:var(--muted)}
 .revealList{display:block;margin-top:6px;color:var(--ink);line-height:1.6}
+.voicePick{display:grid;gap:10px}
+.sel{display:grid;gap:4px;font:500 11px/1 var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sel select{appearance:none;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a9c9c6'/%3E%3C/svg%3E") no-repeat right 12px center;border:1.5px solid var(--line);border-radius:12px;padding:11px 32px 11px 12px;color:var(--ink);font:15px var(--fb);letter-spacing:0;text-transform:none;min-width:0}
+.sel select:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.voicePick .row{align-items:end}
+.hint{margin:0;font-size:13px;color:var(--muted);min-height:1.3em}
+.mic{flex-wrap:wrap}
+.micText{flex:1 1 140px}
+.talk{flex:0 0 auto;margin-left:auto;border:2px solid var(--glow);background:transparent;color:var(--glow);border-radius:999px;padding:16px 22px;font:700 15px/1 var(--fd);touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.talk:disabled{opacity:.4;cursor:default}
+.talk.down{background:var(--glow);color:hsl(200 70% 8%)}
+.talk:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.note kbd{font:500 12px var(--fm);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:1px 5px}

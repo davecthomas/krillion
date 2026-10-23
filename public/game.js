@@ -39,15 +39,9 @@ const $ = id => document.getElementById(id);
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }};
-const todayKey = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 const bandFor = m => BANDS.reduce((b, [t, n]) => m >= t ? n : b, 'Shallows');
 const fmt = n => n.toLocaleString('en-US');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
-
-// Categories played recently, most recent first, so practice dives stay fresh
-const RECENT_KEY = 'kv-recent', RECENT_MAX = 60;
-const recentSlugs = () => store.get(RECENT_KEY) || [];
-function rememberPlayed(slugs) { store.set(RECENT_KEY, [...new Set([...slugs, ...recentSlugs()])].slice(0, RECENT_MAX)); }
 
 // "Krillion answer: X · +4 more" opens the full list on click
 function revealHTML(label, list) {
@@ -87,6 +81,34 @@ function tone(f, d = .12, type = 'sine', g = .12, at = 0) {
 const chime = ti => { const notes = [523, 659, 784, 988, 1175, 1568]; for (let i = 0; i <= ti; i++) tone(notes[i], .22, 'sine', .1, i * .08); };
 const buzz = () => { tone(180, .18, 'triangle', .14); tone(140, .22, 'triangle', .1, .08); };
 
+// ---------- Question voice ----------
+// The player picks a Gemini voice and accent. The server records each question
+// in that voice the first time it is asked for, then serves it from disk.
+let voiceCfg = store.get('kv-voice'), voiceOpts = null;
+const accentLang = () => (voiceOpts && voiceOpts.accents.find(a => a.id === voiceCfg.accent) || {}).lang || 'en-US';
+const clipUrl = slug => `api/audio?slug=${encodeURIComponent(slug)}&voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}`;
+async function loadVoices() {
+  try { voiceOpts = await api('/api/voices'); } catch (e) { $('voiceHint').textContent = 'Voices are unavailable; questions use your browser’s voice.'; return; }
+  if (!voiceCfg || !voiceOpts.voices.some(v => v.id === voiceCfg.voice)) voiceCfg = voiceOpts.default;
+  $('voiceSel').innerHTML = voiceOpts.voices.map(v => `<option value="${v.id}">${v.id} · ${v.character}, ${v.gender}</option>`).join('');
+  $('accentSel').innerHTML = voiceOpts.accents.map(a => `<option value="${a.id}">${a.label}</option>`).join('');
+  $('voiceSel').value = voiceCfg.voice; $('accentSel').value = voiceCfg.accent;
+}
+function chooseVoice() {
+  voiceCfg = {voice: $('voiceSel').value, accent: $('accentSel').value}; store.set('kv-voice', voiceCfg);
+  $('voiceHint').textContent = `Questions will be read by ${voiceCfg.voice} with ${/^[AEIOU]/.test($('accentSel').selectedOptions[0].text) ? 'an' : 'a'} ${$('accentSel').selectedOptions[0].text} accent.`;
+}
+async function previewVoice() {
+  if (!voiceOpts) return;
+  if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
+  if (actx && actx.state === 'suspended') actx.resume();
+  const b = $('previewBtn'); b.disabled = true; b.textContent = 'Loading…';
+  stopVoice();
+  const buf = await loadClip(`api/preview?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}`);
+  if (buf) await playBuffer(buf); else await say('Welcome to Krillion. Here comes your first question.');
+  b.disabled = false; b.textContent = 'Preview';
+}
+
 // ---------- Reading the question ----------
 // The question is the only thing the game speaks. Each category has a clip
 // recorded ahead of time (Gemini TTS); browser speech is the fallback.
@@ -101,8 +123,11 @@ function loadClip(url) {
   return clips.get(url);
 }
 async function speakPrompt(p) {
-  const buf = await loadClip(p.audio);
+  const buf = voiceCfg ? await loadClip(clipUrl(p.slug)) : null;
   if (!buf) return say(p.prompt + '.');
+  return playBuffer(buf);
+}
+function playBuffer(buf) {
   return new Promise(res => {
     const src = actx.createBufferSource(); src.buffer = buf; src.connect(actx.destination);
     let done = false; const fin = () => { if (!done) { done = true; clearTimeout(t); playing = null; res(); } };
@@ -128,7 +153,10 @@ function say(text) {
   return new Promise(res => {
     if (!('speechSynthesis' in window)) { res(); return; }
     speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text); if (voice) u.voice = voice; u.rate = 1.03;
+    const u = new SpeechSynthesisUtterance(text); u.rate = 1.03;
+    const lang = voiceCfg ? accentLang() : 'en-US', vs = speechSynthesis.getVoices();
+    const match = vs.find(v => v.lang.replace('_', '-') === lang) || voice;
+    if (match) { u.voice = match; u.lang = match.lang; }
     let done = false; const fin = () => { if (!done) { done = true; clearTimeout(t); res(); } };
     u.onend = fin; u.onerror = fin;
     const t = setTimeout(fin, 1800 + text.length * 85); // some browsers never fire onend
@@ -136,9 +164,12 @@ function say(text) {
   });
 }
 
-// ---------- Speech recognition ----------
+// ---------- Speech recognition: push to talk ----------
+// The mic only listens while Space or the Talk button is held, so players can
+// talk an answer over first. Releasing stops (not aborts) recognition, so the
+// last words still arrive as a final result.
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-let rec = null, listening = false, wantListen = false, micBlocked = !SR, lastInterim = 0;
+let rec = null, listening = false, wantListen = false, holding = false, micBlocked = !SR, lastInterim = 0;
 function setupRec() {
   if (!SR || rec) return;
   rec = new SR(); rec.lang = 'en-US'; rec.continuous = true; rec.interimResults = true; rec.maxAlternatives = 4;
@@ -155,10 +186,21 @@ function setupRec() {
       micBlocked = true; wantListen = false; orb(); if (state === 'play') $('typeInput').focus();
     }
   };
-  rec.onend = () => { listening = false; orb(); if (wantListen && !micBlocked) setTimeout(startRec, 120); };
+  // Chrome ends a session after a silence; keep listening while the key is still held
+  rec.onend = () => { listening = false; orb(); if (wantListen && holding && !micBlocked) setTimeout(startRec, 60); };
 }
 function startRec() { if (!rec || micBlocked) return; wantListen = true; if (listening) return; try { rec.start(); } catch (e) {} }
-function stopRec() { wantListen = false; if (rec && listening) { try { rec.abort(); } catch (e) {} } }
+function stopRec() { wantListen = false; holding = false; talkUI(); if (rec && listening) { try { rec.abort(); } catch (e) {} } }
+function releaseRec() { wantListen = false; if (rec && listening) { try { rec.stop(); } catch (e) {} } }
+
+const canTalk = () => state === 'play' && phase === 'answer' && !judging && !micBlocked;
+function talkUI() {
+  const b = $('talkBtn'); b.classList.toggle('down', holding);
+  b.disabled = !(state === 'play' && phase === 'answer' && !micBlocked);
+  b.textContent = holding ? 'Listening…' : 'Hold to talk';
+}
+function talkDown() { if (holding || !canTalk()) return; holding = true; $('heard').textContent = ''; startRec(); talkUI(); orb(); }
+function talkUp() { if (!holding) return; holding = false; releaseRec(); talkUI(); orb(); }
 
 // ---------- Game ----------
 let state = 'start', phase = 'idle', game = null, judging = false, token = 0;
@@ -170,9 +212,11 @@ function orb() {
   if (judging) { o.classList.add('checking'); s = 'Checking that answer…'; }
   else if (phase === 'speaking') { o.classList.add('speaking'); s = 'Reading the prompt…'; }
   else if (phase === 'answer' && micBlocked) { o.classList.add('blocked'); s = SR ? 'Mic is blocked here. Type, or use your keyboard’s dictation mic.' : 'This browser can’t listen. Type, or use your keyboard’s dictation mic.'; }
-  else if (phase === 'answer' && listening) { o.classList.add('listening'); s = 'Listening. Say your answer.'; }
-  else if (phase === 'answer') { s = 'Starting the mic…'; }
+  else if (phase === 'answer' && holding && listening) { o.classList.add('listening'); s = 'Listening. Let go when you’ve answered.'; }
+  else if (phase === 'answer' && holding) { o.classList.add('listening'); s = 'Starting the mic…'; }
+  else if (phase === 'answer') { s = 'Hold Space or the Talk button to answer.'; }
   if (s) $('status').textContent = s;
+  if ($('talkBtn')) talkUI();
 }
 
 function show(id) { ['start', 'play', 'end'].forEach(s => $(s).hidden = s !== id); $('pips').hidden = id !== 'play'; }
@@ -183,7 +227,7 @@ function pips() {
   }).join('');
 }
 
-async function startGame(mode) {
+async function startGame() {
   state = 'play';
   if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
   if (actx && actx.state === 'suspended') actx.resume();
@@ -192,27 +236,53 @@ async function startGame(mode) {
   if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {});
   TS = MODES[scoring].tiers;
   let d;
-  const recent = mode === 'daily' ? '' : `&recent=${encodeURIComponent(recentSlugs().join(','))}`;
-  try { d = await api(`/api/dive?mode=${mode === 'daily' ? 'daily' : 'practice'}&date=${todayKey()}${recent}`); }
-  catch (e) { state = 'start'; $('lede').textContent = 'Could not reach the game server. Is it running?'; return; }
-  game = {mode, scoring, date: d.date, prompts: d.prompts, i: 0, rounds: [], score: 0};
-  await loadClip(game.prompts[0] && game.prompts[0].audio);
+  // Every dive is generated fresh. The server usually has one ready; if not,
+  // generating takes about 15 seconds.
+  const btns = [$('beginBtn'), $('againBtn')];
+  btns.forEach(b => { b.disabled = true; b.textContent = 'Generating new questions…'; });
+  const v = voiceCfg ? `?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}` : '';
+  try {
+    const r = await fetch('/api/dive' + v);
+    d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'failed');
+  } catch (e) {
+    home();
+    btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
+    $('lede').textContent = (e && e.message && e.message !== 'failed' && !/fetch/i.test(e.message)) ? e.message : 'Couldn’t reach the game server. Is it running?';
+    return;
+  }
+  game = {scoring, prompts: d.prompts, i: 0, rounds: [], score: 0};
+  if (voiceCfg && game.prompts[0]) await loadClip(clipUrl(game.prompts[0].slug));
+  btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
   setDepth(0); show('play'); playRound();
+}
+
+// The answer list for a brand-new category takes about a minute to build.
+// Wait a little for it; if it's still building, the reveal is left out.
+async function revealFor(slug) {
+  for (let i = 0; i < 4; i++) {
+    let r = null;
+    try { r = await api(`/api/reveal?slug=${encodeURIComponent(slug)}`); } catch (e) { return null; }
+    if (!r.pending) return r;
+    $('status').textContent = 'Finding the krillion answers…';
+    await new Promise(res => setTimeout(res, 1500));
+  }
+  return null;
 }
 
 async function playRound() {
   const my = ++token, p = game.prompts[game.i];
-  p.revealing = api(`/api/reveal?slug=${encodeURIComponent(p.slug)}`).catch(() => null);
+  p.revealing = null;  // fetched at the end of the round, when the answer list is likelier to be ready
   phase = 'speaking'; judging = false;
   $('roundLabel').textContent = `Prompt ${game.i + 1} of ${game.prompts.length} · ${MODES[game.scoring].label}`;
   const pt = $('promptText'); pt.textContent = 'Listen closely…'; pt.classList.add('veiled');
   $('heard').textContent = ''; $('misses').innerHTML = ''; $('resultBox').hidden = true; $('typeInput').value = '';
   game.tried = new Set(); timer.left = ROUND_MS; timer.running = false; drawAir(); pips(); orb();
   stopRec();
-  const next = game.prompts[game.i + 1]; if (next) loadClip(next.audio);
+  const next = game.prompts[game.i + 1]; if (next && voiceCfg) loadClip(clipUrl(next.slug));
   await speakPrompt(p);
   if (my !== token) return;
-  phase = 'answer'; orb(); startTimer(); startRec();
+  phase = 'answer'; orb(); startTimer();
   if (micBlocked) $('typeInput').focus({preventScroll: true});
 }
 
@@ -252,8 +322,6 @@ async function heard(alts, typed) {
   if (my !== token || state !== 'play') return;
   if (r && r.hit) { endRound({tier: r.hit.tier, display: r.hit.name}); return; }
   orb();
-  // Long unmatched speech is usually chatter, not a wrong answer
-  if (!typed && words(raw).length > 3) return;
   wrong(raw);
 }
 function wrong(raw) {
@@ -267,13 +335,13 @@ async function repeat() {
   if (state !== 'play' || phase !== 'answer') return;
   const my = token; timer.running = false; stopRec(); phase = 'speaking'; orb();
   await speakPrompt(game.prompts[game.i]); if (my !== token) return;
-  phase = 'answer'; orb(); startTimer(); startRec();
+  phase = 'answer'; orb(); startTimer();
 }
 
 async function endRound(hit, why) {
   const my = ++token; timer.running = false; phase = 'done'; judging = false; stopRec(); orb();
   const p = game.prompts[game.i], M = MODES[game.scoring];
-  const rv = await p.revealing; if (my !== token) return;
+  const rv = await revealFor(p.slug); if (my !== token) return;
   const bestList = rv ? (game.scoring === 'rare' ? rv.krillion : rv.top) : [];
   const base = hit ? TS[hit.tier].pts : 0, bonus = hit ? Math.round(base * SPEED_MAX * Math.max(0, timer.left) / ROUND_MS) : 0;
   const r = {q: p.prompt, krill: bestList[0] || '', krills: bestList, tier: hit ? hit.tier : -1, answer: hit ? hit.display : null, base, bonus, pts: base + bonus};
@@ -296,14 +364,10 @@ async function endRound(hit, why) {
 
 function finish() {
   state = 'end'; const m = game.score * 4, band = bandFor(m);
-  rememberPlayed(game.prompts.map(p => p.slug));
-  const key = 'kv-' + game.scoring + '-' + game.date;
-  // The first daily dive of the day counts; replays don't overwrite it
-  if (game.mode === 'daily' && !store.get(key)) store.set(key, {score: game.score, rounds: game.rounds});
-  $('endLabel').textContent = `${game.mode === 'daily' ? `Daily dive · ${game.date}` : 'Practice dive'} · ${MODES[game.scoring].label}`;
+  $('endLabel').textContent = `Dive complete · ${MODES[game.scoring].label}`;
   $('endDepth').innerHTML = `${fmt(m)}<span>m</span>`; $('endBand').textContent = band;
   renderLog(game.rounds);
-  $('share').textContent = shareText(game.mode, game.date, m, band, game.rounds, game.scoring);
+  $('share').textContent = shareText(m, band, game.rounds, game.scoring);
   stopRec(); show('end'); window.scrollTo(0, 0);
 }
 function renderLog(rounds) {
@@ -313,23 +377,11 @@ function renderLog(rounds) {
     return `<div class="r"><div class="q">${esc(r.q)}</div><div class="pts" style="color:${t ? t.c : 'var(--muted)'}">${t ? '+' + r.pts : '0'}</div><div class="a">${t ? `${esc(r.answer)} · ${t.name}${bonus ? ` · +${bonus} speed` : ''}` : 'No answer'}</div>${r.krill ? `<div class="k">${revealHTML(r.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, r.krills || [r.krill])}</div>` : ''}</div>`;
   }).join('');
 }
-const shareText = (mode, date, m, band, rounds, sc = 'rare') =>
-  `1 in a Krillion · voice · ${MODES[sc].label} · ${mode === 'daily' ? date : 'practice'}\n${fmt(m)} m · ${band}\n${rounds.map(r => r.tier >= 0 ? MODES[sc].tiers[r.tier].emoji : '⬛').join('')}`;
+const shareText = (m, band, rounds, sc = 'rare') =>
+  `1 in a Krillion · voice · ${MODES[sc].label}\n${fmt(m)} m · ${band}\n${rounds.map(r => r.tier >= 0 ? MODES[sc].tiers[r.tier].emoji : '⬛').join('')}`;
 
 function home() {
   token++; state = 'start'; stopRec(); timer.running = false; stopVoice();
-  const t = store.get('kv-' + scoring + '-' + todayKey()), box = $('todayBox');
-  if (t) {
-    const m = t.score * 4; box.hidden = false;
-    box.innerHTML = `<div><div class="eyebrow">Today's dive · ${MODES[scoring].label}</div><div style="font:700 18px/1.3 var(--fd);margin-top:6px">${fmt(m)} m · ${bandFor(m)}</div><div style="letter-spacing:2px;margin-top:2px">${t.rounds.map(r => r.tier >= 0 ? TS[r.tier].emoji : '⬛').join('')}</div></div><button class="btn ghost" id="seeToday" type="button">See log</button>`;
-    $('seeToday').onclick = () => {
-      state = 'end'; game = {mode: 'daily', scoring, date: todayKey(), rounds: t.rounds, score: t.score};
-      $('endLabel').textContent = `Daily dive · ${todayKey()} · ${MODES[scoring].label}`;
-      $('endDepth').innerHTML = `${fmt(m)}<span>m</span>`; $('endBand').textContent = bandFor(m);
-      renderLog(t.rounds); $('share').textContent = shareText('daily', todayKey(), m, bandFor(m), t.rounds, scoring); show('end');
-    };
-    $('beginBtn').textContent = 'Replay today’s prompts';
-  } else { box.hidden = true; $('beginBtn').textContent = 'Begin today’s dive'; }
   setDepth(0); show('start');
 }
 
@@ -343,9 +395,23 @@ function setMode(m) {
 }
 $('modeRare').onclick = () => setMode('rare'); $('modePop').onclick = () => setMode('popular');
 if (!SR) $('micNote').innerHTML = '<strong>Heads up:</strong> this browser can’t listen for answers. Prompts are still read aloud; answer with your keyboard’s dictation mic. Chrome, Edge and Safari can listen.';
-$('beginBtn').onclick = () => startGame('daily');
-$('practiceBtn').onclick = () => startGame('practice');
-$('againBtn').onclick = () => startGame('practice');
+$('beginBtn').onclick = () => startGame();
+$('againBtn').onclick = () => startGame();
+$('voiceSel').onchange = chooseVoice; $('accentSel').onchange = chooseVoice;
+$('previewBtn').onclick = previewVoice;
+
+// Push to talk: hold Space anywhere except while typing, or hold the button
+const typing = el => el && (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA');
+addEventListener('keydown', e => {
+  if (e.code !== 'Space' || typing(document.activeElement) || state !== 'play') return;
+  e.preventDefault(); if (!e.repeat) talkDown();
+});
+addEventListener('keyup', e => { if (e.code === 'Space' && holding) { e.preventDefault(); talkUp(); } });
+addEventListener('blur', talkUp);  // switching windows mid-hold must not leave the mic open
+const tb = $('talkBtn');
+tb.addEventListener('pointerdown', e => { e.preventDefault(); tb.setPointerCapture(e.pointerId); talkDown(); });
+['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => tb.addEventListener(t, talkUp));
+tb.addEventListener('contextmenu', e => e.preventDefault());
 $('homeBtn').onclick = home;
 $('repeatBtn').onclick = repeat;
 $('skipBtn').onclick = () => { if (state === 'play' && phase === 'answer') endRound(null, 'skip'); };
@@ -376,4 +442,4 @@ function selectShare() { const r = document.createRange(); r.selectNodeContents(
   addEventListener('resize', size); size(); draw();
 })();
 
-setMode(scoring); home();
+setMode(scoring); home(); loadVoices();
