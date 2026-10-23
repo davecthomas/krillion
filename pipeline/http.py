@@ -44,7 +44,12 @@ def get_json(url: str, params: dict | None = None, *, cache: bool = True) -> dic
     for attempt in range(6):
         if throttled:
             _throttle()
-        r = _client.send(req)
+        try:
+            r = _client.send(req)
+        except httpx.TransportError:
+            # A dropped or reset connection: wait and try again
+            time.sleep(min(2 ** attempt, 30))
+            continue
         if r.status_code == 429 or r.status_code >= 500:
             retry = float(r.headers.get("retry-after") or 2 ** attempt)
             time.sleep(min(retry, 60))
