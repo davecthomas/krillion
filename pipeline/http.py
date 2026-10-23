@@ -9,6 +9,7 @@ Everything caches to disk and backs off on 429.
 
 from __future__ import annotations
 
+import fcntl
 import hashlib
 import json
 import os
@@ -21,22 +22,35 @@ import httpx
 
 USER_AGENT = "krillion-catalog/0.1 (https://github.com/davecthomas/krillion)"
 CACHE_DIR = Path(__file__).resolve().parent / ".cache" / "http"
-INTERVALS_S = {"en.wikipedia.org": 0.12, "query.wikidata.org": 0.5, "books.google.com": 1.5}
+# Spacing per host, shared by every build process on this machine (make
+# JOBS=n): Wikipedia answers bursts from one address with 429s for minutes.
+INTERVALS_S = {"en.wikipedia.org": 0.25, "query.wikidata.org": 0.5, "books.google.com": 1.5}
+CLOCKS = Path(__file__).resolve().parent / ".cache" / "clock"
 
 _client = httpx.Client(headers={"User-Agent": USER_AGENT}, timeout=90.0, follow_redirects=True)
 _lock = threading.Lock()
-_last: dict[str, float] = {}
 
 
 def _throttle(host: str) -> None:
+    """Wait for this host's turn. The last request time lives in a locked
+    file, so parallel build processes share one pace."""
     interval = INTERVALS_S.get(host)
     if not interval:
         return
-    with _lock:
-        wait = _last.get(host, 0.0) + interval - time.monotonic()
+    CLOCKS.mkdir(parents=True, exist_ok=True)
+    with _lock, open(CLOCKS / host, "a+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        try:
+            last = float(f.read() or 0)
+        except ValueError:
+            last = 0.0
+        wait = last + interval - time.time()
         if wait > 0:
             time.sleep(wait)
-        _last[host] = time.monotonic()
+        f.seek(0)
+        f.truncate()
+        f.write(str(time.time()))
 
 
 def get_json(url: str, params: dict | None = None, *, cache: bool = True):
