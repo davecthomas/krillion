@@ -139,8 +139,13 @@ def _tries(name: str, noun: str) -> list[str]:
     place = _place(noun)
     if place:
         return list(dict.fromkeys([f"{n}, {place}", n]))
-    first, short = noun.split()[0], noun.split()[-1]
-    return list(dict.fromkeys([f"{n} ({noun})", f"{n} ({short})", f"{n} ({first})", n, f"{n} {first}", f"{n} {noun}"]))
+    parts = noun.split()
+    short = parts[-1]
+    # "duck or goose breed": a member is a "Cayuga duck" or a "Toulouse goose"
+    kinds = [parts[0]] + [parts[i + 1] for i, w in enumerate(parts[:-1]) if w == "or"]
+    tries = [f"{n} ({noun})", f"{n} ({short})", *(f"{n} ({k})" for k in kinds), n,
+             *(f"{n} {k}" for k in kinds), f"{n} {noun}"]
+    return list(dict.fromkeys(tries))
 
 
 def _pick_article(tries: list[str], resolved: dict[str, str], desc: dict[str, str], noun: str) -> str | None:
