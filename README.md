@@ -47,9 +47,11 @@ the question again or "skip" to pass, or type in the answer box.
   answer costs 3 seconds, and a fast answer earns up to 50% more points.
 - **Two modes.** Rare wins pays the tiers below; Popular wins reverses them, so
   the crowd's favorite pays 100.
-- **Every krillion answer.** After each question, click the revealed answer to
-  list all the One in a Krillion answers (or all the top answers in Popular
-  mode).
+- **Dive log.** A panel beside the game (below it on a phone) keeps every
+  finished question with your answer and all its One in a Krillion answers (all
+  the top answers in Popular mode). The end-of-dive summary lists every winning
+  answer for every question. A list still building when its question ends fills
+  in as soon as it's ready.
 
 The page calls a small JSON API, served locally by `server.py`:
 

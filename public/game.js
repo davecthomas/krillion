@@ -224,6 +224,9 @@ function show(id) {
   $('pips').hidden = id !== 'play';
   // Settings are for between dives: opening them mid-question would eat air
   $('settingsBtn').hidden = id === 'play';
+  // The dive log sits beside the game while playing; the end screen has the full summary
+  $('side').hidden = id !== 'play';
+  document.querySelector('.app').classList.toggle('playing', id === 'play');
 }
 function pips() {
   $('pips').innerHTML = game.prompts.map((_, i) => {
@@ -257,6 +260,7 @@ async function startGame() {
     return;
   }
   game = {scoring, prompts: d.prompts, i: 0, rounds: [], score: 0};
+  renderSide();
   if (voiceCfg && game.prompts[0]) await loadClip(clipUrl(game.prompts[0].slug));
   btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
   setDepth(0); show('play'); playRound();
@@ -349,9 +353,11 @@ async function endRound(hit, why) {
   const rv = await revealFor(p.slug); if (my !== token) return;
   const bestList = rv ? (game.scoring === 'rare' ? rv.krillion : rv.top) : [];
   const base = hit ? TS[hit.tier].pts : 0, bonus = hit ? Math.round(base * SPEED_MAX * Math.max(0, timer.left) / ROUND_MS) : 0;
-  const r = {q: p.prompt, krill: bestList[0] || '', krills: bestList, tier: hit ? hit.tier : -1, answer: hit ? hit.display : null, base, bonus, pts: base + bonus};
+  const r = {q: p.prompt, slug: p.slug, pending: !rv, krill: bestList[0] || '', krills: bestList, tier: hit ? hit.tier : -1, answer: hit ? hit.display : null, base, bonus, pts: base + bonus};
   const pt = $('promptText'); pt.textContent = p.prompt; pt.classList.remove('veiled');
   game.rounds.push(r); game.score += r.pts; setDepth(game.score * 4); pips();
+  renderSide();
+  if (r.pending) watchReveal(game, r);
   const box = $('resultBox'); box.hidden = false;
   if (hit) {
     const t = TS[hit.tier]; chime(Math.round(t.pts / 20));
@@ -375,11 +381,48 @@ function finish() {
   $('share').textContent = shareText(m, band, game.rounds, game.scoring);
   stopRec(); show('end'); window.scrollTo(0, 0);
 }
+// Every winning answer for a question: all One in a Krillion answers in Rare
+// mode, all top answers in Popular mode.
+function winnersHTML(r, M) {
+  const label = M.reveal + 's';
+  if (r.pending) return `<span class="winners pending">Finding ${label.toLowerCase()}…</span>`;
+  const list = r.krills && r.krills.length ? r.krills : (r.krill ? [r.krill] : []);
+  if (!list.length) return '';
+  return `<span class="winners">${label}: ${list.map(n => `<b>${esc(n)}</b>`).join(' · ')}</span>`;
+}
+
+// The dive log beside the game: newest first, so the question just played is on top
+function renderSide() {
+  if (!game) return;
+  const M = MODES[game.scoring];
+  $('sideEmpty').hidden = game.rounds.length > 0;
+  $('sideList').innerHTML = game.rounds.map(r => {
+    const t = r.tier >= 0 ? M.tiers[r.tier] : null;
+    const said = t ? `<span style="color:${t.c}">${esc(r.answer)} · ${t.name} · +${r.pts}</span>` : '<span style="color:var(--muted)">No answer</span>';
+    return `<li class="sideItem"><div class="sq">${esc(r.q)}</div><div class="sa">${said}</div><div>${winnersHTML(r, M)}</div></li>`;
+  }).reverse().join('');
+}
+
+// A brand-new question's answer list can still be building when the round
+// ends. Keep checking, and fill in its winning answers once they're ready.
+async function watchReveal(g, r) {
+  for (let i = 0; i < 60 && r.pending; i++) {
+    await new Promise(res => setTimeout(res, 4000));
+    if (game !== g) return;
+    let rv = null;
+    try { rv = await api(`/api/reveal?slug=${encodeURIComponent(r.slug)}`); } catch (e) { continue; }
+    if (rv.pending) continue;
+    r.krills = g.scoring === 'rare' ? rv.krillion : rv.top; r.krill = r.krills[0] || ''; r.pending = false;
+    renderSide();
+    if (state === 'end') renderLog(g.rounds);
+  }
+}
+
 function renderLog(rounds) {
   const M = MODES[game.scoring || 'rare'];
   $('log').innerHTML = rounds.map(r => {
     const t = r.tier >= 0 ? M.tiers[r.tier] : null, bonus = r.bonus || 0;
-    return `<div class="r"><div class="q">${esc(r.q)}</div><div class="pts" style="color:${t ? t.c : 'var(--muted)'}">${t ? '+' + r.pts : '0'}</div><div class="a">${t ? `${esc(r.answer)} · ${t.name}${bonus ? ` · +${bonus} speed` : ''}` : 'No answer'}</div>${r.krill ? `<div class="k">${revealHTML(r.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, r.krills || [r.krill])}</div>` : ''}</div>`;
+    return `<div class="r"><div class="q">${esc(r.q)}</div><div class="pts" style="color:${t ? t.c : 'var(--muted)'}">${t ? '+' + r.pts : '0'}</div><div class="a">${t ? `${esc(r.answer)} · ${t.name}${bonus ? ` · +${bonus} speed` : ''}` : 'No answer'}</div><div class="k">${winnersHTML(r, M)}</div></div>`;
   }).join('');
 }
 const shareText = (m, band, rounds, sc = 'rare') =>

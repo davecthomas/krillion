@@ -73,7 +73,9 @@ class LiveGames:
         self.meta(slug)
         path = self.catalogs / f"{slug}.json"
         if not path.exists():
-            if self._status.get(slug) == "failed":
+            # Only a build running in this process will ever finish. One that
+            # failed, or was cut off by a restart, means there is no list.
+            if self._status.get(slug) != "building":
                 raise KeyError(slug)
             raise NotReady(slug)
         return path
