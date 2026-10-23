@@ -1,0 +1,66 @@
+{
+  "prompt": "Name a type of bicycle",
+  "noun": "bicycle type",
+  "domain": "vehicles",
+  "answers": {
+    "very_common": [
+      "Mountain bike",
+      "Road bike",
+      "BMX bike",
+      "Tandem bicycle",
+      "Tricycle",
+      "Electric bicycle",
+      "Cruiser bicycle",
+      "Penny-farthing",
+      "Hybrid bicycle"
+    ],
+    "common": [
+      "Recumbent bicycle",
+      "Fixed-gear bicycle",
+      "Folding bicycle",
+      "Fat bike",
+      "Touring bicycle",
+      "Cargo bike",
+      "Balance bike",
+      "Stationary bicycle",
+      "Gravel bike",
+      "Cyclocross bicycle",
+      "Track bicycle",
+      "Lowrider bicycle",
+      "Chopper bicycle",
+      "Utility bicycle",
+      "Unicycle"
+    ],
+    "known": [
+      "Dutch bicycle",
+      "Safety bicycle",
+      "Boneshaker",
+      "Velocipede",
+      "Dandy horse",
+      "Draisine",
+      "Time trial bicycle",
+      "Triathlon bicycle",
+      "Freeride bicycle",
+      "Trials bike",
+      "Single-speed bicycle",
+      "Mixte",
+      "Step-through frame",
+      "Roadster",
+      "Randonneur",
+      "Cycle rickshaw",
+      "Quadracycle"
+    ],
+    "uncommon": [
+      "Pedicab",
+      "Bakfiets",
+      "Longtail bicycle",
+      "Velomobile",
+      "Handcycle",
+      "Tall bike",
+      "Military bicycle"
+    ],
+    "obscure": [
+      "Bamboo bicycle"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "prompt": "Name a truck brand",
+  "noun": "truck manufacturer",
+  "domain": "vehicles",
+  "answers": {
+    "very_common": [
+      "GMC",
+      "Mack Trucks",
+      "Peterbilt",
+      "Kenworth",
+      "Freightliner",
+      "Volvo Trucks",
+      "Ford",
+      "Chevrolet",
+      "Ram Trucks",
+      "Toyota"
+    ],
+    "common": [
+      "Western Star",
+      "Rivian",
+      "Hino Motors",
+      "Isuzu",
+      "Navistar",
+      "Caterpillar",
+      "Oshkosh Corporation",
+      "Nissan",
+      "Dodge",
+      "International Harvester",
+      "Sterling Trucks"
+    ],
+    "known": [
+      "Autocar",
+      "White Motor Company",
+      "Diamond T",
+      "Diamond REO Trucks",
+      "REO Motor Car Company",
+      "Marmon",
+      "Ward LaFrance",
+      "Studebaker",
+      "Brockway Motor Company",
+      "Scania",
+      "MAN Truck & Bus",
+      "DAF Trucks",
+      "Iveco",
+      "Mercedes-Benz Trucks",
+      "Renault Trucks",
+      "Tatra",
+      "Kamaz",
+      "Mitsubishi Fuso",
+      "UD Trucks",
+      "Workhorse Group",
+      "Nikola Corporation"
+    ],
+    "uncommon": [
+      "Pierce Manufacturing",
+      "E-One",
+      "Seagrave",
+      "Crane Carrier Company",
+      "BelAZ",
+      "MAZ",
+      "KrAZ",
+      "GAZ",
+      "ZIL",
+      "Foden",
+      "ERF",
+      "Leyland Trucks",
+      "Scammell",
+      "AEC",
+      "Bedford"
+    ],
+    "obscure": [
+      "Euclid",
+      "Fageol",
+      "Steyr",
+      "Sisu",
+      "Ashok Leyland",
+      "Tata Motors"
+    ]
+  }
+}

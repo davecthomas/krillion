@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a First Lady",
+  "noun": "First Lady of the United States",
+  "domain": "history",
+  "answers": {
+    "very_common": [
+      "Michelle Obama",
+      "Jacqueline Kennedy Onassis",
+      "Eleanor Roosevelt",
+      "Hillary Clinton",
+      "Melania Trump",
+      "Martha Washington",
+      "Nancy Reagan",
+      "Laura Bush",
+      "Barbara Bush",
+      "Jill Biden"
+    ],
+    "common": [
+      "Abigail Adams",
+      "Dolley Madison",
+      "Mary Todd Lincoln",
+      "Rosalynn Carter",
+      "Betty Ford",
+      "Lady Bird Johnson",
+      "Pat Nixon",
+      "Mamie Eisenhower",
+      "Bess Truman",
+      "Edith Wilson"
+    ],
+    "known": [
+      "Lou Henry Hoover",
+      "Grace Coolidge",
+      "Florence Harding",
+      "Helen Herron Taft",
+      "Edith Roosevelt",
+      "Ida Saxton McKinley",
+      "Frances Cleveland",
+      "Caroline Harrison",
+      "Lucretia Garfield",
+      "Lucy Webb Hayes",
+      "Julia Grant",
+      "Eliza McCardle Johnson",
+      "Louisa Adams",
+      "Elizabeth Monroe"
+    ],
+    "uncommon": [
+      "Rachel Jackson",
+      "Hannah Van Buren",
+      "Anna Harrison",
+      "Letitia Christian Tyler",
+      "Julia Gardiner Tyler",
+      "Sarah Childress Polk",
+      "Margaret Taylor",
+      "Abigail Fillmore",
+      "Jane Pierce",
+      "Harriet Lane",
+      "Ellen Herndon Arthur",
+      "Ellen Axson Wilson",
+      "Mary Arthur McElroy",
+      "Martha Wayles Jefferson",
+      "Mary Harrison McKee"
+    ],
+    "obscure": [
+      "Angelica Singleton Van Buren",
+      "Priscilla Cooper Tyler",
+      "Jane Irwin Harrison",
+      "Martha Johnson Patterson",
+      "Rose Cleveland"
+    ]
+  }
+}

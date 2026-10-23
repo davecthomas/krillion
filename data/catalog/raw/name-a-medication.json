@@ -7,7 +7,6 @@
       "Aspirin",
       "Tylenol",
       "Advil",
-      "Ibuprofen",
       "Penicillin",
       "Benadryl",
       "Insulin",
@@ -16,9 +15,7 @@
       "Viagra"
     ],
     "common": [
-      "Acetaminophen",
       "Aleve",
-      "Naproxen",
       "Lipitor",
       "Xanax",
       "Zoloft",
@@ -33,13 +30,11 @@
       "Metformin"
     ],
     "known": [
-      "Atorvastatin",
       "Simvastatin",
       "Lisinopril",
       "Amlodipine",
       "Metoprolol",
       "Losartan",
-      "Omeprazole",
       "Prilosec",
       "Nexium",
       "Pepcid",
@@ -60,25 +55,12 @@
       "Imodium"
     ],
     "uncommon": [
-      "Sertraline",
-      "Fluoxetine",
       "Citalopram",
-      "Escitalopram",
-      "Bupropion",
       "Trazodone",
-      "Alprazolam",
       "Lorazepam",
       "Clonazepam",
-      "Diazepam",
-      "Zolpidem",
-      "Methylphenidate",
       "Albuterol",
       "Montelukast",
-      "Cetirizine",
-      "Loratadine",
-      "Fexofenadine",
-      "Diphenhydramine",
-      "Pseudoephedrine",
       "Doxycycline",
       "Azithromycin",
       "Ciprofloxacin",
@@ -87,7 +69,6 @@
       "Plavix"
     ],
     "obscure": [
-      "Clopidogrel",
       "Rosuvastatin",
       "Pravastatin",
       "Hydrochlorothiazide",
@@ -102,7 +83,6 @@
       "Apixaban",
       "Rivaroxaban",
       "Pantoprazole",
-      "Famotidine",
       "Ondansetron",
       "Promethazine",
       "Meclizine",
@@ -122,10 +102,7 @@
       "Methotrexate",
       "Hydroxychloroquine",
       "Ivermectin",
-      "Semaglutide",
       "Tirzepatide",
-      "Sildenafil",
-      "Tadalafil",
       "Finasteride"
     ]
   }

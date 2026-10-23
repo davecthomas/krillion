@@ -47,8 +47,6 @@
       "Christmas Eve",
       "Ash Wednesday",
       "Palm Sunday",
-      "Lent",
-      "Advent",
       "Epiphany",
       "All Saints' Day",
       "Day of the Dead",
@@ -56,12 +54,8 @@
       "Arbor Day",
       "Patriots' Day",
       "Election Day",
-      "Black Friday",
-      "Cyber Monday",
-      "Leap Day",
       "Pi Day",
       "May Day",
-      "Labour Day",
       "Remembrance Day",
       "Family Day",
       "Civic Holiday",
@@ -75,19 +69,14 @@
       "Holi",
       "Navaratri",
       "Vesak",
-      "Lunar New Year",
       "Mid-Autumn Festival",
       "Dragon Boat Festival",
       "Bastille Day",
       "Guy Fawkes Night",
-      "Oktoberfest",
-      "Juneteenth",
       "Indigenous Peoples' Day",
       "National Day for Truth and Reconciliation",
       "Grandparents Day",
-      "Administrative Professionals' Day",
-      "Sweetest Day",
-      "Festivus"
+      "Sweetest Day"
     ],
     "uncommon": [
       "Maundy Thursday",
@@ -130,8 +119,7 @@
       "Pioneer Day",
       "Lincoln's Birthday",
       "Casimir Pulaski Day",
-      "Evacuation Day",
-      "Mardi Gras"
+      "Evacuation Day"
     ],
     "obscure": [
       "Lammas",

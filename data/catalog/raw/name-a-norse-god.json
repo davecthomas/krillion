@@ -1,0 +1,74 @@
+{
+  "prompt": "Name a Norse god",
+  "noun": "Norse deity",
+  "domain": "books",
+  "wikipedia_category": "Category:Norse gods",
+  "answers": {
+    "very_common": [
+      "Odin",
+      "Thor",
+      "Loki",
+      "Freyja",
+      "Frigg",
+      "Baldr",
+      "Tyr",
+      "Heimdall",
+      "Hel",
+      "Freyr"
+    ],
+    "common": [
+      "Njörðr",
+      "Sif",
+      "Bragi",
+      "Iðunn",
+      "Víðarr",
+      "Váli",
+      "Höðr",
+      "Forseti",
+      "Ullr",
+      "Skaði"
+    ],
+    "known": [
+      "Gerðr",
+      "Sigyn",
+      "Nanna",
+      "Hœnir",
+      "Mímir",
+      "Kvasir",
+      "Ægir",
+      "Rán",
+      "Jörð",
+      "Sól",
+      "Máni",
+      "Nótt",
+      "Dagr"
+    ],
+    "uncommon": [
+      "Fulla",
+      "Gefjon",
+      "Eir",
+      "Saga",
+      "Vár",
+      "Lofn",
+      "Sjöfn",
+      "Snotra",
+      "Hlín",
+      "Gná",
+      "Syn",
+      "Vör",
+      "Bil",
+      "Hermóðr",
+      "Lóðurr",
+      "Meili",
+      "Gullveig"
+    ],
+    "obscure": [
+      "Gersemi",
+      "Hnoss",
+      "Ilmr",
+      "Nerthus",
+      "Sinthgunt",
+      "Ēostre"
+    ]
+  }
+}
