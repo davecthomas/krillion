@@ -21,18 +21,22 @@ cp models.example.json models.json    # model selections; set your Google Cloud 
 uv run python server.py               # http://localhost:8000
 ```
 
-Open the page in Chrome, Edge or Safari and click **New dive**. The game reads
-each question aloud, and you have 25 seconds of air to answer. Hold Space (or
-the **Hold to talk** button), say your answer, and let go. Say "repeat" to hear
-the question again or "skip" to pass, or type in the answer box.
+Open the page in Chrome, Edge or Safari and click **New dive**. When the
+questions are ready, press **Start**. Each question appears with 25 seconds of
+air. Hold Space (or the **Hold to talk** button), say your answer, and let go.
+Say "skip" to pass, or type in the answer box. To hear the questions read
+aloud, turn on **Read questions aloud** in Settings (the gear, top right).
 
 ## The game
 
 - **Every dive is new.** Each New dive gets seven freshly generated categories,
-  and none repeats one you've had before. The server prepares the next game
-  while you play the current one, so a new dive usually starts at once.
-- **Voice out, for the question only.** Gemini TTS on Vertex AI reads each
-  question, directed as an upbeat game-show host. Pick any of 30 Gemini voices
+  and none repeats one you've had before. The dive waits on a ready screen
+  until you press Start; Back keeps it for your next New dive. The server
+  prepares the next game while you play the current one, so a new dive is
+  usually ready at once.
+- **Questions read aloud, if you want them.** Off by default: turn on **Read
+  questions aloud** in Settings. Gemini TTS on Vertex AI then reads each
+  question, directed as an upbeat game-show host, and "repeat" reads it again. Pick any of 30 Gemini voices
   and an American, British, Australian or Indian accent under **Settings**
   (the gear, top right), and press **Preview** to hear it. The server records each question in the
   chosen voice in about 4 seconds, in the background while you play. When a
@@ -50,7 +54,8 @@ the question again or "skip" to pass, or type in the answer box.
   tube worms in the Trench. Rare answers set off sparkles, One in a Krillion a
   burst of diamonds, and a wrong answer gets a wobble and a "blub". With
   reduced motion turned on, the scene holds still and jumps to each new depth.
-- **Air and speed.** The clock starts after the game reads the question. A wrong
+- **Air and speed.** The clock starts when the question appears, or after the
+  game reads it aloud. A wrong
   answer costs 3 seconds, and a fast answer earns up to 50% more points.
 - **Two modes.** Rare wins pays the tiers below; Popular wins reverses them, so
   the crowd's favorite pays 100.

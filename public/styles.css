@@ -157,3 +157,17 @@ pre.share{font:15px/1.5 var(--fm);background:var(--panel);border:1px solid var(-
   .app.playing>section{grid-column:1}
   .app.playing>.side{grid-column:2;grid-row:2/span 3;position:sticky;top:18px;max-height:calc(100dvh - 36px);overflow:auto}
 }
+.ready{display:grid;gap:22px;align-content:start}
+.ready .lede kbd{font:500 12px var(--fm);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:1px 5px}
+#goBtn{padding:18px 40px;font-size:18px}
+/* Settings: on/off switch and the voice controls it enables */
+.toggle{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:700}
+.toggle input{position:absolute;opacity:0;width:1px;height:1px}
+.toggle .track{position:relative;flex:0 0 auto;width:46px;height:26px;border-radius:999px;background:var(--panel);border:1.5px solid var(--line);transition:background .2s}
+.toggle .track::after{content:"";position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:var(--muted);transition:transform .2s,background .2s}
+.toggle input:checked+.track{background:var(--glow);border-color:var(--glow)}
+.toggle input:checked+.track::after{transform:translateX(20px);background:hsl(200 70% 8%)}
+.toggle input:focus-visible+.track{outline:2px solid var(--glow);outline-offset:3px}
+.voiceFields{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.voiceFields:disabled{opacity:.45}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

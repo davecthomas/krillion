@@ -19,10 +19,10 @@ const TIERS_POP = [
   {name: 'Lone Wolf', pts: 10, emoji: '🦐', c: 'var(--t0)'}];
 const MODES = {
   rare: {label: 'Rare wins', tiers: TIERS, best: 5, head: 'The obvious answer <em>sinks.</em>',
-    lede: 'Each prompt is read aloud. Say the rarest true answer you can think of. Every point takes you four metres deeper.',
+    lede: 'Say the rarest true answer you can think of. Every point takes you four metres deeper.',
     reveal: 'Krillion answer'},
   popular: {label: 'Popular wins', tiers: TIERS_POP, best: 0, head: 'Swim with the <em>school.</em>',
-    lede: 'Each prompt is read aloud. Say the answer most people would say first. The crowd’s favorite pays 100; the oddball pays 10.',
+    lede: 'Say the answer most people would say first. The crowd’s favorite pays 100; the oddball pays 10.',
     reveal: 'Top answer'}};
 let scoring = 'rare';
 try { if (localStorage.getItem('kv-mode') === 'popular') scoring = 'popular'; } catch (e) {}
@@ -86,6 +86,14 @@ const buzz = () => { tone(180, .18, 'triangle', .14); tone(140, .22, 'triangle',
 // The player picks a Gemini voice and accent. The server records each question
 // in that voice the first time it is asked for, then serves it from disk.
 let voiceCfg = store.get('kv-voice'), voiceOpts = null;
+// Reading questions aloud is opt-in (Settings): off by default
+let speakOn = store.get('kv-speak') === true;
+function applySpeak() {
+  $('speakToggle').checked = speakOn;
+  $('voiceFields').disabled = !speakOn;
+  $('repeatBtn').hidden = !speakOn;
+  $('readyHow').textContent = speakOn ? 'Each question is read aloud, then your air starts.' : 'Each question appears with 25 seconds of air.';
+}
 const accentLang = () => (voiceOpts && voiceOpts.accents.find(a => a.id === voiceCfg.accent) || {}).lang || 'en-US';
 const clipUrl = slug => `api/audio?slug=${encodeURIComponent(slug)}&voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}`;
 async function loadVoices() {
@@ -221,7 +229,7 @@ function orb() {
 }
 
 function show(id) {
-  ['start', 'play', 'end'].forEach(s => $(s).hidden = s !== id);
+  ['start', 'ready', 'play', 'end'].forEach(s => $(s).hidden = s !== id);
   $('pips').hidden = id !== 'play';
   // Settings are for between dives: opening them mid-question would eat air
   $('settingsBtn').hidden = id === 'play';
@@ -237,35 +245,54 @@ function pips() {
   }).join('');
 }
 
-async function startGame() {
-  state = 'play';
+// A generated dive waits here until the player presses Start. Backing out
+// keeps it, so the next New dive reuses it instead of generating (and paying
+// for) another set.
+let readyPrompts = null;
+
+// New dive: generate the questions, then wait on the ready screen. This click
+// is also the user gesture browsers need before audio and the mic can start.
+async function newDive() {
   if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
   if (actx && actx.state === 'suspended') actx.resume();
   if ('speechSynthesis' in window) { speechSynthesis.cancel(); pickVoice(); }
   setupRec();
+  const btns = [$('beginBtn'), $('againBtn')];
+  if (!readyPrompts) {
+    // The server usually has a dive prepared; if not, generating takes 20-50 seconds.
+    btns.forEach(b => { b.disabled = true; b.textContent = 'Generating new questions…'; });
+    const v = voiceCfg ? `?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}` : '';
+    let d;
+    try {
+      const r = await fetch('/api/dive' + v);
+      d = await r.json();
+      if (!r.ok) throw new Error(d.error || 'failed');
+    } catch (e) {
+      home();
+      btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
+      $('lede').textContent = (e && e.message && e.message !== 'failed' && !/fetch/i.test(e.message)) ? e.message : 'Couldn’t reach the game server. Is it running?';
+      return;
+    }
+    readyPrompts = d.prompts;
+    btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
+  }
+  // Load the first question's recording while the player gets ready
+  if (speakOn && voiceCfg && readyPrompts[0]) loadClip(clipUrl(readyPrompts[0].slug));
+  state = 'ready'; setDepth(0);
+  $('readyTitle').textContent = `${readyPrompts.length} new questions`;
+  show('ready'); window.scrollTo(0, 0); $('goBtn').focus();
+}
+
+// Start: the dive begins and the first question is read
+function beginDive() {
+  if (state !== 'ready' || !readyPrompts) return;
+  if (actx && actx.state === 'suspended') actx.resume();
   if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {});
   TS = MODES[scoring].tiers;
-  let d;
-  // Every dive is generated fresh. The server usually has one ready; if not,
-  // generating takes about 15 seconds.
-  const btns = [$('beginBtn'), $('againBtn')];
-  btns.forEach(b => { b.disabled = true; b.textContent = 'Generating new questions…'; });
-  const v = voiceCfg ? `?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}` : '';
-  try {
-    const r = await fetch('/api/dive' + v);
-    d = await r.json();
-    if (!r.ok) throw new Error(d.error || 'failed');
-  } catch (e) {
-    home();
-    btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
-    $('lede').textContent = (e && e.message && e.message !== 'failed' && !/fetch/i.test(e.message)) ? e.message : 'Couldn’t reach the game server. Is it running?';
-    return;
-  }
-  game = {scoring, prompts: d.prompts, i: 0, rounds: [], score: 0};
-  renderSide();
-  if (voiceCfg && game.prompts[0]) await loadClip(clipUrl(game.prompts[0].slug));
-  btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
-  setDepth(0); show('play'); playRound();
+  game = {scoring, prompts: readyPrompts, i: 0, rounds: [], score: 0};
+  readyPrompts = null;
+  state = 'play';
+  renderSide(); setDepth(0); show('play'); playRound();
 }
 
 // The answer list for a brand-new category takes about a minute to build.
@@ -286,13 +313,18 @@ async function playRound() {
   p.revealing = null;  // fetched at the end of the round, when the answer list is likelier to be ready
   phase = 'speaking'; judging = false;
   $('roundLabel').textContent = `Prompt ${game.i + 1} of ${game.prompts.length} · ${MODES[game.scoring].label}`;
-  const pt = $('promptText'); pt.textContent = 'Listen closely…'; pt.classList.add('veiled');
+  const pt = $('promptText');
+  if (speakOn) { pt.textContent = 'Listen closely…'; pt.classList.add('veiled'); }
+  else { pt.textContent = p.prompt; pt.classList.remove('veiled'); }
   $('heard').textContent = ''; $('misses').innerHTML = ''; $('resultBox').hidden = true; $('typeInput').value = '';
   game.tried = new Set(); timer.left = ROUND_MS; timer.running = false; drawAir(); pips(); orb();
   stopRec();
-  const next = game.prompts[game.i + 1]; if (next && voiceCfg) loadClip(clipUrl(next.slug));
-  await speakPrompt(p);
-  if (my !== token) return;
+  if (speakOn) {
+    // Record the next question while this one is answered (just in time)
+    const next = game.prompts[game.i + 1]; if (next && voiceCfg) loadClip(clipUrl(next.slug));
+    await speakPrompt(p);
+    if (my !== token) return;
+  }
   phase = 'answer'; orb(); startTimer();
   if (micBlocked) $('typeInput').focus({preventScroll: true});
 }
@@ -344,7 +376,7 @@ function wrong(raw) {
   const chip = document.createElement('span'); chip.className = 'miss'; chip.textContent = '✕ ' + raw; $('misses').appendChild(chip);
 }
 async function repeat() {
-  if (state !== 'play' || phase !== 'answer') return;
+  if (!speakOn || state !== 'play' || phase !== 'answer') return;
   const my = token; timer.running = false; stopRec(); phase = 'speaking'; orb();
   await speakPrompt(game.prompts[game.i]); if (my !== token) return;
   phase = 'answer'; orb(); startTimer();
@@ -447,10 +479,18 @@ function setMode(m) {
 }
 $('modeRare').onclick = () => setMode('rare'); $('modePop').onclick = () => setMode('popular');
 if (!SR) $('micNote').innerHTML = '<strong>Heads up:</strong> this browser can’t listen for answers. Prompts are still read aloud; answer with your keyboard’s dictation mic. Chrome, Edge and Safari can listen.';
-$('beginBtn').onclick = () => startGame();
-$('againBtn').onclick = () => startGame();
+$('beginBtn').onclick = newDive;
+$('againBtn').onclick = newDive;
+$('goBtn').onclick = beginDive;
+$('backBtn').onclick = home;
 $('voiceSel').onchange = chooseVoice; $('accentSel').onchange = chooseVoice;
 $('previewBtn').onclick = previewVoice;
+$('speakToggle').onchange = () => {
+  speakOn = $('speakToggle').checked; store.set('kv-speak', speakOn);
+  if (!speakOn) stopVoice();
+  applySpeak();
+};
+applySpeak();
 
 // Settings dialog: the gear opens it; Escape, the close button or a click on
 // the backdrop closes it.

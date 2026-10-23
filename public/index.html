@@ -35,13 +35,21 @@
       </button>
     </form>
     <section class="settingsGroup" aria-labelledby="voiceGroupTitle">
-      <h3 class="eyebrow" id="voiceGroupTitle">Question voice</h3>
-      <label class="sel"><span>Voice</span><select id="voiceSel"></select></label>
-      <label class="sel"><span>Accent</span><select id="accentSel"></select></label>
-      <div class="row">
-        <button class="btn ghost" id="previewBtn" type="button">Preview</button>
-        <p class="hint" id="voiceHint" aria-live="polite"></p>
-      </div>
+      <h3 class="eyebrow" id="voiceGroupTitle">Questions</h3>
+      <label class="toggle">
+        <input type="checkbox" id="speakToggle" role="switch">
+        <span class="track" aria-hidden="true"></span>
+        <span>Read questions aloud</span>
+      </label>
+      <fieldset class="voiceFields" id="voiceFields">
+        <legend class="visually-hidden">Question voice</legend>
+        <label class="sel"><span>Voice</span><select id="voiceSel"></select></label>
+        <label class="sel"><span>Accent</span><select id="accentSel"></select></label>
+        <div class="row">
+          <button class="btn ghost" id="previewBtn" type="button">Preview</button>
+          <p class="hint" id="voiceHint" aria-live="polite"></p>
+        </div>
+      </fieldset>
     </section>
   </dialog>
 
@@ -58,12 +66,25 @@
     <div class="row">
       <button class="btn" id="beginBtn">New dive</button>
     </div>
-    <p class="note" id="micNote"><strong>Push to talk:</strong> the mic only hears you while you hold <kbd>Space</kbd> or the <strong>Hold to talk</strong> button, so you can talk an answer over first. Each question gives you 25 seconds of air, starting once it has been read. A wrong answer costs 3 seconds, and faster answers score more.</p>
+    <p class="note" id="micNote"><strong>Push to talk:</strong> the mic only hears you while you hold <kbd>Space</kbd> or the <strong>Hold to talk</strong> button, so you can talk an answer over first. Each question gives you 25 seconds of air. A wrong answer costs 3 seconds, and faster answers score more.</p>
     <div>
       <div class="eyebrow" style="margin-bottom:8px">Scoring · plus up to 50% more for speed</div>
       <div class="tiers" id="tierTable"></div>
     </div>
-    <p class="cmds">Hold <kbd>Space</kbd> and say your answer. Hold it and say <kbd>repeat</kbd> to hear the question again, or <kbd>skip</kbd> to pass.</p>
+    <p class="cmds">Hold <kbd>Space</kbd> and say your answer, or say <kbd>skip</kbd> to pass. To hear questions read aloud, turn it on in Settings (the gear, top right); then <kbd>repeat</kbd> reads one again.</p>
+  </section>
+
+  <!-- READY: questions generated, waiting for the player to start -->
+  <section id="ready" hidden class="ready" aria-labelledby="readyTitle">
+    <div>
+      <div class="eyebrow">Dive ready</div>
+      <h2 class="prompt" id="readyTitle">7 new questions</h2>
+    </div>
+    <p class="lede"><span id="readyHow">Each question appears with 25 seconds of air.</span> Hold <kbd>Space</kbd> or the <strong>Hold to talk</strong> button to answer.</p>
+    <div class="row">
+      <button class="btn" id="goBtn" type="button">Start</button>
+      <button class="btn ghost" id="backBtn" type="button">Back</button>
+    </div>
   </section>
 
   <!-- PLAY -->
