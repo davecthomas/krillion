@@ -138,20 +138,23 @@ make package      ─► data/packages/default.jsonl.gz (committed; the game unp
    North American: no categories rooted in another country's culture, such
    as cricket or Bollywood films. Global subjects such as cheeses stay.
 2. **Verify.** Look up each name on Wikipedia, 50 per request: "Name (noun)",
-   "Name (last word of noun)", then "Name", then "Name noun", following
-   redirects and rejecting disambiguation pages. The first article whose short
-   description is about the noun wins, because a bare name often means
-   something else: "Cheddar" is a village, and "Goa" an Indian state rather
-   than the board game. The build sets aside answers with no such article,
-   because that is where made-up answers turn up.
-3. **Add.** Members the writer missed come from the Wikipedia category tree
-   (two levels of subcategories) and from Wikidata instances of the class. A
-   member stays only when its title or short description uses every word of
-   the noun and doesn't describe a book, film, person or theory: the check drops
-   "Sadie (dog)", a show winner, and "Knots Unravelled", a book. Added members
-   get the lowest salience, which is where good One in a Krillion answers come
-   from. The build adds at most 400, keeping those with the most language
-   editions.
+   "Name (last word of noun)", "Name", "Name noun" ("Dorset sheep"), and for
+   misses "Name (fruit)"-style titles and Title Case, following redirects and
+   rejecting disambiguation pages. The first article whose short description
+   is about the noun wins, because a bare name often means something else:
+   "Cheddar" is a village, and "Goa" an Indian state rather than the board
+   game. Failing that, the first article that isn't clearly something else:
+   never a place, and outside music, film and history never a person or a
+   work; outside animals, plants and food never a species ("Great White
+   Shark" the Batman villain is not the fish). The build looks up towns as
+   "Paris, Kentucky" and keeps them only when they are in that place. A writer can pin an article
+   (`"Bow pose => Dhanurasana"`). The build sets aside answers with no
+   article, because that is where made-up answers turn up. Characters on a
+   shared "List of" page stay separate answers.
+3. **Add (off by default).** `--extras` adds members from the Wikipedia
+   category tree and Wikidata. Category trees stray into schools, dishes and
+   paintings, and added members land in the top-scoring tier, so the default
+   build uses only the writer's list.
 4. **Aliases.** The redirects pointing at each article become aliases,
    including common misspellings such as "Golden retreiver".
 5. **Score.** Blend six signals, each turned into a percentile within its
@@ -159,7 +162,7 @@ make package      ─► data/packages/default.jsonl.gz (committed; the game unp
 
    | Signal | Weight | Source |
    | --- | --- | --- |
-   | Wikipedia pageviews, last 12 months | 0.30 | Wikimedia REST API |
+   | Wikipedia pageviews | 0.30 | 12 months (REST API) for questions built before; else the last 60 days, 50 articles a request |
    | Writer's salience group | 0.20 | the raw file |
    | Word frequency (Zipf) | 0.15, 0.05 for multi-word names | [wordfreq](https://github.com/rspeer/wordfreq) |
    | US search interest, five years | 0.15 | Google Trends, forty best-known answers |
@@ -168,7 +171,11 @@ make package      ─► data/packages/default.jsonl.gz (committed; the game unp
 
    When the article needed more than the spoken name ("Mouse (knot)",
    "Newfoundland dog"), the name has another meaning, so word frequency,
-   Ngram and Trends are left out for it.
+   Ngram and Trends are left out for it. In a city question that holds only
+   when the bare name leads to another article ("London" is London,
+   England). The build asks Ngram and Trends only about the best-known
+   answers, so it places their values in the top band of the list;
+   otherwise Los Angeles would rank below Sacramento.
 6. **Tier.** Rank by the blended score: roughly the top 6% are Plankton, then
    Schooler to 35%, Rare to 70%, and Deep Cut after that. The least common 3% (at
    most five) become One in a Krillion. Too Clever stays empty: no text signal can
@@ -179,9 +186,13 @@ make package      ─► data/packages/default.jsonl.gz (committed; the game unp
    same bytes. A manifest beside it lists the count, domains and slugs. The
    format loads straight into a database: one row per line, keyed by slug.
 
-Building takes a few minutes per question, because the build spaces out its
-requests to Wikipedia, Wikidata and Google. It caches every response in
-`pipeline/.cache/`, so a rebuild after a scoring change is fast. Google Trends
+The build spaces out its requests per site, shared by every job (`make
+catalog JOBS=5`), and a 429 pauses all of them: Wikipedia blocks an address
+for minutes when bursts overrun it. 500 questions take about two hours with
+five jobs; keep the computer awake (`caffeinate -i make catalog JOBS=5` on a
+Mac). It caches every response in `pipeline/.cache/`, so a rebuild after a
+lookup change is fast, and `python -m pipeline.catalog --retier` re-scores
+built questions from saved signals with no network at all. Google Trends
 and Books Ngram have no official API: a failure there means a missing signal,
 never a failed build. Trends rate-limits after a few dozen requests, so after
 two failures in a row the build skips it for the rest of that question.
@@ -334,10 +345,12 @@ Built:
 
 Known issues:
 
-- **The default package is small.** Run `/krillion-catalog` to grow it; 500
-  questions take a long session and an overnight build.
-- **Category trees stray.** The on-topic check keeps most junk out, but a
-  member whose description mentions the noun in passing can slip in.
+- **Fallback articles can still be wrong.** When no article names the
+  topic, the build takes the first that isn't clearly something else. A
+  few answers borrow another meaning's pageviews that way; fix one by
+  rewording it or pinning its article.
+- **60-day pageviews are seasonal.** Yom Kippur ranks high among holidays
+  when it falls inside the window.
 - **An article proves only that a thing exists.** "Blue cheese dressing" once
   passed as a cheese.
 
