@@ -167,7 +167,7 @@ def _extra_members(raw: dict, noun: str, known: set[str]) -> list[dict]:
     return out
 
 
-def package(raw: dict, *, use_trends: bool = True) -> dict:
+def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict:
     noun = raw["noun"]
     answers = _answers(raw)
     log.info("%s: %d answers from the writer", raw["prompt"], len(answers))
@@ -189,7 +189,10 @@ def package(raw: dict, *, use_trends: bool = True) -> dict:
 
     known_articles = {a["article"] for a in answers if a["article"]}
     known_names = {a["name"] for a in answers}
-    extra = _extra_members(raw, noun, known_articles | known_names)
+    # Off by default: category trees stray into dishes, companies, schools
+    # and paintings, and an added member lands in the rarest tier, where it
+    # pays the most. The writer's list is the answer list.
+    extra = _extra_members(raw, noun, known_articles | known_names) if extras else []
     log.info("%s: %d members added from Wikipedia and Wikidata", raw["prompt"], len(extra))
     answers += extra
 
@@ -308,7 +311,7 @@ def _in_shard(slug: str, shard: tuple[int, int] | None) -> bool:
 
 
 def build(slugs: list[str] | None = None, *, rebuild: bool = False, use_trends: bool = True,
-          shard: tuple[int, int] | None = None) -> list[str]:
+          shard: tuple[int, int] | None = None, extras: bool = False) -> list[str]:
     QUESTIONS.mkdir(parents=True, exist_ok=True)
     done = []
     for path in sorted(RAW.glob("*.json")):
@@ -320,7 +323,7 @@ def build(slugs: list[str] | None = None, *, rebuild: bool = False, use_trends: 
         if target.exists() and not rebuild and target.stat().st_mtime >= path.stat().st_mtime:
             continue
         raw = load_raw(path)
-        doc = package(raw, use_trends=use_trends)
+        doc = package(raw, use_trends=use_trends, extras=extras)
         tmp = target.with_suffix(".tmp")
         tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=0))
         tmp.replace(target)
@@ -335,11 +338,13 @@ def main() -> None:
     ap.add_argument("--all", action="store_true", help="rebuild questions that are already built")
     ap.add_argument("--no-trends", action="store_true", help="skip Google Trends (faster)")
     ap.add_argument("--shard", help="i/n: build only this process's share, for parallel builds (make JOBS=n)")
+    ap.add_argument("--extras", action="store_true",
+                    help="also add members from the Wikipedia category and Wikidata class (noisy)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING, stream=sys.stderr)
     shard = tuple(int(x) for x in args.shard.split("/")) if args.shard else None
-    built = build(args.slugs or None, rebuild=args.all, use_trends=not args.no_trends, shard=shard)
+    built = build(args.slugs or None, rebuild=args.all, use_trends=not args.no_trends, shard=shard, extras=args.extras)
     print(f"{len(built)} question(s) built")
 
 

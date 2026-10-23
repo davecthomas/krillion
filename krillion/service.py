@@ -84,14 +84,51 @@ def judge(slug: str, alts: list[str]) -> dict:
     if not alts:
         return {"hit": None}
     j = ai_judge.judge(q, alts, _shortlist(doc, matcher, alts[0]))
+    on_list = _on_list(matcher, j)
+    if on_list and not _resembles(alts, by_id[on_list.entry_id]["name"], answers):
+        # The judge snapped to a list name the player didn't say ("lychee nut"
+        # as Cashew nut): judge again without the list.
+        j = ai_judge.judge(q, alts)
+        on_list = _on_list(matcher, j)
+        if on_list and not _resembles(alts, by_id[on_list.entry_id]["name"], answers):
+            on_list = None
     if not j:
         return {"hit": None}
-    on_list = matcher.match([j["name"]])
-    if on_list and on_list.method in ("exact", "partial"):
+    if on_list:
         return {"hit": _list_hit(answers, by_id[on_list.entry_id], "judge")}
     # Valid but not on the list: it still gets a place in its tier
     return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge",
                     "ladder": ladder.build(answers, tier=j["tier"])}}
+
+
+def _on_list(matcher, j: dict | None):
+    m = matcher.match([j["name"]]) if j else None
+    return m if m and m.method in ("exact", "partial") else None
+
+
+def _resembles(alts: list[str], name: str, answers: list[dict], *, cutoff: float = 0.7) -> bool:
+    """Whether what was heard could be `name` misheard or misspelled: at least
+    half of the name's distinctive words (not ones many answers share, like
+    "nut" or "dog") are close in spelling or sound to a heard word."""
+    from rapidfuzz.distance import DamerauLevenshtein
+
+    from .match import _codes
+    from .normalize import words
+
+    counts: dict[str, int] = {}
+    for a in answers:
+        for w in set(words(a["name"])):
+            counts[w] = counts.get(w, 0) + 1
+    heard = {w for a in alts for w in words(a)}
+    target = [w for w in words(name) if counts.get(w, 0) <= 3] or words(name)
+    if not heard or not target:
+        return False
+
+    def close(w: str) -> bool:
+        return any(DamerauLevenshtein.normalized_similarity(w, h) >= cutoff or _codes(w) & _codes(h)
+                   for h in heard)
+
+    return sum(map(close, target)) >= max(1, (len(target) + 1) // 2)
 
 
 def _list_hit(answers: list[dict], a: dict, method: str) -> dict:

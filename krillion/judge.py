@@ -55,9 +55,11 @@ def judge(prompt: str, alts: list[str], shortlist: list[str] | None = None) -> d
     heard = " / ".join(f'"{a}"' for a in alts[:3])
     near = ""
     if shortlist:
-        near = ("\nAnswers on our list that are close to what was heard: "
+        near = ("\nNames on our list that look or sound a bit like what was heard: "
                 + "; ".join(shortlist)
-                + ".\nIf the player meant one of these, return that exact name.")
+                + ".\nReturn one of these exact names only if the player's words are that same answer, "
+                "misheard or misspelled. Sharing a word is not enough: \"lychee nut\" is not \"Cashew nut\". "
+                "If the player named something else, judge what they actually said.")
     try:
         r = _get_client().send_structured_output(
             f'Trivia prompt: "{prompt}".\n'

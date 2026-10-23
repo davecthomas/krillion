@@ -30,8 +30,7 @@
       "Slapjack",
       "Speed",
       "Egyptian Ratscrew",
-      "President",
-      "Bullshit"
+      "President"
     ],
     "known": [
       "Pitch",
@@ -48,13 +47,11 @@
       "Pig",
       "Oh Hell",
       "Whist",
-      "Crazy Rummy",
       "Mao",
       "Golf",
       "Michigan rummy",
       "Pai gow poker",
       "Three-card poker",
-      "Uno Flip",
       "Exploding Kittens",
       "Cheat",
       "Beggar-my-neighbour",
@@ -72,7 +69,6 @@
       "Belote",
       "Klaberjass",
       "Tarot",
-      "Contract bridge",
       "Auction bridge",
       "Hand and foot",
       "Samba",
@@ -110,7 +106,6 @@
       "Commerce",
       "Cuckoo",
       "Sixty-six",
-      "Twenty-one",
       "Hanafuda"
     ]
   }

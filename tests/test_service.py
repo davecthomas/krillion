@@ -95,6 +95,22 @@ def test_a_judge_answer_on_the_list_scores_at_its_rank(bank, monkeypatch):
     monkeypatch.setattr(ai_judge, "judge", fake_judge)
     slug = service.dive()["prompts"][0]["slug"]
     n = slug.rsplit("-", 1)[1]
-    hit = service.judge(slug, ["something misheard"])["hit"]
+    hit = service.judge(slug, ["obscure thng"])["hit"]
     assert hit["id"] == "obscure" and hit["tier"] == 5 and hit["method"] == "judge"
     assert hit["ladder"]["rank"] == 2  # its real place on the list, not the judge's guess
+
+
+def test_a_judge_pick_unlike_what_was_said_is_not_that_list_answer(bank, monkeypatch):
+    # "lychee nut" must never score as Cashew nut because both end in "nut"
+    calls = []
+
+    def fake_judge(prompt, alts, shortlist=None):
+        calls.append(shortlist)
+        return {"name": f"Obscure thing {n}", "tier": 2}
+
+    monkeypatch.setattr(ai_judge, "judge", fake_judge)
+    slug = service.dive()["prompts"][0]["slug"]
+    n = slug.rsplit("-", 1)[1]
+    hit = service.judge(slug, ["lychee nut"])["hit"]
+    assert hit["id"] is None and hit["method"] == "judge"
+    assert len(calls) == 2 and calls[1] is None  # judged again without the list

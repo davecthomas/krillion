@@ -9,7 +9,6 @@
       "Spider",
       "FreeCell",
       "Pyramid",
-      "Solitaire",
       "Golf",
       "TriPeaks",
       "Canfield",
@@ -78,12 +77,10 @@
       "Nestor",
       "Perpetual Motion",
       "Puss in the Corner",
-      "Red and Black",
       "Rouge et Noir",
       "Saint Helena",
       "Simple Simon",
       "Sly Fox",
-      "Thirteens",
       "Will o' the Wisp"
     ],
     "obscure": [
@@ -92,9 +89,7 @@
       "Busy Aces",
       "Crescent",
       "Deuces",
-      "Double Klondike",
       "Herring-Bone",
-      "Lady Jane",
       "Martha",
       "Narcotic",
       "Odd and Even",
@@ -107,10 +102,7 @@
       "Royal Marriage",
       "Sultan",
       "Tournament",
-      "Triangle",
-      "Twenty",
-      "Windmill",
-      "Wheatsheaf"
+      "Windmill"
     ]
   }
 }

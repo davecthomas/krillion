@@ -202,10 +202,12 @@ function startRec() { if (!rec || micBlocked) return; wantListen = true; if (lis
 function stopRec() { wantListen = false; holding = false; talkUI(); if (rec && listening) { try { rec.abort(); } catch (e) {} } }
 function releaseRec() { wantListen = false; if (rec && listening) { try { rec.stop(); } catch (e) {} } }
 
-const canTalk = () => state === 'play' && phase === 'answer' && !judging && !micBlocked;
+// 'review' is the pause before Next question: answers then are compared, not scored
+const answering = () => phase === 'answer' || phase === 'review';
+const canTalk = () => state === 'play' && answering() && !judging && !micBlocked;
 function talkUI() {
   const b = $('talkBtn'); b.classList.toggle('down', holding);
-  b.disabled = !(state === 'play' && phase === 'answer' && !micBlocked);
+  b.disabled = !(state === 'play' && answering() && !micBlocked);
   b.textContent = holding ? 'Listening…' : 'Hold to talk';
 }
 function talkDown() { if (holding || !canTalk()) return; holding = true; $('heard').textContent = ''; startRec(); talkUI(); orb(); }
@@ -224,6 +226,8 @@ function orb() {
   else if (phase === 'answer' && holding && listening) { o.classList.add('listening'); s = 'Listening. Let go when you’ve answered.'; }
   else if (phase === 'answer' && holding) { o.classList.add('listening'); s = 'Starting the mic…'; }
   else if (phase === 'answer') { s = 'Hold Space or the Talk button to answer.'; }
+  else if (phase === 'review' && holding) { o.classList.add('listening'); s = 'Listening for an answer to compare…'; }
+  else if (phase === 'review') { s = 'Try another answer to see where it would rank. Only your first answer scores.'; }
   if (s) $('status').textContent = s;
   if ($('talkBtn')) talkUI();
 }
@@ -362,7 +366,9 @@ function drawAir() {
 
 async function heard(alts, typed) {
   const raw = (alts[0] || '').trim();
-  if (state !== 'play' || phase !== 'answer' || judging || !raw) return;
+  if (state !== 'play' || judging || !raw) return;
+  if (phase === 'review') { compare(alts, raw); return; }
+  if (phase !== 'answer') return;
   $('heard').textContent = '“' + raw + '”';
   const n = norm(raw), wc = n.split(' ').length;
   if (!typed && wc <= 4) {
@@ -432,7 +438,12 @@ async function endRound(hit, why) {
     r.player = null;
     loadSectionLadder(game, r, game.i);
   }
-  // The player moves on when ready, after a look at the rankings.
+  // The player moves on when ready, after a look at the rankings, and can
+  // meanwhile try other answers to see where they would have ranked.
+  box.insertAdjacentHTML('beforeend', '<div class="cmpBox"><div class="cmpHead">Compare another answer: say or type it. It isn’t scored.</div><div class="cmpList"></div></div>');
+  r.compared = [];
+  phase = 'review'; orb();
+  $('typeInput').placeholder = 'Compare another answer (not scored)';
   await waitForNext(game.i + 1 >= game.prompts.length); if (my !== token) return;
   game.i++;
   if (game.i < game.prompts.length) playRound(); else finish();
@@ -447,7 +458,43 @@ function waitForNext(last) {
   b.focus({preventScroll: true});
   return new Promise(res => { advance = () => { advance = null; b.hidden = true; res(); }; });
 }
-function cancelNext() { advance = null; $('nextBtn').hidden = true; }
+function cancelNext() { advance = null; $('nextBtn').hidden = true; $('typeInput').placeholder = 'Or type (or dictate) an answer'; }
+
+// An answer tried after the question ends: ranked against the same list,
+// shown under the result and marked in the rankings, never added to the score.
+async function compare(alts, raw) {
+  const r = game.rounds[game.rounds.length - 1], key = words(raw).join(' ');
+  if (!key || !r || r.compared.some(c => c.key === key)) return;
+  const my = token, i = game.i, p = game.prompts[i];
+  $('heard').textContent = '“' + raw + '”';
+  judging = true; orb();
+  let res = null;
+  try { res = await api('/api/judge', {slug: p.slug, alts}); } catch (e) {}
+  judging = false;
+  if (my !== token || phase !== 'review') return;
+  orb();
+  const hit = res && res.hit, row = document.createElement('div');
+  row.className = 'cmp';
+  if (hit) {
+    const t = TS[hit.tier], lad = hit.ladder;
+    const rank = lad && lad.rank ? `#${lad.rank} of ${lad.total}` : 'not on the list';
+    const mine = r.tier >= 0 ? (t.pts > TS[r.tier].pts ? ' · beats your answer' : t.pts < TS[r.tier].pts ? ' · your answer was better' : ' · same tier as yours') : '';
+    row.style.color = t.c;
+    row.innerHTML = `<b>${esc(hit.name)}</b> · ${rank} · ${t.name} · worth ${t.pts} pts${mine}`;
+    r.compared.push({key, name: hit.name, tier: hit.tier, rank: lad && lad.rank});
+    markCompared(game.sections[i], hit.name);
+  } else {
+    row.innerHTML = `<b>${esc(raw)}</b> · not an answer to this one`;
+    r.compared.push({key, name: raw, tier: -1});
+  }
+  const list = $('resultBox').querySelector('.cmpList'); if (list) list.appendChild(row);
+}
+function markCompared(sec, name) {
+  if (!sec) return;
+  for (const row of sec.querySelectorAll('.lqRow')) {
+    if (row.querySelector('.nm').textContent === name) { row.classList.add('compared'); row.scrollIntoView({block: 'nearest', behavior: still ? 'auto' : 'smooth'}); }
+  }
+}
 
 // ---------- Rankings column ----------
 // One list for the whole dive: a section per question, added as the question

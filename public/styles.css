@@ -209,3 +209,10 @@ pre.share{font:15px/1.5 var(--fm);background:var(--panel);border:1px solid var(-
 .lqRow .nm{flex:1;min-width:0}
 .lqSlot .pill{flex:0 1 auto}
 .ladderCol .lq{background:hsl(205 60% 6% / .8)}
+
+/* Answers tried after the question, for comparison only */
+.cmpBox{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.cmpHead{font:500 12px/1.4 var(--fm);color:var(--muted)}
+.cmp{font:500 13px/1.4 var(--fm);margin-top:6px}
+.cmp b{font-weight:700}
+.lqRow.compared{outline:1.5px dashed hsl(188 60% 70% / .8);outline-offset:-1px;border-radius:6px}
