@@ -115,7 +115,9 @@ def pageviews(titles: list[str]) -> dict[str, int]:
     out: dict[str, int] = {t: 0 for t in unique}
     for i in range(0, len(unique), BATCH):
         for q in _query(unique[i : i + BATCH], prop="pageviews", pvipdays=60):
+            # Pageviews arrive spread over continuation responses; a page
+            # without them in one response must not wipe the count from another.
             for p in q.get("pages", []):
-                if p.get("title") in out:
-                    out[p["title"]] = sum(v or 0 for v in (p.get("pageviews") or {}).values())
+                if p.get("title") in out and p.get("pageviews"):
+                    out[p["title"]] = sum(v or 0 for v in p["pageviews"].values())
     return out
