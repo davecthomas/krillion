@@ -1,10 +1,10 @@
 """Polite, cached HTTP for the data sources.
 
 Wikimedia asks for a descriptive User-Agent with contact details. Each host
-gets its own minimum spacing between requests: the Wikipedia Action API and
-the Wikidata query service rate-limit bursts, and Google's Ngram endpoint
-blocks fast scrapers. The pageviews REST API takes parallel requests.
-Everything caches to disk and backs off on 429.
+gets its own minimum spacing between requests, shared by every build process:
+the Wikipedia Action API, the pageviews API and the Wikidata query service
+all rate-limit bursts, and Google's Ngram endpoint blocks fast scrapers.
+Everything caches to disk, and a 429 pauses every process for that host.
 """
 
 from __future__ import annotations
