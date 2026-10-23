@@ -97,10 +97,15 @@ confirms them.
 ```
 
 - `noun`: the Wikipedia disambiguator for a member, used to look up
-  "Pointer (dog breed)". Singular.
+  "Pointer (dog breed)". Singular. For towns use exactly `city in <State>`
+  (or `town in` / `municipality in`): the build then looks up "Paris,
+  Kentucky" and accepts only towns in that place.
+- Write each name the way people say it. When Wikipedia titles it some
+  other way that no redirect covers, pin the article: `"Bow pose =>
+  Dhanurasana"`. The game shows and matches "Bow pose".
 - `wikipedia_category`: the English Wikipedia category that lists members,
-  when you are confident it exists. Leave it out otherwise; a wrong category
-  adds junk answers.
+  when you are confident it exists. Leave it out otherwise. The build uses it
+  only with `--extras` (off by default: categories stray into junk).
 - `wikidata_class`: the Wikidata item for the member class, when you know it.
   Leave it out otherwise.
 - Leave both out when your list is already complete (the 88 constellations,

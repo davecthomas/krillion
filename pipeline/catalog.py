@@ -58,11 +58,13 @@ def _title_case(name: str) -> str:
 
 
 def _answers(raw: dict) -> list[dict]:
-    """The writer's answers, one per distinct name, best salience kept."""
+    """The writer's answers, one per distinct name, best salience kept.
+    "Bow pose => Dhanurasana" pins the article for a name Wikipedia only
+    titles another way."""
     by_key: dict[str, dict] = {}
     for group, salience in SALIENCE.items():
         for name in raw.get("answers", {}).get(group, []):
-            name = name.strip()
+            name, _, pin = (x.strip() for x in name.partition("=>"))
             k = key(name)
             if not k:
                 continue
@@ -70,6 +72,8 @@ def _answers(raw: dict) -> list[dict]:
                 by_key[k]["salience"] = max(by_key[k]["salience"], salience)
             else:
                 by_key[k] = {"name": name, "aliases": [], "salience": salience, "source": "writer"}
+                if pin:
+                    by_key[k]["pin"] = pin
     return list(by_key.values())
 
 
@@ -181,7 +185,9 @@ def _second_tries(name: str, noun: str) -> list[str]:
     if _place(noun):
         return []
     n = _title_case(name)
-    return [f"{n} ({q})" for q in _QUALIFIERS]
+    # Titles are case-sensitive after the first letter: "Bow Pose", not "Bow pose"
+    capped = " ".join(w[:1].upper() + w[1:] for w in name.split())
+    return list(dict.fromkeys([*( [capped] if capped != n else []), *(f"{n} ({q})" for q in _QUALIFIERS)]))
 
 
 # An animal or plant: never a Batman villain ("Great White Shark", "Firefly")
@@ -257,7 +263,7 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     # Verify: "Pointer (dog breed)", "Puli (dog)", then "Pointer", then "Swiss cheese".
     candidates = []
     for a in answers:
-        a["_try"] = _tries(a["name"], noun)
+        a["_try"] = [a.pop("pin")] if a.get("pin") else _tries(a["name"], noun)
         candidates += a["_try"]
     resolved = wiki.resolve(candidates)
     # A bare name often lands on another meaning: "Cheddar" is a village,

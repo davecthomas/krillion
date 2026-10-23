@@ -120,3 +120,9 @@ def test_pageviews_survive_continuation_responses(monkeypatch):
     monkeypatch.setattr(wiki, "is_cached", lambda url: False)
     monkeypatch.setattr(wiki, "_query", lambda titles, **kw: blocks)
     assert wiki.pageviews(["Honda Civic", "Honda e"]) == {"Honda Civic": 100, "Honda e": 7}
+
+
+def test_a_pinned_article_is_kept_apart_from_the_name():
+    raw = {"answers": {"very_common": ["Bow pose => Dhanurasana", "Tree pose"]}}
+    got = {a["name"]: a.get("pin") for a in catalog._answers(raw)}
+    assert got == {"Bow pose": "Dhanurasana", "Tree pose": None}
