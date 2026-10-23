@@ -17,8 +17,8 @@ log = logging.getLogger(__name__)
 
 GENERATION_MODEL = "gpt-6-sol"
 
-SYSTEM = """You build the answer catalog for a voice trivia game.
-Players hear a prompt such as "Name a cheese" and say one answer aloud. Any correct answer
+SYSTEM = """You build the answer catalog for a voice trivia game played in the United States and
+Canada. Players hear a prompt such as "Name a cheese" and say one answer aloud. Any correct answer
 counts, and the rarer it is, the more it scores. Your lists decide what counts as correct, so
 correctness matters more than length: never include anything you are not sure is a true member."""
 
@@ -110,7 +110,7 @@ def propose_categories(count: int, existing: list[str], seeds: list[str]) -> lis
 Start from the seed and climb to a group it belongs to that makes a good category. Examples:
 - seed "Bowline" -> "Name a knot"
 - seed "Cumulonimbus" -> "Name a type of cloud"
-- seed a minor cricket ground -> "Name a cricket fielding position"
+- seed "Tater tots" -> "Name a potato dish"
 Skip seeds that lead nowhere playable (a person, a small village, a single sports season). Prefer
 surprising categories over the obvious ones every quiz has; pick the most interesting seeds.
 
@@ -120,8 +120,11 @@ Seed articles:
 A good category:
 - has membership that is factual and checkable: no opinions, no "best", no "favorite"
 - has at least 80 valid answers, from household names to obscure but real ones
-- is playable: a typical adult can name at least three answers without help, so no specialist
-  jargon (financial ratios, algorithms, legal doctrines)
+- is familiar in North America: a typical adult in the US or Canada knows what it is about.
+  Skip categories rooted in another country's culture, sports or media (Bollywood films, cricket,
+  Premier League clubs, Indian TV); global subjects (cheeses, clouds, knots) are fine
+- is playable: a typical North American adult can name at least three answers without help, so
+  no specialist jargon (financial ratios, algorithms, legal doctrines)
 - has a listable set of members, roughly 80 to 2,000: not so broad that almost any title counts
   ("Name a debut album", "Name a song")
 - has answers that are single named things, never pairs, relations or descriptions
@@ -148,8 +151,8 @@ def generate_answers(category: Category, *, rounds: int = 2) -> list[dict]:
   descriptions, no parentheses.
 - Each member once. Only true members: leave out anything you are unsure of, fictional items, and
   broad groupings that contain members.
-- Group by how likely a typical adult is to say it when asked: very_common (most people say it within
-  seconds), common, known, uncommon, obscure (only specialists know it)."""
+- Group by how likely a typical North American adult is to say it when asked: very_common (most
+  people say it within seconds), common, known, uncommon, obscure (only specialists know it)."""
     for i in range(rounds):
         if i == 0:
             prompt = f"""Prompt: "{category.prompt}" (Wikipedia hint: {category.noun})

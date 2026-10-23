@@ -2,7 +2,8 @@
 
 - resolve(): map candidate titles to real articles, 50 per request, following
   redirects and rejecting disambiguation pages.
-- popular_seeds(): random seeds from the daily most-read lists.
+- popular_seeds(): random seeds from the daily most-read lists of US and
+  Canadian readers.
 - redirect_aliases(): the redirects pointing at an article, which are
   crowd-sourced alternate names ("Gruyere" -> "Gruyère cheese").
 - pageviews(): human pageviews over the last 12 full months.
@@ -80,25 +81,32 @@ def redirect_aliases(titles: list[str]) -> dict[str, list[str]]:
     return out
 
 
-TOP = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access"
+TOP = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top-per-country"
 _NOT_ARTICLES = ("Main_Page", "Special:", "Wikipedia:", "Portal:", "File:", "Help:", "Talk:", "User:", "-")
+# Players are North American. The global English list leans toward whichever
+# country reads most that day (often India), so seeds come from the US and
+# Canadian lists, weighted roughly by population.
+SEED_COUNTRIES = (("US", 0.85), ("CA", 0.15))
 
 
 def popular_seeds(n: int = 50, days: int = 3, rng=None) -> list[str]:
-    """Random seeds that lean toward topics people know: sample n articles from
-    the daily top-1,000 most-viewed lists of a few random days in the last two
-    years. One request per day, cached, so this takes about a second."""
+    """Random seeds that lean toward topics North Americans know: sample n
+    English Wikipedia articles from the most-viewed lists of a few random days
+    in the last two years, each day from US or Canadian readers. One request
+    per day, cached, so this takes about a second."""
     import random
 
     rng = rng or random.Random()
     latest = dt.date.today() - dt.timedelta(days=2)  # the newest day can lag
+    countries, weights = zip(*SEED_COUNTRIES)
     pool: set[str] = set()
     for _ in range(days):
         day = latest - dt.timedelta(days=rng.randrange(730))
-        data = get_json(f"{TOP}/{day:%Y/%m/%d}")
+        country = rng.choices(countries, weights)[0]
+        data = get_json(f"{TOP}/{country}/all-access/{day:%Y/%m/%d}")
         for item in (data.get("items") or [{}])[0].get("articles", []):
             title = item["article"]
-            if not title.startswith(_NOT_ARTICLES) and title != "Main_Page":
+            if item.get("project") == "en.wikipedia" and not title.startswith(_NOT_ARTICLES):
                 pool.add(title.replace("_", " "))
     return rng.sample(sorted(pool), min(n, len(pool)))
 
