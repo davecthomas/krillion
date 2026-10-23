@@ -1,0 +1,71 @@
+{
+  "prompt": "Name a makeup product",
+  "noun": "cosmetics",
+  "domain": "fashion",
+  "wikipedia_category": "Category:Cosmetics",
+  "answers": {
+    "very_common": [
+      "Lipstick",
+      "Mascara",
+      "Eyeliner",
+      "Foundation",
+      "Blush",
+      "Eye shadow",
+      "Lip gloss",
+      "Nail polish",
+      "Concealer",
+      "Face powder"
+    ],
+    "common": [
+      "Bronzer",
+      "Highlighter",
+      "Primer",
+      "Lip liner",
+      "Eyebrow pencil",
+      "False eyelashes",
+      "Setting spray",
+      "Lip balm",
+      "BB cream",
+      "Rouge",
+      "Tinted moisturizer",
+      "Contour",
+      "Makeup remover"
+    ],
+    "known": [
+      "Kohl",
+      "Lip stain",
+      "Color corrector",
+      "Cold cream",
+      "Glitter",
+      "Face paint",
+      "Greasepaint",
+      "Pancake makeup",
+      "CC cream",
+      "Lip plumper",
+      "Brow gel",
+      "Cake mascara",
+      "Henna",
+      "Body glitter",
+      "Self-tanner",
+      "Setting powder",
+      "Cushion compact"
+    ],
+    "uncommon": [
+      "Surma",
+      "Ceruse",
+      "Rice powder",
+      "Theatrical makeup",
+      "Spirit gum",
+      "Liquid latex",
+      "Airbrush makeup",
+      "Fixing spray"
+    ],
+    "obscure": [
+      "Kumkuma",
+      "Thanaka",
+      "Oshiroi",
+      "Sindoor",
+      "Fard"
+    ]
+  }
+}
