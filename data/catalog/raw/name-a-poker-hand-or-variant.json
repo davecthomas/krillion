@@ -1,0 +1,76 @@
+{
+  "prompt": "Name a poker hand or variant",
+  "noun": "poker",
+  "domain": "sports",
+  "wikipedia_category": "Category:Poker variants",
+  "answers": {
+    "very_common": [
+      "Royal flush",
+      "Full house",
+      "Straight flush",
+      "Four of a kind",
+      "Flush",
+      "Straight",
+      "Three of a kind",
+      "Two pair",
+      "Texas hold 'em",
+      "Five-card draw"
+    ],
+    "common": [
+      "One pair",
+      "High card",
+      "Seven-card stud",
+      "Omaha hold 'em",
+      "Five-card stud",
+      "Strip poker",
+      "Video poker",
+      "Caribbean stud poker",
+      "Three-card poker",
+      "Let It Ride",
+      "Pai gow poker",
+      "Lowball",
+      "Razz",
+      "Guts",
+      "Indian poker"
+    ],
+    "known": [
+      "Badugi",
+      "2-7 triple draw",
+      "Chinese poker",
+      "Open-face Chinese poker",
+      "Pineapple",
+      "Crazy pineapple",
+      "HORSE",
+      "Seven-card stud hi-lo",
+      "Omaha hi-lo",
+      "Follow the Queen",
+      "Baseball",
+      "Chicago",
+      "Anaconda",
+      "Mississippi stud",
+      "Short-deck hold'em"
+    ],
+    "uncommon": [
+      "Five-card Omaha",
+      "Courchevel",
+      "Big O",
+      "Irish",
+      "Kansas City lowball",
+      "California lowball",
+      "Night baseball",
+      "Spit in the ocean",
+      "Telesina",
+      "Mexican stud",
+      "Double-board hold'em"
+    ],
+    "obscure": [
+      "Badacey",
+      "Badeucey",
+      "Three-card brag",
+      "Brag",
+      "Primero",
+      "Poque",
+      "Ultimate Texas hold 'em"
+    ]
+  }
+}

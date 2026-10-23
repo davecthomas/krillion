@@ -1,0 +1,66 @@
+{
+  "prompt": "Name a Dr. Seuss book",
+  "noun": "book",
+  "domain": "books",
+  "answers": {
+    "very_common": [
+      "The Cat in the Hat",
+      "Green Eggs and Ham",
+      "How the Grinch Stole Christmas!",
+      "Oh, the Places You'll Go!",
+      "One Fish, Two Fish, Red Fish, Blue Fish",
+      "Horton Hears a Who!",
+      "The Lorax",
+      "Fox in Socks",
+      "Hop on Pop",
+      "Dr. Seuss's ABC"
+    ],
+    "common": [
+      "The Cat in the Hat Comes Back",
+      "Yertle the Turtle",
+      "The Sneetches",
+      "Horton Hatches the Egg",
+      "And to Think That I Saw It on Mulberry Street",
+      "The 500 Hats of Bartholomew Cubbins",
+      "Bartholomew and the Oobleck",
+      "The Foot Book",
+      "There's a Wocket in My Pocket!",
+      "Oh, the Thinks You Can Think!",
+      "Mr. Brown Can Moo! Can You?",
+      "Happy Birthday to You!",
+      "If I Ran the Zoo",
+      "The Butter Battle Book",
+      "My Many Colored Days"
+    ],
+    "known": [
+      "If I Ran the Circus",
+      "McElligot's Pool",
+      "Thidwick the Big-Hearted Moose",
+      "Scrambled Eggs Super!",
+      "On Beyond Zebra!",
+      "Dr. Seuss's Sleep Book",
+      "Marvin K. Mooney Will You Please Go Now!",
+      "I Can Read with My Eyes Shut!",
+      "Oh Say Can You Say?",
+      "Hunches in Bunches",
+      "You're Only Old Once!",
+      "Daisy-Head Mayzie",
+      "Hooray for Diffendoofer Day!",
+      "Did I Ever Tell You How Lucky You Are?",
+      "I Had Trouble in Getting to Solla Sollew",
+      "What Pet Should I Get?",
+      "Great Day for Up!"
+    ],
+    "uncommon": [
+      "The King's Stilts",
+      "The Seven Lady Godivas",
+      "The Cat's Quizzer",
+      "The Shape of Me and Other Stuff",
+      "Horton and the Kwuggerbug and More Lost Stories",
+      "The Bippolo Seed and Other Lost Stories",
+      "Because a Little Bug Went Ka-Choo!",
+      "I Am Not Going to Get Up Today!"
+    ],
+    "obscure": []
+  }
+}
