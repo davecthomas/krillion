@@ -153,6 +153,10 @@ def _in_place(title: str, description: str, place: str) -> bool:
 _QUALIFIERS = ("fruit", "plant", "vegetable", "food", "dish", "animal", "character", "band")
 
 
+def _is_list(article: str | None) -> bool:
+    return bool(article) and article.startswith("List of ")
+
+
 def _tries(name: str, noun: str) -> list[str]:
     """Article titles to look up for a writer's answer, best first. A city is
     titled "Paris, Kentucky"; a breed often "Dorset sheep"."""
@@ -282,12 +286,14 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     log.info("%s: %d members added from Wikipedia and Wikidata", raw["prompt"], len(extra))
     answers += extra
 
-    # Two answers on one article are one answer.
+    # Two answers on one article are one answer, except on a "List of"
+    # page: Milhouse and Krusty both redirect to the list of Simpsons
+    # characters, and stay two answers.
     by_article: dict[str, dict] = {}
     merged = []
     for a in answers:
         art = a["article"]
-        if art and art in by_article:
+        if art and art in by_article and not _is_list(art):
             keep = by_article[art]
             keep["aliases"] += [a["name"], *a["aliases"]]
             keep["salience"] = max(keep["salience"], a["salience"])
@@ -302,13 +308,18 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
     redirects = wiki.redirect_aliases(articles)
     views = wiki.pageviews(articles)
     links = wikidata.sitelinks(articles)
+    # A list page's views and languages belong to the whole list, not to
+    # one character on it: those answers rank on the other signals.
+    for art in {a for a in articles if _is_list(a)}:
+        views.pop(art, None)
+        links.pop(art, None)
 
     # Redirects are crowd-sourced aliases, but never let one steal another answer's name.
     primary = {key(a["name"]) for a in answers}
     for a in answers:
         own = {key(a["name"]), *(key(x) for x in a["aliases"])}
         add = []
-        for r in redirects.get(a["article"], []):
+        for r in ([] if _is_list(a["article"]) else redirects.get(a["article"], [])):
             r = _PAREN.sub(" ", r).strip()
             k = key(r)
             if len(k) < 3 or len(words(r)) > 5 or k in own or k in primary:
@@ -316,7 +327,7 @@ def package(raw: dict, *, use_trends: bool = True, extras: bool = False) -> dict
             own.add(k)
             add.append(r)
         art = _PAREN.sub(" ", a["article"]).strip()
-        if key(art) not in own and key(art) not in primary:
+        if not _is_list(a["article"]) and key(art) not in own and key(art) not in primary:
             add.append(art)
         a["aliases"] = sorted({x.strip() for x in a["aliases"] if key(x) and key(x) != key(a["name"])} | set(add))
 
