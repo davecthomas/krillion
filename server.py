@@ -99,6 +99,13 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json(400, {"error": "bad request"})
         return self._json(404, {"error": "not found"})
 
+    def end_headers(self):
+        # Static files: always check for a newer version, so a reload picks up
+        # changes. Unchanged files still come back as a cheap 304.
+        if not self.path.startswith("/api/"):
+            self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
     def log_message(self, fmt, *args):
         if "/api/" in (args[0] if args else ""):
             super().log_message(fmt, *args)

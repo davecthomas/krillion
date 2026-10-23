@@ -33,8 +33,8 @@ the question again or "skip" to pass, or type in the answer box.
   while you play the current one, so a new dive usually starts at once.
 - **Voice out, for the question only.** Gemini TTS on Vertex AI reads each
   question, directed as an upbeat game-show host. Pick any of 30 Gemini voices
-  and an American, British, Australian or Indian accent on the start screen,
-  and press **Preview** to hear it. The server records each question in the
+  and an American, British, Australian or Indian accent under **Settings**
+  (the gear, top right), and press **Preview** to hear it. The server records each question in the
   chosen voice in about 4 seconds, in the background while you play. When a
   recording fails, the browser's own speech reads the question in the chosen
   accent. Results appear on screen with a chime; the game never speaks them.
@@ -47,9 +47,11 @@ the question again or "skip" to pass, or type in the answer box.
   answer costs 3 seconds, and a fast answer earns up to 50% more points.
 - **Two modes.** Rare wins pays the tiers below; Popular wins reverses them, so
   the crowd's favorite pays 100.
-- **Every krillion answer.** After each question, click the revealed answer to
-  list all the One in a Krillion answers (or all the top answers in Popular
-  mode).
+- **Dive log.** A panel beside the game (below it on a phone) keeps every
+  finished question with your answer and all its One in a Krillion answers (all
+  the top answers in Popular mode). The end-of-dive summary lists every winning
+  answer for every question. A list still building when its question ends fills
+  in as soon as it's ready.
 
 The page calls a small JSON API, served locally by `server.py`:
 

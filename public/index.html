@@ -19,8 +19,31 @@
       <div class="brand">1 in a <b>Krillion</b> · voice</div>
       <div class="pips" id="pips" aria-hidden="true" hidden></div>
     </div>
-    <div class="gauge" id="gauge" aria-live="polite">0 m<small>depth</small></div>
+    <div class="hdrRight">
+      <div class="gauge" id="gauge" aria-live="polite">0 m<small>depth</small></div>
+      <button class="iconBtn" id="settingsBtn" type="button" aria-label="Settings" aria-haspopup="dialog" title="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.43 7.43 0 0 0 .05-.94 7.43 7.43 0 0 0-.05-.94l2.03-1.58a.48.48 0 0 0 .12-.61l-1.92-3.32a.48.48 0 0 0-.58-.21l-2.39.96a7.03 7.03 0 0 0-1.62-.94l-.36-2.54A.47.47 0 0 0 13.94 2h-3.84a.47.47 0 0 0-.47.4l-.36 2.54a7.2 7.2 0 0 0-1.62.94l-2.39-.96a.48.48 0 0 0-.58.21L2.76 8.45a.47.47 0 0 0 .12.61l2.03 1.58a7.6 7.6 0 0 0 0 1.88l-2.03 1.58a.48.48 0 0 0-.12.61l1.92 3.32c.12.21.37.29.58.21l2.39-.96c.5.38 1.04.7 1.62.94l.36 2.54c.04.23.24.4.47.4h3.84c.23 0 .43-.17.47-.4l.36-2.54a7.2 7.2 0 0 0 1.62-.94l2.39.96c.21.08.46 0 .58-.21l1.92-3.32a.48.48 0 0 0-.12-.61l-2.03-1.58ZM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2Z"/></svg>
+      </button>
+    </div>
   </header>
+
+  <dialog id="settings" class="settings" aria-labelledby="settingsTitle">
+    <form method="dialog" class="settingsHead">
+      <h2 id="settingsTitle">Settings</h2>
+      <button class="iconBtn" value="close" aria-label="Close settings" title="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 1 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4L13.4 12l4.9-4.9a1 1 0 0 0 0-1.4Z"/></svg>
+      </button>
+    </form>
+    <section class="settingsGroup" aria-labelledby="voiceGroupTitle">
+      <h3 class="eyebrow" id="voiceGroupTitle">Question voice</h3>
+      <label class="sel"><span>Voice</span><select id="voiceSel"></select></label>
+      <label class="sel"><span>Accent</span><select id="accentSel"></select></label>
+      <div class="row">
+        <button class="btn ghost" id="previewBtn" type="button">Preview</button>
+        <p class="hint" id="voiceHint" aria-live="polite"></p>
+      </div>
+    </section>
+  </dialog>
 
   <!-- START -->
   <section id="start" style="display:grid;gap:22px">
@@ -34,15 +57,6 @@
     <p class="lede" id="lede"></p>
     <div class="row">
       <button class="btn" id="beginBtn">New dive</button>
-    </div>
-    <div class="voicePick">
-      <div class="eyebrow">Question voice</div>
-      <div class="row">
-        <label class="sel"><span>Voice</span><select id="voiceSel"></select></label>
-        <label class="sel"><span>Accent</span><select id="accentSel"></select></label>
-        <button class="btn ghost" id="previewBtn" type="button">Preview</button>
-      </div>
-      <p class="hint" id="voiceHint" aria-live="polite"></p>
     </div>
     <p class="note" id="micNote"><strong>Push to talk:</strong> the mic only hears you while you hold <kbd>Space</kbd> or the <strong>Hold to talk</strong> button, so you can talk an answer over first. Each question gives you 25 seconds of air, starting once it has been read. A wrong answer costs 3 seconds, and faster answers score more.</p>
     <div>
@@ -81,6 +95,13 @@
       <button class="btn ghost" id="skipBtn" type="button">Skip</button>
     </div>
   </section>
+
+  <!-- DIVE LOG: every finished question stays here, with all its winning answers -->
+  <aside id="side" class="side" hidden aria-label="This dive so far">
+    <div class="eyebrow">This dive</div>
+    <p class="hint" id="sideEmpty">Your answers and every winning answer collect here as you go.</p>
+    <ol id="sideList" class="sideList" aria-live="polite"></ol>
+  </aside>
 
   <!-- END -->
   <section id="end" hidden style="display:grid;gap:22px">
