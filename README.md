@@ -56,7 +56,8 @@ aloud, turn on **Read questions aloud** in Settings (the gear, top right).
   reduced motion turned on, the scene holds still and jumps to each new depth.
 - **Rankings.** A column on the left keeps one list for the whole dive. Each
   question adds its section when it starts, the list scrolls up to the newest,
-  and you can scroll back to any earlier one. Each section
+  and you can scroll back to any earlier one. It stays beside the end-of-dive
+  summary for review, and clears when the next dive starts. Each section
   is a slice of that question's answer list, most common at the top: three
   answers from each tier plus the ones ranked just above and below yours. When
   your answer scores, the fish falls past the words, the answers below its
