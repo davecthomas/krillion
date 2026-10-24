@@ -1,0 +1,75 @@
+{
+  "prompt": "Name a Dolly Parton song",
+  "noun": "Dolly Parton song",
+  "domain": "music",
+  "wikipedia_category": "Category:Dolly Parton songs",
+  "answers": {
+    "very_common": [
+      "Jolene",
+      "9 to 5",
+      "I Will Always Love You",
+      "Islands in the Stream",
+      "Coat of Many Colors"
+    ],
+    "common": [
+      "Here You Come Again",
+      "Two Doors Down",
+      "Love Is Like a Butterfly",
+      "Dumb Blonde",
+      "Joshua",
+      "Heartbreaker",
+      "Baby I'm Burnin'",
+      "Real Love",
+      "Old Flames Can't Hold a Candle to You",
+      "Yellow Roses",
+      "Why'd You Come in Here Lookin' Like That"
+    ],
+    "known": [
+      "My Tennessee Mountain Home",
+      "Mule Skinner Blues",
+      "Touch Your Woman",
+      "The Bargain Store",
+      "The Seeker",
+      "We Used To",
+      "All I Can Do",
+      "Light of a Clear Blue Morning",
+      "Rockin' Years",
+      "Silver and Gold",
+      "Starting Over Again",
+      "But You Know I Love You",
+      "Tennessee Homesick Blues",
+      "Potential New Boyfriend",
+      "Think About Love",
+      "Don't Call It Love",
+      "Travelin' Thru",
+      "To Daddy",
+      "Wildflowers",
+      "Telling Me Lies"
+    ],
+    "uncommon": [
+      "Just Because I'm a Woman",
+      "Something Fishy",
+      "In the Good Old Days (When Times Were Bad)",
+      "Daddy Was an Old Time Preacher Man",
+      "Down from Dover",
+      "My Blue Ridge Mountain Boy",
+      "Put It Off Until Tomorrow",
+      "Tomorrow Is Forever",
+      "Please Don't Stop Loving Me",
+      "The Last Thing on My Mind",
+      "Just Someone I Used to Know",
+      "Romeo",
+      "You're the Only One",
+      "Single Women",
+      "Those Memories of You",
+      "He's Alive",
+      "Dagger Through the Heart"
+    ],
+    "obscure": [
+      "Lonely Comin' Down",
+      "Travelin' Man",
+      "Applejack",
+      "World on Fire"
+    ]
+  }
+}

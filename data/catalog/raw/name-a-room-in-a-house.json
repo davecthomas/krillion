@@ -1,0 +1,82 @@
+{
+  "prompt": "Name a room in a house",
+  "noun": "room",
+  "domain": "household",
+  "wikipedia_category": "Category:Rooms",
+  "answers": {
+    "very_common": [
+      "Kitchen",
+      "Bedroom",
+      "Bathroom",
+      "Living room",
+      "Dining room",
+      "Basement",
+      "Attic",
+      "Garage",
+      "Laundry room",
+      "Family room"
+    ],
+    "common": [
+      "Den",
+      "Closet",
+      "Pantry",
+      "Foyer",
+      "Hallway",
+      "Playroom",
+      "Nursery",
+      "Mudroom",
+      "Sunroom",
+      "Library",
+      "Study"
+    ],
+    "known": [
+      "Walk-in closet",
+      "Powder room",
+      "Great room",
+      "Man cave",
+      "Loft",
+      "Wine cellar",
+      "Utility room",
+      "Storm cellar",
+      "Panic room",
+      "Crawl space"
+    ],
+    "uncommon": [
+      "Parlor",
+      "Drawing room",
+      "Sitting room",
+      "Lounge",
+      "Conservatory",
+      "Solarium",
+      "Vestibule",
+      "Anteroom",
+      "Antechamber",
+      "Boudoir",
+      "Dressing room",
+      "Scullery",
+      "Larder",
+      "Cellar",
+      "Root cellar",
+      "Garret",
+      "Billiard room",
+      "Ballroom",
+      "Music room",
+      "Smoking room",
+      "Morning room",
+      "Sauna"
+    ],
+    "obscure": [
+      "Buttery",
+      "Still room",
+      "Servants' hall",
+      "Withdrawing room",
+      "Solar",
+      "Great hall",
+      "Oratory",
+      "Snug",
+      "Inglenook",
+      "Box room",
+      "Cloakroom"
+    ]
+  }
+}

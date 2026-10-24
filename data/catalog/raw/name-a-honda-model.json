@@ -1,0 +1,81 @@
+{
+  "prompt": "Name a Honda model",
+  "noun": "Honda vehicle",
+  "domain": "vehicles",
+  "answers": {
+    "very_common": [
+      "Honda Civic",
+      "Honda Accord",
+      "Honda CR-V",
+      "Honda Odyssey",
+      "Honda Pilot",
+      "Honda Fit",
+      "Honda Ridgeline",
+      "Honda HR-V",
+      "Honda Element",
+      "Honda Prelude"
+    ],
+    "common": [
+      "Honda Passport",
+      "Honda Insight",
+      "Honda S2000",
+      "Honda CR-Z",
+      "Honda Clarity",
+      "Honda del Sol",
+      "Honda NSX",
+      "Honda Crosstour",
+      "Honda Prologue",
+      "Honda Gold Wing",
+      "Honda Shadow",
+      "Honda CBR600RR",
+      "Honda Rebel",
+      "Honda Grom",
+      "Honda Ruckus"
+    ],
+    "known": [
+      "Honda Civic Type R",
+      "Honda CRX",
+      "Honda Integra",
+      "Honda Legend",
+      "Honda City",
+      "Honda Jazz",
+      "Honda Stream",
+      "Honda Stepwgn",
+      "Honda Freed",
+      "Honda Elysion",
+      "Honda Beat",
+      "Honda S500",
+      "Honda S600",
+      "Honda S800",
+      "Honda N360",
+      "Honda N-Box",
+      "Honda e",
+      "Honda ZR-V",
+      "Honda WR-V",
+      "Honda BR-V",
+      "Honda Amaze",
+      "Honda Brio",
+      "Honda Mobilio",
+      "Honda Shuttle"
+    ],
+    "uncommon": [
+      "Honda CB750",
+      "Honda CBR1000RR",
+      "Honda VFR800",
+      "Honda Africa Twin",
+      "Honda XR650L",
+      "Honda CRF450R",
+      "Honda Super Cub",
+      "Honda Metropolitan",
+      "Honda PCX",
+      "Honda Forza",
+      "Honda Valkyrie",
+      "Honda CB500F",
+      "Honda NC750X",
+      "Honda Monkey"
+    ],
+    "obscure": [
+      "Honda Acty"
+    ]
+  }
+}

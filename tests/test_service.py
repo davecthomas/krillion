@@ -1,104 +1,116 @@
-import itertools
-import threading
+import json
+import random
 
 import pytest
 
 from krillion import judge as ai_judge
-from krillion import service, voices
-from krillion.live import ROUNDS, LiveGames
-
-counter = itertools.count()
+from krillion import neighbors, service
+from krillion.bank import ROUNDS, BankEmpty, QuestionBank
 
 
-def propose(count, avoid):
-    # Each call invents new categories, plus one repeat of something already asked
-    # and one rewording, which must both be rejected.
-    fresh = [{"prompt": f"Name a thing {next(counter)}", "noun": "thing"} for _ in range(count)]
-    repeats = [{"prompt": avoid[0]}, {"prompt": avoid[0] + " please"}] if avoid else []
-    return repeats + fresh
-
-
-def similarity(prompt, others):
-    # Stand-in for embeddings: a rewording of an asked prompt counts as a duplicate.
-    return 0.95 if any(prompt == o + " please" for o in others) else 0.1
-
-
-def catalog_for(entry):
-    return {"slug": entry["slug"], "prompt": entry["prompt"], "answers": [
-        {"id": "common", "name": "Common thing", "aliases": [], "tier": 0},
-        {"id": "obscure", "name": "Obscure thing", "aliases": [], "tier": 5},
+def question(n: int, domain: str = "things") -> dict:
+    return {"slug": f"name-a-thing-{n}", "prompt": f"Name a thing {n}", "domain": domain, "answers": [
+        {"id": "common", "name": f"Common thing {n}", "aliases": ["usual thing"], "tier": 0},
+        {"id": "obscure", "name": f"Obscure thing {n}", "aliases": [], "tier": 5},
     ]}
 
 
+@pytest.fixture(autouse=True)
+def no_embeddings(monkeypatch):
+    monkeypatch.setattr(neighbors, "nearest", lambda text, names, k=8: [])
+    monkeypatch.setattr(neighbors, "prepare", lambda names: None)
+
+
 @pytest.fixture
-def games(tmp_path):
-    gate = threading.Event()
-    gate.set()
-
-    def build(entry):
-        gate.wait(5)
-        return catalog_for(entry)
-
-    g = LiveGames(propose, build, similarity, root=tmp_path, workers=2)
-    g.gate = gate
-    service.use(g)
-    yield g
+def bank(tmp_path):
+    qdir = tmp_path / "questions"
+    qdir.mkdir()
+    for n in range(20):
+        (qdir / f"name-a-thing-{n}.json").write_text(json.dumps(question(n, domain=f"d{n % 4}")))
+    b = QuestionBank(questions=qdir, live=tmp_path / "live", rng=random.Random(1), packages=None)
+    service.use(b)
+    yield b
     service.use(None)
 
 
-def wait_ready(g, slug):
-    for _ in range(100):
-        if g.status(slug) == "ready":
-            return
-        threading.Event().wait(0.02)
-    raise AssertionError(f"{slug} never built")
-
-
-def test_every_game_is_new_and_nothing_repeats(games):
+def test_every_game_is_new_and_nothing_repeats(bank):
     seen = set()
-    for _ in range(5):
+    for _ in range(2):
         prompts = [p["prompt"] for p in service.dive()["prompts"]]
         assert len(prompts) == ROUNDS
-        assert not seen & set(prompts), "a category was asked twice"
+        assert not seen & set(prompts), "a question was asked twice"
         seen |= set(prompts)
+    assert bank.remaining() == 20 - 2 * ROUNDS
 
 
-def test_history_survives_a_restart(games, tmp_path):
-    first = {p["prompt"] for p in service.dive()["prompts"]}
-    again = LiveGames(propose, catalog_for, similarity, root=tmp_path)
+def test_a_game_spreads_across_domains(bank):
+    slugs = [p["slug"] for p in service.dive()["prompts"]]
+    assert {bank.meta(s)["domain"] for s in slugs} == {"d0", "d1", "d2", "d3"}
+
+
+def test_asked_list_survives_a_restart(bank, tmp_path):
+    first = {p["slug"] for p in service.dive()["prompts"]}
+    again = QuestionBank(questions=bank.questions, live=tmp_path / "live", packages=None)
     service.use(again)
-    second = {p["prompt"] for p in service.dive()["prompts"]}
+    second = {p["slug"] for p in service.dive()["prompts"]}
     assert not first & second
 
 
-def test_ai_judge_scores_answers_while_the_catalog_builds(games, monkeypatch):
-    games.gate.clear()  # hold catalog builds
+def test_an_exhausted_bank_says_so(bank):
+    service.dive()
+    service.dive()
+    assert len(service.dive()["prompts"]) == 6  # a short game beats no game
+    with pytest.raises(BankEmpty):
+        service.dive()
+
+
+def test_catalog_answers_are_matched_without_ai(bank, monkeypatch):
+    monkeypatch.setattr(ai_judge, "judge", lambda prompt, alts, shortlist=None: pytest.fail("judge must not run"))
     slug = service.dive()["prompts"][0]["slug"]
-    assert service.reveal(slug) == {"pending": True}
-    monkeypatch.setattr(ai_judge, "judge", lambda prompt, alts: {"name": "Real thing", "tier": 3})
+    n = slug.rsplit("-", 1)[1]
+    hit = service.judge(slug, [f"common thing {n}"])["hit"]
+    assert hit["id"] == "common" and hit["method"] == "exact"
+    assert service.reveal(slug)["krillion"] == [f"Obscure thing {n}"]
+
+
+def test_off_list_answers_go_to_the_judge(bank, monkeypatch):
+    monkeypatch.setattr(ai_judge, "judge", lambda prompt, alts, shortlist=None: {"name": "Real thing", "tier": 3})
+    slug = service.dive()["prompts"][0]["slug"]
     hit = service.judge(slug, ["real thing"])["hit"]
-    assert hit["method"] == "judge" and hit["tier"] == 3
-    games.gate.set()
+    assert hit["method"] == "judge" and hit["tier"] == 3 and hit["ladder"]["total"] == 2
 
 
-def test_catalog_answers_and_reveal_once_built(games, monkeypatch):
-    slug = service.dive()["prompts"][0]["slug"]
-    wait_ready(games, slug)
-    monkeypatch.setattr(ai_judge, "judge", lambda prompt, alts: None)
-    assert service.judge(slug, ["obscure thing"])["hit"]["method"] == "exact"
-    assert service.judge(slug, ["nonsense"])["hit"] is None
-    r = service.reveal(slug)
-    assert r["krillion"] == ["Obscure thing"] and r["top"] == ["Common thing"]
-
-
-def test_unknown_categories_are_rejected(games):
+def test_unknown_question_is_a_key_error(bank):
     with pytest.raises(KeyError):
-        service.judge("never-generated", ["x"])
+        service.judge("name-a-ghost", ["boo"])
 
 
-def test_voice_choices_are_validated():
-    assert voices.resolve("puck", "GB") == ("Puck", "gb")
-    assert voices.resolve(None, None) == (voices.DEFAULT_VOICE, voices.DEFAULT_ACCENT)
-    for bad in [("Nobody", "us"), ("Puck", "fr"), ("../x", "us")]:
-        with pytest.raises(KeyError):
-            voices.resolve(*bad)
+def test_a_judge_answer_on_the_list_scores_at_its_rank(bank, monkeypatch):
+    seen = {}
+
+    def fake_judge(prompt, alts, shortlist=None):
+        seen["shortlist"] = shortlist
+        return {"name": f"Obscure thing {n}", "tier": 2}
+
+    monkeypatch.setattr(ai_judge, "judge", fake_judge)
+    slug = service.dive()["prompts"][0]["slug"]
+    n = slug.rsplit("-", 1)[1]
+    hit = service.judge(slug, ["obscure thng"])["hit"]
+    assert hit["id"] == "obscure" and hit["tier"] == 5 and hit["method"] == "judge"
+    assert hit["ladder"]["rank"] == 2  # its real place on the list, not the judge's guess
+
+
+def test_a_judge_pick_unlike_what_was_said_is_not_that_list_answer(bank, monkeypatch):
+    # "lychee nut" must never score as Cashew nut because both end in "nut"
+    calls = []
+
+    def fake_judge(prompt, alts, shortlist=None):
+        calls.append(shortlist)
+        return {"name": f"Obscure thing {n}", "tier": 2}
+
+    monkeypatch.setattr(ai_judge, "judge", fake_judge)
+    slug = service.dive()["prompts"][0]["slug"]
+    n = slug.rsplit("-", 1)[1]
+    hit = service.judge(slug, ["lychee nut"])["hit"]
+    assert hit["id"] is None and hit["method"] == "judge"
+    assert len(calls) == 2 and calls[1] is None  # judged again without the list

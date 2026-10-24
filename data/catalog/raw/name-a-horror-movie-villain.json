@@ -1,0 +1,66 @@
+{
+  "prompt": "Name a horror movie villain",
+  "noun": "horror villain",
+  "domain": "film and TV",
+  "answers": {
+    "very_common": [
+      "Freddy Krueger",
+      "Jason Voorhees",
+      "Michael Myers",
+      "Chucky",
+      "Leatherface",
+      "Ghostface",
+      "Pennywise",
+      "Jigsaw",
+      "Pinhead",
+      "Hannibal Lecter"
+    ],
+    "common": [
+      "Norman Bates",
+      "Count Dracula",
+      "Frankenstein's monster",
+      "Regan MacNeil",
+      "Damien Thorn",
+      "Candyman",
+      "Samara Morgan",
+      "Annabelle",
+      "Jack Torrance",
+      "Carrie White",
+      "Annie Wilkes"
+    ],
+    "known": [
+      "Art the Clown",
+      "Pearl",
+      "Esther",
+      "M3GAN",
+      "The Tall Man",
+      "Herbert West",
+      "Pamela Voorhees",
+      "Kayako Saeki",
+      "Sadako Yamamura",
+      "The Nun",
+      "The Creeper",
+      "The Babadook",
+      "Captain Spaulding",
+      "Patrick Bateman",
+      "Pumpkinhead"
+    ],
+    "uncommon": [
+      "Tiffany Valentine",
+      "Graf Orlok",
+      "Imhotep",
+      "Dr. Phibes",
+      "Baron Frankenstein",
+      "The Gill-man",
+      "Xenomorph",
+      "Pazuzu",
+      "Valak",
+      "Bughuul",
+      "Victor Crowley",
+      "Mick Taylor",
+      "Angela Baker",
+      "Baby Firefly"
+    ],
+    "obscure": []
+  }
+}

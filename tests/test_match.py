@@ -109,3 +109,18 @@ def test_shared_category_words_do_not_earn_typo_allowance():
     assert m2.match("coffee cake") is None  # coffee and kyiv share a sound code, not a spelling
     assert m.match("carot cake").entry_id == "carrot"
     assert m.match("carrot").entry_id == "carrot"
+
+
+def test_best_guess_wins_over_a_weaker_guess():
+    m = Matcher([("pyr", ["Great Pyrenees"]), ("pwd", ["Portuguese Water Dog", "Portie"]),
+                 ("shep", ["Pyrenean Shepherd"])])
+    assert m.match(["Pyrenees", "porties"]).entry_id == "pyr"  # partial on the best guess
+    assert m.match(["Pyrenees", "porties"]).method == "partial"
+    assert m.match(["zzz", "porties"]).entry_id == "pwd"  # a lower guess may still match exactly
+
+
+def test_words_in_several_names_go_to_the_judge():
+    m = Matcher([("pwd", ["Portuguese Water Dog"]), ("swd", ["Spanish Water Dog"]), ("mast", ["Mastiff"]),
+                 ("lab", ["Labrador Retriever"]), ("gold", ["Golden Retriever"])])
+    assert m.match(["water dog"]) is None
+    assert set(m.candidates("water dog")) == {"pwd", "swd"}

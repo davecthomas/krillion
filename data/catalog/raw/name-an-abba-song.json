@@ -1,0 +1,69 @@
+{
+  "prompt": "Name an ABBA song",
+  "noun": "ABBA song",
+  "domain": "music",
+  "answers": {
+    "very_common": [
+      "Dancing Queen",
+      "Mamma Mia",
+      "Waterloo",
+      "Take a Chance on Me",
+      "The Winner Takes It All",
+      "Fernando",
+      "Super Trouper",
+      "Gimme! Gimme! Gimme!",
+      "Knowing Me, Knowing You",
+      "SOS"
+    ],
+    "common": [
+      "Chiquitita",
+      "Voulez-Vous",
+      "Money, Money, Money",
+      "Lay All Your Love on Me",
+      "Does Your Mother Know",
+      "I Have a Dream",
+      "Thank You for the Music",
+      "Honey, Honey",
+      "Ring Ring",
+      "The Name of the Game",
+      "Slipping Through My Fingers"
+    ],
+    "known": [
+      "Summer Night City",
+      "Angeleyes",
+      "One of Us",
+      "The Day Before You Came",
+      "Head over Heels",
+      "Under Attack",
+      "When All Is Said and Done",
+      "I Do, I Do, I Do, I Do, I Do",
+      "Hasta Mañana",
+      "Our Last Summer",
+      "Happy New Year",
+      "I Still Have Faith in You",
+      "Don't Shut Me Down"
+    ],
+    "uncommon": [
+      "Rock Me",
+      "So Long",
+      "Eagle",
+      "Nina, Pretty Ballerina",
+      "People Need Love",
+      "He Is Your Brother",
+      "Bang-A-Boomerang",
+      "I've Been Waiting for You",
+      "Two for the Price of One",
+      "Cassandra",
+      "Just a Notion",
+      "Little Things",
+      "The Visitors",
+      "Soldiers",
+      "Andante, Andante",
+      "My Love, My Life",
+      "Arrival",
+      "Tiger",
+      "Hole in Your Soul"
+    ],
+    "obscure": []
+  }
+}

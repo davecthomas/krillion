@@ -1,0 +1,64 @@
+{
+  "prompt": "Name a phobia",
+  "noun": "phobia",
+  "domain": "science",
+  "wikipedia_category": "Category:Phobias",
+  "answers": {
+    "very_common": [
+      "Arachnophobia",
+      "Claustrophobia",
+      "Acrophobia",
+      "Agoraphobia",
+      "Fear of flying",
+      "Ophidiophobia",
+      "Trypophobia",
+      "Glossophobia"
+    ],
+    "common": [
+      "Nyctophobia",
+      "Coulrophobia",
+      "Mysophobia",
+      "Triskaidekaphobia",
+      "Xenophobia",
+      "Homophobia",
+      "Social anxiety disorder",
+      "Trypanophobia",
+      "Cynophobia",
+      "Hemophobia",
+      "Emetophobia",
+      "Thanatophobia"
+    ],
+    "known": [
+      "Aquaphobia",
+      "Astraphobia",
+      "Entomophobia",
+      "Ailurophobia",
+      "Dentophobia",
+      "Nosophobia",
+      "Hippopotomonstrosesquippedaliophobia",
+      "Paraskevidekatriaphobia",
+      "Hexakosioihexekontahexaphobia",
+      "Phobophobia",
+      "Technophobia",
+      "Nomophobia",
+      "Thalassophobia",
+      "Automatonophobia",
+      "Somniphobia",
+      "Arachibutyrophobia"
+    ],
+    "uncommon": [
+      "Tokophobia",
+      "Gerascophobia",
+      "Gymnophobia",
+      "Ergophobia",
+      "Chronophobia",
+      "Dysmorphophobia",
+      "Pyrophobia",
+      "Megalophobia",
+      "Herpetophobia",
+      "Ombrophobia",
+      "Chionophobia"
+    ],
+    "obscure": []
+  }
+}

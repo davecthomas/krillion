@@ -1,0 +1,75 @@
+{
+  "prompt": "Name a type of dress",
+  "noun": "dress",
+  "domain": "fashion",
+  "wikipedia_category": "Category:Dresses",
+  "answers": {
+    "very_common": [
+      "Wedding dress",
+      "Ball gown",
+      "Sundress",
+      "Little black dress",
+      "Maxi dress",
+      "Cocktail dress",
+      "Prom dress",
+      "Evening gown",
+      "Wrap dress"
+    ],
+    "common": [
+      "Shirtdress",
+      "Slip dress",
+      "Sheath dress",
+      "A-line",
+      "Halter dress",
+      "Bodycon dress",
+      "Sweater dress",
+      "Pinafore",
+      "Sari",
+      "Qipao",
+      "Muumuu"
+    ],
+    "known": [
+      "Shift dress",
+      "Mermaid dress",
+      "Peasant dress",
+      "Prairie dress",
+      "Babydoll",
+      "Flapper dress",
+      "Tea gown",
+      "Caftan"
+    ],
+    "uncommon": [
+      "Polonaise",
+      "Robe à la française",
+      "Mantua",
+      "Sack-back gown",
+      "Chemise à la reine",
+      "Dirndl",
+      "Hanbok",
+      "Áo dài",
+      "Kebaya",
+      "Abaya",
+      "Jilbab",
+      "Djellaba",
+      "Lehenga",
+      "Anarkali",
+      "Peplos",
+      "Chiton",
+      "Stola",
+      "Kirtle",
+      "Houppelande",
+      "Bliaut"
+    ],
+    "obscure": [
+      "Cheongsam",
+      "Sarafan",
+      "Cotehardie",
+      "Princess line",
+      "Delphos gown",
+      "Mother Hubbard dress",
+      "Housedress",
+      "Gymslip",
+      "Thawb"
+    ]
+  }
+}

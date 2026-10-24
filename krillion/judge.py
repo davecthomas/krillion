@@ -39,21 +39,34 @@ def _get_client():
     if _client is None:
         from ai_api_unified import AIFactory
 
+        from .cache_store import install
+
+        install()  # a repeated answer is judged from the persistent response cache
+
         _client = AIFactory.get_ai_completions_client(
             model_name=JUDGE_MODEL, completions_engine="openai", thinking="off")
     return _client
 
 
-def judge(prompt: str, alts: list[str]) -> dict | None:
-    """{"name", "tier"} for a correct answer, else None."""
+def judge(prompt: str, alts: list[str], shortlist: list[str] | None = None) -> dict | None:
+    """{"name", "tier"} for a correct answer, else None. `shortlist` holds the
+    list answers closest to what was heard; when the player meant one of them,
+    the judge returns that exact name so the caller can find it on the list."""
     heard = " / ".join(f'"{a}"' for a in alts[:3])
+    near = ""
+    if shortlist:
+        near = ("\nNames on our list that look or sound a bit like what was heard: "
+                + "; ".join(shortlist)
+                + ".\nReturn one of these exact names only if the player's words are that same answer, "
+                "misheard or misspelled. Sharing a word is not enough: \"lychee nut\" is not \"Cashew nut\". "
+                "If the player named something else, judge what they actually said.")
     try:
         r = _get_client().send_structured_output(
             f'Trivia prompt: "{prompt}".\n'
-            f"The player said (speech-to-text alternatives, best first; may be misheard): {heard}\n"
+            f"The player said (speech-to-text alternatives, best first; may be misheard): {heard}{near}\n"
             "Is it a real, correct answer to the prompt? Be strict about correctness and generous about "
-            "speech-recognition spelling. If it is, give its canonical name and how likely a typical adult "
-            "is to say it (salience 1-5).",
+            "speech-recognition spelling. If it is, give its canonical name and how likely a typical "
+            "North American adult is to say it (salience 1-5).",
             response_schema=SCHEMA, max_response_tokens=300, request_timeout_seconds=TIMEOUT_S)
     except Exception:
         log.warning("judge failed for %r", alts[:1], exc_info=True)

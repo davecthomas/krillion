@@ -1,0 +1,62 @@
+{
+  "prompt": "Name a subatomic particle",
+  "noun": "subatomic particle",
+  "domain": "science",
+  "answers": {
+    "very_common": [
+      "Proton",
+      "Neutron",
+      "Electron",
+      "Quark",
+      "Photon",
+      "Neutrino",
+      "Positron",
+      "Higgs boson"
+    ],
+    "common": [
+      "Muon",
+      "Gluon",
+      "Boson",
+      "Fermion",
+      "Lepton",
+      "Hadron",
+      "Meson",
+      "Baryon",
+      "Pion",
+      "Antiproton",
+      "Antineutron",
+      "Graviton",
+      "Tau",
+      "W and Z bosons",
+      "Kaon"
+    ],
+    "known": [
+      "Up quark",
+      "Down quark",
+      "Strange quark",
+      "Charm quark",
+      "Top quark",
+      "Bottom quark",
+      "Electron neutrino",
+      "Muon neutrino",
+      "Tau neutrino",
+      "Alpha particle",
+      "Beta particle",
+      "Deuteron",
+      "Lambda baryon",
+      "Sigma baryon",
+      "Xi baryon",
+      "Omega baryon",
+      "J/psi meson",
+      "Eta meson",
+      "Rho meson",
+      "B meson",
+      "D meson",
+      "Axion",
+      "Pentaquark",
+      "Tetraquark"
+    ],
+    "uncommon": [],
+    "obscure": []
+  }
+}

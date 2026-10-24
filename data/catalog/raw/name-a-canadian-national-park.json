@@ -1,0 +1,63 @@
+{
+  "prompt": "Name a Canadian national park",
+  "noun": "national park of Canada",
+  "domain": "geography",
+  "wikipedia_category": "Category:National parks of Canada",
+  "answers": {
+    "very_common": [
+      "Banff National Park",
+      "Jasper National Park",
+      "Yoho National Park",
+      "Pacific Rim National Park Reserve",
+      "Cape Breton Highlands National Park",
+      "Gros Morne National Park",
+      "Fundy National Park",
+      "Waterton Lakes National Park",
+      "Kootenay National Park"
+    ],
+    "common": [
+      "Bruce Peninsula National Park",
+      "Point Pelee National Park",
+      "Prince Edward Island National Park",
+      "Riding Mountain National Park",
+      "Prince Albert National Park",
+      "Elk Island National Park",
+      "Wood Buffalo National Park",
+      "Mount Revelstoke National Park",
+      "Kluane National Park and Reserve",
+      "Nahanni National Park Reserve",
+      "Gwaii Haanas National Park Reserve and Haida Heritage Site",
+      "Kejimkujik National Park",
+      "Thousand Islands National Park",
+      "Forillon National Park"
+    ],
+    "known": [
+      "Georgian Bay Islands National Park",
+      "Pukaskwa National Park",
+      "Fathom Five National Marine Park",
+      "Rouge National Urban Park",
+      "La Mauricie National Park",
+      "Mingan Archipelago National Park Reserve",
+      "Kouchibouguac National Park",
+      "Terra Nova National Park",
+      "Torngat Mountains National Park",
+      "Grasslands National Park",
+      "Wapusk National Park",
+      "Auyuittuq National Park",
+      "Quttinirpaaq National Park",
+      "Sirmilik National Park",
+      "Ukkusiksalik National Park",
+      "Ivvavik National Park",
+      "Vuntut National Park",
+      "Aulavik National Park",
+      "Tuktut Nogait National Park",
+      "Gulf Islands National Park Reserve",
+      "Sable Island National Park Reserve",
+      "Nááts'ihch'oh National Park Reserve",
+      "Qausuittuq National Park",
+      "Thaidene Nëné National Park Reserve"
+    ],
+    "uncommon": [],
+    "obscure": []
+  }
+}

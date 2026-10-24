@@ -202,10 +202,12 @@ function startRec() { if (!rec || micBlocked) return; wantListen = true; if (lis
 function stopRec() { wantListen = false; holding = false; talkUI(); if (rec && listening) { try { rec.abort(); } catch (e) {} } }
 function releaseRec() { wantListen = false; if (rec && listening) { try { rec.stop(); } catch (e) {} } }
 
-const canTalk = () => state === 'play' && phase === 'answer' && !judging && !micBlocked;
+// 'review' is the pause before Next question: answers then are compared, not scored
+const answering = () => phase === 'answer' || phase === 'review';
+const canTalk = () => state === 'play' && answering() && !judging && !micBlocked;
 function talkUI() {
   const b = $('talkBtn'); b.classList.toggle('down', holding);
-  b.disabled = !(state === 'play' && phase === 'answer' && !micBlocked);
+  b.disabled = !(state === 'play' && answering() && !micBlocked);
   b.textContent = holding ? 'Listening…' : 'Hold to talk';
 }
 function talkDown() { if (holding || !canTalk()) return; holding = true; $('heard').textContent = ''; startRec(); talkUI(); orb(); }
@@ -224,6 +226,8 @@ function orb() {
   else if (phase === 'answer' && holding && listening) { o.classList.add('listening'); s = 'Listening. Let go when you’ve answered.'; }
   else if (phase === 'answer' && holding) { o.classList.add('listening'); s = 'Starting the mic…'; }
   else if (phase === 'answer') { s = 'Hold Space or the Talk button to answer.'; }
+  else if (phase === 'review' && holding) { o.classList.add('listening'); s = 'Listening for an answer to compare…'; }
+  else if (phase === 'review') { s = 'Try another answer to see where it would rank. Only your first answer scores.'; }
   if (s) $('status').textContent = s;
   if ($('talkBtn')) talkUI();
 }
@@ -268,7 +272,7 @@ async function newDive() {
   setupRec();
   const btns = [$('beginBtn'), $('againBtn')];
   if (!readyPrompts) {
-    // The server usually has a dive prepared; if not, generating takes 20-50 seconds.
+    // Questions come from the built bank, so this is quick.
     btns.forEach(b => { b.disabled = true; b.textContent = 'Generating new questions…'; });
     const v = voiceCfg ? `?voice=${encodeURIComponent(voiceCfg.voice)}&accent=${voiceCfg.accent}` : '';
     let d;
@@ -320,6 +324,7 @@ async function revealFor(slug) {
 
 async function playRound() {
   const my = ++token, p = game.prompts[game.i];
+  cancelNext();
   openSection(game.i, p.prompt);
   disarmEnd();
   p.revealing = null;  // fetched at the end of the round, when the answer list is likelier to be ready
@@ -361,7 +366,9 @@ function drawAir() {
 
 async function heard(alts, typed) {
   const raw = (alts[0] || '').trim();
-  if (state !== 'play' || phase !== 'answer' || judging || !raw) return;
+  if (state !== 'play' || judging || !raw) return;
+  if (phase === 'review') { compare(alts, raw); return; }
+  if (phase !== 'answer') return;
   $('heard').textContent = '“' + raw + '”';
   const n = norm(raw), wc = n.split(' ').length;
   if (!typed && wc <= 4) {
@@ -424,19 +431,69 @@ async function endRound(hit, why) {
       if (rankedFits() && slot) { played = true; await fallInto(sec, slot, land); }
     } else sectionNote(sec, 'The ranking appears when this answer list is ready.');
     if (my !== token) return;
-    if (!played) { land(); await new Promise(res => setTimeout(res, 2400)); }
-    else await new Promise(res => setTimeout(res, 1200));
-    if (my !== token) return;
+    if (!played) land();
   } else {
     box.innerHTML = `<div class="result" style="color:var(--muted)"><div class="tn">${why === 'skip' ? 'Skipped' : 'Out of air'}</div><div class="tp">${revealHTML(M.reveal, bestList)}</div></div>`;
     $('status').textContent = '';
     r.player = null;
     loadSectionLadder(game, r, game.i);
-    // Results are shown, not spoken: a beat to read them, then the next question
-    await new Promise(res => setTimeout(res, 3200)); if (my !== token) return;
   }
+  // The player moves on when ready, after a look at the rankings, and can
+  // meanwhile try other answers to see where they would have ranked.
+  box.insertAdjacentHTML('beforeend', '<div class="cmpBox"><div class="cmpHead">Compare another answer: say or type it. It isn’t scored.</div><div class="cmpList"></div></div>');
+  r.compared = [];
+  phase = 'review'; orb();
+  $('typeInput').placeholder = 'Compare another answer (not scored)';
+  await waitForNext(game.i + 1 >= game.prompts.length); if (my !== token) return;
   game.i++;
   if (game.i < game.prompts.length) playRound(); else finish();
+}
+
+// Between questions the game waits for Next question (or Enter).
+let advance = null;
+function waitForNext(last) {
+  const b = $('nextBtn');
+  b.textContent = last ? 'See results' : 'Next question';
+  b.hidden = false;
+  b.focus({preventScroll: true});
+  return new Promise(res => { advance = () => { advance = null; b.hidden = true; res(); }; });
+}
+function cancelNext() { advance = null; $('nextBtn').hidden = true; $('typeInput').placeholder = 'Or type (or dictate) an answer'; }
+
+// An answer tried after the question ends: ranked against the same list,
+// shown under the result and marked in the rankings, never added to the score.
+async function compare(alts, raw) {
+  const r = game.rounds[game.rounds.length - 1], key = words(raw).join(' ');
+  if (!key || !r || r.compared.some(c => c.key === key)) return;
+  const my = token, i = game.i, p = game.prompts[i];
+  $('heard').textContent = '“' + raw + '”';
+  judging = true; orb();
+  let res = null;
+  try { res = await api('/api/judge', {slug: p.slug, alts}); } catch (e) {}
+  judging = false;
+  if (my !== token || phase !== 'review') return;
+  orb();
+  const hit = res && res.hit, row = document.createElement('div');
+  row.className = 'cmp';
+  if (hit) {
+    const t = TS[hit.tier], lad = hit.ladder;
+    const rank = lad && lad.rank ? `#${lad.rank} of ${lad.total}` : 'not on the list';
+    const mine = r.tier >= 0 ? (t.pts > TS[r.tier].pts ? ' · beats your answer' : t.pts < TS[r.tier].pts ? ' · your answer was better' : ' · same tier as yours') : '';
+    row.style.color = t.c;
+    row.innerHTML = `<b>${esc(hit.name)}</b> · ${rank} · ${t.name} · worth ${t.pts} pts${mine}`;
+    r.compared.push({key, name: hit.name, tier: hit.tier, rank: lad && lad.rank});
+    markCompared(game.sections[i], hit.name);
+  } else {
+    row.innerHTML = `<b>${esc(raw)}</b> · not an answer to this one`;
+    r.compared.push({key, name: raw, tier: -1});
+  }
+  const list = $('resultBox').querySelector('.cmpList'); if (list) list.appendChild(row);
+}
+function markCompared(sec, name) {
+  if (!sec) return;
+  for (const row of sec.querySelectorAll('.lqRow')) {
+    if (row.querySelector('.nm').textContent === name) { row.classList.add('compared'); row.scrollIntoView({block: 'nearest', behavior: still ? 'auto' : 'smooth'}); }
+  }
 }
 
 // ---------- Rankings column ----------
@@ -540,7 +597,7 @@ function endEarly() {
     endArmed = setTimeout(disarmEnd, 3000);
     return;
   }
-  disarmEnd();
+  disarmEnd(); cancelNext();
   token++; timer.running = false; judging = false; phase = 'done';
   stopRec(); stopVoice();
   game.endedEarly = true;
@@ -606,7 +663,7 @@ const shareText = (m, band, rounds, sc = 'rare') =>
   `1 in a Krillion · voice · ${MODES[sc].label}\n${fmt(m)} m · ${band}\n${rounds.map(r => r.tier >= 0 ? MODES[sc].tiers[r.tier].emoji : '⬛').join('')}`;
 
 function home() {
-  token++; state = 'start'; stopRec(); timer.running = false; stopVoice();
+  token++; state = 'start'; stopRec(); timer.running = false; stopVoice(); cancelNext();
   setDepth(0); show('start');
 }
 
@@ -646,6 +703,11 @@ addEventListener('keydown', e => {
   if (e.code !== 'Space' || typing(document.activeElement) || state !== 'play' || settings.open) return;
   e.preventDefault(); if (!e.repeat) talkDown();
 });
+addEventListener('keydown', e => {
+  if (e.key === 'Enter' && advance && state === 'play' && !typing(document.activeElement) && !settings.open) {
+    e.preventDefault(); advance();
+  }
+});
 addEventListener('keyup', e => { if (e.code === 'Space' && holding) { e.preventDefault(); talkUp(); } });
 addEventListener('blur', talkUp);  // switching windows mid-hold must not leave the mic open
 const tb = $('talkBtn');
@@ -655,6 +717,7 @@ tb.addEventListener('contextmenu', e => e.preventDefault());
 $('homeBtn').onclick = home;
 $('repeatBtn').onclick = repeat;
 $('endBtn').onclick = endEarly;
+$('nextBtn').onclick = () => { if (advance) advance(); };
 $('skipBtn').onclick = () => { if (state === 'play' && phase === 'answer') endRound(null, 'skip'); };
 $('typeForm').addEventListener('submit', e => { e.preventDefault(); const v = $('typeInput').value.trim(); if (!v) return; $('typeInput').value = ''; heard([v], true); });
 $('copyBtn').onclick = () => {

@@ -1,0 +1,76 @@
+{
+  "prompt": "Name a Muppet",
+  "noun": "Muppet",
+  "domain": "film and TV",
+  "answers": {
+    "very_common": [
+      "Kermit the Frog",
+      "Miss Piggy",
+      "Fozzie Bear",
+      "Gonzo",
+      "Animal",
+      "Big Bird",
+      "Elmo",
+      "Cookie Monster",
+      "Oscar the Grouch",
+      "Swedish Chef"
+    ],
+    "common": [
+      "Rowlf the Dog",
+      "Scooter",
+      "Statler and Waldorf",
+      "Beaker",
+      "Dr. Bunsen Honeydew",
+      "Sam Eagle",
+      "Rizzo the Rat",
+      "Pepe the King Prawn",
+      "Camilla the Chicken",
+      "Sweetums",
+      "Bert",
+      "Ernie",
+      "Grover",
+      "Count von Count",
+      "Telly Monster"
+    ],
+    "known": [
+      "Dr. Teeth",
+      "Floyd Pepper",
+      "Janice",
+      "Zoot",
+      "Lew Zealand",
+      "Crazy Harry",
+      "Uncle Deadly",
+      "Walter",
+      "Robin the Frog",
+      "Link Hogthrob",
+      "Dr. Julius Strangepork",
+      "Mahna Mahna",
+      "Clifford",
+      "Bobo the Bear",
+      "Beauregard",
+      "Snuffleupagus",
+      "Rosita",
+      "Zoe",
+      "Abby Cadabby",
+      "Prairie Dawn",
+      "Herry Monster",
+      "Baby Bear",
+      "Two-Headed Monster"
+    ],
+    "uncommon": [
+      "Wembley Fraggle",
+      "Gobo Fraggle",
+      "Red Fraggle",
+      "Mokey Fraggle",
+      "Boober Fraggle",
+      "Uncle Traveling Matt",
+      "Marjory the Trash Heap",
+      "Johnny Fiama"
+    ],
+    "obscure": [
+      "Wilkins",
+      "Bean Bunny",
+      "The Newsman"
+    ]
+  }
+}

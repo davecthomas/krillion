@@ -25,9 +25,13 @@ node_modules/
 # OS
 .DS_Store
 
-# Generated per game, never committed: categories asked so far, their catalogs, recorded questions
+# Local play state (which questions this machine has asked) and recorded audio.
 data/live/
 public/audio/
+
+# Built questions are a local working copy: the committed forms are the raw
+# files in data/catalog/raw/ and the packages in data/packages/.
+data/catalog/questions/
 
 # ai-api-unified response cache (persistent store)
 data/cache/
