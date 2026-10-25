@@ -79,7 +79,9 @@ questions aloud** in Settings (the gear, top right).
   to the summary of the questions played so far.
 - **Air and speed.** The clock starts when the question appears, or after the
   game reads it aloud. A wrong
-  answer costs 3 seconds, and a fast answer earns up to 50% more points.
+  answer costs 3 seconds, and a fast answer earns up to 50% more points. Under
+  10 seconds a beep sounds each second; under 5 it rises in pitch and speeds
+  up to about seven a second.
 - **Two modes.** Rare wins pays the tiers below; Popular wins reverses them, so
   the crowd's favorite pays 100.
 - **Dive log.** A panel beside the game (below it on a phone) keeps every
