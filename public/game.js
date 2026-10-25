@@ -81,6 +81,18 @@ function tone(f, d = .12, type = 'sine', g = .12, at = 0) {
 }
 const chime = ti => { const notes = [523, 659, 784, 988, 1175, 1568]; for (let i = 0; i <= ti; i++) tone(notes[i], .22, 'sine', .1, i * .08); };
 const buzz = () => { tone(180, .18, 'triangle', .14); tone(140, .22, 'triangle', .1, .08); };
+// Running out of air: a beep each second under 10 s, then faster and higher
+// under 5 s, down to about seven a second at the end.
+const BEEP_FROM_MS = 10000, BEEP_FAST_MS = 5000;
+let lastBeep = 0;
+function countdownBeep(now) {
+  const left = timer.left;
+  if (left <= 0 || left >= BEEP_FROM_MS) return;
+  const gap = left >= BEEP_FAST_MS ? 1000 : 140 + 460 * left / BEEP_FAST_MS;
+  if (now - lastBeep < gap) return;
+  lastBeep = now;
+  tone(left < BEEP_FAST_MS ? 1047 : 880, .07, 'sine', .08);
+}
 
 // ---------- Question voice ----------
 // The player picks a Gemini voice and accent. The server records each question
@@ -346,11 +358,11 @@ async function playRound() {
   if (micBlocked) $('typeInput').focus({preventScroll: true});
 }
 
-function startTimer() { timer.running = true; timer.last = performance.now(); requestAnimationFrame(tick); }
+function startTimer() { timer.running = true; timer.last = performance.now(); lastBeep = 0; requestAnimationFrame(tick); }
 function tick(now) {
   if (!timer.running || state !== 'play') return;
   const dt = now - timer.last; timer.last = now;
-  if (!judging) timer.left -= dt;
+  if (!judging) { timer.left -= dt; countdownBeep(now); }
   if (timer.left <= 0) {
     timer.left = 0; drawAir();
     // Let a half-spoken answer finish before running out of air
