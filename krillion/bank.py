@@ -36,6 +36,7 @@ class QuestionBank:
 
             unpack(packages, questions)
         live.mkdir(parents=True, exist_ok=True)
+        self.live = live
         self._asked_path = live / "asked.json"
         self.asked: list[dict] = (
             json.loads(self._asked_path.read_text()) if self._asked_path.exists() else [])
@@ -69,6 +70,11 @@ class QuestionBank:
         return sum(1 for s in self._meta if s not in played)
 
     # -- games ----------------------------------------------------------
+
+    def game_size(self, game_id: str) -> int:
+        """How many questions the bank gave this game; 0 for a game it never started."""
+        with self._lock:
+            return sum(1 for a in self.asked if a["game"] == game_id)
 
     def take(self) -> dict:
         """A new game of unplayed questions, as varied in domain as the bank allows."""
