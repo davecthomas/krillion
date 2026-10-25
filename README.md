@@ -77,6 +77,11 @@ questions aloud** in Settings (the gear, top right).
   question's button reads **See results**.
 - **End a dive early.** End dive, next to Skip, takes two presses, then jumps
   to the summary of the questions played so far.
+- **All-time high scores.** Each mode keeps a top 10 of the deepest dives,
+  shown on the start screen and after every dive. A dive that makes the board
+  asks for a name. The server keeps the boards in `data/live/highscores.json`
+  and takes one score per game it started, never above what that game's
+  questions can pay.
 - **Air and speed.** The clock starts when the question appears, or after the
   game reads it aloud. A wrong
   answer costs 3 seconds, and a fast answer earns up to 50% more points. Under
@@ -303,6 +308,7 @@ public/           the voice game: index.html, styles.css, game.js, ocean.js (the
                   the skill that writes raw questions on your Claude plan
 krillion/
   bank.py         the question bank and the asked-list
+  scores.py       all-time high scores, a top 10 per mode
   service.py      dive, judge and reveal, free of any web framework
   judge.py        AI judge for answers the list can't settle
   neighbors.py    embedding shortlist for the judge

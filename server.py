@@ -18,6 +18,7 @@ from urllib.parse import parse_qs, urlparse
 
 from krillion import service, tts, voices
 from krillion.bank import BankEmpty
+from krillion.scores import ScoreRejected
 
 PUBLIC = Path(__file__).resolve().parent / "public"
 MAX_BODY = 8_192
@@ -67,6 +68,8 @@ class Handler(SimpleHTTPRequestHandler):
                 tier = q.get("tier")
                 return self._json(200, service.ladder_for(
                     q.get("slug", ""), q.get("answer") or None, int(tier) if tier and tier.isdigit() else None))
+            if url.path == "/api/highscores":
+                return self._json(200, service.high_scores())
             if url.path == "/api/voices":
                 return self._json(200, voices.options())
             if url.path == "/api/preview":
@@ -102,6 +105,12 @@ class Handler(SimpleHTTPRequestHandler):
             body = self._body()
             if path == "/api/judge":
                 return self._json(200, service.judge(str(body.get("slug", "")), list(body.get("alts", []))))
+            if path == "/api/highscores":
+                return self._json(200, service.submit_score(
+                    body.get("game", ""), body.get("mode", ""), body.get("name"),
+                    body.get("score"), body.get("questions")))
+        except ScoreRejected as e:
+            return self._json(409, {"error": str(e)})
         except BankEmpty as e:
             return self._json(503, {"error": str(e)})
         except KeyError:

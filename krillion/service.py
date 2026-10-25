@@ -16,9 +16,11 @@ from . import judge as ai_judge
 from . import ladder, neighbors
 from .bank import QuestionBank
 from .match import Matcher
+from .scores import HighScores
 from .tiers import KRILLION, PLANKTON
 
 _bank: QuestionBank | None = None
+_scores: HighScores | None = None
 
 
 def bank() -> QuestionBank:
@@ -29,9 +31,35 @@ def bank() -> QuestionBank:
 
 
 def use(b: QuestionBank | None) -> None:
-    """Swap in a bank (tests point one at a temporary directory)."""
-    global _bank
-    _bank = b
+    """Swap in a bank (tests point one at a temporary directory). The high
+    scores live beside its asked-list."""
+    global _bank, _scores
+    _bank, _scores = b, None
+
+
+def scores() -> HighScores:
+    global _scores
+    if _scores is None:
+        _scores = HighScores(bank().live)
+    return _scores
+
+
+def high_scores() -> dict:
+    """Both boards, without the game ids."""
+    return {m: [{k: v for k, v in e.items() if k != "game"} for e in board]
+            for m, board in scores().snapshot().items()}
+
+
+def submit_score(game_id: str, mode: str, name: object, score: object, questions: object) -> dict:
+    """{"rank": 1-10 or None, "boards": ...}. ScoreRejected for a game the
+    bank never started, a repeat, or an impossible score."""
+    from .scores import ScoreRejected
+
+    size = bank().game_size(str(game_id))
+    if not size:
+        raise ScoreRejected("unknown game")
+    rank = scores().submit(str(game_id), str(mode), name, score, questions, size)
+    return {"rank": rank, "boards": high_scores()}
 
 
 @lru_cache(maxsize=256)

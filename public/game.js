@@ -273,7 +273,7 @@ function pips() {
 // A generated dive waits here until the player presses Start. Backing out
 // keeps it, so the next New dive reuses it instead of generating (and paying
 // for) another set.
-let readyPrompts = null;
+let readyPrompts = null, readyGameId = null;
 
 // New dive: generate the questions, then wait on the ready screen. This click
 // is also the user gesture browsers need before audio and the mic can start.
@@ -298,7 +298,7 @@ async function newDive() {
       $('lede').textContent = (e && e.message && e.message !== 'failed' && !/fetch/i.test(e.message)) ? e.message : 'Couldn’t reach the game server. Is it running?';
       return;
     }
-    readyPrompts = d.prompts;
+    readyPrompts = d.prompts; readyGameId = d.id;
     btns.forEach(b => { b.disabled = false; b.textContent = 'New dive'; });
   }
   // Load the first question's recording while the player gets ready
@@ -314,8 +314,8 @@ function beginDive() {
   if (actx && actx.state === 'suspended') actx.resume();
   if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {});
   TS = MODES[scoring].tiers;
-  game = {scoring, prompts: readyPrompts, i: 0, rounds: [], score: 0, sections: []};
-  readyPrompts = null;
+  game = {id: readyGameId, scoring, prompts: readyPrompts, i: 0, rounds: [], score: 0, sections: []};
+  readyPrompts = null; readyGameId = null;
   $('ladderList').innerHTML = '';
   state = 'play';
   renderSide(); setDepth(0); show('play'); playRound();
@@ -625,6 +625,53 @@ function finish() {
   renderLog(game.rounds);
   $('share').textContent = shareText(m, band, game.rounds, game.scoring);
   stopRec(); show('end'); window.scrollTo(0, 0);
+  endBoard(game);
+}
+
+// ---------- High scores ----------
+// A top 10 per mode, kept by the server. A dive that makes the board asks
+// for a name; the board then shows with that entry marked.
+const HS_SIZE = 10;
+let boards = null;
+async function loadBoards() {
+  try { boards = await api('/api/highscores'); } catch (e) { boards = null; }
+  return boards;
+}
+const makesBoard = (mode, score) => {
+  const b = (boards && boards[mode]) || [];
+  return score > 0 && (b.length < HS_SIZE || score > b[b.length - 1].score);
+};
+function boardHTML(mode, mark) {
+  const b = (boards && boards[mode]) || [];
+  if (!b.length) return `<p class="hsEmpty">No scores yet. The first finished dive sets the record.</p>`;
+  return `<ol class="hs">${b.map((e, i) => `<li class="${i + 1 === mark ? 'me' : ''}"><span class="hr">${i + 1}</span><span class="hn">${esc(e.name)}</span><span class="hd">${fmt(e.score * 4)} m</span><span class="hp">${fmt(e.score)} pts · ${e.questions} q · ${esc(e.date)}</span></li>`).join('')}</ol>`;
+}
+function renderStartBoard() {
+  const el = $('startBoard'); if (!el) return;
+  el.innerHTML = `<div class="eyebrow">All-time deepest · ${MODES[scoring].label}</div>${boardHTML(scoring)}`;
+}
+async function endBoard(g) {
+  const el = $('endBoard');
+  el.innerHTML = '';
+  await loadBoards(); if (game !== g) return;
+  const head = `<div class="eyebrow">All-time deepest · ${MODES[g.scoring].label}</div>`;
+  if (!boards) { el.innerHTML = ''; return; }
+  if (!g.id || g.submitted || !makesBoard(g.scoring, g.score)) { el.innerHTML = head + boardHTML(g.scoring); return; }
+  let saved = ''; try { saved = localStorage.getItem('kv-name') || ''; } catch (e) {}
+  el.innerHTML = `${head}<form class="hsForm" id="hsForm" autocomplete="off"><label for="hsName">You made the board! Your name:</label><div class="row"><input id="hsName" maxlength="16" value="${esc(saved)}" placeholder="Name"><button class="btn" type="submit">Save score</button></div></form>${boardHTML(g.scoring)}`;
+  const input = $('hsName'); input.focus(); input.select();
+  $('hsForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    if (g.submitted) return;
+    g.submitted = true;
+    const name = input.value.trim(); try { localStorage.setItem('kv-name', name); } catch (err) {}
+    let r = null;
+    try { r = await api('/api/highscores', {game: g.id, mode: g.scoring, name, score: g.score, questions: g.rounds.length}); } catch (err) {}
+    if (game !== g) return;
+    if (r) boards = r.boards;
+    el.innerHTML = head + boardHTML(g.scoring, r && r.rank);
+    const me = el.querySelector('.me'); if (me) me.scrollIntoView({block: 'nearest', behavior: still ? 'auto' : 'smooth'});
+  });
 }
 // Every winning answer for a question: all One in a Krillion answers in Rare
 // mode, all top answers in Popular mode.
@@ -677,6 +724,7 @@ const shareText = (m, band, rounds, sc = 'rare') =>
 function home() {
   token++; state = 'start'; stopRec(); timer.running = false; stopVoice(); cancelNext();
   setDepth(0); show('start');
+  renderStartBoard(); loadBoards().then(() => { if (state === 'start') renderStartBoard(); });
 }
 
 // ---------- Wiring ----------
