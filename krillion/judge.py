@@ -65,8 +65,10 @@ def judge(prompt: str, alts: list[str], shortlist: list[str] | None = None) -> d
             f'Trivia prompt: "{prompt}".\n'
             f"The player said (speech-to-text alternatives, best first; may be misheard): {heard}{near}\n"
             "Is it a real, correct answer to the prompt? Be strict about correctness and generous about "
-            "speech-recognition spelling. If it is, give its canonical name and how likely a typical "
-            "North American adult is to say it (salience 1-5).",
+            "speech-recognition spelling, but only when the heard words plausibly are one specific answer "
+            "misheard. If they are garbled or could be several things, it is not valid: never guess. "
+            "If it is valid, give its canonical name and how likely a typical North American adult is "
+            "to say it (salience 1-5).",
             response_schema=SCHEMA, max_response_tokens=300, request_timeout_seconds=TIMEOUT_S)
     except Exception:
         log.warning("judge failed for %r", alts[:1], exc_info=True)

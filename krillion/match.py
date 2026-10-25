@@ -71,6 +71,7 @@ class Matcher:
     def __init__(self, entries: Iterable[tuple[str, Iterable[str]]]):
         # entries: (entry_id, [name, alias, alias, ...])
         self.exact: dict[str, str] = {}
+        self.real: set[str] = set()  # keys of real names and aliases, not guessed singulars
         self.fuzzy: list[tuple[str, str]] = []  # (distinctive key, entry_id)
         self.sound: dict[str, list[tuple[str, str]]] = {}  # code -> [(key, entry_id)]
         self.name_words: dict[str, set[str]] = {}  # distinctive word -> entries with it in their name
@@ -91,14 +92,16 @@ class Matcher:
                             continue  # first entry to claim a key keeps it
                         canonical[v] = entry_id
                         self.exact[v] = entry_id
+                        self.real.add(v)
                     else:
                         self.exact.setdefault(v, entry_id)
                 ws = words(name)
+                # Real words only: the heard side is singularized at lookup, so
+                # "cherries" still finds Cherry, but "rhode" isn't a word of Rhodes.
                 for w in ws:
                     if w not in self.generic and len(w) >= 3:
-                        for v in variants(w):
-                            (self.name_words if name is names[0] else self.alias_words).setdefault(
-                                v, set()).add(entry_id)
+                        (self.name_words if name is names[0] else self.alias_words).setdefault(
+                            w, set()).add(entry_id)
                 d = self._distinct(ws)
                 if d:
                     self.fuzzy.append((d, entry_id))
@@ -121,8 +124,17 @@ class Matcher:
         return out
 
     def _exact(self, grams) -> Match | None:
-        for g, _ in grams:
-            for v in variants(g):
+        whole = max((len(ws) for _, ws in grams), default=0)
+        for g, ws in grams:
+            # Words many answers share never name one answer by themselves:
+            # "island" is an alias of Iceland (its own name for itself), so
+            # "Glen Island" and "Rhode Island" matched Iceland.
+            if all(w in self.generic for w in ws):
+                continue
+            # Singular guesses only for the whole answer ("cheddars"). A
+            # fragment of a longer one must be a real name or alias as heard:
+            # "rhode" in "Rhode Island" is not a singular of Rhodes.
+            for v in (variants(g) if len(ws) == whole else [g] if g in self.real else []):
                 hit = self.exact.get(v)
                 if hit:
                     return Match(hit, "exact")

@@ -354,6 +354,8 @@ async function playRound() {
     await speakPrompt(p);
     if (my !== token) return;
   }
+  // Once read aloud, the question stays on screen while you answer
+  pt.textContent = p.prompt; pt.classList.remove('veiled');
   phase = 'answer'; orb(); startTimer();
   if (micBlocked) $('typeInput').focus({preventScroll: true});
 }

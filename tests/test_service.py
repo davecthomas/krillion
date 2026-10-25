@@ -106,11 +106,20 @@ def test_a_judge_pick_unlike_what_was_said_is_not_that_list_answer(bank, monkeyp
 
     def fake_judge(prompt, alts, shortlist=None):
         calls.append(shortlist)
-        return {"name": f"Obscure thing {n}", "tier": 2}
+        # Steered by the list it snaps to a list name; without it, it says what was heard
+        return {"name": f"Obscure thing {n}" if shortlist is not None else "Lychee nut", "tier": 2}
 
     monkeypatch.setattr(ai_judge, "judge", fake_judge)
     slug = service.dive()["prompts"][0]["slug"]
     n = slug.rsplit("-", 1)[1]
     hit = service.judge(slug, ["lychee nut"])["hit"]
-    assert hit["id"] is None and hit["method"] == "judge"
+    assert hit["id"] is None and hit["name"] == "Lychee nut" and hit["method"] == "judge"
     assert len(calls) == 2 and calls[1] is None  # judged again without the list
+
+
+def test_garbled_speech_never_scores_as_the_judges_guess(bank, monkeypatch):
+    # Vietnamese heard as "come to know how hot now" once scored as Thai sticky rice
+    monkeypatch.setattr(ai_judge, "judge", lambda prompt, alts, shortlist=None:
+                        {"name": "Khao niao (Thai sticky rice)", "tier": 4})
+    slug = service.dive()["prompts"][0]["slug"]
+    assert service.judge(slug, ["come to know how hot now"])["hit"] is None
