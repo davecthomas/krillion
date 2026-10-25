@@ -53,7 +53,7 @@ questions aloud** in Settings (the gear, top right).
   browser's speech recognition streams what you say, and the server judges it
   (see [Judging answers](#judging-answers)). Chrome sends the audio to Google's
   speech service; Safari uses Apple's.
-- **The dive.** A pink fish lives in the ocean behind the game and dives deeper
+- **The dive.** A krill lives in the ocean behind the game and dives deeper
   with every scored answer, trailing bubbles, while the camera follows it down
   through five bands: kelp and light rays in the Shallows, coral and schools of
   fish at Schooler, jellyfish in the Thermocline, anglerfish in the Deep Cut,
@@ -66,7 +66,7 @@ questions aloud** in Settings (the gear, top right).
   summary for review, and clears when the next dive starts. Each section
   is a slice of that question's answer list, most common at the top: three
   answers from each tier plus the ones ranked just above and below yours. When
-  your answer scores, the fish falls past the words, the answers below its
+  your answer scores, the krill falls past the words, the answers below its
   spot slide down to open a gap, and it slides in carrying your answer at its
   exact rank ("#71 of 182"). An answer only the AI judge recognized goes in
   the middle of its tier, marked "new"; a skipped question shows its ladder

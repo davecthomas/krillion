@@ -67,7 +67,7 @@ function setDepth(m) {
   const f = Math.min(1, m / 4200);
   document.documentElement.style.setProperty('--sea', `hsl(${194 + f * 26} ${62 - f * 22}% ${19 - f * 15.5}%)`);
   $('gauge').innerHTML = `${fmt(m)} m<small>${bandFor(m)}</small>`;
-  if (window.Ocean) Ocean.goTo(m);  // the fish dives (or swims back up) to match
+  if (window.Ocean) Ocean.goTo(m);  // the krill dives (or swims back up) to match
 }
 
 // ---------- Audio ----------
@@ -245,7 +245,7 @@ function show(id) {
   const app = document.querySelector('.app');
   app.classList.toggle('playing', id === 'play');
   app.classList.toggle('ranked', rankings && rankedFits());
-  // While the rankings column is up, its fish is the one that dives
+  // While the rankings column is up, its krill is the one that dives
   if (window.Ocean) { Ocean.setFishVisible(!(rankings && rankedFits())); Ocean.layout(); }
 }
 const wide = matchMedia('(min-width: 1200px)');
@@ -419,7 +419,7 @@ async function endRound(hit, why) {
     const rankText = lad ? (lad.rank ? ` · #${lad.rank} of ${lad.total}` : ' · not on the list') : '';
     box.innerHTML = `<div class="result" style="color:${t.c}"><div class="tn">${t.name}</div><div class="tp">${esc(hit.display)}${rankText} · ${t.pts} + ${bonus} speed = ${r.pts} pts · +${r.pts * 4} m</div>${bestList.length ? `<div class="tp">${revealHTML(hit.tier === M.best ? 'All ' + M.reveal.toLowerCase() + 's' : M.reveal, bestList)}</div>` : ''}</div>`;
     $('status').textContent = 'Got it.';
-    // The fish falls through a slice of the answer list and slots in at the
+    // The krill falls through a slice of the answer list and slots in at the
     // answer's rank; the celebration fires as it lands. Without room for the
     // ladder (narrow screens) it celebrates straight away.
     const land = at => { chime(Math.round(t.pts / 20)); if (window.Ocean) Ocean.celebrate(t.pts, r.pts * 4, at); };
@@ -499,7 +499,7 @@ function markCompared(sec, name) {
 // ---------- Rankings column ----------
 // One list for the whole dive: a section per question, added as the question
 // starts, so the list grows and scrolls up as you play. Scroll back any time.
-const FISH_SVG = `<svg class="lqFish" viewBox="0 0 40 30" aria-hidden="true"><path d="M9 15 1 7v16z" fill="#ff6f8f"/><path d="M14 4q6-6 12 0z" fill="#ff6f8f"/><ellipse cx="22" cy="15" rx="15" ry="11" fill="#ff8aa3"/><ellipse cx="23" cy="19" rx="10" ry="5" fill="#ffe9ee" opacity=".6"/><circle cx="29" cy="12" r="4.3" fill="#fff"/><circle cx="30" cy="12.3" r="2.4" fill="#1d2433"/><circle cx="30.8" cy="11.2" r=".9" fill="#fff"/><ellipse cx="28" cy="18" rx="2.6" ry="1.5" fill="#ff7896" opacity=".7"/></svg>`;
+const FISH_SVG = `<svg class="lqFish" viewBox="0 0 40 30" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M30 12Q36 3 27 1M31 13Q40 7 35 2" stroke="#ffaa96" stroke-width="1"/><path d="M27 19l-1 4M24 19l-1 4M21 19l-1 4M18 19l-1 4M15 19l-1 4M12 18l-1 4" stroke="#ff9a86" stroke-width="1.1"/></g><path d="M8 16Q2 9 1 11Q3 16 1 21Q3 23 8 16z" fill="#ff8270"/><g fill="#ff8f7c"><ellipse cx="9.5" cy="17" rx="2.4" ry="4.2"/><ellipse cx="12.5" cy="16.5" rx="2.6" ry="4.8"/><ellipse cx="15.5" cy="16" rx="2.8" ry="5.4"/><ellipse cx="18.5" cy="15.5" rx="3" ry="6"/></g><ellipse cx="25" cy="14.5" rx="9" ry="6" fill="#ff9c88"/><ellipse cx="24" cy="12" rx="5.5" ry="2" fill="#fff" opacity=".35"/><path d="M32 12l5 1-4 2z" fill="#ff8a76"/><g fill="#78dcff"><circle cx="26" cy="19.5" r=".9"/><circle cx="21" cy="20" r=".9"/><circle cx="16" cy="20.5" r=".9"/></g><circle cx="29" cy="11" r="3" fill="#1d2433"/><circle cx="30" cy="10" r="1" fill="#fff"/><path d="M30.5 15.5q1.4 1.2 2.6 0" stroke="#7a2a3d" stroke-width=".9" fill="none" stroke-linecap="round"/></svg>`;
 
 function openSection(i, prompt) {
   const list = $('ladderList');
@@ -530,7 +530,7 @@ function fillSection(sec, lad, player) {
   return slot;
 }
 
-// The fish falls past the words and slides into the answer's slot
+// The krill falls past the words and slides into the answer's slot
 function fallInto(sec, slot, onLand) {
   return new Promise(resolve => {
     const list = $('ladderList');
@@ -550,7 +550,7 @@ function fallInto(sec, slot, onLand) {
     };
     list.scrollTo({top: Math.max(0, sec.offsetTop - 8), behavior: still ? 'auto' : 'smooth'});
     if (still) { fish.style.transform = `translateY(${target}px)`; land(); return; }
-    // Words wiggle as the fish brushes past them
+    // Words wiggle as the krill brushes past them
     for (const row of sec.querySelectorAll('.lqRow')) {
       if (row.offsetTop >= target) continue;
       const k = (row.offsetTop - startY) / span;

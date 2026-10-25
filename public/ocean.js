@@ -1,4 +1,4 @@
-// The ocean behind the game. A pink fish dives deeper with every scored answer,
+// The ocean behind the game. A krill dives deeper with every scored answer,
 // and the camera follows it down through five bands of life:
 //   Shallows (0 m)       light rays and swaying kelp
 //   Schooler (600 m)     coral fans and schools of little fish
@@ -17,7 +17,7 @@
   const BANDS = [[0, 'Shallows'], [600, 'Schooler'], [1350, 'Thermocline'], [2250, 'Deep Cut'], [3300, 'Trench']];
   const PX_PER_M = 1.1;          // how far the world scrolls per metre of depth
   const MAX_M = 5600;
-  const FISH_Y = 0.42;           // the fish sits this far down the screen
+  const FISH_Y = 0.42;           // the krill sits this far down the screen
   const TAU = Math.PI * 2;
 
   const cv = document.getElementById('ocean');
@@ -29,7 +29,7 @@
   let dive = null;               // {from, to, start, dur}
   let time = 0, last = performance.now();
   let wobble = 0;                // seconds of "no!" head-shake left
-  let fishVisible = true;        // hidden while the rankings column has its own fish
+  let fishVisible = true;        // hidden while the rankings column has its own krill
   const bubbles = [], sparkles = [], popups = [], snow = [];
 
   // Seeded random numbers, so the world looks the same every visit
@@ -298,7 +298,10 @@
     if (bubbles.length < 160) bubbles.push({x, y, r, vy: 30 + r * 9 + Math.random() * 20, ph: Math.random() * TAU});
   }
 
-  // ---------- The fish ----------
+  // ---------- The krill ----------
+  // Facing right: a fan tail, a curled, segmented tail section, a shell over
+  // the head, a big eye on a stalk, two long antennae, paddling legs, and the
+  // blue lights real krill glow with.
   function fish(dt) {
     const {x, y: y0} = fishPos();
     const y = y0 + Math.sin(time * 1.6) * 5;
@@ -306,33 +309,58 @@
     if (diving && Math.random() < dt * 22) addBubble(x - 10 + Math.random() * 6, y - 8, 1.5 + Math.random() * 3.5);
     let tilt = Math.max(-.7, Math.min(.7, camVel / 380));
     if (wobble > 0) { tilt += Math.sin(time * 34) * .3 * wobble; wobble = Math.max(0, wobble - dt * 1.4); }
-    const wag = Math.sin(time * (diving ? 16 : 6)) * (diving ? .45 : .25);
-    // A soft light around the fish keeps it visible in the dark
-    glow(x, y, 70, 'rgba(255,170,190,A)', .08 + Math.min(.14, cam / 25000));
+    const wag = Math.sin(time * (diving ? 16 : 6)) * (diving ? .4 : .18);
+    // A soft light around the krill keeps it visible in the dark
+    glow(x, y, 70, 'rgba(255,160,140,A)', .08 + Math.min(.14, cam / 25000));
     cx.save(); cx.translate(x, y); cx.rotate(tilt);
-    // tail
-    cx.fillStyle = '#ff6f8f';
-    cx.save(); cx.translate(-22, 0); cx.rotate(wag);
-    cx.beginPath(); cx.moveTo(0, 0); cx.quadraticCurveTo(-14, -18, -20, -14); cx.quadraticCurveTo(-12, 0, -20, 14); cx.quadraticCurveTo(-14, 18, 0, 0); cx.fill();
+    cx.lineCap = 'round'; cx.lineJoin = 'round';
+    // antennae, behind everything, swaying
+    const sway = Math.sin(time * 2.2) * 3;
+    cx.strokeStyle = 'rgba(255,170,150,.9)'; cx.lineWidth = 1.4;
+    cx.beginPath(); cx.moveTo(24, -6); cx.quadraticCurveTo(40, -24, 14 + sway, -34); cx.stroke();
+    cx.beginPath(); cx.moveTo(25, -4); cx.quadraticCurveTo(48, -16, 30 + sway, -30); cx.stroke();
+    // legs: eight feathery swimmerets paddling in a wave
+    cx.strokeStyle = '#ff9a86'; cx.lineWidth = 1.6;
+    for (let i = 0; i < 8; i++) {
+      const lx = 14 - i * 5, a = Math.sin(time * (diving ? 18 : 9) - i * .8) * .45;
+      cx.beginPath(); cx.moveTo(lx, 6 + i * .4);
+      cx.lineTo(lx - 2 + Math.sin(a) * 5, 15 + i * .4 + Math.cos(a) * 2); cx.stroke();
+    }
+    // tail fan
+    cx.save(); cx.translate(-31, 4); cx.rotate(wag);
+    cx.fillStyle = '#ff8270';
+    cx.beginPath(); cx.moveTo(0, 0); cx.quadraticCurveTo(-10, -10, -15, -7); cx.quadraticCurveTo(-11, 0, -15, 8); cx.quadraticCurveTo(-10, 11, 0, 0); cx.fill();
+    cx.fillStyle = 'rgba(255,220,210,.5)';
+    cx.beginPath(); cx.moveTo(0, 0); cx.quadraticCurveTo(-8, -4, -11, -2); cx.quadraticCurveTo(-8, 1, 0, 0); cx.fill();
     cx.restore();
-    // dorsal fin
-    cx.beginPath(); cx.moveTo(-8, -15); cx.quadraticCurveTo(2, -30, 10, -15); cx.fill();
-    // body
-    const g = cx.createLinearGradient(0, -18, 0, 18);
-    g.addColorStop(0, '#ff9fb3'); g.addColorStop(1, '#ff6f8f');
-    cx.fillStyle = g; cx.beginPath(); cx.ellipse(0, 0, 27, 19, 0, 0, TAU); cx.fill();
-    cx.fillStyle = 'rgba(255,240,244,.55)'; cx.beginPath(); cx.ellipse(2, 7, 17, 8, 0, 0, TAU); cx.fill();
-    // side fin, flapping
-    cx.fillStyle = '#ff7f9c';
-    cx.save(); cx.translate(-2, 4); cx.rotate(.5 + Math.sin(time * 7) * .35);
-    cx.beginPath(); cx.ellipse(-6, 0, 8, 4, 0, 0, TAU); cx.fill(); cx.restore();
-    // eye, cheek, smile
-    cx.fillStyle = '#fff'; cx.beginPath(); cx.arc(13, -5, 7.5, 0, TAU); cx.fill();
-    cx.fillStyle = '#1d2433'; cx.beginPath(); cx.arc(14.5, -4.5, 4.2, 0, TAU); cx.fill();
-    cx.fillStyle = '#fff'; cx.beginPath(); cx.arc(16, -6.2, 1.5, 0, TAU); cx.fill();
-    cx.fillStyle = 'rgba(255,120,150,.6)'; cx.beginPath(); cx.ellipse(12, 6, 4.5, 2.6, 0, 0, TAU); cx.fill();
-    cx.strokeStyle = '#7a2a3d'; cx.lineWidth = 1.6; cx.lineCap = 'round';
-    cx.beginPath(); cx.arc(21, 3, 3.2, .2, Math.PI * .8); cx.stroke();
+    // tail section: six segments, smaller toward the tail, curling down
+    for (let i = 5; i >= 0; i--) {
+      const sx = -4 - i * 5, sy = 1 + i * i * .14, r = 9 - i * 0.9;
+      const g = cx.createLinearGradient(0, sy - r, 0, sy + r);
+      g.addColorStop(0, '#ffb3a1'); g.addColorStop(1, '#ff7a66');
+      cx.fillStyle = g; cx.beginPath(); cx.ellipse(sx, sy, 4.6, r, 0, 0, TAU); cx.fill();
+      cx.strokeStyle = 'rgba(200,70,60,.35)'; cx.lineWidth = 1;
+      cx.beginPath(); cx.ellipse(sx, sy, 4.6, r, 0, -Math.PI * .45, Math.PI * .45); cx.stroke();
+    }
+    // shell over the head and body
+    const g = cx.createLinearGradient(0, -12, 0, 10);
+    g.addColorStop(0, '#ffb8a6'); g.addColorStop(1, '#ff7a66');
+    cx.fillStyle = g; cx.beginPath(); cx.ellipse(10, -1, 17, 10.5, -.06, 0, TAU); cx.fill();
+    cx.fillStyle = 'rgba(255,240,236,.45)'; cx.beginPath(); cx.ellipse(8, -5, 10, 3.5, -.1, 0, TAU); cx.fill();
+    // pointed snout
+    cx.fillStyle = '#ff8a76';
+    cx.beginPath(); cx.moveTo(24, -6); cx.lineTo(32, -4); cx.lineTo(25, -1); cx.fill();
+    // blue lights along the belly, brighter in the dark
+    const lit = .55 + Math.min(.45, cam / 3000) + Math.sin(time * 3) * .1;
+    cx.fillStyle = `rgba(120,220,255,${lit})`;
+    for (const [lx, ly] of [[14, 7], [6, 8.5], [-4, 9], [-13, 9.5], [-22, 9]]) { cx.beginPath(); cx.arc(lx, ly, 1.6, 0, TAU); cx.fill(); }
+    // big eye on a short stalk, cheek, smile
+    cx.fillStyle = '#ff8a76'; cx.beginPath(); cx.ellipse(19, -6, 3, 2, -.4, 0, TAU); cx.fill();
+    cx.fillStyle = '#1d2433'; cx.beginPath(); cx.arc(20, -8, 5.2, 0, TAU); cx.fill();
+    cx.fillStyle = '#fff'; cx.beginPath(); cx.arc(21.8, -9.8, 1.8, 0, TAU); cx.fill();
+    cx.fillStyle = 'rgba(255,110,120,.55)'; cx.beginPath(); cx.ellipse(17, 2, 3.6, 2.2, 0, 0, TAU); cx.fill();
+    cx.strokeStyle = '#7a2a3d'; cx.lineWidth = 1.4;
+    cx.beginPath(); cx.arc(23.5, 0.5, 2.6, .25, Math.PI * .8); cx.stroke();
     cx.restore();
   }
 
