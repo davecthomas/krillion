@@ -42,7 +42,8 @@ questions aloud** in Settings (the gear, top right).
   screen until you press Start; Back keeps it for your next New dive.
 - **Questions read aloud, if you want them.** Off by default: turn on **Read
   questions aloud** in Settings. Gemini TTS on Vertex AI then reads each
-  question, directed as an upbeat game-show host, and "repeat" reads it again. Pick any of 30 Gemini voices
+  question, directed as an upbeat game-show host, and "repeat" reads it again. The question
+  appears on screen once it has been read. Pick any of 30 Gemini voices
   and an American, British, Australian or Indian accent under **Settings**
   (the gear, top right), and press **Preview** to hear it. The server records each question in the
   chosen voice in about 4 seconds, in the background while you play. When a

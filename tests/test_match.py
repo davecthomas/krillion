@@ -124,3 +124,16 @@ def test_words_in_several_names_go_to_the_judge():
                  ("lab", ["Labrador Retriever"]), ("gold", ["Golden Retriever"])])
     assert m.match(["water dog"]) is None
     assert set(m.candidates("water dog")) == {"pwd", "swd"}
+
+
+def test_a_shared_word_alone_never_names_an_answer():
+    # Wikipedia redirects "Island" to Iceland; in an island question that word
+    # belongs to every answer, so "Glen Island" must not land on Iceland.
+    islands = Matcher([("iceland", ["Iceland", "Island"]), ("long", ["Long Island"]), ("rhodes", ["Rhodes"]),
+                       ("ellis", ["Ellis Island"]), ("rhode", ["Block Island"]), ("coney", ["Fire Island"])])
+    assert islands.match(["Glen Island"]) is None
+    assert islands.match(["Coney Island"]) is None
+    assert islands.match(["island"]) is None
+    assert islands.match(["Rhodes"]).entry_id == "rhodes"
+    assert islands.match(["Iceland"]).entry_id == "iceland"
+    assert islands.match(["Long Island"]).entry_id == "long"

@@ -124,6 +124,11 @@ def judge(slug: str, alts: list[str]) -> dict:
         return {"hit": None}
     if on_list:
         return {"hit": _list_hit(answers, by_id[on_list.entry_id], "judge")}
+    # Nothing on the list vouches for this one, so it must sound like what was
+    # said: garbled speech ("come to know how hot now") must not score as a
+    # dish the judge guessed ("Khao niao").
+    if not _resembles(alts, j["name"], answers, strict=True):
+        return {"hit": None}
     # Valid but not on the list: it still gets a place in its tier
     return {"hit": {"id": None, "name": j["name"], "tier": j["tier"], "method": "judge",
                     "ladder": ladder.build(answers, tier=j["tier"])}}
@@ -134,10 +139,15 @@ def _on_list(matcher, j: dict | None):
     return m if m and m.method in ("exact", "partial") else None
 
 
-def _resembles(alts: list[str], name: str, answers: list[dict], *, cutoff: float = 0.7) -> bool:
+def _resembles(alts: list[str], name: str, answers: list[dict], *, cutoff: float = 0.7,
+               strict: bool = False) -> bool:
     """Whether what was heard could be `name` misheard or misspelled: at least
     half of the name's distinctive words (not ones many answers share, like
-    "nut" or "dog") are close in spelling or sound to a heard word."""
+    "nut" or "dog") are close in spelling or sound to a heard word. `strict`
+    (for answers not on the list, which nothing else vouches for) needs every
+    one, or all but one of three or more. A parenthetical is ignored:
+    "Khao niao (Thai sticky rice)" is checked as "Khao niao"."""
+    import re
     from rapidfuzz.distance import DamerauLevenshtein
 
     from .match import _codes
@@ -148,6 +158,7 @@ def _resembles(alts: list[str], name: str, answers: list[dict], *, cutoff: float
         for w in set(words(a["name"])):
             counts[w] = counts.get(w, 0) + 1
     heard = {w for a in alts for w in words(a)}
+    name = re.sub(r"\s*\([^)]*\)", " ", name)
     target = [w for w in words(name) if counts.get(w, 0) <= 3] or words(name)
     if not heard or not target:
         return False
@@ -156,7 +167,10 @@ def _resembles(alts: list[str], name: str, answers: list[dict], *, cutoff: float
         return any(DamerauLevenshtein.normalized_similarity(w, h) >= cutoff or _codes(w) & _codes(h)
                    for h in heard)
 
-    return sum(map(close, target)) >= max(1, (len(target) + 1) // 2)
+    hits = sum(map(close, target))
+    if strict:
+        return hits >= (len(target) - 1 if len(target) > 2 else len(target))
+    return hits >= max(1, (len(target) + 1) // 2)
 
 
 def _list_hit(answers: list[dict], a: dict, method: str) -> dict:
